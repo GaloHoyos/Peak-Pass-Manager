@@ -10,6 +10,11 @@ namespace Dominio
 {
     public class ModeloProducto
     {
+        //atributos del producto
+        private int idProducto;
+        private string nombre;
+        private int precio;
+        private string catalogo;
         ProductoDao productoDao = new ProductoDao();
 
         public DataTable ActualizarLista()

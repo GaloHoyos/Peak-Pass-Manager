@@ -82,21 +82,20 @@ namespace Peak_Pass_Manager
         }
 
         //abrir formulario hijo
-        private void AbrirFormularioHijo(Form formularioHijo)
+        public void AbrirFormularioHijo(Form formularioHijo)
         {
-            if (formActual != null)
-            {
-                formActual.Close();
-            }
-            formActual = formularioHijo;
+            if (this.panelEscritorio.Controls.Count > 0)
+                this.panelEscritorio.Controls.RemoveAt(0);
             formularioHijo.TopLevel = false;
             formularioHijo.FormBorderStyle = FormBorderStyle.None;
             formularioHijo.Dock = DockStyle.Fill;
-            panelEscritorio.Controls.Add(formularioHijo);
-            panelEscritorio.Tag = formularioHijo;
-            formularioHijo.BringToFront();
+            this.panelEscritorio.Controls.Add(formularioHijo);
+            this.panelEscritorio.Tag = formularioHijo;
             formularioHijo.Show();
-            lblTitleChildForm.Text = formularioHijo.Text;
+        }
+        public void ChangeTextBox1Text(string text)
+        {
+            this.lblNombre.Text = text;
         }
 
         private void btnInicio_Click(object sender, EventArgs e)

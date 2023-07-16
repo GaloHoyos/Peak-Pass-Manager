@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             dgvCarrito = new DataGridView();
-            id_cliente = new DataGridViewTextBoxColumn();
-            id_producto = new DataGridViewTextBoxColumn();
-            cantidad = new DataGridViewTextBoxColumn();
-            precio = new DataGridViewTextBoxColumn();
             txtCantidad = new TextBox();
             lblCantidad = new Label();
             btnCantidad = new FontAwesome.Sharp.IconButton();
@@ -43,41 +39,12 @@
             // dgvCarrito
             // 
             dgvCarrito.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCarrito.Columns.AddRange(new DataGridViewColumn[] { id_cliente, id_producto, cantidad, precio });
             dgvCarrito.Location = new Point(72, 75);
             dgvCarrito.Name = "dgvCarrito";
             dgvCarrito.RowHeadersWidth = 62;
             dgvCarrito.RowTemplate.Height = 33;
             dgvCarrito.Size = new Size(664, 310);
             dgvCarrito.TabIndex = 0;
-            // 
-            // id_cliente
-            // 
-            id_cliente.HeaderText = "ID Cliente";
-            id_cliente.MinimumWidth = 8;
-            id_cliente.Name = "id_cliente";
-            id_cliente.Width = 150;
-            // 
-            // id_producto
-            // 
-            id_producto.HeaderText = "ID Producto";
-            id_producto.MinimumWidth = 8;
-            id_producto.Name = "id_producto";
-            id_producto.Width = 150;
-            // 
-            // cantidad
-            // 
-            cantidad.HeaderText = "Cantidad";
-            cantidad.MinimumWidth = 8;
-            cantidad.Name = "cantidad";
-            cantidad.Width = 150;
-            // 
-            // precio
-            // 
-            precio.HeaderText = "Precio";
-            precio.MinimumWidth = 8;
-            precio.Name = "precio";
-            precio.Width = 150;
             // 
             // txtCantidad
             // 
@@ -143,10 +110,6 @@
         #endregion
 
         private DataGridView dgvCarrito;
-        private DataGridViewTextBoxColumn id_cliente;
-        private DataGridViewTextBoxColumn id_producto;
-        private DataGridViewTextBoxColumn cantidad;
-        private DataGridViewTextBoxColumn precio;
         private TextBox txtCantidad;
         private Label lblCantidad;
         private FontAwesome.Sharp.IconButton btnCantidad;

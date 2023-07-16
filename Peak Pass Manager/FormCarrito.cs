@@ -8,25 +8,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Comun.Cache;
+using Dominio;
 
 namespace Peak_Pass_Manager
 {
     public partial class FormCarrito : Form
     {
-        public FormCarrito()
+        public FormCarrito(ModeloCarrito modeloCarrito)
         {
             InitializeComponent();
-            AgregarProductos();
+            Iniciar();
+            IniciarN(modeloCarrito);
+
         }
-        public void AgregarProductos()
+        public void Iniciar()
         {
-            dgvCarrito.Rows.Add(CacheCarrito.IdCliente, CacheCarrito.IdProducto, CacheCarrito.Cantidad, CacheCarrito.Precio);
+        }
+        public void IniciarN(ModeloCarrito modeloCarrito)
+        {
+            dgvCarrito.DataSource = modeloCarrito.ObtenerLista();
         }
 
         private void btnCantidad_Click(object sender, EventArgs e)
         {
             dgvCarrito.CurrentRow.Cells[2].Value = Convert.ToInt32(txtCantidad.Text);
-            CacheCarrito.Cantidad = Convert.ToInt32(txtCantidad.Text);
         }
     }
 }

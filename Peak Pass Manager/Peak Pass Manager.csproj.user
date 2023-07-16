@@ -4,6 +4,9 @@
     <Compile Update="FormCarrito.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormCatalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -14,9 +17,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormMenuPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FormCatalogo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormInicio.cs">

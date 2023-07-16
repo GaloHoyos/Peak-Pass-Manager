@@ -34,6 +34,7 @@
             lblCliente = new Label();
             btnAgregar = new FontAwesome.Sharp.IconButton();
             lblTotal = new Label();
+            btnVerCarrito = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
             SuspendLayout();
             // 
@@ -103,12 +104,26 @@
             lblTotal.TabIndex = 5;
             lblTotal.Text = "Total:";
             // 
+            // btnVerCarrito
+            // 
+            btnVerCarrito.IconChar = FontAwesome.Sharp.IconChar.None;
+            btnVerCarrito.IconColor = Color.Black;
+            btnVerCarrito.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnVerCarrito.Location = new Point(955, 520);
+            btnVerCarrito.Name = "btnVerCarrito";
+            btnVerCarrito.Size = new Size(168, 98);
+            btnVerCarrito.TabIndex = 6;
+            btnVerCarrito.Text = "Ver Carrito";
+            btnVerCarrito.UseVisualStyleBackColor = true;
+            btnVerCarrito.Click += btnVerCarrito_Click;
+            // 
             // FormCatalogo
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(34, 33, 74);
             ClientSize = new Size(1196, 702);
+            Controls.Add(btnVerCarrito);
             Controls.Add(lblTotal);
             Controls.Add(btnAgregar);
             Controls.Add(lblCliente);
@@ -130,5 +145,6 @@
         private Label lblCliente;
         private FontAwesome.Sharp.IconButton btnAgregar;
         private Label lblTotal;
+        private FontAwesome.Sharp.IconButton btnVerCarrito;
     }
 }

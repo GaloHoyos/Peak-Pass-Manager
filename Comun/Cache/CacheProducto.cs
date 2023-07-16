@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace Comun.Cache
 {
-    public class CacheCarrito
+    public static class CacheProducto
     {
-        public static int IdCliente { get; set; }
         public static int IdProducto { get; set; }
+        public static string Catalogo { get; set; }
+        public static string Nombre { get; set; }
         public static int Cantidad { get; set; }
         public static int Precio { get; set; }
-        public static int Total { get; set; }
+        public static int Subtotal { get; set; }
+
     }
 }

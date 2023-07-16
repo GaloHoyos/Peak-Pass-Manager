@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,6 +32,7 @@ namespace Peak_Pass_Manager
             txtDNI.Text = string.Empty;
             txtDireccion.Text = string.Empty;
             txtTelefono.Text = string.Empty;
+            lblCliente.Text = CacheCliente.Nombre + " " + CacheCliente.Apellido;
         }
 
         public void AgregarCliente()
