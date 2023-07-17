@@ -22,7 +22,7 @@ namespace Peak_Pass_Manager
         ModeloCarrito modeloCarrito = new ModeloCarrito(0, 0);
         public FormCatalogo()
         {
-            
+
             InitializeComponent();
             nombreCliente();
             ActualizarLista();
@@ -61,7 +61,7 @@ namespace Peak_Pass_Manager
                     int idProducto = Convert.ToInt32(dgvProductos.CurrentRow.Cells[0].Value);
                     string nombreProducto = dgvProductos.CurrentRow.Cells[1].Value.ToString();
                     bool existencia = modeloCarrito.ExisteProducto(idProducto);
-                    if(existencia == true)
+                    if (existencia == true)
                     {
                         modeloCarrito.AgregarCantidad(idProducto, 1);
                     }
@@ -88,6 +88,7 @@ namespace Peak_Pass_Manager
         {
             FormCarrito formCarrito = new FormCarrito(modeloCarrito);
             formCarrito.ShowDialog();
+            modeloCarrito = formCarrito.modelo;
 
         }
     }

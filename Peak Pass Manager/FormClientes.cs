@@ -10,11 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dominio;
 using Comun.Cache;
+using Comun;
 
 namespace Peak_Pass_Manager
 {
     public partial class FormClientes : Form
     {
+        
         Form formActual;
         public FormClientes()
         {
@@ -38,20 +40,22 @@ namespace Peak_Pass_Manager
         public void AgregarCliente()
         {
             ModeloCliente modeloCliente = new ModeloCliente();
-            modeloCliente.AgregarCliente(txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtDNI.Text), txtCorreo.Text, txtDireccion.Text, Convert.ToInt32(txtTelefono.Text));
+            modeloCliente.AgregarCliente(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text);
             iniciar();
         }
         public void ModificarCliente()
         {
             ModeloCliente modeloCliente = new ModeloCliente();
-            modeloCliente.ModificarCliente(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtDNI.Text), txtCorreo.Text, txtDireccion.Text, Convert.ToInt32(txtTelefono.Text));
+            modeloCliente.ModificarCliente(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text);
             iniciar();
+            LimpioCliente();
         }
         public void EliminarCliente()
         {
             ModeloCliente modeloCliente = new ModeloCliente();
             modeloCliente.EliminarCliente(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value));
             iniciar();
+            LimpioCliente();
         }
         private void FormClientes_Load(object sender, EventArgs e)
         {
@@ -60,21 +64,42 @@ namespace Peak_Pass_Manager
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            AgregarCliente();
-            lblMensajeError.Hide();
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            if (dgvClientes.CurrentRow.Cells[0].Value != null)
+            Verificaciones verificaciones = new Verificaciones();
+            bool verif = verificaciones.VerificacionCrearCliente(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text);
+            if (verif == true)
             {
-                ModificarCliente();
+                AgregarCliente();
                 lblMensajeError.Hide();
             }
             else
             {
                 lblMensajeError.Show();
+                lblMensajeError.Text = "Complete todos los campos";
+            }
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (dgvClientes.CurrentRow == null)
+            {
+                lblMensajeError.Show();
                 lblMensajeError.Text = "Seleccione un cliente";
+            }
+            else
+            {
+                Verificaciones verificaciones = new Verificaciones();
+                bool verif = verificaciones.VerificacionCrearCliente(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text);
+                if (verif == true)
+                {
+                    ModificarCliente();
+                    lblMensajeError.Hide();
+                }
+                else
+                {
+                    lblMensajeError.Show();
+                    lblMensajeError.Text = "Complete todos los campos";
+                }
             }
         }
 
@@ -91,28 +116,54 @@ namespace Peak_Pass_Manager
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (dgvClientes.CurrentRow.Cells[0].Value != null)
-            {
-                EliminarCliente();
-                lblMensajeError.Hide();
-            }
-            else
+            if (dgvClientes.CurrentRow == null)
             {
                 lblMensajeError.Show();
                 lblMensajeError.Text = "Seleccione un cliente";
+            }
+            else
+            {
+                EliminarCliente();
+                lblMensajeError.Hide();
+                dgvClientes.ClearSelection();
             }
         }
 
         private void btnCambioCliente_Click(object sender, EventArgs e)
         {
+            if(dgvClientes.CurrentRow == null)
+            {
+                lblMensajeError.Show();
+                lblMensajeError.Text = "Seleccione un cliente";
+            }
+            else
+            {
+                CambioCliente();
+            }
+
+        }
+        public void CambioCliente()
+        {
+            lblMensajeError.Hide();
             CacheCliente.IdCliente = Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value);
             CacheCliente.Nombre = dgvClientes.CurrentRow.Cells[1].Value.ToString();
             CacheCliente.Apellido = dgvClientes.CurrentRow.Cells[2].Value.ToString();
-            CacheCliente.DNI = Convert.ToInt32(dgvClientes.CurrentRow.Cells[3].Value);
+            CacheCliente.DNI = dgvClientes.CurrentRow.Cells[3].Value.ToString();
             CacheCliente.Correo = dgvClientes.CurrentRow.Cells[4].Value.ToString();
             CacheCliente.Direccion = dgvClientes.CurrentRow.Cells[5].Value.ToString();
-            CacheCliente.Telefono = Convert.ToInt32(dgvClientes.CurrentRow.Cells[6].Value);
+            CacheCliente.Telefono = dgvClientes.CurrentRow.Cells[6].Value.ToString();
             lblCliente.Text = CacheCliente.Nombre + " " + CacheCliente.Apellido;
+        }
+        public void LimpioCliente()
+        {
+            CacheCliente.IdCliente = -1;
+            CacheCliente.Nombre = string.Empty;
+            CacheCliente.Apellido = string.Empty;
+            CacheCliente.DNI = string.Empty;
+            CacheCliente.Correo = string.Empty;
+            CacheCliente.Direccion = string.Empty;
+            CacheCliente.Telefono = string.Empty;
+            lblCliente.Text = string.Empty;
         }
     }
 }

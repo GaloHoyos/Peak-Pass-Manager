@@ -29,64 +29,83 @@
         private void InitializeComponent()
         {
             dgvCarrito = new DataGridView();
-            txtCantidad = new TextBox();
-            lblCantidad = new Label();
-            btnCantidad = new FontAwesome.Sharp.IconButton();
             btnComprar = new FontAwesome.Sharp.IconButton();
+            lblTotal = new Label();
+            btnQuitar = new FontAwesome.Sharp.IconButton();
+            btnQuitarCantidad = new FontAwesome.Sharp.IconButton();
+            lblMensajeError = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvCarrito).BeginInit();
             SuspendLayout();
             // 
             // dgvCarrito
             // 
             dgvCarrito.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCarrito.Location = new Point(72, 75);
+            dgvCarrito.Location = new Point(34, 91);
             dgvCarrito.Name = "dgvCarrito";
             dgvCarrito.RowHeadersWidth = 62;
             dgvCarrito.RowTemplate.Height = 33;
-            dgvCarrito.Size = new Size(664, 310);
+            dgvCarrito.Size = new Size(1128, 303);
             dgvCarrito.TabIndex = 0;
-            // 
-            // txtCantidad
-            // 
-            txtCantidad.Location = new Point(220, 490);
-            txtCantidad.Name = "txtCantidad";
-            txtCantidad.Size = new Size(107, 31);
-            txtCantidad.TabIndex = 1;
-            // 
-            // lblCantidad
-            // 
-            lblCantidad.AutoSize = true;
-            lblCantidad.ForeColor = Color.Gainsboro;
-            lblCantidad.Location = new Point(220, 462);
-            lblCantidad.Name = "lblCantidad";
-            lblCantidad.Size = new Size(83, 25);
-            lblCantidad.TabIndex = 3;
-            lblCantidad.Text = "Cantidad";
-            // 
-            // btnCantidad
-            // 
-            btnCantidad.IconChar = FontAwesome.Sharp.IconChar.None;
-            btnCantidad.IconColor = Color.Black;
-            btnCantidad.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnCantidad.Location = new Point(333, 488);
-            btnCantidad.Name = "btnCantidad";
-            btnCantidad.Size = new Size(112, 34);
-            btnCantidad.TabIndex = 4;
-            btnCantidad.Text = "Aceptar";
-            btnCantidad.UseVisualStyleBackColor = true;
-            btnCantidad.Click += btnCantidad_Click;
             // 
             // btnComprar
             // 
             btnComprar.IconChar = FontAwesome.Sharp.IconChar.None;
             btnComprar.IconColor = Color.Black;
             btnComprar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnComprar.Location = new Point(829, 490);
+            btnComprar.Location = new Point(948, 511);
             btnComprar.Name = "btnComprar";
-            btnComprar.Size = new Size(112, 34);
+            btnComprar.Size = new Size(236, 179);
             btnComprar.TabIndex = 5;
             btnComprar.Text = "Comprar";
             btnComprar.UseVisualStyleBackColor = true;
+            btnComprar.Click += btnComprar_Click;
+            // 
+            // lblTotal
+            // 
+            lblTotal.AutoSize = true;
+            lblTotal.ForeColor = Color.Gainsboro;
+            lblTotal.Location = new Point(948, 397);
+            lblTotal.Name = "lblTotal";
+            lblTotal.Size = new Size(53, 25);
+            lblTotal.TabIndex = 6;
+            lblTotal.Text = "Total:";
+            // 
+            // btnQuitar
+            // 
+            btnQuitar.IconChar = FontAwesome.Sharp.IconChar.None;
+            btnQuitar.IconColor = Color.Black;
+            btnQuitar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnQuitar.Location = new Point(34, 400);
+            btnQuitar.Name = "btnQuitar";
+            btnQuitar.Size = new Size(243, 38);
+            btnQuitar.TabIndex = 7;
+            btnQuitar.Text = "Quitar";
+            btnQuitar.UseVisualStyleBackColor = true;
+            btnQuitar.Click += btnQuitar_Click;
+            // 
+            // btnQuitarCantidad
+            // 
+            btnQuitarCantidad.IconChar = FontAwesome.Sharp.IconChar.None;
+            btnQuitarCantidad.IconColor = Color.Black;
+            btnQuitarCantidad.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnQuitarCantidad.Location = new Point(34, 458);
+            btnQuitarCantidad.Name = "btnQuitarCantidad";
+            btnQuitarCantidad.Size = new Size(243, 38);
+            btnQuitarCantidad.TabIndex = 8;
+            btnQuitarCantidad.Text = "Quitar Cantidad";
+            btnQuitarCantidad.UseVisualStyleBackColor = true;
+            btnQuitarCantidad.Click += btnQuitarCantidad_Click;
+            // 
+            // lblMensajeError
+            // 
+            lblMensajeError.AutoSize = true;
+            lblMensajeError.ForeColor = Color.Red;
+            lblMensajeError.Location = new Point(345, 436);
+            lblMensajeError.Name = "lblMensajeError";
+            lblMensajeError.Size = new Size(115, 25);
+            lblMensajeError.TabIndex = 9;
+            lblMensajeError.Text = "MensajeError";
+            lblMensajeError.Visible = false;
             // 
             // FormCarrito
             // 
@@ -94,10 +113,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(34, 33, 74);
             ClientSize = new Size(1196, 702);
+            Controls.Add(lblMensajeError);
+            Controls.Add(btnQuitarCantidad);
+            Controls.Add(btnQuitar);
+            Controls.Add(lblTotal);
             Controls.Add(btnComprar);
-            Controls.Add(btnCantidad);
-            Controls.Add(lblCantidad);
-            Controls.Add(txtCantidad);
             Controls.Add(dgvCarrito);
             ForeColor = SystemColors.ControlText;
             Name = "FormCarrito";
@@ -110,9 +130,10 @@
         #endregion
 
         private DataGridView dgvCarrito;
-        private TextBox txtCantidad;
-        private Label lblCantidad;
-        private FontAwesome.Sharp.IconButton btnCantidad;
         private FontAwesome.Sharp.IconButton btnComprar;
+        private Label lblTotal;
+        private FontAwesome.Sharp.IconButton btnQuitar;
+        private FontAwesome.Sharp.IconButton btnQuitarCantidad;
+        private Label lblMensajeError;
     }
 }

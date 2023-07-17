@@ -14,6 +14,6 @@ namespace Comun.Cache
         public static string Usuario { get; set; }
         public static string Contrasena { get; set; }
         public static string Email { get; set; }
-        public static int DNI { get; set; }
+        public static string DNI { get; set; }
     }
 }

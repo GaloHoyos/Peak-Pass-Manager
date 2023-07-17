@@ -12,10 +12,10 @@ namespace Comun.Cache
         public static int IdCliente { get; set; }
         public static string Nombre { get; set; }
         public static string Apellido { get; set; }
-        public static int DNI { get; set; }
+        public static string DNI { get; set; }
         public static string Correo { get; set; }
         public static string Direccion { get; set; }
-        public static int Telefono { get; set; }
+        public static string Telefono { get; set; }
     }
 
 }

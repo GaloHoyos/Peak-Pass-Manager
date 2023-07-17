@@ -18,11 +18,11 @@ namespace Dominio
             dt = clienteDao.ActualizarLista();
             return dt;
         }
-        public void AgregarCliente(string nombre, string apellido, int dni, string correo, string direccion, int telefono)
+        public void AgregarCliente(string nombre, string apellido, string dni, string correo, string direccion, string telefono)
         {
             clienteDao.AgregarCliente(nombre, apellido, dni, correo, direccion, telefono);
         }
-        public void ModificarCliente(int id, string nombre, string apellido, int dni, string correo, string direccion, int telefono)
+        public void ModificarCliente(int id, string nombre, string apellido, string dni, string correo, string direccion, string telefono)
         {
             clienteDao.ModificarCliente(id, nombre, apellido, dni, correo, direccion, telefono);
         }

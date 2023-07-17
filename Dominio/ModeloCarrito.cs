@@ -55,8 +55,71 @@ namespace Dominio
                 if (producto.ObtenerIdProducto() == idProducto)
                 {
                     producto.AgregarCantidad(cantidad);
+                    
                 }
             }
+        }
+        public void SetCantidad(int idProducto, int cantidad)
+        {
+            foreach (ModeloCarritoDetalle producto in listaCarritoDetalles)
+            {
+                if (producto.ObtenerIdProducto() == idProducto)
+                {
+                    producto.SetCantidad(cantidad);
+                }
+            }
+        }
+        public void QuitarCantidad(int idProducto, int cantidad)
+        {
+            foreach (ModeloCarritoDetalle producto in listaCarritoDetalles)
+            {
+                if (producto.ObtenerIdProducto() == idProducto)
+                {
+                    producto.AgregarCantidad(-cantidad);
+                }
+            }
+        }
+        public int GetCantidad(int idProducto)
+        {
+            foreach (ModeloCarritoDetalle producto in listaCarritoDetalles)
+            {
+                if (producto.ObtenerIdProducto() == idProducto)
+                {
+                    return producto.ObtenerCantidad();
+                }
+            }
+            return 0;
+        }
+        public void EliminarProducto(int idProducto)
+        {
+            foreach (ModeloCarritoDetalle producto in listaCarritoDetalles)
+            {
+                if (producto.ObtenerIdProducto() == idProducto)
+                {
+                    listaCarritoDetalles.Remove(producto);
+                    break;
+                }
+            }
+        }
+        public void ReducirCantidad(int idProducto, int cantidad)
+        {
+            foreach (ModeloCarritoDetalle producto in listaCarritoDetalles)
+            {
+                if (producto.ObtenerIdProducto() == idProducto)
+                {
+                    producto.AgregarCantidad(-cantidad);
+                    break;
+                }
+            }
+        }
+        public string ObtenerTotal()
+        {
+            int total = 0;
+            foreach (ModeloCarritoDetalle producto in listaCarritoDetalles)
+            {
+                total += producto.ObtenerSubtotal();
+            }
+            return total.ToString();
         }
         public DataTable ObtenerLista()
         {

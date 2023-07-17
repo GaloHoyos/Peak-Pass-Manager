@@ -11,7 +11,8 @@ namespace Acceso_a_Datos
     public class ClienteDao : ConexionSQL1
     {
         //metodo para obtener todos los clientes
-        public DataTable ActualizarLista() {
+        public DataTable ActualizarLista() 
+        {
             DataTable dt = new DataTable();
             using (var connection = GetConnection()) 
             {
@@ -22,7 +23,7 @@ namespace Acceso_a_Datos
                 return dt; //Envia los datos de la tabla
             }
         }
-        public void AgregarCliente(string Nombre, string Apellido, int DNI, string Correo, string Direccion, int Telefono)
+        public void AgregarCliente(string Nombre, string Apellido, string DNI, string Correo, string Direccion, string Telefono)
         {
             //metodo para agregar un cliente
             using (var connection = GetConnection())
@@ -39,7 +40,7 @@ namespace Acceso_a_Datos
                 }
             }
         }
-        public void ModificarCliente(int ID, string Nombre, string Apellido, int DNI, string Correo, string Direccion, int Telefono)
+        public void ModificarCliente(int ID, string Nombre, string Apellido, string DNI, string Correo, string Direccion, string Telefono)
         {
             //metodo para modificar un cliente
             using (var connection = GetConnection())

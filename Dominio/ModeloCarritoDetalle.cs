@@ -27,6 +27,27 @@ namespace Dominio
         public void AgregarCantidad(int cantidad)
         {
             this.cantidad += cantidad;
+            if (this.cantidad <= 0)
+            {
+                this.subtotal = 0;
+            }
+            else
+            {
+                this.subtotal = this.cantidad * this.precio;
+            }
+
+        }
+        public void SetCantidad(int cantidad)
+        {
+            this.cantidad = cantidad;
+            if (this.cantidad <= 0)
+            {
+                this.subtotal = 0;
+            }
+            else
+            {
+                this.subtotal = this.cantidad * this.precio;
+            }
         }
         public int ObtenerIdProducto()
         {

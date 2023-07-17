@@ -45,6 +45,7 @@
             iconFormulario = new FontAwesome.Sharp.IconPictureBox();
             panelSombra = new Panel();
             panelEscritorio = new Panel();
+            btnPedidos = new FontAwesome.Sharp.IconButton();
             panelMenu.SuspendLayout();
             panel1.SuspendLayout();
             panelLogo.SuspendLayout();
@@ -58,6 +59,7 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(31, 30, 68);
+            panelMenu.Controls.Add(btnPedidos);
             panelMenu.Controls.Add(panel1);
             panelMenu.Controls.Add(btnOpciones);
             panelMenu.Controls.Add(btnClientes);
@@ -295,6 +297,28 @@
             panelEscritorio.Size = new Size(1218, 758);
             panelEscritorio.TabIndex = 3;
             // 
+            // btnPedidos
+            // 
+            btnPedidos.Dock = DockStyle.Top;
+            btnPedidos.FlatAppearance.BorderSize = 0;
+            btnPedidos.FlatStyle = FlatStyle.Flat;
+            btnPedidos.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnPedidos.ForeColor = SystemColors.ButtonHighlight;
+            btnPedidos.IconChar = FontAwesome.Sharp.IconChar.Gears;
+            btnPedidos.IconColor = Color.WhiteSmoke;
+            btnPedidos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnPedidos.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPedidos.Location = new Point(0, 380);
+            btnPedidos.Name = "btnPedidos";
+            btnPedidos.Padding = new Padding(10, 0, 20, 0);
+            btnPedidos.Size = new Size(220, 60);
+            btnPedidos.TabIndex = 6;
+            btnPedidos.Text = "Pedidos";
+            btnPedidos.TextAlign = ContentAlignment.MiddleLeft;
+            btnPedidos.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnPedidos.UseVisualStyleBackColor = true;
+            btnPedidos.Click += btnPedidos_Click;
+            // 
             // FormMenuPrincipal
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -338,5 +362,6 @@
         private Panel panel1;
         private Label lblApellido;
         private Label lblNombre;
+        private FontAwesome.Sharp.IconButton btnPedidos;
     }
 }

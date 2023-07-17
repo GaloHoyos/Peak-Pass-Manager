@@ -127,6 +127,11 @@ namespace Peak_Pass_Manager
             ActivarBoton(sender, RGBColors.color4);
             AbrirFormularioHijo(new FormOpciones());
         }
+        private void btnPedidos_Click(object sender, EventArgs e)
+        {
+            ActivarBoton(sender, RGBColors.color5);
+            AbrirFormularioHijo(new FormPedidos());
+        }
         private void Reset()
         {
             DesactivarBoton();
@@ -165,5 +170,7 @@ namespace Peak_Pass_Manager
             //cambiar color a oscuro nuevamente
             iconCerrar.ForeColor = Color.DimGray;
         }
+
+
     }
 }

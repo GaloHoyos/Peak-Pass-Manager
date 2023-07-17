@@ -34,7 +34,7 @@ namespace Acceso_a_Datos
                             CacheLogin.Contrasena = reader.GetString(2);
                             CacheLogin.Nombre = reader.GetString(3);
                             CacheLogin.Apellido = reader.GetString(4);
-                            CacheLogin.DNI = reader.GetInt32(5);
+                            CacheLogin.DNI = reader.GetString(5);
                             CacheLogin.Email = reader.GetString(6);
                         }
                         return true;
