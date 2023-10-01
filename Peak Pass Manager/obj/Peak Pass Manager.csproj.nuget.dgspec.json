@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Peak Pass Manager\\Peak Pass Manager.csproj": {}
+    "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Peak Pass Manager\\Peak Pass Manager.csproj": {}
   },
   "projects": {
-    "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Acceso a Datos\\Acceso a Datos.csproj": {
+    "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Acceso a Datos\\Acceso a Datos(Modelo).csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Acceso a Datos\\Acceso a Datos.csproj",
-        "projectName": "Acceso a Datos",
-        "projectPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Acceso a Datos\\Acceso a Datos.csproj",
+        "projectUniqueName": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Acceso a Datos\\Acceso a Datos(Modelo).csproj",
+        "projectName": "Acceso a Datos(Modelo)",
+        "projectPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Acceso a Datos\\Acceso a Datos(Modelo).csproj",
         "packagesPath": "C:\\Users\\galoh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Acceso a Datos\\obj\\",
+        "outputPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Acceso a Datos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Comun\\Comun.csproj": {
-                "projectPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Comun\\Comun.csproj"
+              "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Comun\\Comun.csproj": {
+                "projectPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Comun\\Comun.csproj"
               }
             }
           }
@@ -73,14 +73,14 @@
         }
       }
     },
-    "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Comun\\Comun.csproj": {
+    "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Comun\\Comun.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Comun\\Comun.csproj",
+        "projectUniqueName": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Comun\\Comun.csproj",
         "projectName": "Comun",
-        "projectPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Comun\\Comun.csproj",
+        "projectPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Comun\\Comun.csproj",
         "packagesPath": "C:\\Users\\galoh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Comun\\obj\\",
+        "outputPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Comun\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -132,14 +132,14 @@
         }
       }
     },
-    "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Dominio\\Dominio.csproj": {
+    "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Dominio\\Dominio(Controladora).csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Dominio\\Dominio.csproj",
-        "projectName": "Dominio",
-        "projectPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Dominio\\Dominio(Controladora).csproj",
+        "projectName": "Dominio(Controladora)",
+        "projectPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Dominio\\Dominio(Controladora).csproj",
         "packagesPath": "C:\\Users\\galoh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Dominio\\obj\\",
+        "outputPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -160,11 +160,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Acceso a Datos\\Acceso a Datos.csproj": {
-                "projectPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Acceso a Datos\\Acceso a Datos.csproj"
+              "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Acceso a Datos\\Acceso a Datos(Modelo).csproj": {
+                "projectPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Acceso a Datos\\Acceso a Datos(Modelo).csproj"
               },
-              "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Comun\\Comun.csproj": {
-                "projectPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Comun\\Comun.csproj"
+              "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Comun\\Comun.csproj": {
+                "projectPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Comun\\Comun.csproj"
               }
             }
           }
@@ -198,14 +198,14 @@
         }
       }
     },
-    "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Peak Pass Manager\\Peak Pass Manager.csproj": {
+    "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Peak Pass Manager\\Peak Pass Manager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Peak Pass Manager\\Peak Pass Manager.csproj",
+        "projectUniqueName": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Peak Pass Manager\\Peak Pass Manager.csproj",
         "projectName": "Peak Pass Manager",
-        "projectPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Peak Pass Manager\\Peak Pass Manager.csproj",
+        "projectPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Peak Pass Manager\\Peak Pass Manager.csproj",
         "packagesPath": "C:\\Users\\galoh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Peak Pass Manager\\obj\\",
+        "outputPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Peak Pass Manager\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -226,11 +226,11 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Comun\\Comun.csproj": {
-                "projectPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Comun\\Comun.csproj"
+              "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Comun\\Comun.csproj": {
+                "projectPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Comun\\Comun.csproj"
               },
-              "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Dominio\\Dominio.csproj": {
-                "projectPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Dominio\\Dominio.csproj"
+              "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Dominio\\Dominio(Controladora).csproj": {
+                "projectPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Dominio\\Dominio(Controladora).csproj"
               }
             }
           }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5Gdnpd6cjs67j5NvXUfleR1fK2oOqbt4/LD6uVQ49kbdfRrsIR7WXLkol4yXHWFJjr2BHd3jPk58UaqyAAOElw==",
+  "dgSpecHash": "q1GZaLLoW9UzCJpSiS4FYJQD0NzPHz43MxWbUMKHvUvqgi1fV4oM8Rt/AKxHcvfUUYmn24EXTbbLXzSxStsOWA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Acceso a Datos\\Acceso a Datos.csproj",
+  "projectFilePath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Acceso a Datos\\Acceso a Datos(Modelo).csproj",
   "expectedPackageFiles": [
     "C:\\Users\\galoh\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\galoh\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

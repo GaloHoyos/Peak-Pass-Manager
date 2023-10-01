@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Zg0DowdMM+6DgaWWG8YxKX9YRuZf1TnaUCNS5JXutZUUUv2pofdVtuxYBYYeGzbAizjhDdn1oFCEPCFsq7b98A==",
+  "dgSpecHash": "VrybxtJ8gP1NixKa2plxPM1ByOPfAb1+Y11K12lhIX94oQ2bv6iV5fM22wV9b7uEjpoVcxRKe9Wm9SSukJ0JUQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Ingenieria de Software\\Peak Pass Manager\\Proyecto Actualizado\\Peak Pass Manager\\Peak Pass Manager\\Peak Pass Manager.csproj",
+  "projectFilePath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Trabajo de Diploma\\Peak Pass Manager\\Peak Pass Manager\\Peak Pass Manager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\galoh\\.nuget\\packages\\fontawesome.sharp\\6.3.0\\fontawesome.sharp.6.3.0.nupkg.sha512",
     "C:\\Users\\galoh\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

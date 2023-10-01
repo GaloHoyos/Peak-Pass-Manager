@@ -20,7 +20,7 @@ namespace Peak_Pass_Manager
         }
         public void Iniciar(int idVenta)
         {
-            ModeloPedidoDetalle modeloPedidoDetalle = new ModeloPedidoDetalle();
+            ControladoraPedidoDetalle modeloPedidoDetalle = new ControladoraPedidoDetalle();
             dgvCompraDetalles.DataSource = modeloPedidoDetalle.ActualizarLista(idVenta);
         }
     }

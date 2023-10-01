@@ -109,7 +109,7 @@ namespace Peak_Pass_Manager
             {
                 if(txtContra.Text != "CONTRASEÑA")
                 {
-                    ModeloUsuario modeloUsuario = new ModeloUsuario();
+                    ControladoraUsuario modeloUsuario = new ControladoraUsuario();
                     var loginValido = modeloUsuario.LoginUser(txtUsuario.Text, txtContra.Text);
                     if (loginValido == true)
                     {

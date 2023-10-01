@@ -26,7 +26,7 @@ namespace Peak_Pass_Manager
         }
         public void iniciar()
         {
-            ModeloCliente modeloCliente = new ModeloCliente();
+            ControladoraCliente modeloCliente = new ControladoraCliente();
             dgvClientes.DataSource = modeloCliente.ActualizarLista();
             txtNombre.Text = string.Empty;
             txtApellido.Text = string.Empty;
@@ -39,20 +39,20 @@ namespace Peak_Pass_Manager
 
         public void AgregarCliente()
         {
-            ModeloCliente modeloCliente = new ModeloCliente();
+            ControladoraCliente modeloCliente = new ControladoraCliente();
             modeloCliente.AgregarCliente(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text);
             iniciar();
         }
         public void ModificarCliente()
         {
-            ModeloCliente modeloCliente = new ModeloCliente();
+            ControladoraCliente modeloCliente = new ControladoraCliente();
             modeloCliente.ModificarCliente(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text);
             iniciar();
             LimpioCliente();
         }
         public void EliminarCliente()
         {
-            ModeloCliente modeloCliente = new ModeloCliente();
+            ControladoraCliente modeloCliente = new ControladoraCliente();
             modeloCliente.EliminarCliente(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value));
             iniciar();
             LimpioCliente();

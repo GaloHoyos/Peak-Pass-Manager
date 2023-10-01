@@ -9,7 +9,7 @@
       "Peak Pass Manager/1.0.0": {
         "dependencies": {
           "Comun": "1.0.0",
-          "Dominio": "1.0.0",
+          "Dominio(Controladora)": "1.0.0",
           "FontAwesome.Sharp": "6.3.0"
         },
         "runtime": {
@@ -99,13 +99,13 @@
         }
       },
       "System.Security.Principal.Windows/4.7.0": {},
-      "Acceso a Datos/1.0.0": {
+      "Acceso a Datos(Modelo)/1.0.0": {
         "dependencies": {
           "Comun": "1.0.0",
           "System.Data.SqlClient": "4.8.5"
         },
         "runtime": {
-          "Acceso a Datos.dll": {}
+          "Acceso a Datos(Modelo).dll": {}
         }
       },
       "Comun/1.0.0": {
@@ -113,13 +113,13 @@
           "Comun.dll": {}
         }
       },
-      "Dominio/1.0.0": {
+      "Dominio(Controladora)/1.0.0": {
         "dependencies": {
-          "Acceso a Datos": "1.0.0",
+          "Acceso a Datos(Modelo)": "1.0.0",
           "Comun": "1.0.0"
         },
         "runtime": {
-          "Dominio.dll": {}
+          "Dominio(Controladora).dll": {}
         }
       }
     }
@@ -200,7 +200,7 @@
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
     },
-    "Acceso a Datos/1.0.0": {
+    "Acceso a Datos(Modelo)/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -210,7 +210,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Dominio/1.0.0": {
+    "Dominio(Controladora)/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

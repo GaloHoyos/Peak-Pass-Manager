@@ -19,7 +19,7 @@ namespace Peak_Pass_Manager
         int cantidad = 1;
         int idCliente = -1;
         Form formMenuPrincipal;
-        ModeloCarrito modeloCarrito = new ModeloCarrito(0, 0);
+        ControladoraCarrito carrito = new ControladoraCarrito(CacheCliente.IdCliente, 0);
         public FormCatalogo()
         {
 
@@ -38,7 +38,7 @@ namespace Peak_Pass_Manager
         //metodo para actualizar la lista de productos
         public void ActualizarLista()
         {
-            ModeloProducto modeloProducto = new ModeloProducto();
+            ControladoraProducto modeloProducto = new ControladoraProducto();
             dgvProductos.DataSource = modeloProducto.ActualizarLista();
         }
 
@@ -47,7 +47,7 @@ namespace Peak_Pass_Manager
             FormClientes formClientes = new FormClientes();
             formClientes.ShowDialog();
             nombreCliente();
-            modeloCarrito.CambiarCliente(idCliente);
+            carrito.CambiarCliente(CacheCliente.IdCliente);
 
         }
 
@@ -60,15 +60,15 @@ namespace Peak_Pass_Manager
                     int precioProducto = Convert.ToInt32(dgvProductos.CurrentRow.Cells[2].Value);
                     int idProducto = Convert.ToInt32(dgvProductos.CurrentRow.Cells[0].Value);
                     string nombreProducto = dgvProductos.CurrentRow.Cells[1].Value.ToString();
-                    bool existencia = modeloCarrito.ExisteProducto(idProducto);
+                    bool existencia = carrito.ExisteProducto(idProducto);
                     if (existencia == true)
                     {
-                        modeloCarrito.AgregarCantidad(idProducto, 1);
+                        carrito.AgregarCantidad(idProducto, 1);
                     }
                     else
                     {
-                        ModeloCarritoDetalle modeloCarritoDetalle = new ModeloCarritoDetalle(idCliente, idProducto, nombreProducto, precioProducto, cantidad, cantidad * precioProducto);
-                        modeloCarrito.AgregarProducto(modeloCarritoDetalle);
+                        ControladoraCarritoDetalle controladoraCarritoDetalle = new ControladoraCarritoDetalle(idCliente, idProducto, nombreProducto, precioProducto, cantidad, cantidad * precioProducto);
+                        carrito.AgregarProducto(controladoraCarritoDetalle.ObtenerModelo());
                     }
 
                 }
@@ -86,9 +86,9 @@ namespace Peak_Pass_Manager
 
         private void btnVerCarrito_Click(object sender, EventArgs e)
         {
-            FormCarrito formCarrito = new FormCarrito(modeloCarrito);
+            FormCarrito formCarrito = new FormCarrito(carrito);
             formCarrito.ShowDialog();
-            modeloCarrito = formCarrito.modelo;
+            carrito = formCarrito.modelo;
 
         }
     }

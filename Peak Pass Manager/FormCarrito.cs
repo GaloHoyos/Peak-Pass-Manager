@@ -14,17 +14,17 @@ namespace Peak_Pass_Manager
 {
     public partial class FormCarrito : Form
     {
-        public ModeloCarrito modelo { get; set; }
-        public FormCarrito(ModeloCarrito modeloCarrito)
+        public ControladoraCarrito modelo { get; set; }
+        public FormCarrito(ControladoraCarrito carrito)
         {
             InitializeComponent();
-            modelo = modeloCarrito;
-            IniciarN(modeloCarrito);
+            modelo = carrito;
+            IniciarN(carrito);
         }
-        public void IniciarN(ModeloCarrito modeloCarrito)
+        public void IniciarN(ControladoraCarrito carrito)
         {
-            dgvCarrito.DataSource = modeloCarrito.ObtenerLista();
-            lblTotal.Text = "Total: " + modeloCarrito.ObtenerTotal();
+            dgvCarrito.DataSource = carrito.ObtenerLista();
+            lblTotal.Text = "Total: " + carrito.ObtenerTotal();
         }
 
         private void btnComprar_Click(object sender, EventArgs e)
@@ -32,9 +32,9 @@ namespace Peak_Pass_Manager
             if(modelo != null)
             {
                 lblMensajeError.Hide();
-                ModeloPedido modeloPedido = new ModeloPedido();
+                ControladoraPedido modeloPedido = new ControladoraPedido();
                 modeloPedido.AgregarPedido(CacheLogin.IdUsuario, CacheCliente.IdCliente, Convert.ToInt32(modelo.ObtenerTotal()));
-                ModeloPedidoDetalle modeloPedidoDetalle = new ModeloPedidoDetalle();
+                ControladoraPedidoDetalle modeloPedidoDetalle = new ControladoraPedidoDetalle();
                 foreach (DataRow row in modelo.ObtenerLista().Rows)
                 {
                     modeloPedidoDetalle.AgregarDetallePedido(modeloPedido.GetIdVenta(), Convert.ToInt32(row[1]), Convert.ToInt32(row[4]));
