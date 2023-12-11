@@ -1,0 +1,199 @@
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.exe
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.deps.json
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.runtimeconfig.json
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.dll
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.pdb
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.AssemblyReference.cache
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormMenuPrincipal.resources
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.Properties.Resources.resources
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.GenerateResource.cache
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.AssemblyInfoInputs.cache
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.AssemblyInfo.cs
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.CoreCompileInputs.cache
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.CopyComplete
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.dll
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\refint\Peak Pass Manager.dll
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.pdb
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.genruntimeconfig.cache
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\ref\Peak Pass Manager.dll
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormCatalogo.resources
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormInicio.resources
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormClientes.resources
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormLogin.resources
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormOpciones.resources
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Acceso a Datos.dll
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Dominio.dll
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Dominio.pdb
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Acceso a Datos.pdb
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Comun.dll
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Comun.pdb
+C:\Users\galoh\source\repos\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormCarrito.resources
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.exe
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.deps.json
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.runtimeconfig.json
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.dll
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.pdb
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Acceso a Datos.dll
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Comun.dll
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Dominio.dll
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Comun.pdb
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Dominio.pdb
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Acceso a Datos.pdb
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.AssemblyReference.cache
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormCarrito.resources
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormCatalogo.resources
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormClientes.resources
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormInicio.resources
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormLogin.resources
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormMenuPrincipal.resources
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormOpciones.resources
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.Properties.Resources.resources
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.GenerateResource.cache
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.AssemblyInfoInputs.cache
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.AssemblyInfo.cs
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.CoreCompileInputs.cache
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.CopyComplete
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.dll
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\refint\Peak Pass Manager.dll
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.pdb
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.genruntimeconfig.cache
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\ref\Peak Pass Manager.dll
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormPedidos.resources
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormPedidosDetalles.resources
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.exe
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.deps.json
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.runtimeconfig.json
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.pdb
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Comun.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Comun.pdb
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.AssemblyReference.cache
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormCarrito.resources
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormCatalogo.resources
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormClientes.resources
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormInicio.resources
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormLogin.resources
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormMenuPrincipal.resources
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormOpciones.resources
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormPedidos.resources
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormPedidosDetalles.resources
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.Properties.Resources.resources
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.GenerateResource.cache
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.AssemblyInfoInputs.cache
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.AssemblyInfo.cs
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.CoreCompileInputs.cache
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.CopyComplete
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\refint\Peak Pass Manager.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.pdb
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.genruntimeconfig.cache
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\ref\Peak Pass Manager.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Acceso a Datos(Modelo).dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Dominio(Controladora).dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Dominio(Controladora).pdb
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Acceso a Datos(Modelo).pdb
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.exe
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.deps.json
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.runtimeconfig.json
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.pdb
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Acceso a Datos(Modelo).dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Comun.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Dominio(Controladora).dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Comun.pdb
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Dominio(Controladora).pdb
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Acceso a Datos(Modelo).pdb
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.AssemblyReference.cache
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormCarrito.resources
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormCatalogo.resources
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormClientes.resources
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormInicio.resources
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormLogin.resources
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormMenuPrincipal.resources
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormOpciones.resources
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormPedidos.resources
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormPedidosDetalles.resources
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.Properties.Resources.resources
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.GenerateResource.cache
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.AssemblyInfoInputs.cache
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.AssemblyInfo.cs
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.CoreCompileInputs.cache
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.CopyComplete
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\refint\Peak Pass Manager.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.pdb
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.genruntimeconfig.cache
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\ref\Peak Pass Manager.dll
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.AssemblyReference.cache
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormCarrito.resources
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormCatalogo.resources
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormClientes.resources
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormInicio.resources
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormLogin.resources
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormMenuPrincipal.resources
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormOpciones.resources
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormPedidos.resources
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormPedidosDetalles.resources
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.Properties.Resources.resources
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.GenerateResource.cache
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.AssemblyInfoInputs.cache
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.AssemblyInfo.cs
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.CoreCompileInputs.cache
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.sourcelink.json
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.dll
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\refint\Peak Pass Manager.dll
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.pdb
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.exe
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.deps.json
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.runtimeconfig.json
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.dll
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.pdb
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Acceso a Datos(Modelo).dll
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Comun.dll
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Dominio(Controladora).dll
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Comun.pdb
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Dominio(Controladora).pdb
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Acceso a Datos(Modelo).pdb
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.CopyComplete
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.genruntimeconfig.cache
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\ref\Peak Pass Manager.dll

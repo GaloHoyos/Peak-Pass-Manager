@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Acceso a Datos\Acceso a Datos(Modelo).csproj" />
+    <ProjectReference Include="..\Comun\Comun.csproj" />
+  </ItemGroup>
+
+</Project>

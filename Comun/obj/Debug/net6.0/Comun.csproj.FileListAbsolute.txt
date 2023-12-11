@@ -1,0 +1,60 @@
+C:\Users\galoh\source\repos\Peak Pass Manager\Comun\bin\Debug\net6.0\Comun.deps.json
+C:\Users\galoh\source\repos\Peak Pass Manager\Comun\bin\Debug\net6.0\Comun.dll
+C:\Users\galoh\source\repos\Peak Pass Manager\Comun\bin\Debug\net6.0\Comun.pdb
+C:\Users\galoh\source\repos\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.csproj.AssemblyReference.cache
+C:\Users\galoh\source\repos\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\galoh\source\repos\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.AssemblyInfoInputs.cache
+C:\Users\galoh\source\repos\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.AssemblyInfo.cs
+C:\Users\galoh\source\repos\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.csproj.CoreCompileInputs.cache
+C:\Users\galoh\source\repos\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.dll
+C:\Users\galoh\source\repos\Peak Pass Manager\Comun\obj\Debug\net6.0\refint\Comun.dll
+C:\Users\galoh\source\repos\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.pdb
+C:\Users\galoh\source\repos\Peak Pass Manager\Comun\obj\Debug\net6.0\ref\Comun.dll
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Comun\bin\Debug\net6.0\Comun.deps.json
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Comun\bin\Debug\net6.0\Comun.dll
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Comun\bin\Debug\net6.0\Comun.pdb
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.csproj.AssemblyReference.cache
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.AssemblyInfoInputs.cache
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.AssemblyInfo.cs
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.csproj.CoreCompileInputs.cache
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.dll
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Comun\obj\Debug\net6.0\refint\Comun.dll
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.pdb
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Comun\obj\Debug\net6.0\ref\Comun.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Comun\bin\Debug\net6.0\Comun.deps.json
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Comun\bin\Debug\net6.0\Comun.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Comun\bin\Debug\net6.0\Comun.pdb
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.csproj.AssemblyReference.cache
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.AssemblyInfoInputs.cache
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.AssemblyInfo.cs
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.csproj.CoreCompileInputs.cache
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Comun\obj\Debug\net6.0\refint\Comun.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.pdb
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Comun\obj\Debug\net6.0\ref\Comun.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\bin\Debug\net6.0\Comun.deps.json
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\bin\Debug\net6.0\Comun.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\bin\Debug\net6.0\Comun.pdb
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.csproj.AssemblyReference.cache
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.AssemblyInfoInputs.cache
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.AssemblyInfo.cs
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.csproj.CoreCompileInputs.cache
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\obj\Debug\net6.0\refint\Comun.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.pdb
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\obj\Debug\net6.0\ref\Comun.dll
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\bin\Debug\net6.0\Comun.deps.json
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\bin\Debug\net6.0\Comun.dll
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\bin\Debug\net6.0\Comun.pdb
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.AssemblyInfoInputs.cache
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.AssemblyInfo.cs
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.csproj.CoreCompileInputs.cache
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.sourcelink.json
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.dll
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\obj\Debug\net6.0\refint\Comun.dll
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\obj\Debug\net6.0\Comun.pdb
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Comun\obj\Debug\net6.0\ref\Comun.dll

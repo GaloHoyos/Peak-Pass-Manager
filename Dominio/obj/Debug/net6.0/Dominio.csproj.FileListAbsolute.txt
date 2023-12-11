@@ -1,0 +1,51 @@
+C:\Users\galoh\source\repos\Peak Pass Manager\Dominio\bin\Debug\net6.0\Dominio.deps.json
+C:\Users\galoh\source\repos\Peak Pass Manager\Dominio\bin\Debug\net6.0\Dominio.dll
+C:\Users\galoh\source\repos\Peak Pass Manager\Dominio\bin\Debug\net6.0\Dominio.pdb
+C:\Users\galoh\source\repos\Peak Pass Manager\Dominio\bin\Debug\net6.0\Acceso a Datos.dll
+C:\Users\galoh\source\repos\Peak Pass Manager\Dominio\bin\Debug\net6.0\Acceso a Datos.pdb
+C:\Users\galoh\source\repos\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.csproj.AssemblyReference.cache
+C:\Users\galoh\source\repos\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\galoh\source\repos\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.AssemblyInfoInputs.cache
+C:\Users\galoh\source\repos\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.AssemblyInfo.cs
+C:\Users\galoh\source\repos\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\galoh\source\repos\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.csproj.CopyComplete
+C:\Users\galoh\source\repos\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.dll
+C:\Users\galoh\source\repos\Peak Pass Manager\Dominio\obj\Debug\net6.0\refint\Dominio.dll
+C:\Users\galoh\source\repos\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.pdb
+C:\Users\galoh\source\repos\Peak Pass Manager\Dominio\obj\Debug\net6.0\ref\Dominio.dll
+C:\Users\galoh\source\repos\Peak Pass Manager\Dominio\bin\Debug\net6.0\Comun.dll
+C:\Users\galoh\source\repos\Peak Pass Manager\Dominio\bin\Debug\net6.0\Comun.pdb
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Dominio\bin\Debug\net6.0\Dominio.deps.json
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Dominio\bin\Debug\net6.0\Dominio.dll
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Dominio\bin\Debug\net6.0\Dominio.pdb
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Dominio\bin\Debug\net6.0\Acceso a Datos.dll
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Dominio\bin\Debug\net6.0\Comun.dll
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Dominio\bin\Debug\net6.0\Acceso a Datos.pdb
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Dominio\bin\Debug\net6.0\Comun.pdb
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.csproj.AssemblyReference.cache
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.AssemblyInfoInputs.cache
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.AssemblyInfo.cs
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.csproj.CopyComplete
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.dll
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Dominio\obj\Debug\net6.0\refint\Dominio.dll
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.pdb
+C:\Users\galoh\Documents\UAI\3er año\Ingenieria de Software\Peak Pass Manager\Proyecto Actualizado\Peak Pass Manager\Dominio\obj\Debug\net6.0\ref\Dominio.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Dominio\bin\Debug\net6.0\Dominio.deps.json
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Dominio\bin\Debug\net6.0\Dominio.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Dominio\bin\Debug\net6.0\Dominio.pdb
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Dominio\bin\Debug\net6.0\Acceso a Datos.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Dominio\bin\Debug\net6.0\Comun.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Dominio\bin\Debug\net6.0\Acceso a Datos.pdb
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Dominio\bin\Debug\net6.0\Comun.pdb
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.csproj.AssemblyReference.cache
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.AssemblyInfoInputs.cache
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.AssemblyInfo.cs
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.csproj.CopyComplete
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Dominio\obj\Debug\net6.0\refint\Dominio.dll
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio.pdb
+C:\Users\galoh\Documents\UAI\3er año\Trabajo de Diploma\Peak Pass Manager\Dominio\obj\Debug\net6.0\ref\Dominio.dll
