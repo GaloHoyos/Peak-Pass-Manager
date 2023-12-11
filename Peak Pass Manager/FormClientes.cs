@@ -26,40 +26,36 @@ namespace Peak_Pass_Manager
         }
         public void iniciar()
         {
-            ControladoraCliente modeloCliente = new ControladoraCliente();
-            dgvClientes.DataSource = modeloCliente.ActualizarLista();
+            ControladoraUsuario cliente = new ControladoraUsuario();
+            dgvClientes.DataSource = cliente.ActualizarLista();
             txtNombre.Text = string.Empty;
             txtApellido.Text = string.Empty;
             txtCorreo.Text = string.Empty;
             txtDNI.Text = string.Empty;
             txtDireccion.Text = string.Empty;
             txtTelefono.Text = string.Empty;
-            lblCliente.Text = CacheCliente.Nombre + " " + CacheCliente.Apellido;
+            lblCliente.Text = cliente.ObtenerNombre() + " " + cliente.ObtenerApellido();
         }
 
         public void AgregarCliente()
         {
-            ControladoraCliente modeloCliente = new ControladoraCliente();
-            modeloCliente.AgregarCliente(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text);
+            ControladoraUsuario cliente = new ControladoraUsuario();
+            cliente.AgregarUsuario(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 0);
             iniciar();
         }
         public void ModificarCliente()
         {
-            ControladoraCliente modeloCliente = new ControladoraCliente();
-            modeloCliente.ModificarClienteSeleccionado(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text);
+            ControladoraUsuario cliente = new ControladoraUsuario();
+            cliente.ModifcarUsuario(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "","",0);
             iniciar();
             LimpioCliente();
         }
         public void EliminarCliente()
         {
-            ControladoraCliente modeloCliente = new ControladoraCliente();
-            modeloCliente.EliminarCliente(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value));
+            ControladoraUsuario cliente = new ControladoraUsuario();
+            cliente.EliminarUsuario(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value));
             iniciar();
             LimpioCliente();
-        }
-        private void FormClientes_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -145,24 +141,24 @@ namespace Peak_Pass_Manager
         public void CambioCliente()
         {
             lblMensajeError.Hide();
-            CacheCliente.IdCliente = Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value);
-            CacheCliente.Nombre = dgvClientes.CurrentRow.Cells[1].Value.ToString();
-            CacheCliente.Apellido = dgvClientes.CurrentRow.Cells[2].Value.ToString();
-            CacheCliente.DNI = dgvClientes.CurrentRow.Cells[3].Value.ToString();
-            CacheCliente.Correo = dgvClientes.CurrentRow.Cells[4].Value.ToString();
-            CacheCliente.Direccion = dgvClientes.CurrentRow.Cells[5].Value.ToString();
-            CacheCliente.Telefono = dgvClientes.CurrentRow.Cells[6].Value.ToString();
-            lblCliente.Text = CacheCliente.Nombre + " " + CacheCliente.Apellido;
+            CacheUsuario.IdCliente = Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value);
+            CacheUsuario.Nombre = dgvClientes.CurrentRow.Cells[1].Value.ToString();
+            CacheUsuario.Apellido = dgvClientes.CurrentRow.Cells[2].Value.ToString();
+            CacheUsuario.DNI = dgvClientes.CurrentRow.Cells[3].Value.ToString();
+            CacheUsuario.Correo = dgvClientes.CurrentRow.Cells[4].Value.ToString();
+            CacheUsuario.Direccion = dgvClientes.CurrentRow.Cells[5].Value.ToString();
+            CacheUsuario.Telefono = dgvClientes.CurrentRow.Cells[6].Value.ToString();
+            lblCliente.Text = CacheUsuario.Nombre + " " + CacheUsuario.Apellido;
         }
         public void LimpioCliente()
         {
-            CacheCliente.IdCliente = -1;
-            CacheCliente.Nombre = string.Empty;
-            CacheCliente.Apellido = string.Empty;
-            CacheCliente.DNI = string.Empty;
-            CacheCliente.Correo = string.Empty;
-            CacheCliente.Direccion = string.Empty;
-            CacheCliente.Telefono = string.Empty;
+            CacheUsuario.IdCliente = -1;
+            CacheUsuario.Nombre = string.Empty;
+            CacheUsuario.Apellido = string.Empty;
+            CacheUsuario.DNI = string.Empty;
+            CacheUsuario.Correo = string.Empty;
+            CacheUsuario.Direccion = string.Empty;
+            CacheUsuario.Telefono = string.Empty;
             lblCliente.Text = string.Empty;
         }
     }

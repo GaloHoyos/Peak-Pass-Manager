@@ -17,7 +17,7 @@ namespace Peak_Pass_Manager
         public FormMenuPrincipal()
         {
             InitializeComponent();
-            CacheCliente.IdCliente = -1;
+            CacheUsuario.IdCliente = -1;
             btnBordeIzquierdo = new Panel();
             btnBordeIzquierdo.Size = new Size(7, 60);
             panelMenu.Controls.Add(btnBordeIzquierdo);
@@ -30,9 +30,40 @@ namespace Peak_Pass_Manager
         }
         private void LoadUserData()
         {
-            ControladoraUsuario controladoraUsuario = new ControladoraUsuario();
-            lblNombre.Text = controladoraUsuario.ObtenerNombre();
-            lblApellido.Text = controladoraUsuario.ObtenerApellido();
+            ControladoraUsuario usuario = new ControladoraUsuario();
+            lblNombre.Text = usuario.ObtenerNombre();
+            lblApellido.Text = usuario.ObtenerApellido();
+            lblRol.Text = usuario.ObtenerRol();
+            if (usuario.ObtenerIDRol() == 0)
+            {
+                btnInicio.Visible = true;
+                btnCatalogo.Visible = false;
+                btnClientes.Visible = false;
+                btnPedidos.Visible = false;
+                btnUsuarios.Visible = false;
+                btnOpciones.Visible = false;
+                btnReinicio.Visible = false;
+
+            } else if (usuario.ObtenerIDRol() == 1)
+            {
+                btnInicio.Visible = true;
+                btnCatalogo.Visible = true;
+                btnClientes.Visible = true;
+                btnPedidos.Visible = true;
+                btnUsuarios.Visible = true;
+                btnOpciones.Visible = true;
+                btnReinicio.Visible = true;
+            }
+            else if (usuario.ObtenerIDRol() == 2)
+            {
+                btnInicio.Visible = true;
+                btnCatalogo.Visible = true;
+                btnClientes.Visible = true;
+                btnPedidos.Visible = true;
+                btnUsuarios.Visible = false;
+                btnOpciones.Visible = true;
+                btnReinicio.Visible = true;
+            }
         }
 
         //estructura colores RGB
@@ -173,6 +204,10 @@ namespace Peak_Pass_Manager
             iconCerrar.ForeColor = Color.DimGray;
         }
 
-
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            ActivarBoton(sender, RGBColors.color6);
+            AbrirFormularioHijo(new FormUsuarios());
+        }
     }
 }

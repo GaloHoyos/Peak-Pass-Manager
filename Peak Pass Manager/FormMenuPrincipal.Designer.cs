@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             panelMenu = new Panel();
+            btnUsuarios = new FontAwesome.Sharp.IconButton();
+            btnPedidos = new FontAwesome.Sharp.IconButton();
             panel1 = new Panel();
+            lblRol = new Label();
             lblApellido = new Label();
             lblNombre = new Label();
             btnOpciones = new FontAwesome.Sharp.IconButton();
@@ -45,7 +48,6 @@
             iconFormulario = new FontAwesome.Sharp.IconPictureBox();
             panelSombra = new Panel();
             panelEscritorio = new Panel();
-            btnPedidos = new FontAwesome.Sharp.IconButton();
             panelMenu.SuspendLayout();
             panel1.SuspendLayout();
             panelLogo.SuspendLayout();
@@ -59,6 +61,7 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(31, 30, 68);
+            panelMenu.Controls.Add(btnUsuarios);
             panelMenu.Controls.Add(btnPedidos);
             panelMenu.Controls.Add(panel1);
             panelMenu.Controls.Add(btnOpciones);
@@ -72,8 +75,53 @@
             panelMenu.Size = new Size(220, 842);
             panelMenu.TabIndex = 0;
             // 
+            // btnUsuarios
+            // 
+            btnUsuarios.Dock = DockStyle.Top;
+            btnUsuarios.FlatAppearance.BorderSize = 0;
+            btnUsuarios.FlatStyle = FlatStyle.Flat;
+            btnUsuarios.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnUsuarios.ForeColor = SystemColors.ButtonHighlight;
+            btnUsuarios.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
+            btnUsuarios.IconColor = Color.WhiteSmoke;
+            btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnUsuarios.ImageAlign = ContentAlignment.MiddleLeft;
+            btnUsuarios.Location = new Point(0, 440);
+            btnUsuarios.Name = "btnUsuarios";
+            btnUsuarios.Padding = new Padding(10, 0, 20, 0);
+            btnUsuarios.Size = new Size(220, 60);
+            btnUsuarios.TabIndex = 7;
+            btnUsuarios.Text = "Usuarios";
+            btnUsuarios.TextAlign = ContentAlignment.MiddleLeft;
+            btnUsuarios.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnUsuarios.UseVisualStyleBackColor = true;
+            btnUsuarios.Click += btnUsuarios_Click;
+            // 
+            // btnPedidos
+            // 
+            btnPedidos.Dock = DockStyle.Top;
+            btnPedidos.FlatAppearance.BorderSize = 0;
+            btnPedidos.FlatStyle = FlatStyle.Flat;
+            btnPedidos.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnPedidos.ForeColor = SystemColors.ButtonHighlight;
+            btnPedidos.IconChar = FontAwesome.Sharp.IconChar.Gears;
+            btnPedidos.IconColor = Color.WhiteSmoke;
+            btnPedidos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnPedidos.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPedidos.Location = new Point(0, 380);
+            btnPedidos.Name = "btnPedidos";
+            btnPedidos.Padding = new Padding(10, 0, 20, 0);
+            btnPedidos.Size = new Size(220, 60);
+            btnPedidos.TabIndex = 6;
+            btnPedidos.Text = "Pedidos";
+            btnPedidos.TextAlign = ContentAlignment.MiddleLeft;
+            btnPedidos.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnPedidos.UseVisualStyleBackColor = true;
+            btnPedidos.Click += btnPedidos_Click;
+            // 
             // panel1
             // 
+            panel1.Controls.Add(lblRol);
             panel1.Controls.Add(lblApellido);
             panel1.Controls.Add(lblNombre);
             panel1.Dock = DockStyle.Bottom;
@@ -81,6 +129,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(220, 150);
             panel1.TabIndex = 5;
+            // 
+            // lblRol
+            // 
+            lblRol.AutoSize = true;
+            lblRol.ForeColor = Color.Gainsboro;
+            lblRol.Location = new Point(12, 116);
+            lblRol.Name = "lblRol";
+            lblRol.Size = new Size(37, 25);
+            lblRol.TabIndex = 2;
+            lblRol.Text = "Rol";
             // 
             // lblApellido
             // 
@@ -297,28 +355,6 @@
             panelEscritorio.Size = new Size(1218, 758);
             panelEscritorio.TabIndex = 3;
             // 
-            // btnPedidos
-            // 
-            btnPedidos.Dock = DockStyle.Top;
-            btnPedidos.FlatAppearance.BorderSize = 0;
-            btnPedidos.FlatStyle = FlatStyle.Flat;
-            btnPedidos.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnPedidos.ForeColor = SystemColors.ButtonHighlight;
-            btnPedidos.IconChar = FontAwesome.Sharp.IconChar.Gears;
-            btnPedidos.IconColor = Color.WhiteSmoke;
-            btnPedidos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnPedidos.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPedidos.Location = new Point(0, 380);
-            btnPedidos.Name = "btnPedidos";
-            btnPedidos.Padding = new Padding(10, 0, 20, 0);
-            btnPedidos.Size = new Size(220, 60);
-            btnPedidos.TabIndex = 6;
-            btnPedidos.Text = "Pedidos";
-            btnPedidos.TextAlign = ContentAlignment.MiddleLeft;
-            btnPedidos.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnPedidos.UseVisualStyleBackColor = true;
-            btnPedidos.Click += btnPedidos_Click;
-            // 
             // FormMenuPrincipal
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -363,5 +399,7 @@
         private Label lblApellido;
         private Label lblNombre;
         private FontAwesome.Sharp.IconButton btnPedidos;
+        private FontAwesome.Sharp.IconButton btnUsuarios;
+        private Label lblRol;
     }
 }

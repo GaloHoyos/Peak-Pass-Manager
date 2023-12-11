@@ -20,8 +20,8 @@ namespace Peak_Pass_Manager
         }
         public void ActualizarLista()
         {
-            ControladoraPedido modeloPedido = new ControladoraPedido();
-            dgvCompra.DataSource = modeloPedido.ActualizarLista();
+            ControladoraPedido pedido = new ControladoraPedido();
+            dgvCompra.DataSource = pedido.ActualizarLista();
         }
 
         private void btnDetalles_Click(object sender, EventArgs e)

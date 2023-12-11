@@ -35,5 +35,16 @@ namespace Comun
             result = System.Text.Encoding.Unicode.GetString(decryted, 0, decryted.ToArray().Length);
             return result;
         }
+        public bool VerificacionCrearUsuario(string nombre, string apellido, string dni, string correo, string direccion, string telefono, string usuario, string contraseña)
+        {
+            if (nombre == string.Empty || apellido == string.Empty || dni == string.Empty || correo == string.Empty || direccion == string.Empty || telefono == string.Empty || usuario == string.Empty || contraseña == string.Empty)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }

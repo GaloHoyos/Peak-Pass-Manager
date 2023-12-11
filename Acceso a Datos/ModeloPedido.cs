@@ -66,7 +66,7 @@ namespace Acceso_a_Datos
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    SqlCommand cmd = new SqlCommand("SELECT nombre FROM clientes WHERE id_cliente = '" + idCliente + "'", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
+                    SqlCommand cmd = new SqlCommand("SELECT nombre FROM usuarios WHERE id_usuario = '" + idCliente + "'", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
                     cmd.CommandType = CommandType.Text; //Indica como se interpretará el comando anterior para mayor claridad al momento de ejecutarlo en el SQL
 
                     nombreCliente = Convert.ToString(cmd.ExecuteScalar()); //Ejecuta el comando 
@@ -83,7 +83,7 @@ namespace Acceso_a_Datos
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    SqlCommand cmd = new SqlCommand("SELECT nombre FROM vendedores WHERE id_vendedor = '" + idVendedor + "'", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
+                    SqlCommand cmd = new SqlCommand("SELECT nombre FROM usuarios WHERE id_usuario = '" + idVendedor + "'", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
                     cmd.CommandType = CommandType.Text; //Indica como se interpretará el comando anterior para mayor claridad al momento de ejecutarlo en el SQL
 
                     nombreVendedor = Convert.ToString(cmd.ExecuteScalar()); //Ejecuta el comando 

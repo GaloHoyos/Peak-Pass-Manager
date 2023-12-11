@@ -197,3 +197,4 @@ C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PP
 C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.CopyComplete
 C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.genruntimeconfig.cache
 C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\ref\Peak Pass Manager.dll
+C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormUsuarios.resources

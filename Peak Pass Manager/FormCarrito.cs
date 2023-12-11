@@ -32,13 +32,13 @@ namespace Peak_Pass_Manager
             if(modelo != null)
             {
                 lblMensajeError.Hide();
-                ControladoraPedido modeloPedido = new ControladoraPedido();
-                ControladoraUsuario modeloUsuario = new ControladoraUsuario();
-                modeloPedido.AgregarPedido(modeloUsuario.ObtenerIdUsuario(), CacheCliente.IdCliente, Convert.ToInt32(modelo.ObtenerTotal()));
+                ControladoraPedido pedido = new ControladoraPedido();
+                ControladoraUsuario usuario = new ControladoraUsuario();
+                pedido.AgregarPedido(usuario.ObtenerIDUsuario(), CacheUsuario.IdCliente, Convert.ToInt32(modelo.ObtenerTotal()));
                 ControladoraPedidoDetalle modeloPedidoDetalle = new ControladoraPedidoDetalle();
                 foreach (DataRow row in modelo.ObtenerLista().Rows)
                 {
-                    modeloPedidoDetalle.AgregarDetallePedido(modeloPedido.GetIdVenta(), Convert.ToInt32(row[1]), Convert.ToInt32(row[3]), Convert.ToInt32(row[4]));
+                    modeloPedidoDetalle.AgregarDetallePedido(pedido.GetIdVenta(), Convert.ToInt32(row[1]), Convert.ToInt32(row[3]), Convert.ToInt32(row[4]));
                 }
 
             }

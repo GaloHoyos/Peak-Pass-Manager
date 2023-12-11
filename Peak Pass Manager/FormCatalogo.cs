@@ -19,7 +19,7 @@ namespace Peak_Pass_Manager
         int cantidad = 1;
         int idCliente = -1;
         Form formMenuPrincipal;
-        ControladoraCarrito carrito = new ControladoraCarrito(CacheCliente.IdCliente, 0);
+        ControladoraCarrito carrito = new ControladoraCarrito(CacheUsuario.IdCliente, 0);
         public FormCatalogo()
         {
 
@@ -31,8 +31,8 @@ namespace Peak_Pass_Manager
         //metodo para mostrar el nombre del cliente en el label
         public void nombreCliente()
         {
-            lblCliente.Text = CacheCliente.Nombre + " " + CacheCliente.Apellido;
-            idCliente = CacheCliente.IdCliente;
+            lblCliente.Text = CacheUsuario.Nombre + " " + CacheUsuario.Apellido;
+            idCliente = CacheUsuario.IdCliente;
         }
 
         //metodo para actualizar la lista de productos
@@ -47,7 +47,7 @@ namespace Peak_Pass_Manager
             FormClientes formClientes = new FormClientes();
             formClientes.ShowDialog();
             nombreCliente();
-            carrito.CambiarCliente(CacheCliente.IdCliente);
+            carrito.CambiarCliente(CacheUsuario.IdCliente);
 
         }
 

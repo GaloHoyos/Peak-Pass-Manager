@@ -54,7 +54,7 @@
             // dgvClientes
             // 
             dgvClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvClientes.Location = new Point(52, 28);
+            dgvClientes.Location = new Point(38, 26);
             dgvClientes.Name = "dgvClientes";
             dgvClientes.RowHeadersWidth = 62;
             dgvClientes.RowTemplate.Height = 33;
@@ -64,42 +64,42 @@
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(215, 453);
+            txtNombre.Location = new Point(201, 451);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(150, 31);
             txtNombre.TabIndex = 1;
             // 
             // txtApellido
             // 
-            txtApellido.Location = new Point(215, 490);
+            txtApellido.Location = new Point(201, 488);
             txtApellido.Name = "txtApellido";
             txtApellido.Size = new Size(150, 31);
             txtApellido.TabIndex = 2;
             // 
             // txtDNI
             // 
-            txtDNI.Location = new Point(215, 527);
+            txtDNI.Location = new Point(201, 525);
             txtDNI.Name = "txtDNI";
             txtDNI.Size = new Size(150, 31);
             txtDNI.TabIndex = 3;
             // 
             // txtCorreo
             // 
-            txtCorreo.Location = new Point(215, 564);
+            txtCorreo.Location = new Point(201, 562);
             txtCorreo.Name = "txtCorreo";
             txtCorreo.Size = new Size(150, 31);
             txtCorreo.TabIndex = 4;
             // 
             // txtDireccion
             // 
-            txtDireccion.Location = new Point(215, 601);
+            txtDireccion.Location = new Point(201, 599);
             txtDireccion.Name = "txtDireccion";
             txtDireccion.Size = new Size(150, 31);
             txtDireccion.TabIndex = 5;
             // 
             // txtTelefono
             // 
-            txtTelefono.Location = new Point(215, 638);
+            txtTelefono.Location = new Point(201, 636);
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(150, 31);
             txtTelefono.TabIndex = 6;
@@ -108,7 +108,7 @@
             // 
             lblNombre.AutoSize = true;
             lblNombre.ForeColor = Color.Gainsboro;
-            lblNombre.Location = new Point(127, 456);
+            lblNombre.Location = new Point(113, 454);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(82, 25);
             lblNombre.TabIndex = 7;
@@ -118,7 +118,7 @@
             // 
             lblApellido.AutoSize = true;
             lblApellido.ForeColor = Color.Gainsboro;
-            lblApellido.Location = new Point(127, 496);
+            lblApellido.Location = new Point(113, 494);
             lblApellido.Name = "lblApellido";
             lblApellido.Size = new Size(82, 25);
             lblApellido.TabIndex = 8;
@@ -128,7 +128,7 @@
             // 
             lblDNI.AutoSize = true;
             lblDNI.ForeColor = Color.Gainsboro;
-            lblDNI.Location = new Point(162, 530);
+            lblDNI.Location = new Point(148, 528);
             lblDNI.Name = "lblDNI";
             lblDNI.Size = new Size(47, 25);
             lblDNI.TabIndex = 9;
@@ -138,7 +138,7 @@
             // 
             lblCorreo.AutoSize = true;
             lblCorreo.ForeColor = Color.Gainsboro;
-            lblCorreo.Location = new Point(139, 564);
+            lblCorreo.Location = new Point(125, 562);
             lblCorreo.Name = "lblCorreo";
             lblCorreo.Size = new Size(70, 25);
             lblCorreo.TabIndex = 10;
@@ -148,7 +148,7 @@
             // 
             lblDireccion.AutoSize = true;
             lblDireccion.ForeColor = Color.Gainsboro;
-            lblDireccion.Location = new Point(124, 604);
+            lblDireccion.Location = new Point(110, 602);
             lblDireccion.Name = "lblDireccion";
             lblDireccion.Size = new Size(89, 25);
             lblDireccion.TabIndex = 11;
@@ -158,7 +158,7 @@
             // 
             lblTelefono.AutoSize = true;
             lblTelefono.ForeColor = Color.Gainsboro;
-            lblTelefono.Location = new Point(130, 638);
+            lblTelefono.Location = new Point(116, 636);
             lblTelefono.Name = "lblTelefono";
             lblTelefono.Size = new Size(83, 25);
             lblTelefono.TabIndex = 12;
@@ -169,7 +169,7 @@
             btnAgregar.IconChar = FontAwesome.Sharp.IconChar.None;
             btnAgregar.IconColor = Color.Black;
             btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnAgregar.Location = new Point(551, 482);
+            btnAgregar.Location = new Point(537, 480);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(112, 34);
             btnAgregar.TabIndex = 13;
@@ -182,7 +182,7 @@
             btnModificar.IconChar = FontAwesome.Sharp.IconChar.None;
             btnModificar.IconColor = Color.Black;
             btnModificar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnModificar.Location = new Point(551, 527);
+            btnModificar.Location = new Point(537, 525);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(112, 34);
             btnModificar.TabIndex = 14;
@@ -195,7 +195,7 @@
             btnEliminar.IconChar = FontAwesome.Sharp.IconChar.None;
             btnEliminar.IconColor = Color.Black;
             btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnEliminar.Location = new Point(551, 578);
+            btnEliminar.Location = new Point(537, 576);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(112, 34);
             btnEliminar.TabIndex = 15;
@@ -207,7 +207,7 @@
             // 
             lblMensajeError.AutoSize = true;
             lblMensajeError.ForeColor = Color.Red;
-            lblMensajeError.Location = new Point(543, 641);
+            lblMensajeError.Location = new Point(529, 639);
             lblMensajeError.Name = "lblMensajeError";
             lblMensajeError.Size = new Size(120, 25);
             lblMensajeError.TabIndex = 16;
@@ -219,7 +219,7 @@
             btnCambioCliente.IconChar = FontAwesome.Sharp.IconChar.None;
             btnCambioCliente.IconColor = Color.Black;
             btnCambioCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnCambioCliente.Location = new Point(956, 564);
+            btnCambioCliente.Location = new Point(942, 562);
             btnCambioCliente.Name = "btnCambioCliente";
             btnCambioCliente.Size = new Size(197, 68);
             btnCambioCliente.TabIndex = 17;
@@ -231,7 +231,7 @@
             // 
             lblCliente.AutoSize = true;
             lblCliente.ForeColor = Color.Gainsboro;
-            lblCliente.Location = new Point(1066, 644);
+            lblCliente.Location = new Point(1052, 642);
             lblCliente.Name = "lblCliente";
             lblCliente.Size = new Size(65, 25);
             lblCliente.TabIndex = 19;
@@ -241,7 +241,7 @@
             // 
             lblClienteActual.AutoSize = true;
             lblClienteActual.ForeColor = Color.Gainsboro;
-            lblClienteActual.Location = new Point(937, 644);
+            lblClienteActual.Location = new Point(923, 642);
             lblClienteActual.Name = "lblClienteActual";
             lblClienteActual.Size = new Size(123, 25);
             lblClienteActual.TabIndex = 18;
@@ -275,7 +275,6 @@
             Controls.Add(dgvClientes);
             Name = "FormClientes";
             Text = "FormClientes";
-            Load += FormClientes_Load;
             ((System.ComponentModel.ISupportInitialize)dgvClientes).EndInit();
             ResumeLayout(false);
             PerformLayout();
