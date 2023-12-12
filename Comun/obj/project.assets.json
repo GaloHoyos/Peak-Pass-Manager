@@ -8,19 +8,24 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\galoh\\.nuget\\packages\\": {}
+    "C:\\Users\\galot\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Segundo Cuatrimestre\\Trabajo de Diploma\\PPM\\Peak Pass Manager\\Comun\\Comun.csproj",
+      "projectUniqueName": "C:\\Users\\galot\\OneDrive\\Documentos\\UAI\\Trabajo de Campo\\PPM\\Peak Pass Manager\\Comun\\Comun.csproj",
       "projectName": "Comun",
-      "projectPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Segundo Cuatrimestre\\Trabajo de Diploma\\PPM\\Peak Pass Manager\\Comun\\Comun.csproj",
-      "packagesPath": "C:\\Users\\galoh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\galoh\\Documents\\UAI\\3er año\\Segundo Cuatrimestre\\Trabajo de Diploma\\PPM\\Peak Pass Manager\\Comun\\obj\\",
+      "projectPath": "C:\\Users\\galot\\OneDrive\\Documentos\\UAI\\Trabajo de Campo\\PPM\\Peak Pass Manager\\Comun\\Comun.csproj",
+      "packagesPath": "C:\\Users\\galot\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\galot\\OneDrive\\Documentos\\UAI\\Trabajo de Campo\\PPM\\Peak Pass Manager\\Comun\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\galoh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\galot\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -56,26 +61,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.25, 6.0.25]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.25, 6.0.25]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.25, 6.0.25]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

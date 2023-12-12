@@ -40,7 +40,7 @@ namespace Peak_Pass_Manager
                 {
                     modeloPedidoDetalle.AgregarDetallePedido(pedido.GetIdVenta(), Convert.ToInt32(row[1]), Convert.ToInt32(row[3]), Convert.ToInt32(row[4]));
                 }
-
+                MessageBox.Show("Compra realizada con exito");
             }
             else
             {

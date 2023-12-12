@@ -14,6 +14,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Peak_Pass_Manager
-build_property.ProjectDir = C:\Users\galoh\Documents\UAI\3er año\Segundo Cuatrimestre\Trabajo de Diploma\PPM\Peak Pass Manager\Peak Pass Manager\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = C:\Users\galot\OneDrive\Documentos\UAI\Trabajo de Campo\PPM\Peak Pass Manager\Peak Pass Manager\

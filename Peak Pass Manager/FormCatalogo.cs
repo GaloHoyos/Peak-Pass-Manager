@@ -86,10 +86,25 @@ namespace Peak_Pass_Manager
 
         private void btnVerCarrito_Click(object sender, EventArgs e)
         {
-            FormCarrito formCarrito = new FormCarrito(carrito);
-            formCarrito.ShowDialog();
-            carrito = formCarrito.modelo;
-
+            //verificacion para saber si hay cliente seleccionado
+            if (idCliente >= 0)
+            {
+                //verificacion para saber si hay productos en el carrito
+                if (carrito.ObtenerLista().Rows.Count > 0)
+                {
+                    FormCarrito formCarrito = new FormCarrito(carrito);
+                    formCarrito.ShowDialog();
+                    carrito = formCarrito.modelo;
+                }
+                else
+                {
+                    MessageBox.Show("No hay productos en el carrito");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un cliente");
+            }
         }
     }
 }

@@ -205,7 +205,7 @@ namespace Acceso_a_Datos
                     using (var command = new SqlCommand())
                     {
                         command.Connection = connection;
-                        SqlCommand cmd = new SqlCommand("UPDATE usuarios SET nombre = '" + nombre + "', apellido = '" + apellido + "', dni = '" + dni + "', email = '" + email + "', direccion = '" + direccion + "', telefono = '" + telefono + "' WHERE id_usuario = '" + idUsuario + "'", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
+                        SqlCommand cmd = new SqlCommand("UPDATE usuarios SET nombre = '" + nombre + "', apellido = '" + apellido + "', dni = '" + dni + "', correo = '" + email + "', direccion = '" + direccion + "', telefono = '" + telefono + "' WHERE id_usuario = '" + idUsuario + "'", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
                         cmd.CommandType = CommandType.Text; //Indica como se interpretará el comando anterior para mayor claridad al momento de ejecutarlo en el SQL
                         cmd.ExecuteNonQuery(); //Ejecuta el comando 
                         //modifica el rol 0 al usuario
@@ -224,7 +224,7 @@ namespace Acceso_a_Datos
                     using (var command = new SqlCommand())
                     {
                         command.Connection = connection;
-                        SqlCommand cmd = new SqlCommand("UPDATE usuarios SET nombre = '" + nombre + "', apellido = '" + apellido + "', dni = '" + dni + "', email = '" + email + "', direccion = '" + direccion + "', telefono = '" + telefono + "' WHERE id_usuario = '" + idUsuario + "'", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
+                        SqlCommand cmd = new SqlCommand("UPDATE usuarios SET nombre = '" + nombre + "', apellido = '" + apellido + "', dni = '" + dni + "', correo = '" + email + "', direccion = '" + direccion + "', telefono = '" + telefono + "' WHERE id_usuario = '" + idUsuario + "'", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
                         cmd.CommandType = CommandType.Text; //Indica como se interpretará el comando anterior para mayor claridad al momento de ejecutar
                         cmd.ExecuteNonQuery(); //Ejecuta el comando 
                         //modifica el rol correspondiente al usuario junto con el usuario y la contraseña
