@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "baL9Bn/7zKM+osm2fHWkzq9cv5amcoI48uW7VtO5KsrgM59NZaPV5PJT7LL4whHtNUwlNtvj42fY83EnhTCGMQ==",
+  "dgSpecHash": "YVA/aK2Wt2Iiaof/d0OeM4S+QiU0CmLJrf6p4q8CsR60JGmll8GVj6RsV5J3Vd28O5JcWrGb8Aq1FqUG0x8oJg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\galot\\OneDrive\\Documentos\\UAI\\Trabajo de Campo\\PPM\\Peak Pass Manager\\Comun\\Comun.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Comun\\Comun.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\galoh\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\galoh\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\galoh\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512"
+  ],
   "logs": []
 }

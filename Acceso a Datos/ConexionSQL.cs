@@ -8,7 +8,7 @@ namespace Acceso_a_Datos
 
         public ConexionSQL1()
         {
-			stringConexion = "Data Source=DESKTOP-AM7P5VD;Initial Catalog=PeakPassManager;Integrated Security=True;Pooling=False";
+			stringConexion = "Data Source=LALEGION;Initial Catalog=PeakPassManager;Integrated Security=True";
 		}
         protected SqlConnection GetConnection()
         {
@@ -16,3 +16,5 @@ namespace Acceso_a_Datos
 		}
     }
 }
+
+//ZwBhAGwAbwAxADIA

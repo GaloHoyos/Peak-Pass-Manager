@@ -22,96 +22,67 @@ namespace Acceso_a_Datos
         public static string Usuario { get; set; }
         public static string Password { get; set; }
         public static int IdRol { get; set; }
+        public static string Rol { get; set; }
 
-        public bool Login(string user, string pass)
+        public string Login(string user, string pass)
         {
             using (var connection = GetConnection())
             {
-                // Se abre la conexión
-                connection.Open();
-
-                // Se crea una consulta SQL para buscar el usuario y la contraseña en la tabla roles
-                string query = "SELECT * FROM roles WHERE usuario = @usuario AND contrasena = @contrasena";
-
-                // Se crea una instancia de SqlCommand con la consulta y la conexión
-                using (SqlCommand comando = new SqlCommand(query, connection))
+                try
                 {
-                    // Se asignan los parámetros con los valores ingresados por el usuario
-                    comando.Parameters.AddWithValue("@usuario", user);
-                    comando.Parameters.AddWithValue("@contrasena", pass);
-
-                    // Se ejecuta la consulta y se obtiene un SqlDataReader
-                    using (SqlDataReader lector = comando.ExecuteReader())
+                    connection.Open();
+                    using (var command = new SqlCommand())
                     {
-                        // Se verifica si hay algún resultado
-                        if (lector.HasRows)
+                        command.Connection = connection;
+                        command.CommandText = "SELECT * FROM usuarios WHERE usuario = @user AND contrasena = @pass";
+                        command.Parameters.AddWithValue("@user", user);
+                        command.Parameters.AddWithValue("@pass", pass);
+                        command.CommandType = CommandType.Text;
+                        SqlDataReader reader = command.ExecuteReader();
+                        if (reader.HasRows)
                         {
-                            // Se lee el primer resultado
-                            lector.Read();
-
-                            // Se obtiene el id_usuario del resultado
-                            int id_usuario = lector.GetInt32(0);
-
-                            // Se cierra el lector
-                            lector.Close();
-
-                            // Se crea una segunda consulta SQL para buscar los datos del usuario en la tabla usuarios
-                            string query2 = "SELECT * FROM usuarios WHERE id_usuario = @id_usuario";
-
-                            // Se crea una segunda instancia de SqlCommand con la segunda consulta y la conexión
-                            using (SqlCommand comando2 = new SqlCommand(query2, connection))
+                            while (reader.Read())
                             {
-                                // Se asigna el parámetro con el id_usuario obtenido
-                                comando2.Parameters.AddWithValue("@id_usuario", id_usuario);
-
-                                // Se ejecuta la segunda consulta y se obtiene un segundo SqlDataReader
-                                using (SqlDataReader lector2 = comando2.ExecuteReader())
+                                IdUsuario = reader.GetInt32(0);
+                                Nombre = reader.GetString(1);
+                                Apellido = reader.GetString(2);
+                                DNI = reader.GetString(3);
+                                Email = reader.GetString(4);
+                                Direccion = reader.GetString(5);
+                                Telefono = reader.GetString(6);
+                                Usuario = reader.GetString(7);
+                                Password = reader.GetString(8);
+                                IdRol = reader.GetInt32(9);
+                            }
+                            reader.Close(); // Cierra el primer DataReader antes de abrir el segundo
+                            using (var command2 = new SqlCommand())
+                            {
+                                command2.Connection = connection;
+                                command2.CommandText = "select roles.nombre from roles inner join usuarios on roles.id_rol = usuarios.id_rol where usuarios.id_usuario = @idUsuario";
+                                command2.Parameters.AddWithValue("@idUsuario", IdUsuario);
+                                command2.CommandType = CommandType.Text;
+                                SqlDataReader reader2 = command2.ExecuteReader();
+                                if (reader2.HasRows)
                                 {
-                                    // Se verifica si hay algún resultado
-                                    if (lector2.HasRows)
+                                    while (reader2.Read())
                                     {
-                                        // Se lee el primer resultado
-                                        lector2.Read();
-
-                                        // Se asignan los valores de las variables get set con los datos del resultado
-                                        IdUsuario = lector2.GetInt32(0);
-                                        Nombre = lector2.GetString(1);
-                                        Apellido = lector2.GetString(2);
-                                        DNI = lector2.GetString(3);
-                                        Email = lector2.GetString(4);
-                                        Direccion = lector2.GetString(5);
-                                        Telefono = lector2.GetString(6);
-                                        Usuario = user;
-                                        Password = pass;
-
-
-                                        // Se cierra el lector2
-                                        lector2.Close();
-                                        SqlCommand cmd = new SqlCommand("SELECT rol FROM roles WHERE id_usuario = '" + id_usuario + "'", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
-                                        cmd.CommandType = CommandType.Text; //Indica como se interpretará el comando anterior para mayor claridad al momento de ejecutarlo en el SQL
-                                        cmd.ExecuteNonQuery();
-                                        IdRol = Convert.ToInt32(cmd.ExecuteScalar());
-
-                                        // Se retorna true para indicar que el login fue exitoso
-                                        return true;
-                                    }
-                                    else
-                                    {
-                                        // Se retorna false para indicar que no se encontraron los datos del usuario
-                                        return false;
+                                        Rol = reader2.GetString(0);
                                     }
                                 }
+                                reader2.Close();
                             }
+                            return "true";
                         }
                         else
                         {
-                            // Se retorna false para indicar que el usuario o la contraseña son incorrectos
-                            return false;
+                            return "false";
                         }
                     }
                 }
-
-
+                catch (Exception ex)
+                {
+                    return ex.Message;
+                }
             }
         }
         //Crea una datatable y mete los datos de la tabla usuarios en ella

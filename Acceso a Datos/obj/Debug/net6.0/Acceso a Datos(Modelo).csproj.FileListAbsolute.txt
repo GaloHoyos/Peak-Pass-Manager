@@ -59,3 +59,19 @@ C:\Users\galot\OneDrive\Documentos\UAI\Trabajo de Campo\PPM\Peak Pass Manager\Ac
 C:\Users\galot\OneDrive\Documentos\UAI\Trabajo de Campo\PPM\Peak Pass Manager\Acceso a Datos\obj\Debug\net6.0\refint\Acceso a Datos(Modelo).dll
 C:\Users\galot\OneDrive\Documentos\UAI\Trabajo de Campo\PPM\Peak Pass Manager\Acceso a Datos\obj\Debug\net6.0\Acceso a Datos(Modelo).pdb
 C:\Users\galot\OneDrive\Documentos\UAI\Trabajo de Campo\PPM\Peak Pass Manager\Acceso a Datos\obj\Debug\net6.0\ref\Acceso a Datos(Modelo).dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Acceso a Datos\bin\Debug\net6.0\Acceso a Datos(Modelo).deps.json
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Acceso a Datos\bin\Debug\net6.0\Acceso a Datos(Modelo).dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Acceso a Datos\bin\Debug\net6.0\Acceso a Datos(Modelo).pdb
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Acceso a Datos\bin\Debug\net6.0\Comun.dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Acceso a Datos\bin\Debug\net6.0\Comun.pdb
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Acceso a Datos\obj\Debug\net6.0\Acceso a Datos(Modelo).csproj.AssemblyReference.cache
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Acceso a Datos\obj\Debug\net6.0\Acceso a Datos(Modelo).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Acceso a Datos\obj\Debug\net6.0\Acceso a Datos(Modelo).AssemblyInfoInputs.cache
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Acceso a Datos\obj\Debug\net6.0\Acceso a Datos(Modelo).AssemblyInfo.cs
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Acceso a Datos\obj\Debug\net6.0\Acceso a Datos(Modelo).csproj.CoreCompileInputs.cache
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Acceso a Datos\obj\Debug\net6.0\Acceso a Datos(Modelo).sourcelink.json
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Acceso a Datos\obj\Debug\net6.0\Acceso a Datos(Modelo).csproj.CopyComplete
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Acceso a Datos\obj\Debug\net6.0\Acceso a Datos(Modelo).dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Acceso a Datos\obj\Debug\net6.0\refint\Acceso a Datos(Modelo).dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Acceso a Datos\obj\Debug\net6.0\Acceso a Datos(Modelo).pdb
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Acceso a Datos\obj\Debug\net6.0\ref\Acceso a Datos(Modelo).dll

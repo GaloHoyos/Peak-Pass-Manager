@@ -8,7 +8,7 @@ namespace Dominio
     public class ControladoraUsuario
     {
         ModeloUsuario modeloUsuario = new ModeloUsuario();
-        public bool LoginUser(string user, string pass)
+        public string LoginUser(string user, string pass)
         {
             Verificaciones verificaciones = new Verificaciones();
             string passEncriptada = verificaciones.Encriptar(pass);
@@ -57,18 +57,7 @@ namespace Dominio
         }
         public string ObtenerRol()
         {
-            if (ModeloUsuario.IdRol == 1)
-            {
-                return "Administrador";
-            }
-            else if (ModeloUsuario.IdRol == 2)
-            {
-                return "Vendedor";
-            }
-            else
-            {
-                return "Sin Rol";
-            }
+            return ModeloUsuario.Rol;
         }
 
         //Crea una tabla y mete los datos de ModeloUsuario en ella

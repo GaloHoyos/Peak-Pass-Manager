@@ -34,35 +34,26 @@ namespace Peak_Pass_Manager
             lblNombre.Text = usuario.ObtenerNombre();
             lblApellido.Text = usuario.ObtenerApellido();
             lblRol.Text = usuario.ObtenerRol();
-            if (usuario.ObtenerIDRol() == 0)
+            ControladoraPermisos permisos = new ControladoraPermisos();
+            if (!permisos.Catalogo())
             {
-                btnInicio.Visible = true;
                 btnCatalogo.Visible = false;
-                btnClientes.Visible = false;
-                btnPedidos.Visible = false;
-                btnUsuarios.Visible = false;
-                btnOpciones.Visible = false;
-                btnReinicio.Visible = false;
-
-            } else if (usuario.ObtenerIDRol() == 1)
-            {
-                btnInicio.Visible = true;
-                btnCatalogo.Visible = true;
-                btnClientes.Visible = true;
-                btnPedidos.Visible = true;
-                btnUsuarios.Visible = true;
-                btnOpciones.Visible = true;
-                btnReinicio.Visible = true;
             }
-            else if (usuario.ObtenerIDRol() == 2)
+            if (!permisos.Clientes())
             {
-                btnInicio.Visible = true;
-                btnCatalogo.Visible = true;
-                btnClientes.Visible = true;
-                btnPedidos.Visible = true;
+                btnClientes.Visible = false;
+            }
+            if (!permisos.Opciones())
+            {
+                btnOpciones.Visible = false;
+            }
+            if (!permisos.Pedidos())
+            {
+                btnPedidos.Visible = false;
+            }
+            if (!permisos.Usuarios())
+            {
                 btnUsuarios.Visible = false;
-                btnOpciones.Visible = true;
-                btnReinicio.Visible = true;
             }
         }
 

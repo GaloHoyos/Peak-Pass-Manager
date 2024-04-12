@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Comun;
 using Dominio;
 
 namespace Peak_Pass_Manager
@@ -105,23 +106,29 @@ namespace Peak_Pass_Manager
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
+            
             if (txtUsuario.Text != "USUARIO")
             {
                 if(txtContra.Text != "CONTRASEÑA")
                 {
-                    ControladoraUsuario modeloUsuario = new ControladoraUsuario();
-                    var loginValido = modeloUsuario.LoginUser(txtUsuario.Text, txtContra.Text);
-                    if (loginValido == true)
+                    ControladoraUsuario controladoraUsuario = new ControladoraUsuario();
+                    var loginValido = controladoraUsuario.LoginUser(txtUsuario.Text, txtContra.Text);
+                    if (loginValido == "true")
                     {
                         FormMenuPrincipal formMenuPrincipal = new FormMenuPrincipal();
                         formMenuPrincipal.Show();
                         this.Hide();
                     }
-                    else
+                    else if (loginValido == "false")
                     {
                         msgError("Usuario o contraseña incorrectos.");
                         txtUsuario.Text = "USUARIO";
                         txtContra.Text = "CONTRASEÑA";
+                    }
+                    else
+                    {
+                        msgError("Ha ocurrido un error");
+                        MessageBox.Show(loginValido);
                     }
                 }
                 else

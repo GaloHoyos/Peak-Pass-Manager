@@ -25,7 +25,17 @@ namespace Peak_Pass_Manager
         public void iniciar()
         {
             ControladoraUsuario usuario = new ControladoraUsuario();
-            dgvUsuarios.DataSource = usuario.ActualizarListaRoles();
+            //Agregar columnas vacias al dgv
+            dgvUsuarios.Columns.Clear();
+            dgvUsuarios.Columns.Add("ID", "ID");
+            dgvUsuarios.Columns.Add("Nombre", "Nombre");
+            dgvUsuarios.Columns.Add("Apellido", "Apellido");
+            dgvUsuarios.Columns.Add("DNI", "DNI");
+            dgvUsuarios.Columns.Add("Correo", "Correo");
+            dgvUsuarios.Columns.Add("Direccion", "Direccion");
+            dgvUsuarios.Columns.Add("Telefono", "Telefono");
+            dgvUsuarios.Columns.Add("Rol", "Rol");
+            //dgvUsuarios.DataSource = usuario.ActualizarListaRoles();
             txtNombre.Text = string.Empty;
             txtApellido.Text = string.Empty;
             txtCorreo.Text = string.Empty;

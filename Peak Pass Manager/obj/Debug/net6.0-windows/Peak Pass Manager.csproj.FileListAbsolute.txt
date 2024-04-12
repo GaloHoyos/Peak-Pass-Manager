@@ -239,3 +239,45 @@ C:\Users\galot\OneDrive\Documentos\UAI\Trabajo de Campo\PPM\Peak Pass Manager\Pe
 C:\Users\galot\OneDrive\Documentos\UAI\Trabajo de Campo\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.pdb
 C:\Users\galot\OneDrive\Documentos\UAI\Trabajo de Campo\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.genruntimeconfig.cache
 C:\Users\galot\OneDrive\Documentos\UAI\Trabajo de Campo\PPM\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\ref\Peak Pass Manager.dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.exe
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.deps.json
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.runtimeconfig.json
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Peak Pass Manager.pdb
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Acceso a Datos(Modelo).dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Comun.dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Dominio(Controladora).dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Comun.pdb
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Dominio(Controladora).pdb
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\Acceso a Datos(Modelo).pdb
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.AssemblyReference.cache
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormCarrito.resources
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormCatalogo.resources
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormClientes.resources
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormInicio.resources
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormLogin.resources
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormMenuPrincipal.resources
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormOpciones.resources
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormPedidos.resources
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormPedidosDetalles.resources
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormUsuarios.resources
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.Properties.Resources.resources
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.GenerateResource.cache
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.AssemblyInfoInputs.cache
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.AssemblyInfo.cs
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.CoreCompileInputs.cache
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.sourcelink.json
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.CopyComplete
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\refint\Peak Pass Manager.dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.pdb
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.genruntimeconfig.cache
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\ref\Peak Pass Manager.dll
