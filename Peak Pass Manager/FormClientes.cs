@@ -40,13 +40,13 @@ namespace Peak_Pass_Manager
         public void AgregarCliente()
         {
             ControladoraUsuario cliente = new ControladoraUsuario();
-            cliente.AgregarUsuario(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 0);
+            cliente.AgregarUsuario(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 3);
             iniciar();
         }
         public void ModificarCliente()
         {
             ControladoraUsuario cliente = new ControladoraUsuario();
-            cliente.ModifcarUsuario(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "","",0);
+            cliente.ModifcarUsuario(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "","",3);
             iniciar();
             LimpioCliente();
         }

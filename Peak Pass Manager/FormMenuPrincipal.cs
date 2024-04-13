@@ -11,7 +11,6 @@ namespace Peak_Pass_Manager
         //campos
         private IconButton btnActual;
         private Panel btnBordeIzquierdo;
-        private Form formActual;
 
         //constructor
         public FormMenuPrincipal()
@@ -105,7 +104,7 @@ namespace Peak_Pass_Manager
             }
         }
 
-        //abrir formulario hijo
+
         public void AbrirFormularioHijo(Form formularioHijo)
         {
             if (this.panelEscritorio.Controls.Count > 0)

@@ -67,13 +67,7 @@ namespace Dominio
             dt = modeloUsuario.ActualizarLista();
             return dt;
         }
-        //Crea una tabla con los datos de ModeloUsuario con la tabla roles
-        public DataTable ActualizarListaRoles()
-        {
-            DataTable dt = new DataTable();
-            dt = modeloUsuario.ActualizarListaRoles();
-            return dt;
-        }
+
         //metodo para agregar un usuario
         public void AgregarUsuario(string nombre, string apellido, string dni, string email, string direccion, string telefono, string usuario, string password, int idRol)
         {
