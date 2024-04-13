@@ -11,18 +11,18 @@ using Comun.Cache;
 using Dominio;
 using System.Linq;
 using System.Runtime.InteropServices;
+using Peak_Pass_Manager;
 
 namespace Peak_Pass_Manager
 {
     public partial class FormCatalogo : Form
     {
+        public static Form formActual;
         int cantidad = 1;
         int idCliente = -1;
-        Form formMenuPrincipal;
         ControladoraCarrito carrito = new ControladoraCarrito(CacheUsuario.IdCliente, 0);
         public FormCatalogo()
         {
-
             InitializeComponent();
             nombreCliente();
             ActualizarLista();
@@ -47,8 +47,6 @@ namespace Peak_Pass_Manager
             FormClientes formClientes = new FormClientes();
             formClientes.ShowDialog();
             nombreCliente();
-            carrito.CambiarCliente(CacheUsuario.IdCliente);
-
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -105,6 +103,9 @@ namespace Peak_Pass_Manager
             {
                 MessageBox.Show("Debe seleccionar un cliente");
             }
+        }
+        public void Cambio()
+        { 
         }
     }
 }
