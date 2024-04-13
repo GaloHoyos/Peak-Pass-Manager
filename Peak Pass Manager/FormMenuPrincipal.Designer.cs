@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panelMenu = new Panel();
+            btnReportes = new FontAwesome.Sharp.IconButton();
             btnUsuarios = new FontAwesome.Sharp.IconButton();
             btnPedidos = new FontAwesome.Sharp.IconButton();
             panel1 = new Panel();
@@ -61,6 +62,7 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(31, 30, 68);
+            panelMenu.Controls.Add(btnReportes);
             panelMenu.Controls.Add(btnUsuarios);
             panelMenu.Controls.Add(btnPedidos);
             panelMenu.Controls.Add(panel1);
@@ -74,6 +76,27 @@
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(220, 842);
             panelMenu.TabIndex = 0;
+            // 
+            // btnReportes
+            // 
+            btnReportes.Dock = DockStyle.Top;
+            btnReportes.FlatAppearance.BorderSize = 0;
+            btnReportes.FlatStyle = FlatStyle.Flat;
+            btnReportes.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnReportes.ForeColor = SystemColors.ButtonHighlight;
+            btnReportes.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
+            btnReportes.IconColor = Color.WhiteSmoke;
+            btnReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnReportes.ImageAlign = ContentAlignment.MiddleLeft;
+            btnReportes.Location = new Point(0, 500);
+            btnReportes.Name = "btnReportes";
+            btnReportes.Padding = new Padding(10, 0, 20, 0);
+            btnReportes.Size = new Size(220, 60);
+            btnReportes.TabIndex = 8;
+            btnReportes.Text = "Reportes";
+            btnReportes.TextAlign = ContentAlignment.MiddleLeft;
+            btnReportes.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnReportes.UseVisualStyleBackColor = true;
             // 
             // btnUsuarios
             // 
@@ -401,5 +424,6 @@
         private FontAwesome.Sharp.IconButton btnPedidos;
         private FontAwesome.Sharp.IconButton btnUsuarios;
         private Label lblRol;
+        private FontAwesome.Sharp.IconButton btnReportes;
     }
 }

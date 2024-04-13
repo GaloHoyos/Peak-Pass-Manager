@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "YVA/aK2Wt2Iiaof/d0OeM4S+QiU0CmLJrf6p4q8CsR60JGmll8GVj6RsV5J3Vd28O5JcWrGb8Aq1FqUG0x8oJg==",
+  "dgSpecHash": "vdKtWoGY9tphgdkUefTLvGVBh7wtAtAuaIIv+zUxybDkGU+jIhaBrjS0qDAldTyFQNUgcVAfhzM3/QWCnED79A==",
   "success": true,
   "projectFilePath": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Comun\\Comun.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\galoh\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\galoh\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\galoh\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512"
+    "C:\\Users\\galoh\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\galoh\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\galoh\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512"
   ],
   "logs": []
 }

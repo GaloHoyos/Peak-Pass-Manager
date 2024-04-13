@@ -43,5 +43,52 @@ namespace Dominio
         {
             return ModeloPermisos.EditarProductos;
         }
+        public bool Reportes()
+        {
+            return ModeloPermisos.Reportes;
+        }
+        public bool Auditoria()
+        {
+            return ModeloPermisos.Auditoria;
+        }
+        public bool AgregarClientes()
+        {
+            return ModeloPermisos.AgregarClientes;
+        }
+        public bool ModificarClientes()
+        {
+            return ModeloPermisos.ModificarClientes;
+        }
+        public bool EliminarClientes()
+        {
+            return ModeloPermisos.EliminarClientes;
+        }
+        public bool AgregarUsuarios()
+        {
+            return ModeloPermisos.AgregarUsuarios;
+        }
+        public bool ModificarUsuarios()
+        {
+            return ModeloPermisos.ModificarUsuarios;
+        }
+        public bool EliminarUsuarios()
+        {
+            return ModeloPermisos.EliminarUsuarios;
+        }
+        //Agregar permisos
+        public void AgregarPermisos(int idRol, int idPermiso)
+        {
+            modeloPermisos.AgregarPermisos(idRol, idPermiso);
+        }
+        //Eliminar permisos
+        public void EliminarPermisos(int idRol, int idPermiso)
+        {
+            modeloPermisos.EliminarPermisos(idRol, idPermiso);
+        }
+        //Ver permisos de un rol
+        public bool VerPermisos(int idRol, int idPermiso)
+        {
+            return modeloPermisos.VerPermisos(idRol, idPermiso);
+        }
     }
 }

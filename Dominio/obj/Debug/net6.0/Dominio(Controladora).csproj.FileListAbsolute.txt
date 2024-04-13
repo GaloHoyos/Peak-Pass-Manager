@@ -80,8 +80,8 @@ C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Dominio\obj\Debug\net6.0
 C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio(Controladora).AssemblyInfo.cs
 C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio(Controladora).csproj.CoreCompileInputs.cache
 C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio(Controladora).sourcelink.json
-C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio(Controladora).csproj.CopyComplete
 C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio(Controladora).dll
 C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Dominio\obj\Debug\net6.0\refint\Dominio(Controladora).dll
 C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio(Controladora).pdb
 C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Dominio\obj\Debug\net6.0\ref\Dominio(Controladora).dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Dominio\obj\Debug\net6.0\Dominio(.E1DC74A9.Up2Date

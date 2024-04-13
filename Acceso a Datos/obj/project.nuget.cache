@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wmWAxLbQr+Spbh3J7ovAhZxW/xlcXgbqB3AadySNcRuei0IzjabOJsYb3wW3SCiQfnTIYu19bD0H0cBEpp5KjA==",
+  "dgSpecHash": "oQzRFlxayXUGd7AWJZeUuy13Qg92jo2mQqdgVBXnShXK+kjQwchYPmQEGwZVYSGs++W22TRiNH1FFjJrfm8uyg==",
   "success": true,
   "projectFilePath": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Acceso a Datos\\Acceso a Datos(Modelo).csproj",
   "expectedPackageFiles": [
@@ -13,9 +13,9 @@
     "C:\\Users\\galoh\\.nuget\\packages\\system.data.sqlclient\\4.8.6\\system.data.sqlclient.4.8.6.nupkg.sha512",
     "C:\\Users\\galoh\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\galoh\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
-    "C:\\Users\\galoh\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\galoh\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\galoh\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512"
+    "C:\\Users\\galoh\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\galoh\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\galoh\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512"
   ],
   "logs": []
 }

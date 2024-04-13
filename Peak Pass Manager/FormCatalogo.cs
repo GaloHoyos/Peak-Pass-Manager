@@ -44,8 +44,9 @@ namespace Peak_Pass_Manager
 
         private void btnCambioCliente_Click(object sender, EventArgs e)
         {
-            //abrir formClientes dentro del panel en el que se encuentra el formCatalogo actual
             FormClientes formClientes = new FormClientes();
+            formClientes.ShowDialog();
+            nombreCliente();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

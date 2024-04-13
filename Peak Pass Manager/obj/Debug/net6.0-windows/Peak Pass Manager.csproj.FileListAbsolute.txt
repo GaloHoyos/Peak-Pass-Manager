@@ -275,9 +275,9 @@ C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\De
 C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.AssemblyInfo.cs
 C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.CoreCompileInputs.cache
 C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.sourcelink.json
-C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.csproj.CopyComplete
 C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.dll
 C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\refint\Peak Pass Manager.dll
 C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.pdb
 C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.genruntimeconfig.cache
 C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\ref\Peak Pass Manager.dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pas.77A36C82.Up2Date

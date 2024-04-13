@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using Comun.Cache;
 using Dominio;
+using Acceso_a_Datos;
 
 namespace Peak_Pass_Manager
 {
@@ -11,6 +12,7 @@ namespace Peak_Pass_Manager
         //campos
         private IconButton btnActual;
         private Panel btnBordeIzquierdo;
+        ControladoraPermisos permisos = new ControladoraPermisos();
 
         //constructor
         public FormMenuPrincipal()
@@ -33,7 +35,6 @@ namespace Peak_Pass_Manager
             lblNombre.Text = usuario.ObtenerNombre();
             lblApellido.Text = usuario.ObtenerApellido();
             lblRol.Text = usuario.ObtenerRol();
-            ControladoraPermisos permisos = new ControladoraPermisos();
             if (!permisos.Catalogo())
             {
                 btnCatalogo.Visible = false;
@@ -129,14 +130,28 @@ namespace Peak_Pass_Manager
 
         private void btnCatalogo_Click(object sender, EventArgs e)
         {
-            ActivarBoton(sender, RGBColors.color2);
-            AbrirFormularioHijo(new FormCatalogo());
+            if (permisos.Catalogo())
+            {
+                ActivarBoton(sender, RGBColors.color2);
+                AbrirFormularioHijo(new FormCatalogo());
+            }
+            else
+            {
+                MessageBox.Show("No tiene permisos para acceder a esta sección");
+            }
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            ActivarBoton(sender, RGBColors.color3);
-            AbrirFormularioHijo(new FormClientes());
+            if (permisos.Clientes())
+            {
+                ActivarBoton(sender, RGBColors.color3);
+                AbrirFormularioHijo(new FormClientes());
+            }
+            else
+            {
+                MessageBox.Show("No tiene permisos para acceder a esta sección");
+            }
         }
 
         private void btnReinicio_Click(object sender, EventArgs e)
@@ -147,13 +162,27 @@ namespace Peak_Pass_Manager
 
         private void btnOpciones_Click(object sender, EventArgs e)
         {
-            ActivarBoton(sender, RGBColors.color4);
-            AbrirFormularioHijo(new FormOpciones());
+            if (permisos.Opciones())
+            {
+                ActivarBoton(sender, RGBColors.color4);
+                AbrirFormularioHijo(new FormOpciones());
+            }
+            else
+            {
+                MessageBox.Show("No tiene permisos para acceder a esta sección");
+            }
         }
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            ActivarBoton(sender, RGBColors.color5);
-            AbrirFormularioHijo(new FormPedidos());
+            if (permisos.Pedidos())
+            {
+                ActivarBoton(sender, RGBColors.color5);
+                AbrirFormularioHijo(new FormPedidos());
+            }
+            else
+            {
+                MessageBox.Show("No tiene permisos para acceder a esta sección");
+            }
         }
         private void Reset()
         {
@@ -196,8 +225,15 @@ namespace Peak_Pass_Manager
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            ActivarBoton(sender, RGBColors.color6);
-            AbrirFormularioHijo(new FormUsuarios());
+            if (permisos.Usuarios())
+            {
+                ActivarBoton(sender, RGBColors.color6);
+                AbrirFormularioHijo(new FormUsuarios());
+            }
+            else
+            {
+                MessageBox.Show("No tiene permisos para acceder a esta sección");
+            }
         }
     }
 }
