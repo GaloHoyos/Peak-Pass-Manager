@@ -14,12 +14,17 @@ namespace Peak_Pass_Manager
 {
     public partial class FormOpciones : Form
     {
+        ControladoraPermisos controladoraPermisos = new ControladoraPermisos();
         public FormOpciones()
         {
             InitializeComponent();
             cmbRol.Items.Add("Administrador");
             cmbRol.Items.Add("Vendedor");
             cmbRol.SelectedIndex = 0;
+            if (controladoraPermisos.EditarPermisos()== false)
+            {
+                gboxPermisos.Enabled = false;
+            }
         }
         public void Inicializar()
         {

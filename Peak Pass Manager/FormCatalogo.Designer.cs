@@ -34,6 +34,7 @@
             lblCliente = new Label();
             btnAgregar = new FontAwesome.Sharp.IconButton();
             btnVerCarrito = new FontAwesome.Sharp.IconButton();
+            lblDescripcion = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
             SuspendLayout();
             // 
@@ -44,8 +45,9 @@
             dgvProductos.Name = "dgvProductos";
             dgvProductos.RowHeadersWidth = 62;
             dgvProductos.RowTemplate.Height = 33;
-            dgvProductos.Size = new Size(622, 354);
+            dgvProductos.Size = new Size(662, 354);
             dgvProductos.TabIndex = 0;
+            dgvProductos.CellClick += dgvProductos_CellClick;
             // 
             // btnCambioCliente
             // 
@@ -106,12 +108,23 @@
             btnVerCarrito.UseVisualStyleBackColor = true;
             btnVerCarrito.Click += btnVerCarrito_Click;
             // 
+            // lblDescripcion
+            // 
+            lblDescripcion.AutoSize = true;
+            lblDescripcion.ForeColor = SystemColors.ButtonFace;
+            lblDescripcion.Location = new Point(733, 119);
+            lblDescripcion.Name = "lblDescripcion";
+            lblDescripcion.Size = new Size(216, 25);
+            lblDescripcion.TabIndex = 7;
+            lblDescripcion.Text = "Descripcion del producto:";
+            // 
             // FormCatalogo
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(34, 33, 74);
             ClientSize = new Size(1196, 702);
+            Controls.Add(lblDescripcion);
             Controls.Add(btnVerCarrito);
             Controls.Add(btnAgregar);
             Controls.Add(lblCliente);
@@ -133,5 +146,6 @@
         private Label lblCliente;
         private FontAwesome.Sharp.IconButton btnAgregar;
         private FontAwesome.Sharp.IconButton btnVerCarrito;
+        private Label lblDescripcion;
     }
 }

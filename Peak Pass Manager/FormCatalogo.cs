@@ -20,26 +20,44 @@ namespace Peak_Pass_Manager
         public static Form formActual;
         int cantidad = 1;
         int idCliente = -1;
-        ControladoraCarrito carrito = new ControladoraCarrito(CacheUsuario.IdCliente, 0);
+        ControladoraCarrito carrito = new ControladoraCarrito(CacheCliente.IdCliente, 0);
         public FormCatalogo()
         {
             InitializeComponent();
             nombreCliente();
             ActualizarLista();
+            lblDescripcion.MaximumSize = new Size(450, 0);
+            lblDescripcion.AutoSize = true;
         }
 
         //metodo para mostrar el nombre del cliente en el label
         public void nombreCliente()
         {
-            lblCliente.Text = CacheUsuario.Nombre + " " + CacheUsuario.Apellido;
-            idCliente = CacheUsuario.IdCliente;
+            lblCliente.Text = CacheCliente.Nombre + " " + CacheCliente.Apellido;
+            idCliente = CacheCliente.IdCliente;
         }
 
         //metodo para actualizar la lista de productos
         public void ActualizarLista()
         {
+            //Agregar columnas vacias al dgv
+            dgvProductos.Columns.Clear();
+            dgvProductos.Columns.Add("ID", "ID");
+            dgvProductos.Columns[0].DataPropertyName = "id_producto";
+            dgvProductos.Columns.Add("Nombre", "Nombre");
+            dgvProductos.Columns[1].DataPropertyName = "nombre_producto";
+            dgvProductos.Columns.Add("Precio", "Precio");
+            dgvProductos.Columns[2].DataPropertyName = "precio_producto";
+            dgvProductos.Columns.Add("Catalogo", "Catalogo");
+            dgvProductos.Columns[3].DataPropertyName = "nombre_catalogo";
             ControladoraProducto modeloProducto = new ControladoraProducto();
             dgvProductos.DataSource = modeloProducto.ActualizarLista();
+        }
+        public string ObtenerDescripcion(int id)
+        {
+            ControladoraProducto controladoraProducto = new ControladoraProducto();
+            return controladoraProducto.VerDescripcion(id);
+            lblDescripcion.Text = controladoraProducto.VerDescripcion(id);
         }
 
         private void btnCambioCliente_Click(object sender, EventArgs e)
@@ -92,7 +110,7 @@ namespace Peak_Pass_Manager
                 {
                     FormCarrito formCarrito = new FormCarrito(carrito);
                     formCarrito.ShowDialog();
-                    carrito = formCarrito.modelo;
+                    carrito = formCarrito.carrito;
                 }
                 else
                 {
@@ -104,8 +122,10 @@ namespace Peak_Pass_Manager
                 MessageBox.Show("Debe seleccionar un cliente");
             }
         }
-        public void Cambio()
-        { 
+
+        private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            lblDescripcion.Text = "Descripcion del producto: " + ObtenerDescripcion(Convert.ToInt32(dgvProductos.CurrentRow.Cells[0].Value));
         }
     }
 }

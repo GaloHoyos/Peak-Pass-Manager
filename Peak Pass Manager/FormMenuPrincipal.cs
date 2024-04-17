@@ -18,7 +18,7 @@ namespace Peak_Pass_Manager
         public FormMenuPrincipal()
         {
             InitializeComponent();
-            CacheUsuario.IdCliente = -1;
+            CacheUsuario.IdUsuario = -1;
             btnBordeIzquierdo = new Panel();
             btnBordeIzquierdo.Size = new Size(7, 60);
             panelMenu.Controls.Add(btnBordeIzquierdo);
@@ -32,6 +32,7 @@ namespace Peak_Pass_Manager
         private void LoadUserData()
         {
             ControladoraUsuario usuario = new ControladoraUsuario();
+            usuario.LlenarCacheUsuario();
             lblNombre.Text = usuario.ObtenerNombre();
             lblApellido.Text = usuario.ObtenerApellido();
             lblRol.Text = usuario.ObtenerRol();

@@ -121,4 +121,22 @@
   <data name="Peak Pass Manager Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Peak Pass Manager Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MasterCard_Logo.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MasterCard_Logo.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="71fb1a228e533f9b9bec7164680e0979" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\71fb1a228e533f9b9bec7164680e0979.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2048px-American_Express_logo.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2048px-American_Express_logo.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="American Express" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\American Express.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MasterCard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MasterCard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Visa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Visa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

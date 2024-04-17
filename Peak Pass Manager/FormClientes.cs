@@ -16,8 +16,7 @@ namespace Peak_Pass_Manager
 {
     public partial class FormClientes : Form
     {
-        
-        Form formActual;
+        ControladoraUsuario cliente = new ControladoraUsuario();
         public FormClientes()
         {
             InitializeComponent();
@@ -26,8 +25,6 @@ namespace Peak_Pass_Manager
         }
         public void iniciar()
         {
-            ControladoraUsuario cliente = new ControladoraUsuario();
-            dgvClientes.DataSource = cliente.ActualizarLista();
             txtNombre.Text = string.Empty;
             txtApellido.Text = string.Empty;
             txtCorreo.Text = string.Empty;
@@ -35,6 +32,26 @@ namespace Peak_Pass_Manager
             txtDireccion.Text = string.Empty;
             txtTelefono.Text = string.Empty;
             lblCliente.Text = cliente.ObtenerNombre() + " " + cliente.ObtenerApellido();
+            ActualizarClientes();
+        }
+        public void ActualizarClientes()
+        {
+            dgvClientes.DataSource = cliente.ActualizarClientes();
+            dgvClientes.Columns.Clear();
+            dgvClientes.Columns.Add("ID", "ID");
+            dgvClientes.Columns[0].DataPropertyName = "id_usuario";
+            dgvClientes.Columns.Add("Nombre", "Nombre");
+            dgvClientes.Columns[1].DataPropertyName = "nombre";
+            dgvClientes.Columns.Add("Apellido", "Apellido");
+            dgvClientes.Columns[2].DataPropertyName = "apellido";
+            dgvClientes.Columns.Add("DNI", "DNI");
+            dgvClientes.Columns[3].DataPropertyName = "dni";
+            dgvClientes.Columns.Add("Correo", "Correo");
+            dgvClientes.Columns[4].DataPropertyName = "correo";
+            dgvClientes.Columns.Add("Direccion", "Direccion");
+            dgvClientes.Columns[5].DataPropertyName = "direccion";
+            dgvClientes.Columns.Add("Telefono", "Telefono");
+            dgvClientes.Columns[6].DataPropertyName = "telefono";
         }
 
         public void AgregarCliente()
@@ -141,24 +158,24 @@ namespace Peak_Pass_Manager
         public void CambioCliente()
         {
             lblMensajeError.Hide();
-            CacheUsuario.IdCliente = Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value);
-            CacheUsuario.Nombre = dgvClientes.CurrentRow.Cells[1].Value.ToString();
-            CacheUsuario.Apellido = dgvClientes.CurrentRow.Cells[2].Value.ToString();
-            CacheUsuario.DNI = dgvClientes.CurrentRow.Cells[3].Value.ToString();
-            CacheUsuario.Correo = dgvClientes.CurrentRow.Cells[4].Value.ToString();
-            CacheUsuario.Direccion = dgvClientes.CurrentRow.Cells[5].Value.ToString();
-            CacheUsuario.Telefono = dgvClientes.CurrentRow.Cells[6].Value.ToString();
-            lblCliente.Text = CacheUsuario.Nombre + " " + CacheUsuario.Apellido;
+            CacheCliente.IdCliente = Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value);
+            CacheCliente.Nombre = dgvClientes.CurrentRow.Cells[1].Value.ToString();
+            CacheCliente.Apellido = dgvClientes.CurrentRow.Cells[2].Value.ToString();
+            CacheCliente.DNI = dgvClientes.CurrentRow.Cells[3].Value.ToString();
+            CacheCliente.Correo = dgvClientes.CurrentRow.Cells[4].Value.ToString();
+            CacheCliente.Direccion = dgvClientes.CurrentRow.Cells[5].Value.ToString();
+            CacheCliente.Telefono = dgvClientes.CurrentRow.Cells[6].Value.ToString();
+            lblCliente.Text = CacheCliente.Nombre + " " + CacheCliente.Apellido;
         }
         public void LimpioCliente()
         {
-            CacheUsuario.IdCliente = -1;
-            CacheUsuario.Nombre = string.Empty;
-            CacheUsuario.Apellido = string.Empty;
-            CacheUsuario.DNI = string.Empty;
-            CacheUsuario.Correo = string.Empty;
-            CacheUsuario.Direccion = string.Empty;
-            CacheUsuario.Telefono = string.Empty;
+            CacheCliente.IdCliente = -1;
+            CacheCliente.Nombre = string.Empty;
+            CacheCliente.Apellido = string.Empty;
+            CacheCliente.DNI = string.Empty;
+            CacheCliente.Correo = string.Empty;
+            CacheCliente.Direccion = string.Empty;
+            CacheCliente.Telefono = string.Empty;
             lblCliente.Text = string.Empty;
         }
     }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Acceso a Datos(Modelo)")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+421a30b2cbaa62e982c0e0e94486d511553db555")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10073e872de7198dcb96ba71b5ac8f14dbe56734")]
 [assembly: System.Reflection.AssemblyProductAttribute("Acceso a Datos(Modelo)")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Acceso a Datos(Modelo)")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -24,7 +24,7 @@ namespace Acceso_a_Datos
                 return dt; //Envia los datos de la tabla
             }
         }
-        public void AgregarPedido(int idVendedor, int idCliente, int Total)
+        public void AgregarPedido(int idVendedor, int idCliente, int total)
         {
             //metodo para agregar un pedido
             using (var connection = GetConnection())
@@ -33,10 +33,10 @@ namespace Acceso_a_Datos
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    SqlCommand cmd = new SqlCommand("Insert into pedidos values ('" + idVendedor + "','" + idCliente + "','" + Total + "')", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
+                    SqlCommand cmd = new SqlCommand("Insert into pedidos values ('" + idVendedor + "','" + idCliente + "','" + total + "')", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
                     cmd.CommandType = CommandType.Text; //Indica como se interpretará el comando anterior para mayor claridad al momento de ejecutarlo en el SQL
 
-                    cmd.ExecuteNonQuery(); //Ejecuta el comando 
+                    cmd.ExecuteNonQuery();
                 }
             }
         }

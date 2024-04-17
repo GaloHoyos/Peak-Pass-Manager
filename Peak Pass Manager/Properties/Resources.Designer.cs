@@ -63,6 +63,36 @@ namespace Peak_Pass_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2048px_American_Express_logo_svg {
+            get {
+                object obj = ResourceManager.GetObject("2048px-American_Express_logo.svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _71fb1a228e533f9b9bec7164680e0979 {
+            get {
+                object obj = ResourceManager.GetObject("71fb1a228e533f9b9bec7164680e0979", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MasterCard_Logo_svg {
+            get {
+                object obj = ResourceManager.GetObject("MasterCard_Logo.svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Peak_Pass_Manager_Logo {
             get {
                 object obj = ResourceManager.GetObject("Peak Pass Manager Logo", resourceCulture);

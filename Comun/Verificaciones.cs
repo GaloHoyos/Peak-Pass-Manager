@@ -46,5 +46,61 @@ namespace Comun
                 return true;
             }
         }
+        //Detectar tipo de tarjeta
+        public string TipoTarjeta(string tarjeta)
+        {
+            if (tarjeta.StartsWith("4"))
+            {
+                return "Visa";
+            }
+            else if (tarjeta.StartsWith("5"))
+            {
+                return "MasterCard";
+            }
+            else if (tarjeta.StartsWith("3"))
+            {
+                return "American Express";
+            }
+            else
+            {
+                return "Desconocida";
+            }
+        }
+        //Verificar tarjeta
+        public bool VerificarTarjeta(string tarjeta)
+        {
+            if (tarjeta.Length == 16)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        //Verificar fecha de vencimiento
+        public bool VerificarFechaVencimiento(string fecha)
+        {
+            if (fecha.Length == 5)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        //Verificar codigo de seguridad
+        public bool VerificarCodigoSeguridad(string codigo)
+        {
+            if (codigo.Length == 3)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

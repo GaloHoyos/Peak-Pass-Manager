@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             lblOpciones = new Label();
-            groupBox1 = new GroupBox();
+            gboxPermisos = new GroupBox();
             chkEliUsuarios = new CheckBox();
             chkModUsuarios = new CheckBox();
             chkAgUsuarios = new CheckBox();
@@ -49,7 +49,7 @@
             lblRol = new Label();
             cmbRol = new ComboBox();
             btnGuardar = new FontAwesome.Sharp.IconButton();
-            groupBox1.SuspendLayout();
+            gboxPermisos.SuspendLayout();
             SuspendLayout();
             // 
             // lblOpciones
@@ -62,33 +62,33 @@
             lblOpciones.TabIndex = 3;
             lblOpciones.Text = "Opciones";
             // 
-            // groupBox1
+            // gboxPermisos
             // 
-            groupBox1.Controls.Add(chkEliUsuarios);
-            groupBox1.Controls.Add(chkModUsuarios);
-            groupBox1.Controls.Add(chkAgUsuarios);
-            groupBox1.Controls.Add(chkEliClientes);
-            groupBox1.Controls.Add(chkModClientes);
-            groupBox1.Controls.Add(chkAgClientes);
-            groupBox1.Controls.Add(chkAuditoria);
-            groupBox1.Controls.Add(chkReportes);
-            groupBox1.Controls.Add(chkEdProductos);
-            groupBox1.Controls.Add(chkEdCatalogos);
-            groupBox1.Controls.Add(chkEdPermisos);
-            groupBox1.Controls.Add(chkUsuarios);
-            groupBox1.Controls.Add(chkPedidos);
-            groupBox1.Controls.Add(chkOpciones);
-            groupBox1.Controls.Add(chkClientes);
-            groupBox1.Controls.Add(chkCatalogo);
-            groupBox1.Controls.Add(lblRol);
-            groupBox1.Controls.Add(cmbRol);
-            groupBox1.ForeColor = SystemColors.ButtonFace;
-            groupBox1.Location = new Point(705, 111);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(458, 411);
-            groupBox1.TabIndex = 4;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Permisos";
+            gboxPermisos.Controls.Add(chkEliUsuarios);
+            gboxPermisos.Controls.Add(chkModUsuarios);
+            gboxPermisos.Controls.Add(chkAgUsuarios);
+            gboxPermisos.Controls.Add(chkEliClientes);
+            gboxPermisos.Controls.Add(chkModClientes);
+            gboxPermisos.Controls.Add(chkAgClientes);
+            gboxPermisos.Controls.Add(chkAuditoria);
+            gboxPermisos.Controls.Add(chkReportes);
+            gboxPermisos.Controls.Add(chkEdProductos);
+            gboxPermisos.Controls.Add(chkEdCatalogos);
+            gboxPermisos.Controls.Add(chkEdPermisos);
+            gboxPermisos.Controls.Add(chkUsuarios);
+            gboxPermisos.Controls.Add(chkPedidos);
+            gboxPermisos.Controls.Add(chkOpciones);
+            gboxPermisos.Controls.Add(chkClientes);
+            gboxPermisos.Controls.Add(chkCatalogo);
+            gboxPermisos.Controls.Add(lblRol);
+            gboxPermisos.Controls.Add(cmbRol);
+            gboxPermisos.ForeColor = SystemColors.ButtonFace;
+            gboxPermisos.Location = new Point(705, 111);
+            gboxPermisos.Name = "gboxPermisos";
+            gboxPermisos.Size = new Size(458, 411);
+            gboxPermisos.TabIndex = 4;
+            gboxPermisos.TabStop = false;
+            gboxPermisos.Text = "Permisos";
             // 
             // chkEliUsuarios
             // 
@@ -289,12 +289,12 @@
             BackColor = Color.FromArgb(34, 33, 74);
             ClientSize = new Size(1196, 702);
             Controls.Add(btnGuardar);
-            Controls.Add(groupBox1);
+            Controls.Add(gboxPermisos);
             Controls.Add(lblOpciones);
             Name = "FormOpciones";
             Text = "FormOpciones";
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            gboxPermisos.ResumeLayout(false);
+            gboxPermisos.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -302,7 +302,7 @@
         #endregion
 
         private Label lblOpciones;
-        private GroupBox groupBox1;
+        private GroupBox gboxPermisos;
         private Label lblRol;
         private ComboBox cmbRol;
         private CheckBox chkAuditoria;

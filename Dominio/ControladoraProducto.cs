@@ -10,11 +10,6 @@ namespace Dominio
 {
     public class ControladoraProducto
     {
-        //atributos del producto
-        private int idProducto;
-        private string nombre;
-        private int precio;
-        private string catalogo;
         Acceso_a_Datos.ModeloProducto productoDao = new Acceso_a_Datos.ModeloProducto();
 
         public DataTable ActualizarLista()
@@ -22,6 +17,12 @@ namespace Dominio
             DataTable dt = new DataTable();
             dt = productoDao.ActualizarLista();
             return dt;
+        }
+        public string VerDescripcion(int id)
+        {
+            string descripcion;
+            descripcion = productoDao.VerDescripcion(id);
+            return descripcion;
         }
     }
 }

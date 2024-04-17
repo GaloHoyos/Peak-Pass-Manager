@@ -99,6 +99,19 @@ namespace Acceso_a_Datos
             }
         }
 
+        public DataTable ActualizarClientes()
+        {
+            DataTable dt = new DataTable();
+            using (var connection = GetConnection())
+            {
+
+                SqlDataAdapter da = new SqlDataAdapter("select id_usuario, nombre, apellido, dni, correo, direccion, telefono from usuarios ORDER BY 1", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos, en este caso para poder tomar los valores de una tabla
+                da.SelectCommand.CommandType = CommandType.Text; //Indica como se interpretará el comando anterior para mayor claridad al momento de ejecutarlo en el SQL
+                da.Fill(dt); //Obtiene los datos de la tabla
+                return dt; //Envia los datos de la tabla
+            }
+        }
+
         //metodo para agregar un usuario
         public void AgregarUsuario(string nombre, string apellido, string dni, string email, string direccion, string telefono, string usuario, string password, int idRol)
         {
@@ -181,7 +194,6 @@ namespace Acceso_a_Datos
                 }
             }
         }
-
     }
 }
 // ZwBhAGwAbwAxADIA = galo12

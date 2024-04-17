@@ -1,5 +1,6 @@
 ﻿using Acceso_a_Datos;
 using Comun;
+using Comun.Cache;
 using System.Data;
 
 
@@ -68,6 +69,13 @@ namespace Dominio
             return dt;
         }
 
+        public DataTable ActualizarClientes()
+        {
+            DataTable dt = new DataTable();
+            dt = modeloUsuario.ActualizarClientes();
+            return dt;
+        }
+
         //metodo para agregar un usuario
         public void AgregarUsuario(string nombre, string apellido, string dni, string email, string direccion, string telefono, string usuario, string password, int idRol)
         {
@@ -84,6 +92,19 @@ namespace Dominio
         public void EliminarUsuario(int idUsuario)
         {
             modeloUsuario.EliminarUsuario(idUsuario);
+        }
+
+        //Llenar cache de usuario con los datos del usuario logueado
+        public void LlenarCacheUsuario()
+        {
+            CacheUsuario.IdUsuario = ModeloUsuario.IdUsuario;
+            CacheUsuario.Nombre = ModeloUsuario.Nombre;
+            CacheUsuario.Apellido = ModeloUsuario.Apellido;
+            CacheUsuario.DNI = ModeloUsuario.DNI;
+            CacheUsuario.Correo = ModeloUsuario.Email;
+            CacheUsuario.Direccion = ModeloUsuario.Direccion;
+            CacheUsuario.Telefono = ModeloUsuario.Telefono;
+
         }
 
     }
