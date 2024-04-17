@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             dgvCarrito = new DataGridView();
-            btnComprar = new FontAwesome.Sharp.IconButton();
+            btnPago = new FontAwesome.Sharp.IconButton();
             lblTotal = new Label();
             btnQuitar = new FontAwesome.Sharp.IconButton();
             btnQuitarCantidad = new FontAwesome.Sharp.IconButton();
@@ -47,18 +47,18 @@
             dgvCarrito.Size = new Size(1128, 303);
             dgvCarrito.TabIndex = 0;
             // 
-            // btnComprar
+            // btnPago
             // 
-            btnComprar.IconChar = FontAwesome.Sharp.IconChar.None;
-            btnComprar.IconColor = Color.Black;
-            btnComprar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnComprar.Location = new Point(948, 511);
-            btnComprar.Name = "btnComprar";
-            btnComprar.Size = new Size(236, 179);
-            btnComprar.TabIndex = 5;
-            btnComprar.Text = "Comprar";
-            btnComprar.UseVisualStyleBackColor = true;
-            btnComprar.Click += btnComprar_Click;
+            btnPago.IconChar = FontAwesome.Sharp.IconChar.None;
+            btnPago.IconColor = Color.Black;
+            btnPago.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnPago.Location = new Point(948, 511);
+            btnPago.Name = "btnPago";
+            btnPago.Size = new Size(236, 179);
+            btnPago.TabIndex = 5;
+            btnPago.Text = "Proceder al Pago";
+            btnPago.UseVisualStyleBackColor = true;
+            btnPago.Click += btnComprar_Click;
             // 
             // lblTotal
             // 
@@ -117,7 +117,7 @@
             Controls.Add(btnQuitarCantidad);
             Controls.Add(btnQuitar);
             Controls.Add(lblTotal);
-            Controls.Add(btnComprar);
+            Controls.Add(btnPago);
             Controls.Add(dgvCarrito);
             ForeColor = SystemColors.ControlText;
             Name = "FormCarrito";
@@ -130,7 +130,7 @@
         #endregion
 
         private DataGridView dgvCarrito;
-        private FontAwesome.Sharp.IconButton btnComprar;
+        private FontAwesome.Sharp.IconButton btnPago;
         private Label lblTotal;
         private FontAwesome.Sharp.IconButton btnQuitar;
         private FontAwesome.Sharp.IconButton btnQuitarCantidad;

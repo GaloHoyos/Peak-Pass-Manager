@@ -9,7 +9,7 @@ namespace Comun.Cache
     
     public class CacheUsuario
     {
-        public static int IdCliente { get; set; }
+        public static int IdUsuario { get; set; }
         public static string Nombre { get; set; }
         public static string Apellido { get; set; }
         public static string DNI { get; set; }

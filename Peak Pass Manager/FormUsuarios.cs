@@ -15,6 +15,7 @@ namespace Peak_Pass_Manager
 {
     public partial class FormUsuarios : Form
     {
+        ControladoraPermisos controladoraPermisos = new ControladoraPermisos();
         public FormUsuarios()
         {
             InitializeComponent();
@@ -54,6 +55,42 @@ namespace Peak_Pass_Manager
             txtDNI.Text = string.Empty;
             txtDireccion.Text = string.Empty;
             txtTelefono.Text = string.Empty;
+            for (int i = 1; i < 4; i++)
+            {
+                switch (i)
+                {
+                    case 1:
+                        if (controladoraPermisos.AgregarUsuarios() == false)
+                        {
+                            btnAgregar.Enabled = false;
+                        }
+                        else
+                        {
+                            btnAgregar.Enabled = true;
+                        }
+                        break;
+                    case 2:
+                        if (controladoraPermisos.ModificarUsuarios() == false)
+                        {
+                            btnModificar.Enabled = false;
+                        }
+                        else
+                        {
+                            btnModificar.Enabled = true;
+                        }
+                        break;
+                    case 3:
+                        if (controladoraPermisos.EliminarUsuarios() == false)
+                        {
+                            btnEliminar.Enabled = false;
+                        }
+                        else
+                        {
+                            btnEliminar.Enabled = true;
+                        }
+                        break;
+                }
+            }
         }
         public void AgregarUsuario()
         {

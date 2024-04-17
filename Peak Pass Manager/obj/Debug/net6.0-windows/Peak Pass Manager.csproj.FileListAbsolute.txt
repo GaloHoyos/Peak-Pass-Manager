@@ -281,3 +281,5 @@ C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\De
 C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pass Manager.genruntimeconfig.cache
 C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\ref\Peak Pass Manager.dll
 C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak Pas.77A36C82.Up2Date
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormPago.resources
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.Imagenes.resources

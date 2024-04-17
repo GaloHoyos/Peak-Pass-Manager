@@ -14,12 +14,12 @@ namespace Peak_Pass_Manager
 {
     public partial class FormCarrito : Form
     {
-        public ControladoraCarrito modelo { get; set; }
+        public ControladoraCarrito carrito { get; set; }
         public FormCarrito(ControladoraCarrito carrito)
         {
             InitializeComponent();
-            modelo = carrito;
-            IniciarN(carrito);
+            this.carrito = carrito;
+            IniciarN(this.carrito);
         }
         public void IniciarN(ControladoraCarrito carrito)
         {
@@ -29,6 +29,19 @@ namespace Peak_Pass_Manager
 
         private void btnComprar_Click(object sender, EventArgs e)
         {
+            if (carrito != null)
+            {
+                FormPago formPago = new FormPago(carrito);
+                formPago.Show();
+            }
+            else
+            {
+                lblMensajeError.Show();
+                lblMensajeError.Text = "No hay productos en carrito.";
+            }
+
+
+            /*
             if(modelo != null)
             {
                 lblMensajeError.Hide();
@@ -46,15 +59,15 @@ namespace Peak_Pass_Manager
             {
                 lblMensajeError.Show();
                 lblMensajeError.Text = "No hay productos en carrito.";
-            }
+            }*/
         }
 
         private void btnQuitar_Click(object sender, EventArgs e)
         {
             if (dgvCarrito.CurrentRow != null)
             {
-                modelo.EliminarProducto(Convert.ToInt32(dgvCarrito.CurrentRow.Cells[1].Value));
-                IniciarN(modelo);
+                carrito.EliminarProducto(Convert.ToInt32(dgvCarrito.CurrentRow.Cells[1].Value));
+                IniciarN(carrito);
                 lblMensajeError.Hide();
             }
             else
@@ -70,14 +83,14 @@ namespace Peak_Pass_Manager
             {
                 if (Convert.ToInt32(dgvCarrito.CurrentRow.Cells[4].Value) == 1)
                 {
-                    modelo.EliminarProducto(Convert.ToInt32(dgvCarrito.CurrentRow.Cells[1].Value));
-                    IniciarN(modelo);
+                    carrito.EliminarProducto(Convert.ToInt32(dgvCarrito.CurrentRow.Cells[1].Value));
+                    IniciarN(carrito);
                     lblMensajeError.Hide();
                 }
                 else
                 {
-                    modelo.QuitarCantidad(Convert.ToInt32(dgvCarrito.CurrentRow.Cells[1].Value), 1);
-                    IniciarN(modelo);
+                    carrito.QuitarCantidad(Convert.ToInt32(dgvCarrito.CurrentRow.Cells[1].Value), 1);
+                    IniciarN(carrito);
                     lblMensajeError.Hide();
                 }
             }
