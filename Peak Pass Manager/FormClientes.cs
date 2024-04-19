@@ -57,7 +57,22 @@ namespace Peak_Pass_Manager
         public void AgregarCliente()
         {
             ControladoraUsuario cliente = new ControladoraUsuario();
-            cliente.AgregarUsuario(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 3);
+            switch (cliente.AgregarCliente(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 3))
+            {
+                case "No Existente":
+                    MessageBox.Show("Cliente Agregado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+                case "Usuario Existente":
+                    MessageBox.Show("Usuario Existente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+                case "Inactivo y Existente":
+                    var m = MessageBox.Show("Usuario Existente pero inactivo. Desea reactivarlo?", "Error", MessageBoxButtons.YesNo);
+                    if (m == DialogResult.Yes)
+                    {
+                        cliente.ActivarUsuario(cliente.ObtenerIdPorDNI(txtDNI.Text));
+                    }
+                    break;
+            }
             iniciar();
         }
         public void ModificarCliente()
@@ -69,8 +84,12 @@ namespace Peak_Pass_Manager
         }
         public void EliminarCliente()
         {
+            bool existePedido = false;
             ControladoraUsuario cliente = new ControladoraUsuario();
-            cliente.EliminarUsuario(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value));
+            if (cliente.EliminarUsuario(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value)) == true)
+            {
+                MessageBox.Show("No se puede eliminar el cliente porque tiene pedidos asociados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             iniciar();
             LimpioCliente();
         }
@@ -82,7 +101,6 @@ namespace Peak_Pass_Manager
             if (verif == true)
             {
                 AgregarCliente();
-                lblMensajeError.Hide();
             }
             else
             {

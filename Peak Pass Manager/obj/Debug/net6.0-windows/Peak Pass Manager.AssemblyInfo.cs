@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Peak Pass Manager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10073e872de7198dcb96ba71b5ac8f14dbe56734")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5ddf49b722f36bb6b0704c730740784fac1cf06")]
 [assembly: System.Reflection.AssemblyProductAttribute("Peak Pass Manager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Peak Pass Manager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

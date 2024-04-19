@@ -30,6 +30,9 @@
         {
             lblOpciones = new Label();
             gboxPermisos = new GroupBox();
+            btnEliminarRol = new Button();
+            chkAgregarRol = new CheckBox();
+            btnGuardar = new FontAwesome.Sharp.IconButton();
             chkEliUsuarios = new CheckBox();
             chkModUsuarios = new CheckBox();
             chkAgUsuarios = new CheckBox();
@@ -48,8 +51,12 @@
             chkCatalogo = new CheckBox();
             lblRol = new Label();
             cmbRol = new ComboBox();
-            btnGuardar = new FontAwesome.Sharp.IconButton();
+            gboxRoles = new GroupBox();
+            btnAgregarRol = new Button();
+            lblNombreRol = new Label();
+            txtRol = new TextBox();
             gboxPermisos.SuspendLayout();
+            gboxRoles.SuspendLayout();
             SuspendLayout();
             // 
             // lblOpciones
@@ -64,6 +71,9 @@
             // 
             // gboxPermisos
             // 
+            gboxPermisos.Controls.Add(btnEliminarRol);
+            gboxPermisos.Controls.Add(chkAgregarRol);
+            gboxPermisos.Controls.Add(btnGuardar);
             gboxPermisos.Controls.Add(chkEliUsuarios);
             gboxPermisos.Controls.Add(chkModUsuarios);
             gboxPermisos.Controls.Add(chkAgUsuarios);
@@ -85,10 +95,45 @@
             gboxPermisos.ForeColor = SystemColors.ButtonFace;
             gboxPermisos.Location = new Point(705, 111);
             gboxPermisos.Name = "gboxPermisos";
-            gboxPermisos.Size = new Size(458, 411);
+            gboxPermisos.Size = new Size(458, 530);
             gboxPermisos.TabIndex = 4;
             gboxPermisos.TabStop = false;
             gboxPermisos.Text = "Permisos";
+            // 
+            // btnEliminarRol
+            // 
+            btnEliminarRol.ForeColor = SystemColors.ActiveCaptionText;
+            btnEliminarRol.Location = new Point(29, 437);
+            btnEliminarRol.Name = "btnEliminarRol";
+            btnEliminarRol.Size = new Size(128, 73);
+            btnEliminarRol.TabIndex = 18;
+            btnEliminarRol.Text = "Eliminar Rol";
+            btnEliminarRol.UseVisualStyleBackColor = true;
+            btnEliminarRol.Click += btnEliminarRol_Click;
+            // 
+            // chkAgregarRol
+            // 
+            chkAgregarRol.AutoSize = true;
+            chkAgregarRol.Location = new Point(29, 396);
+            chkAgregarRol.Name = "chkAgregarRol";
+            chkAgregarRol.Size = new Size(149, 29);
+            chkAgregarRol.TabIndex = 17;
+            chkAgregarRol.Text = "Agregar Roles";
+            chkAgregarRol.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.ForeColor = SystemColors.ActiveCaptionText;
+            btnGuardar.IconChar = FontAwesome.Sharp.IconChar.None;
+            btnGuardar.IconColor = Color.Black;
+            btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnGuardar.Location = new Point(310, 437);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(133, 76);
+            btnGuardar.TabIndex = 5;
+            btnGuardar.Text = "Guardar Cambios";
+            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // chkEliUsuarios
             // 
@@ -269,18 +314,45 @@
             cmbRol.TabIndex = 0;
             cmbRol.SelectedIndexChanged += cmbRol_SelectedIndexChanged;
             // 
-            // btnGuardar
+            // gboxRoles
             // 
-            btnGuardar.IconChar = FontAwesome.Sharp.IconChar.None;
-            btnGuardar.IconColor = Color.Black;
-            btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnGuardar.Location = new Point(1030, 593);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(133, 76);
-            btnGuardar.TabIndex = 5;
-            btnGuardar.Text = "Guardar Cambios";
-            btnGuardar.UseVisualStyleBackColor = true;
-            btnGuardar.Click += btnGuardar_Click;
+            gboxRoles.Controls.Add(btnAgregarRol);
+            gboxRoles.Controls.Add(lblNombreRol);
+            gboxRoles.Controls.Add(txtRol);
+            gboxRoles.ForeColor = SystemColors.ButtonFace;
+            gboxRoles.Location = new Point(253, 121);
+            gboxRoles.Name = "gboxRoles";
+            gboxRoles.Size = new Size(428, 178);
+            gboxRoles.TabIndex = 6;
+            gboxRoles.TabStop = false;
+            gboxRoles.Text = "Roles";
+            // 
+            // btnAgregarRol
+            // 
+            btnAgregarRol.ForeColor = SystemColors.ActiveCaptionText;
+            btnAgregarRol.Location = new Point(188, 118);
+            btnAgregarRol.Name = "btnAgregarRol";
+            btnAgregarRol.Size = new Size(122, 34);
+            btnAgregarRol.TabIndex = 2;
+            btnAgregarRol.Text = "Agregar Rol";
+            btnAgregarRol.UseVisualStyleBackColor = true;
+            btnAgregarRol.Click += btnAgregarRol_Click;
+            // 
+            // lblNombreRol
+            // 
+            lblNombreRol.AutoSize = true;
+            lblNombreRol.Location = new Point(30, 71);
+            lblNombreRol.Name = "lblNombreRol";
+            lblNombreRol.Size = new Size(137, 25);
+            lblNombreRol.TabIndex = 1;
+            lblNombreRol.Text = "Nombre de Rol:";
+            // 
+            // txtRol
+            // 
+            txtRol.Location = new Point(173, 68);
+            txtRol.Name = "txtRol";
+            txtRol.Size = new Size(150, 31);
+            txtRol.TabIndex = 0;
             // 
             // FormOpciones
             // 
@@ -288,13 +360,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(34, 33, 74);
             ClientSize = new Size(1196, 702);
-            Controls.Add(btnGuardar);
+            Controls.Add(gboxRoles);
             Controls.Add(gboxPermisos);
             Controls.Add(lblOpciones);
             Name = "FormOpciones";
             Text = "FormOpciones";
             gboxPermisos.ResumeLayout(false);
             gboxPermisos.PerformLayout();
+            gboxRoles.ResumeLayout(false);
+            gboxRoles.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -322,5 +396,11 @@
         private CheckBox chkEliClientes;
         private CheckBox chkModClientes;
         private FontAwesome.Sharp.IconButton btnGuardar;
+        private CheckBox chkAgregarRol;
+        private GroupBox gboxRoles;
+        private Button btnAgregarRol;
+        private Label lblNombreRol;
+        private TextBox txtRol;
+        private Button btnEliminarRol;
     }
 }

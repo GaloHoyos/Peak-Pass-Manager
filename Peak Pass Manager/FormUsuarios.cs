@@ -19,11 +19,10 @@ namespace Peak_Pass_Manager
         public FormUsuarios()
         {
             InitializeComponent();
-            iniciar();
-            cmbRol.Items.Add("Administrador");
-            cmbRol.Items.Add("Vendedor");
+            Iniciar();
+            LlenarRoles();
         }
-        public void iniciar()
+        public void Iniciar()
         {
             ControladoraUsuario usuario = new ControladoraUsuario();
             //Agregar columnas vacias al dgv
@@ -92,21 +91,50 @@ namespace Peak_Pass_Manager
                 }
             }
         }
+        public void LlenarRoles()
+        {
+            try
+            {
+                cmbRol.Items.Clear();
+                List<string> roles = controladoraPermisos.ObtenerRoles();
+                foreach (string rol in roles)
+                {
+                    cmbRol.Items.Add(rol);
+                }
+                cmbRol.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         public void AgregarUsuario()
         {
             try
             {
-                if (cmbRol.SelectedItem.ToString() == "Administrador")
+                int idRol = controladoraPermisos.ObtenerIdRol(cmbRol.Text);
+                ControladoraUsuario usuario = new ControladoraUsuario();
+                switch (usuario.AgregarUsuario(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text, idRol))
                 {
-                    ControladoraUsuario usuario = new ControladoraUsuario();
-                    usuario.AgregarUsuario(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text, 1);
-                    iniciar();
-                }
-                else if (cmbRol.SelectedItem.ToString() == "Vendedor")
-                {
-                    ControladoraUsuario usuario = new ControladoraUsuario();
-                    usuario.AgregarUsuario(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text, 2);
-                    iniciar();
+                    case "Activo y Existente":
+                        MessageBox.Show("El usuario ya existe");
+                        break;
+                    case "Inactivo y Existente":
+                        var m = MessageBox.Show("El usuario ya existe y esta inactivo. Desea reactivarlo?", "Atencion",MessageBoxButtons.YesNo);
+                        if (m == DialogResult.Yes)
+                        {
+                            usuario.ActivarUsuario(usuario.ObtenerIdPorDNI(txtDNI.Text));
+                            Iniciar();
+                            LimpioUsuario();
+                        }
+                        break;
+                    case "Usuario Existente":
+                        MessageBox.Show("Ya existe una persona con ese nombre de usuario");
+                        break;
+                    case "No Existente":
+                        Iniciar();
+                        LimpioUsuario();
+                        break;
                 }
             }
             catch (Exception ex)
@@ -118,20 +146,11 @@ namespace Peak_Pass_Manager
         {
             try
             {
-                if (cmbRol.SelectedItem.ToString() == "Administrador")
-                {
-                    ControladoraUsuario usuario = new ControladoraUsuario();
-                    usuario.ModifcarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text, 1);
-                    iniciar();
-                    LimpioUsuario();
-                }
-                else if (cmbRol.SelectedItem.ToString() == "Vendedor")
-                {
-                    ControladoraUsuario usuario = new ControladoraUsuario();
-                    usuario.ModifcarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text, 2);
-                    iniciar();
-                    LimpioUsuario();
-                }
+                int idRol = controladoraPermisos.ObtenerIdRol(cmbRol.Text);
+                ControladoraUsuario usuario = new ControladoraUsuario();
+                usuario.ModifcarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text, idRol);
+                Iniciar();
+                LimpioUsuario();
             }
             catch (Exception ex)
             {
@@ -144,9 +163,22 @@ namespace Peak_Pass_Manager
             try
             {
                 ControladoraUsuario usuario = new ControladoraUsuario();
-                usuario.EliminarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value));
-                iniciar();
-                LimpioUsuario();
+                if (usuario.EliminarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value)))
+                {
+                    var resultado = MessageBox.Show("No se puede eliminar el usuario porque tiene pedidos asociados, desea desactivarlo en cambio?", "Atencion", MessageBoxButtons.YesNo);
+                    if (resultado == DialogResult.Yes)
+                    {
+                        usuario.DesactivarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value));
+                        Iniciar();
+                        LimpioUsuario();
+                        MessageBox.Show("Usuario desactivado");
+                    }
+                }
+                else
+                {
+                    Iniciar();
+                    LimpioUsuario();
+                }
             }
             catch (Exception ex)
             {
