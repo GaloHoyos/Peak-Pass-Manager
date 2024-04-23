@@ -52,27 +52,91 @@ namespace Peak_Pass_Manager
             dgvClientes.Columns[5].DataPropertyName = "direccion";
             dgvClientes.Columns.Add("Telefono", "Telefono");
             dgvClientes.Columns[6].DataPropertyName = "telefono";
+            dgvClientes.Columns.Add("Rol", "Rol");
+            dgvClientes.Columns[7].DataPropertyName = "nombre_rol";
         }
 
         public void AgregarCliente()
         {
             ControladoraUsuario cliente = new ControladoraUsuario();
-            cliente.AgregarUsuario(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 3);
+            switch (cliente.AgregarUsuario(1,txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 3))
+            {
+                case "No Existente":
+                    MessageBox.Show("Cliente Agregado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+                case "Usuario Existente":
+                    MessageBox.Show("Usuario Existente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+                case "Inactivo y Existente":
+                    var m = MessageBox.Show("Usuario Existente pero inactivo. Desea reactivarlo?", "Error", MessageBoxButtons.YesNo);
+                    if (m == DialogResult.Yes)
+                    {
+                        cliente.ActivarUsuario(cliente.ObtenerIdPorDNI(txtDNI.Text));
+                    }
+                    break;
+            }
             iniciar();
         }
         public void ModificarCliente()
         {
             ControladoraUsuario cliente = new ControladoraUsuario();
-            cliente.ModifcarUsuario(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "","",3);
-            iniciar();
-            LimpioCliente();
+            if (dgvClientes.CurrentRow.Cells[7].Value.ToString() == "Cliente")
+            {
+                if (txtDNI.Text == cliente.ObtenerDNI(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value)))
+                {
+                    cliente.ModifcarUsuario(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 3);
+                    iniciar();
+                    LimpioCliente();
+                }
+                else
+                {
+                    if (cliente.ExisteDNI(txtDNI.Text))
+                    {
+                        MessageBox.Show("DNI Existente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                    {
+                        cliente.ModifcarUsuario(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 3);
+                        iniciar();
+                        LimpioCliente();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se puede modificar un usuario que no sea cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         public void EliminarCliente()
         {
-            ControladoraUsuario cliente = new ControladoraUsuario();
-            cliente.EliminarUsuario(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value));
-            iniciar();
-            LimpioCliente();
+            if (dgvClientes.CurrentRow == null)
+            {
+                lblMensajeError.Show();
+                lblMensajeError.Text = "Seleccione un cliente";
+            }
+            else if (dgvClientes.CurrentRow.Cells[0].Value.ToString() == CacheUsuario.IdUsuario.ToString())
+            {
+                lblMensajeError.Show();
+                lblMensajeError.Text = "No se puede eliminar el usuario logueado";
+            }
+            else if (dgvClientes.CurrentRow.Cells[7].Value.ToString() != "Cliente")
+            {
+                lblMensajeError.Show();
+                lblMensajeError.Text = "No se puede eliminar un usuario que no sea cliente";
+            }
+            else
+            {
+                ControladoraUsuario cliente = new ControladoraUsuario();
+                if (cliente.EliminarUsuario(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value)) == true)
+                {
+                    MessageBox.Show("No se puede eliminar el cliente porque tiene pedidos asociados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                iniciar();
+                LimpioCliente();
+                lblMensajeError.Hide();
+                dgvClientes.ClearSelection();
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -82,7 +146,6 @@ namespace Peak_Pass_Manager
             if (verif == true)
             {
                 AgregarCliente();
-                lblMensajeError.Hide();
             }
             else
             {
@@ -98,7 +161,7 @@ namespace Peak_Pass_Manager
             {
                 lblMensajeError.Show();
                 lblMensajeError.Text = "Seleccione un cliente";
-            }
+            }   
             else
             {
                 Verificaciones verificaciones = new Verificaciones();
@@ -129,17 +192,7 @@ namespace Peak_Pass_Manager
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (dgvClientes.CurrentRow == null)
-            {
-                lblMensajeError.Show();
-                lblMensajeError.Text = "Seleccione un cliente";
-            }
-            else
-            {
                 EliminarCliente();
-                lblMensajeError.Hide();
-                dgvClientes.ClearSelection();
-            }
         }
 
         private void btnCambioCliente_Click(object sender, EventArgs e)

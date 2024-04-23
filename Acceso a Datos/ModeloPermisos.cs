@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,7 @@ namespace Acceso_a_Datos
         public static bool AgregarUsuarios { get; set; }
         public static bool ModificarUsuarios { get; set; }
         public static bool EliminarUsuarios { get; set; }
+        public static bool AgregarRoles { get; set; }
 
         public ModeloPermisos()
         {
@@ -247,7 +249,7 @@ namespace Acceso_a_Datos
             }
         }
         //Ver permisos de un rol
-        public bool VerPermisos(int idRol, int idPermiso)
+        public bool VerPermiso(int idRol, int idPermiso)
         {
             bool permiso = false;
             using (var con = GetConnection())
@@ -269,7 +271,185 @@ namespace Acceso_a_Datos
             }
             return permiso;
         }
+        //Ver todos los nombres de los permisos de un rol
+        public List<string> VerPermisos(int idRol)
+        {
+            List<string> permisos = new List<string>();
+            using (var con = GetConnection())
+            {
+                con.Open();
+                using (var cmd = con.CreateCommand())
+                {
+                    cmd.CommandText = "select nombre_permiso from roles_permisos inner join permisos on roles_permisos.id_permiso = permisos.id_permiso where id_rol = @id_rol";
+                    cmd.Parameters.AddWithValue("@id_rol", idRol);
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            permisos.Add(reader.GetString(0));
+                        }
+                    }
+                }
+            }
+            return permisos;
+        }
 
-
+        public bool AgregarRol(string nombreRol)
+        {
+            bool existe = false;
+            using (var con = GetConnection())
+            {
+                con.Open();
+                using (var cmd = con.CreateCommand())
+                {
+                    cmd.CommandText = "select * from roles where nombre_rol = @nombre_rol";
+                    cmd.Parameters.AddWithValue("@nombre_rol", nombreRol);
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            existe = true;
+                            return existe;
+                        }
+                    }
+                }
+            }
+            if (!existe)
+            {
+                using (var con = GetConnection())
+                {
+                    con.Open();
+                    using (var cmd = con.CreateCommand())
+                    {
+                        cmd.CommandText = "insert into roles values(@nombre_rol)";
+                        cmd.Parameters.AddWithValue("@nombre_rol", nombreRol);
+                        cmd.ExecuteNonQuery();
+                        return existe;
+                    }
+                }
+            }
+            else
+            {
+                return existe;
+            }
+        }
+        //Elimina Roles si no hay usuarios asignados a ese rol
+        public bool EliminarRol(int idRol)
+        {
+            bool existenUsuarios = false;
+            using (var con = GetConnection())
+            {
+                con.Open();
+                using (var cmd = con.CreateCommand())
+                {
+                    cmd.CommandText = "select * from usuarios where id_rol = @id_rol";
+                    cmd.Parameters.AddWithValue("@id_rol", idRol);
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            existenUsuarios = true;
+                            return existenUsuarios;
+                        }
+                    }
+                }
+            }
+            if (!existenUsuarios)
+            {
+                using (var con = GetConnection())
+                {
+                    con.Open();
+                    using (var cmd = con.CreateCommand())
+                    {
+                        cmd.CommandText = "delete from roles where id_rol = @id_rol";
+                        cmd.Parameters.AddWithValue("@id_rol", idRol);
+                        cmd.ExecuteNonQuery();
+                        return existenUsuarios;
+                    }
+                }
+            }
+            else
+            {
+                return existenUsuarios;
+            }
+        }
+        //Busca el id del rol seleccionado
+        public int ObtenerIdRol(string nombreRol)
+        {
+            int idRol = 0;
+            using (var con = GetConnection())
+            {
+                con.Open();
+                using (var cmd = con.CreateCommand())
+                {
+                    cmd.CommandText = "select id_rol from roles where nombre_rol = @nombre_rol";
+                    cmd.Parameters.AddWithValue("@nombre_rol", nombreRol);
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            idRol = reader.GetInt32(0);
+                        }
+                    }
+                }
+            }
+            return idRol;
+        }
+        //Devuelve una lista con los nombres de los roles
+        public List<string> ObtenerRoles()
+        {
+            List<string> roles = new List<string>();
+            using (var con = GetConnection())
+            {
+                con.Open();
+                using (var cmd = con.CreateCommand())
+                {
+                    cmd.CommandText = "select nombre_rol from roles";
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            roles.Add(reader.GetString(0));
+                        }
+                    }
+                }
+            }
+            return roles;
+        }
+        //Modificar permisos
+        public void ModificarPermisos(int idRol, List<int> permisos)
+        {
+            List<int> permisosActuales = new List<int>();
+            using (var con = GetConnection())
+            {
+                con.Open();
+                using (var cmd = con.CreateCommand())
+                {
+                    cmd.CommandText = "select id_permiso from roles_permisos where id_rol = @id_rol";
+                    cmd.Parameters.AddWithValue("@id_rol", idRol);
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            permisosActuales.Add(reader.GetInt32(0));
+                        }
+                    }
+                }
+            }
+            foreach (int permiso in permisosActuales)
+            {
+                if (!permisos.Contains(permiso))
+                {
+                    EliminarPermisos(idRol, permiso);
+                }
+            }
+            foreach (int permiso in permisos)
+            {
+                if (!permisosActuales.Contains(permiso))
+                {
+                    AgregarPermisos(idRol, permiso);
+                }
+            }
+        }
     }
 }

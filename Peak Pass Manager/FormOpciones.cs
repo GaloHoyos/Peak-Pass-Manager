@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Security.Cryptography.Pkcs;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,224 +19,216 @@ namespace Peak_Pass_Manager
         public FormOpciones()
         {
             InitializeComponent();
-            cmbRol.Items.Add("Administrador");
-            cmbRol.Items.Add("Vendedor");
-            cmbRol.SelectedIndex = 0;
-            if (controladoraPermisos.EditarPermisos()== false)
+            LlenarRoles();
+            LlenarCheckBoxes();
+            //Agrega al combobox los nombrede los roles con la funcion ObtenerRoles de la controladoraPermisos
+            if (controladoraPermisos.EditarPermisos() == false)
             {
                 gboxPermisos.Enabled = false;
             }
         }
-        public void Inicializar()
+        public void LlenarCheckBoxes()
         {
-            switch (cmbRol.SelectedIndex)
+            try
             {
-                case 0:
-                    ControladoraPermisos controladoraPermisos = new ControladoraPermisos();
-                    chkCatalogo.Checked = controladoraPermisos.VerPermisos(1, 1);
-                    chkClientes.Checked = controladoraPermisos.VerPermisos(1, 2);
-                    chkOpciones.Checked = controladoraPermisos.VerPermisos(1, 3);
-                    chkPedidos.Checked = controladoraPermisos.VerPermisos(1, 4);
-                    chkUsuarios.Checked = controladoraPermisos.VerPermisos(1, 5);
-                    chkEdPermisos.Checked = controladoraPermisos.VerPermisos(1, 6);
-                    chkEdCatalogos.Checked = controladoraPermisos.VerPermisos(1, 7);
-                    chkEdProductos.Checked = controladoraPermisos.VerPermisos(1, 8);
-                    chkReportes.Checked = controladoraPermisos.VerPermisos(1, 9);
-                    chkAuditoria.Checked = controladoraPermisos.VerPermisos(1, 10);
-                    chkAgClientes.Checked = controladoraPermisos.VerPermisos(1, 11);
-                    chkModClientes.Checked = controladoraPermisos.VerPermisos(1, 12);
-                    chkEliClientes.Checked = controladoraPermisos.VerPermisos(1, 13);
-                    chkAgUsuarios.Checked = controladoraPermisos.VerPermisos(1, 14);
-                    chkModUsuarios.Checked = controladoraPermisos.VerPermisos(1, 15);
-                    chkEliUsuarios.Checked = controladoraPermisos.VerPermisos(1, 16);
-                    break;
-                case 1:
-                    ControladoraPermisos controladoraPermisos2 = new ControladoraPermisos();
-                    chkCatalogo.Checked = controladoraPermisos2.VerPermisos(2, 1);
-                    chkClientes.Checked = controladoraPermisos2.VerPermisos(2, 2);
-                    chkOpciones.Checked = controladoraPermisos2.VerPermisos(2, 3);
-                    chkPedidos.Checked = controladoraPermisos2.VerPermisos(2, 4);
-                    chkUsuarios.Checked = controladoraPermisos2.VerPermisos(2, 5);
-                    chkEdPermisos.Checked = controladoraPermisos2.VerPermisos(2, 6);
-                    chkEdCatalogos.Checked = controladoraPermisos2.VerPermisos(2, 7);
-                    chkEdProductos.Checked = controladoraPermisos2.VerPermisos(2, 8);
-                    chkReportes.Checked = controladoraPermisos2.VerPermisos(2, 9);
-                    chkAuditoria.Checked = controladoraPermisos2.VerPermisos(2, 10);
-                    chkAgClientes.Checked = controladoraPermisos2.VerPermisos(2, 11);
-                    chkModClientes.Checked = controladoraPermisos2.VerPermisos(2, 12);
-                    chkEliClientes.Checked = controladoraPermisos2.VerPermisos(2, 13);
-                    chkAgUsuarios.Checked = controladoraPermisos2.VerPermisos(2, 14);
-                    chkModUsuarios.Checked = controladoraPermisos2.VerPermisos(2, 15);
-                    chkEliUsuarios.Checked = controladoraPermisos2.VerPermisos(2, 16);
-                    break;
+                    controladoraPermisos.LlenarPermisos(controladoraPermisos.ObtenerIdRol(cmbRol.Text));
+                    chkAgClientes.Checked = ControladoraPermisos.AgregarClientesSeleccion;
+                    chkAgUsuarios.Checked = ControladoraPermisos.AgregarUsuariosSeleccion;
+                    chkAuditoria.Checked = ControladoraPermisos.AuditoriaSeleccion;
+                    chkCatalogo.Checked = ControladoraPermisos.CatalogoSeleccion;
+                    chkClientes.Checked = ControladoraPermisos.ClientesSeleccion;
+                    chkEdCatalogos.Checked = ControladoraPermisos.EditarCatalogosSeleccion;
+                    chkEdPermisos.Checked = ControladoraPermisos.EditarPermisosSeleccion;
+                    chkEdProductos.Checked = ControladoraPermisos.EditarProductosSeleccion;
+                    chkEliClientes.Checked = ControladoraPermisos.EliminarClientesSeleccion;
+                    chkEliUsuarios.Checked = ControladoraPermisos.EliminarUsuariosSeleccion;
+                    chkModClientes.Checked = ControladoraPermisos.ModificarClientesSeleccion;
+                    chkModUsuarios.Checked = ControladoraPermisos.ModificarUsuariosSeleccion;
+                    chkOpciones.Checked = ControladoraPermisos.OpcionesSeleccion;
+                    chkPedidos.Checked = ControladoraPermisos.PedidosSeleccion;
+                    chkReportes.Checked = ControladoraPermisos.ReportesSeleccion;
+                    chkUsuarios.Checked = ControladoraPermisos.UsuariosSeleccion;
+                    chkAgregarRol.Checked = ControladoraPermisos.AgregarRolesSeleccion;
+            }
+            catch (Exception ex)
+            {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void LlenarRoles()
+        {
+            try
+            {
+                cmbRol.Items.Clear();
+                List<string> roles = controladoraPermisos.ObtenerRoles();
+                foreach (string rol in roles)
+                {
+                    cmbRol.Items.Add(rol);
+                }
+                cmbRol.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            switch (cmbRol.SelectedIndex)
-            {
-                case 0:
-                    Selecciones(1);
-                    break;
-                case 1:
-                    Selecciones(2);
-                    break;
-            }
-            //Recarga el Menu Principal
+            controladoraPermisos.ModificarPermisos(controladoraPermisos.ObtenerIdRol(cmbRol.Text), ObtenerPermisos());
         }
-        public void Selecciones(int idRol)
+
+        //Metodo para pasar una lista de permisos a la controladoraPermisos
+        public List<int> ObtenerPermisos()
         {
-            ControladoraPermisos controladoraPermisos = new ControladoraPermisos();
-            switch (chkCatalogo.Checked)
+            List<int> permisos = new List<int>();
+            if (chkCatalogo.Checked == true)
             {
-                case true:
-                    controladoraPermisos.AgregarPermisos(idRol, 1);
-                    break;
-                case false:
-                    controladoraPermisos.EliminarPermisos(idRol, 1);
-                    break;
+                permisos.Add(1);
             }
-            switch (chkClientes.Checked)
+            if (chkClientes.Checked == true)
             {
-                case true:
-                    controladoraPermisos.AgregarPermisos(idRol, 2);
-                    break;
-                case false:
-                    controladoraPermisos.EliminarPermisos(idRol, 2);
-                    break;
+                permisos.Add(2);
             }
-            switch (chkOpciones.Checked)
+            if (chkOpciones.Checked == true)
             {
-                case true:
-                    controladoraPermisos.AgregarPermisos(idRol, 3);
-                    break;
-                case false:
-                    controladoraPermisos.EliminarPermisos(idRol, 3);
-                    break;
+                permisos.Add(3);
             }
-            switch (chkPedidos.Checked)
+            if (chkPedidos.Checked == true)
             {
-                case true:
-                    controladoraPermisos.AgregarPermisos(idRol, 4);
-                    break;
-                case false:
-                    controladoraPermisos.EliminarPermisos(idRol, 4);
-                    break;
+                permisos.Add(4);
             }
-            switch (chkUsuarios.Checked)
+            if (chkUsuarios.Checked == true)
             {
-                case true:
-                    controladoraPermisos.AgregarPermisos(idRol, 5);
-                    break;
-                case false:
-                    controladoraPermisos.EliminarPermisos(idRol, 5);
-                    break;
+                permisos.Add(5);
             }
-            switch (chkEdPermisos.Checked)
+            if (chkEdPermisos.Checked == true)
             {
-                case true:
-                    controladoraPermisos.AgregarPermisos(idRol, 6);
-                    break;
-                case false:
-                    controladoraPermisos.EliminarPermisos(idRol, 6);
-                    break;
+                permisos.Add(6);
             }
-            switch (chkEdCatalogos.Checked)
+            if (chkEdCatalogos.Checked == true)
             {
-                case true:
-                    controladoraPermisos.AgregarPermisos(idRol, 7);
-                    break;
-                case false:
-                    controladoraPermisos.EliminarPermisos(idRol, 7);
-                    break;
+                permisos.Add(7);
             }
-            switch (chkEdProductos.Checked)
+            if (chkEdProductos.Checked == true)
             {
-                case true:
-                    controladoraPermisos.AgregarPermisos(idRol, 8);
-                    break;
-                case false:
-                    controladoraPermisos.EliminarPermisos(idRol, 8);
-                    break;
+                permisos.Add(8);
             }
-            switch (chkReportes.Checked)
+            if (chkReportes.Checked == true)
             {
-                case true:
-                    controladoraPermisos.AgregarPermisos(idRol, 9);
-                    break;
-                case false:
-                    controladoraPermisos.EliminarPermisos(idRol, 9);
-                    break;
+                permisos.Add(9);
             }
-            switch (chkAuditoria.Checked)
+            if (chkAuditoria.Checked == true)
             {
-                case true:
-                    controladoraPermisos.AgregarPermisos(idRol, 10);
-                    break;
-                case false:
-                    controladoraPermisos.EliminarPermisos(idRol, 10);
-                    break;
+                permisos.Add(10);
             }
-            switch (chkAgClientes.Checked)
+            if (chkAgClientes.Checked == true)
             {
-                case true:
-                    controladoraPermisos.AgregarPermisos(idRol, 11);
-                    break;
-                case false:
-                    controladoraPermisos.EliminarPermisos(idRol, 11);
-                    break;
+                permisos.Add(11);
             }
-            switch (chkModClientes.Checked)
+            if (chkModClientes.Checked == true)
             {
-                case true:
-                    controladoraPermisos.AgregarPermisos(idRol, 12);
-                    break;
-                case false:
-                    controladoraPermisos.EliminarPermisos(idRol, 12);
-                    break;
+                permisos.Add(12);
             }
-            switch (chkEliClientes.Checked)
+            if (chkEliClientes.Checked == true)
             {
-                case true:
-                    controladoraPermisos.AgregarPermisos(idRol, 13);
-                    break;
-                case false:
-                    controladoraPermisos.EliminarPermisos(idRol, 13);
-                    break;
+                permisos.Add(13);
             }
-            switch (chkAgUsuarios.Checked)
+            if (chkAgUsuarios.Checked == true)
             {
-                case true:
-                    controladoraPermisos.AgregarPermisos(idRol, 14);
-                    break;
-                case false:
-                    controladoraPermisos.EliminarPermisos(idRol, 14);
-                    break;
+                permisos.Add(14);
             }
-            switch (chkModUsuarios.Checked)
+            if (chkModUsuarios.Checked == true)
             {
-                case true:
-                    controladoraPermisos.AgregarPermisos(idRol, 15);
-                    break;
-                case false:
-                    controladoraPermisos.EliminarPermisos(idRol, 15);
-                    break;
+                permisos.Add(15);
             }
-            switch (chkEliUsuarios.Checked)
+            if (chkEliUsuarios.Checked == true)
             {
-                case true:
-                    controladoraPermisos.AgregarPermisos(idRol, 16);
-                    break;
-                case false:
-                    controladoraPermisos.EliminarPermisos(idRol, 16);
-                    break;
+                permisos.Add(16);
             }
+            if (chkAgregarRol.Checked == true)
+            {
+                permisos.Add(17);
+            }
+            return permisos;
         }
 
         private void cmbRol_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Inicializar();
+            if (cmbRol.Text == "Administrador" || cmbRol.Text == "Cliente")
+            {
+                CambiarPermisosClickeables(false);
+            }
+            else
+            {
+                CambiarPermisosClickeables(true);
+            }
+            LlenarCheckBoxes();
+        }
+
+        public void CambiarPermisosClickeables(bool permiso)
+        {
+            chkCatalogo.Enabled = permiso;
+            chkClientes.Enabled = permiso;
+            chkOpciones.Enabled = permiso;
+            chkPedidos.Enabled = permiso;
+            chkUsuarios.Enabled = permiso;
+            chkEdPermisos.Enabled = permiso;
+            chkEdCatalogos.Enabled = permiso;
+            chkEdProductos.Enabled = permiso;
+            chkReportes.Enabled = permiso;
+            chkAuditoria.Enabled = permiso;
+            chkAgClientes.Enabled = permiso;
+            chkModClientes.Enabled = permiso;
+            chkEliClientes.Enabled = permiso;
+            chkAgUsuarios.Enabled = permiso;
+            chkModUsuarios.Enabled = permiso;
+            chkEliUsuarios.Enabled = permiso;
+            chkAgregarRol.Enabled = permiso;
+            btnGuardar.Enabled = permiso;
+        }
+
+        private void btnAgregarRol_Click(object sender, EventArgs e)
+        {
+            bool existe = controladoraPermisos.AgregarRol(txtRol.Text);
+            if (existe == true)
+            {
+                MessageBox.Show("El rol ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Rol agregado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LlenarRoles();
+                txtRol.Text = "";
+            }
+        }
+
+        private void btnEliminarRol_Click(object sender, EventArgs e)
+        {
+            if (cmbRol.Text == "Administrador")
+            {
+                MessageBox.Show("No se puede eliminar el rol de Administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else if (cmbRol.Text == "Cliente")
+            {
+                MessageBox.Show("No se puede eliminar el rol de Cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else
+            {
+                int idRol = controladoraPermisos.ObtenerIdRol(cmbRol.Text);
+                bool existenUsuarios = controladoraPermisos.EliminarRol(idRol);
+                if (existenUsuarios == true)
+                {
+                    MessageBox.Show("El rol que desea eliminar tiene usuarios asociados.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("El rol fue eliminado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    LlenarRoles();
+                }
+            }
         }
     }
 }

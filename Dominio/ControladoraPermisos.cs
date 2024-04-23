@@ -9,6 +9,25 @@ namespace Dominio
 {
     public class ControladoraPermisos
     {
+        public static bool CatalogoSeleccion { get; set; }
+        public static bool ClientesSeleccion { get; set; }
+        public static bool OpcionesSeleccion { get; set; }
+        public static bool PedidosSeleccion { get; set; }
+        public static bool UsuariosSeleccion { get; set; }
+        public static bool EditarPermisosSeleccion { get; set; }
+        public static bool EditarCatalogosSeleccion { get; set; }
+        public static bool EditarProductosSeleccion { get; set; }
+        public static bool ReportesSeleccion { get; set; }
+        public static bool AuditoriaSeleccion { get; set; }
+        public static bool AgregarClientesSeleccion { get; set; }
+        public static bool ModificarClientesSeleccion { get; set; }
+        public static bool EliminarClientesSeleccion { get; set; }
+        public static bool AgregarUsuariosSeleccion { get; set; }
+        public static bool ModificarUsuariosSeleccion { get; set; }
+        public static bool EliminarUsuariosSeleccion { get; set; }
+        public static bool AgregarRolesSeleccion { get; set; }
+
+
         ModeloPermisos modeloPermisos = new ModeloPermisos();
         //obtener los permisos del usuario
         public bool Catalogo()
@@ -75,20 +94,114 @@ namespace Dominio
         {
             return ModeloPermisos.EliminarUsuarios;
         }
-        //Agregar permisos
-        public void AgregarPermisos(int idRol, int idPermiso)
+        //Modificar permisos con una lista de permisos
+        public void ModificarPermisos(int idRol, List<int> permisos)
         {
-            modeloPermisos.AgregarPermisos(idRol, idPermiso);
-        }
-        //Eliminar permisos
-        public void EliminarPermisos(int idRol, int idPermiso)
-        {
-            modeloPermisos.EliminarPermisos(idRol, idPermiso);
+            modeloPermisos.ModificarPermisos(idRol, permisos);
         }
         //Ver permisos de un rol
-        public bool VerPermisos(int idRol, int idPermiso)
+        public List<string> VerPermisos(int idRol)
         {
-            return modeloPermisos.VerPermisos(idRol, idPermiso);
+            return modeloPermisos.VerPermisos(idRol);
+        }
+        public bool AgregarRol(string nombreRol)
+        {
+            bool existe = modeloPermisos.AgregarRol(nombreRol);
+            return existe;
+        }
+        public bool EliminarRol(int idRol)
+        {
+            bool existenUsuarios = modeloPermisos.EliminarRol(idRol);
+            return existenUsuarios;
+        }
+        public int ObtenerIdRol(string nombreRol)
+        {
+            int idRol = modeloPermisos.ObtenerIdRol(nombreRol);
+            return idRol;
+        }
+        public List<string> ObtenerRoles()
+        {
+            List<string> roles = modeloPermisos.ObtenerRoles();
+            return roles;
+        }
+        //Llena las variables de la controladora con los permisos del rol seleccionado
+        public void LlenarPermisos(int idRol)
+        {
+            CatalogoSeleccion = false;
+            ClientesSeleccion = false;
+            OpcionesSeleccion = false;
+            PedidosSeleccion = false;
+            UsuariosSeleccion = false;
+            EditarPermisosSeleccion = false;
+            EditarCatalogosSeleccion = false;
+            EditarProductosSeleccion = false;
+            ReportesSeleccion = false;
+            AuditoriaSeleccion = false;
+            AgregarClientesSeleccion = false;
+            ModificarClientesSeleccion = false;
+            EliminarClientesSeleccion = false;
+            AgregarUsuariosSeleccion = false;
+            ModificarUsuariosSeleccion = false;
+            EliminarUsuariosSeleccion = false;
+            AgregarRolesSeleccion = false;
+            List<string> permisos = modeloPermisos.VerPermisos(idRol);
+            foreach (string permiso in permisos)
+            {
+                switch (permiso)
+                {
+                    case "Catalogo":
+                        CatalogoSeleccion = true;
+                        break;
+                    case "Clientes":
+                        ClientesSeleccion = true;
+                        break;
+                    case "Opciones":
+                        OpcionesSeleccion = true;
+                        break;
+                    case "Pedidos":
+                        PedidosSeleccion = true;
+                        break;
+                    case "Usuarios":
+                        UsuariosSeleccion = true;
+                        break;
+                    case "Editar Permisos":
+                        EditarPermisosSeleccion = true;
+                        break;
+                    case "Editar Catalogos":
+                        EditarCatalogosSeleccion = true;
+                        break;
+                    case "Editar Productos":
+                        EditarProductosSeleccion = true;
+                        break;
+                    case "Reportes":
+                        ReportesSeleccion = true;
+                        break;
+                    case "Auditoria":
+                        AuditoriaSeleccion = true;
+                        break;
+                    case "Agregar Clientes":
+                        AgregarClientesSeleccion = true;
+                        break;
+                    case "Modificar Clientes":
+                        ModificarClientesSeleccion = true;
+                        break;
+                    case "Eliminar Clientes":
+                        EliminarClientesSeleccion = true;
+                        break;
+                    case "Agregar Usuarios":
+                        AgregarUsuariosSeleccion = true;
+                        break;
+                    case "Modificar Usuarios":
+                        ModificarUsuariosSeleccion = true;
+                        break;
+                    case "Eliminar Usuarios":
+                        EliminarUsuariosSeleccion = true;
+                        break;
+                    case "Agregar Roles":
+                        AgregarRolesSeleccion = true;
+                        break;
+                }
+            }
         }
     }
 }

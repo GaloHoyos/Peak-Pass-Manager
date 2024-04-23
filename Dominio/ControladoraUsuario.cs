@@ -75,13 +75,58 @@ namespace Dominio
             dt = modeloUsuario.ActualizarClientes();
             return dt;
         }
-
-        //metodo para agregar un usuario
-        public void AgregarUsuario(string nombre, string apellido, string dni, string email, string direccion, string telefono, string usuario, string password, int idRol)
+        public string AgregarUsuario(int cliente, string nombre, string apellido, string dni, string email, string direccion, string telefono, string usuario, string password, int idRol)
         {
-            Verificaciones verificaciones = new Verificaciones();
-            string passEncriptada = verificaciones.Encriptar(password);
-            modeloUsuario.AgregarUsuario(nombre, apellido, dni, email, direccion, telefono, usuario, passEncriptada, idRol);
+            if (cliente == 1)
+            {
+                if (modeloUsuario.ExisteDNI(dni))
+                {
+                    if (modeloUsuario.UsuarioActivo(dni))
+                    {
+                        return "Usuario Existente";
+                    }
+                    else
+                    {
+                        return "Inactivo y Existente";
+                    }
+                }
+                else
+                {
+                    Verificaciones verificaciones = new Verificaciones();
+                    string passEncriptada = verificaciones.Encriptar(password);
+                    modeloUsuario.AgregarUsuario(nombre, apellido, dni, email, direccion, telefono, usuario, passEncriptada, idRol);
+                    return "No Existente";
+                }
+            }
+            else if (cliente == 0) 
+            {
+                if (modeloUsuario.ExisteDNI(dni))
+                {
+                    if (modeloUsuario.UsuarioActivo(dni))
+                    {
+                        return "DNI Existente";
+                    }
+                    else
+                    {
+                        return "Inactivo y Existente";
+                    }
+                }
+                else if (modeloUsuario.ExisteUsuario(usuario))
+                {
+                    return "Usuario Existente";
+                }
+                else
+                {
+                    Verificaciones verificaciones = new Verificaciones();
+                    string passEncriptada = verificaciones.Encriptar(password);
+                    modeloUsuario.AgregarUsuario(nombre, apellido, dni, email, direccion, telefono, usuario, passEncriptada, idRol);
+                    return "No Existente";
+                }
+            }
+            else
+            {
+                return "Error";
+            }
         }
         public void ModifcarUsuario(int idUsuario, string nombre, string apellido, string dni, string email, string direccion, string telefono, string usuario, string password, int idRol)
         {
@@ -89,9 +134,18 @@ namespace Dominio
             string passEncriptada = verificaciones.Encriptar(password);
             modeloUsuario.ModificarUsuario(idUsuario, nombre, apellido, dni, email, direccion, telefono, usuario, passEncriptada, idRol);
         }
-        public void EliminarUsuario(int idUsuario)
+        public bool EliminarUsuario(int idUsuario)
         {
-            modeloUsuario.EliminarUsuario(idUsuario);
+            bool existePedido = modeloUsuario.EliminarUsuario(idUsuario);
+            return existePedido;
+        }
+        public void DesactivarUsuario(int idUsuario)
+        {
+            modeloUsuario.DesactivarUsuario(idUsuario);
+        }
+        public void ActivarUsuario(int idUsuario)
+        {
+            modeloUsuario.ActivarUsuario(idUsuario);
         }
 
         //Llenar cache de usuario con los datos del usuario logueado
@@ -104,7 +158,18 @@ namespace Dominio
             CacheUsuario.Correo = ModeloUsuario.Email;
             CacheUsuario.Direccion = ModeloUsuario.Direccion;
             CacheUsuario.Telefono = ModeloUsuario.Telefono;
-
+        }
+        public string ObtenerDNI(int idUsuario)
+        {
+            return modeloUsuario.ObtenerDNI(idUsuario);
+        }
+        public int ObtenerIdPorDNI(string dni)
+        {
+            return modeloUsuario.ObtenerIdPorDNI(dni);
+        }
+        public bool ExisteDNI(string dni)
+        {
+            return modeloUsuario.ExisteDNI(dni);
         }
 
     }
