@@ -114,7 +114,7 @@ namespace Peak_Pass_Manager
             {
                 int idRol = controladoraPermisos.ObtenerIdRol(cmbRol.Text);
                 ControladoraUsuario usuario = new ControladoraUsuario();
-                switch (usuario.AgregarUsuario(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text, idRol))
+                switch (usuario.AgregarUsuario(0,txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text, idRol))
                 {
                     case "Activo y Existente":
                         MessageBox.Show("El usuario ya existe");
@@ -131,6 +131,9 @@ namespace Peak_Pass_Manager
                     case "Usuario Existente":
                         MessageBox.Show("Ya existe una persona con ese nombre de usuario");
                         break;
+                    case "DNI Existente":
+                        MessageBox.Show("Ya existe una persona con ese DNI");
+                        break;
                     case "No Existente":
                         Iniciar();
                         LimpioUsuario();
@@ -146,11 +149,33 @@ namespace Peak_Pass_Manager
         {
             try
             {
-                int idRol = controladoraPermisos.ObtenerIdRol(cmbRol.Text);
                 ControladoraUsuario usuario = new ControladoraUsuario();
-                usuario.ModifcarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text, idRol);
-                Iniciar();
-                LimpioUsuario();
+                if (dgvUsuarios.CurrentRow.Cells[0].Value.ToString() == CacheUsuario.IdUsuario.ToString())
+                {
+                    MessageBox.Show("No se puede modificar el usuario que esta en uso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (txtDNI.Text == usuario.ObtenerDNI(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value)))
+                {
+                    int idRol = controladoraPermisos.ObtenerIdRol(cmbRol.Text);
+                    usuario.ModifcarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text, idRol);
+                    Iniciar();
+                    LimpioUsuario();
+                }
+                else
+                {
+                    if (usuario.ExisteDNI(txtDNI.Text))
+                    {
+                        MessageBox.Show("DNI Existente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                    {
+                        int idRol = controladoraPermisos.ObtenerIdRol(cmbRol.Text);
+                        usuario.ModifcarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text, idRol);
+                        Iniciar();
+                        LimpioUsuario();
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -162,22 +187,29 @@ namespace Peak_Pass_Manager
         {
             try
             {
-                ControladoraUsuario usuario = new ControladoraUsuario();
-                if (usuario.EliminarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value)))
+                if (dgvUsuarios.CurrentRow.Cells[0].Value.ToString() == CacheUsuario.IdUsuario.ToString())
                 {
-                    var resultado = MessageBox.Show("No se puede eliminar el usuario porque tiene pedidos asociados, desea desactivarlo en cambio?", "Atencion", MessageBoxButtons.YesNo);
-                    if (resultado == DialogResult.Yes)
+                    MessageBox.Show("No se puede eliminar el usuario que esta en uso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else 
+                { 
+                    ControladoraUsuario usuario = new ControladoraUsuario();
+                    if (usuario.EliminarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value)))
                     {
-                        usuario.DesactivarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value));
+                        var resultado = MessageBox.Show("No se puede eliminar el usuario porque tiene pedidos asociados, desea desactivarlo en cambio?", "Atencion", MessageBoxButtons.YesNo);
+                        if (resultado == DialogResult.Yes)
+                        {
+                            usuario.DesactivarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value));
+                            Iniciar();
+                            LimpioUsuario();
+                            MessageBox.Show("Usuario desactivado");
+                        }
+                    }
+                    else
+                    {
                         Iniciar();
                         LimpioUsuario();
-                        MessageBox.Show("Usuario desactivado");
                     }
-                }
-                else
-                {
-                    Iniciar();
-                    LimpioUsuario();
                 }
             }
             catch (Exception ex)
@@ -251,6 +283,7 @@ namespace Peak_Pass_Manager
             txtCorreo.Text = dgvUsuarios.CurrentRow.Cells[4].Value.ToString();
             txtDireccion.Text = dgvUsuarios.CurrentRow.Cells[5].Value.ToString();
             txtTelefono.Text = dgvUsuarios.CurrentRow.Cells[6].Value.ToString();
+            cmbRol.Text = dgvUsuarios.CurrentRow.Cells[9].Value.ToString();
         }
     }
 }

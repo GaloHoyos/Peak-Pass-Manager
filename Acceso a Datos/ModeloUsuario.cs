@@ -105,7 +105,7 @@ namespace Acceso_a_Datos
             using (var connection = GetConnection())
             {
 
-                SqlDataAdapter da = new SqlDataAdapter("select id_usuario, nombre, apellido, dni, correo, direccion, telefono from usuarios where usuarios.activo = 1 ORDER BY 1", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos, en este caso para poder tomar los valores de una tabla
+                SqlDataAdapter da = new SqlDataAdapter("select id_usuario, nombre, apellido, dni, correo, direccion, telefono, nombre_rol from usuarios inner join roles on usuarios.id_rol = roles.id_rol where usuarios.activo = 1 ORDER BY 1", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos, en este caso para poder tomar los valores de una tabla
                 da.SelectCommand.CommandType = CommandType.Text; //Indica como se interpretará el comando anterior para mayor claridad al momento de ejecutarlo en el SQL
                 da.Fill(dt); //Obtiene los datos de la tabla
                 return dt; //Envia los datos de la tabla
@@ -283,6 +283,22 @@ namespace Acceso_a_Datos
                     using (var command = new SqlCommand())
                     {
                         command.Connection = connection;
+                        SqlCommand cmd = new SqlCommand("select * from pedidos where id_vendedor = '" + usuario + "'", connection);
+                        cmd.CommandType = CommandType.Text;
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        if (reader.HasRows)
+                        {
+                            existenPedidos = true;
+                        }
+                        reader.Close();
+                    }
+
+                }
+                if (existenPedidos == false)
+                {
+                    using (var command = new SqlCommand())
+                    {
+                        command.Connection = connection;
                         SqlCommand cmd = new SqlCommand("DELETE FROM usuarios WHERE id_usuario = '" + usuario + "'", connection);
                         cmd.CommandType = CommandType.Text;
                         cmd.ExecuteNonQuery();
@@ -292,7 +308,7 @@ namespace Acceso_a_Datos
             return existenPedidos;
         }
         //Detecta si el usuario ya existe por medio del DNI
-        public bool ExisteUsuarioDNI(string dni)
+        public bool ExisteDNI(string dni)
         {
             bool existe = false;
             using (var connection = GetConnection())
