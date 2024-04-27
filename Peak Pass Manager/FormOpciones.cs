@@ -31,28 +31,28 @@ namespace Peak_Pass_Manager
         {
             try
             {
-                    controladoraPermisos.LlenarPermisos(controladoraPermisos.ObtenerIdRol(cmbRol.Text));
-                    chkAgClientes.Checked = ControladoraPermisos.AgregarClientesSeleccion;
-                    chkAgUsuarios.Checked = ControladoraPermisos.AgregarUsuariosSeleccion;
-                    chkAuditoria.Checked = ControladoraPermisos.AuditoriaSeleccion;
-                    chkCatalogo.Checked = ControladoraPermisos.CatalogoSeleccion;
-                    chkClientes.Checked = ControladoraPermisos.ClientesSeleccion;
-                    chkEdCatalogos.Checked = ControladoraPermisos.EditarCatalogosSeleccion;
-                    chkEdPermisos.Checked = ControladoraPermisos.EditarPermisosSeleccion;
-                    chkEdProductos.Checked = ControladoraPermisos.EditarProductosSeleccion;
-                    chkEliClientes.Checked = ControladoraPermisos.EliminarClientesSeleccion;
-                    chkEliUsuarios.Checked = ControladoraPermisos.EliminarUsuariosSeleccion;
-                    chkModClientes.Checked = ControladoraPermisos.ModificarClientesSeleccion;
-                    chkModUsuarios.Checked = ControladoraPermisos.ModificarUsuariosSeleccion;
-                    chkOpciones.Checked = ControladoraPermisos.OpcionesSeleccion;
-                    chkPedidos.Checked = ControladoraPermisos.PedidosSeleccion;
-                    chkReportes.Checked = ControladoraPermisos.ReportesSeleccion;
-                    chkUsuarios.Checked = ControladoraPermisos.UsuariosSeleccion;
-                    chkAgregarRol.Checked = ControladoraPermisos.AgregarRolesSeleccion;
+                controladoraPermisos.LlenarPermisos(controladoraPermisos.ObtenerIdRol(cmbRol.Text));
+                chkAgClientes.Checked = ControladoraPermisos.AgregarClientesSeleccion;
+                chkAgUsuarios.Checked = ControladoraPermisos.AgregarUsuariosSeleccion;
+                chkAuditoria.Checked = ControladoraPermisos.AuditoriaSeleccion;
+                chkCatalogo.Checked = ControladoraPermisos.CatalogoSeleccion;
+                chkClientes.Checked = ControladoraPermisos.ClientesSeleccion;
+                chkEdCatalogos.Checked = ControladoraPermisos.EditarCatalogosSeleccion;
+                chkEdPermisos.Checked = ControladoraPermisos.EditarPermisosSeleccion;
+                chkEdProductos.Checked = ControladoraPermisos.EditarProductosSeleccion;
+                chkEliClientes.Checked = ControladoraPermisos.EliminarClientesSeleccion;
+                chkEliUsuarios.Checked = ControladoraPermisos.EliminarUsuariosSeleccion;
+                chkModClientes.Checked = ControladoraPermisos.ModificarClientesSeleccion;
+                chkModUsuarios.Checked = ControladoraPermisos.ModificarUsuariosSeleccion;
+                chkOpciones.Checked = ControladoraPermisos.OpcionesSeleccion;
+                chkPedidos.Checked = ControladoraPermisos.PedidosSeleccion;
+                chkReportes.Checked = ControladoraPermisos.ReportesSeleccion;
+                chkUsuarios.Checked = ControladoraPermisos.UsuariosSeleccion;
+                chkAgregarRol.Checked = ControladoraPermisos.AgregarRolesSeleccion;
             }
             catch (Exception ex)
             {
-                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public void LlenarRoles()
@@ -60,12 +60,30 @@ namespace Peak_Pass_Manager
             try
             {
                 cmbRol.Items.Clear();
-                List<string> roles = controladoraPermisos.ObtenerRoles();
+                List<string> roles = controladoraPermisos.ObtenerRolesActivos();
                 foreach (string rol in roles)
                 {
                     cmbRol.Items.Add(rol);
                 }
                 cmbRol.SelectedIndex = 0;
+                cmbRolInactivo.Items.Clear();
+                List<string> rolesInactivos = controladoraPermisos.ObtenerRolesInactivos();
+                foreach (string rol in rolesInactivos)
+                {
+                    cmbRolInactivo.Items.Add(rol);
+                }
+                if (cmbRolInactivo.Items.Count == 0)
+                {
+                    cmbRolInactivo.Enabled = false;
+                    btnHabilitarRol.Enabled = false;
+                }
+                else
+                {
+                    cmbRolInactivo.Enabled = true;
+                    btnHabilitarRol.Enabled = true;
+                    cmbRolInactivo.SelectedIndex = 0;
+                }
+
             }
             catch (Exception ex)
             {
@@ -207,12 +225,17 @@ namespace Peak_Pass_Manager
         {
             if (cmbRol.Text == "Administrador")
             {
-                MessageBox.Show("No se puede eliminar el rol de Administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No se puede eliminar el rol de Administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else if (cmbRol.Text == "Cliente")
             {
-                MessageBox.Show("No se puede eliminar el rol de Cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No se puede eliminar el rol de Cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (cmbRol.Text == "Vendedor")
+            {
+                MessageBox.Show("No se puede eliminar el rol de Vendedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
@@ -221,14 +244,27 @@ namespace Peak_Pass_Manager
                 bool existenUsuarios = controladoraPermisos.EliminarRol(idRol);
                 if (existenUsuarios == true)
                 {
-                    MessageBox.Show("El rol que desea eliminar tiene usuarios asociados.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    var m = MessageBox.Show("El rol que desea eliminar tiene usuarios asociados. Desea deshabilitar el Rol junto a los usuarios asociados?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (m == DialogResult.Yes)
+                    {
+                        controladoraPermisos.DeshabilitarRol(idRol);
+                        MessageBox.Show("El rol fue deshabilitado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LlenarRoles();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("El rol fue eliminado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El rol fue eliminado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LlenarRoles();
                 }
             }
+        }
+
+        private void btnHabilitarRol_Click(object sender, EventArgs e)
+        {
+            controladoraPermisos.HabilitarRol(controladoraPermisos.ObtenerIdRol(cmbRolInactivo.Text));
+            LlenarRoles();
+            MessageBox.Show("Rol habilitado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

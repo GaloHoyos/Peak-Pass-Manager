@@ -55,8 +55,13 @@
             btnAgregarRol = new Button();
             lblNombreRol = new Label();
             txtRol = new TextBox();
+            groupBox1 = new GroupBox();
+            lblRolInactivo = new Label();
+            btnHabilitarRol = new Button();
+            cmbRolInactivo = new ComboBox();
             gboxPermisos.SuspendLayout();
             gboxRoles.SuspendLayout();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // lblOpciones
@@ -298,7 +303,7 @@
             // lblRol
             // 
             lblRol.AutoSize = true;
-            lblRol.Location = new Point(29, 55);
+            lblRol.Location = new Point(60, 55);
             lblRol.Name = "lblRol";
             lblRol.Size = new Size(37, 25);
             lblRol.TabIndex = 1;
@@ -354,12 +359,55 @@
             txtRol.Size = new Size(150, 31);
             txtRol.TabIndex = 0;
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(lblRolInactivo);
+            groupBox1.Controls.Add(btnHabilitarRol);
+            groupBox1.Controls.Add(cmbRolInactivo);
+            groupBox1.ForeColor = SystemColors.ButtonFace;
+            groupBox1.Location = new Point(253, 332);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(428, 178);
+            groupBox1.TabIndex = 7;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Roles Inactivos";
+            // 
+            // lblRolInactivo
+            // 
+            lblRolInactivo.AutoSize = true;
+            lblRolInactivo.Location = new Point(98, 70);
+            lblRolInactivo.Name = "lblRolInactivo";
+            lblRolInactivo.Size = new Size(37, 25);
+            lblRolInactivo.TabIndex = 20;
+            lblRolInactivo.Text = "Rol";
+            // 
+            // btnHabilitarRol
+            // 
+            btnHabilitarRol.ForeColor = SystemColors.ActiveCaptionText;
+            btnHabilitarRol.Location = new Point(188, 118);
+            btnHabilitarRol.Name = "btnHabilitarRol";
+            btnHabilitarRol.Size = new Size(122, 34);
+            btnHabilitarRol.TabIndex = 2;
+            btnHabilitarRol.Text = "Habilitar Rol";
+            btnHabilitarRol.UseVisualStyleBackColor = true;
+            btnHabilitarRol.Click += btnHabilitarRol_Click;
+            // 
+            // cmbRolInactivo
+            // 
+            cmbRolInactivo.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbRolInactivo.FormattingEnabled = true;
+            cmbRolInactivo.Location = new Point(141, 66);
+            cmbRolInactivo.Name = "cmbRolInactivo";
+            cmbRolInactivo.Size = new Size(182, 33);
+            cmbRolInactivo.TabIndex = 19;
+            // 
             // FormOpciones
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(34, 33, 74);
             ClientSize = new Size(1196, 702);
+            Controls.Add(groupBox1);
             Controls.Add(gboxRoles);
             Controls.Add(gboxPermisos);
             Controls.Add(lblOpciones);
@@ -369,6 +417,8 @@
             gboxPermisos.PerformLayout();
             gboxRoles.ResumeLayout(false);
             gboxRoles.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -402,5 +452,9 @@
         private Label lblNombreRol;
         private TextBox txtRol;
         private Button btnEliminarRol;
+        private GroupBox groupBox1;
+        private Label lblRolInactivo;
+        private Button btnHabilitarRol;
+        private ComboBox cmbRolInactivo;
     }
 }

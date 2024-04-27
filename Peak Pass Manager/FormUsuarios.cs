@@ -25,6 +25,7 @@ namespace Peak_Pass_Manager
         public void Iniciar()
         {
             ControladoraUsuario usuario = new ControladoraUsuario();
+            gboxFiltros.Hide();
             //Agregar columnas vacias al dgv
             dgvUsuarios.Columns.Clear();
             dgvUsuarios.Columns.Add("ID", "ID");
@@ -95,13 +96,42 @@ namespace Peak_Pass_Manager
         {
             try
             {
-                cmbRol.Items.Clear();
-                List<string> roles = controladoraPermisos.ObtenerRoles();
-                foreach (string rol in roles)
+                if (cboxInactivo.Checked)
                 {
-                    cmbRol.Items.Add(rol);
+                    cmbRol.Items.Clear();
+                    cmbRolFiltro.Items.Clear();
+                    List<string> rolesActivos = controladoraPermisos.ObtenerRolesActivos();
+                    List<string> rolesInactivos = controladoraPermisos.ObtenerRolesInactivos();
+                    cmbRolFiltro.Items.Add("Todos");
+                    foreach (string rol in rolesActivos)
+                    {
+                        cmbRol.Items.Add(rol);
+                        cmbRolFiltro.Items.Add(rol);
+                    }
+                    foreach (string rol in rolesInactivos)
+                    {
+                        cmbRol.Items.Add(rol);
+                        cmbRolFiltro.Items.Add(rol);
+                    }
+                    cmbRol.SelectedIndex = 0;
+                    cmbRolFiltro.SelectedIndex = 0;
+
                 }
-                cmbRol.SelectedIndex = 0;
+                else
+                {
+                    cmbRol.Items.Clear();
+                    cmbRolFiltro.Items.Clear();
+                    List<string> roles = controladoraPermisos.ObtenerRolesActivos();
+                    cmbRolFiltro.Items.Add("Todos");
+                    foreach (string rol in roles)
+                    {
+                        cmbRol.Items.Add(rol);
+                        cmbRolFiltro.Items.Add(rol);
+                    }
+                    cmbRol.SelectedIndex = 0;
+                    cmbRolFiltro.SelectedIndex = 0;
+                }
+
             }
             catch (Exception ex)
             {
@@ -114,13 +144,13 @@ namespace Peak_Pass_Manager
             {
                 int idRol = controladoraPermisos.ObtenerIdRol(cmbRol.Text);
                 ControladoraUsuario usuario = new ControladoraUsuario();
-                switch (usuario.AgregarUsuario(0,txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text, idRol))
+                switch (usuario.AgregarUsuario(0, txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text, idRol, cboxUserActivo.Checked))
                 {
                     case "Activo y Existente":
                         MessageBox.Show("El usuario ya existe");
                         break;
                     case "Inactivo y Existente":
-                        var m = MessageBox.Show("El usuario ya existe y esta inactivo. Desea reactivarlo?", "Atencion",MessageBoxButtons.YesNo);
+                        var m = MessageBox.Show("El usuario ya existe y esta inactivo. Desea reactivarlo?", "Atencion", MessageBoxButtons.YesNo);
                         if (m == DialogResult.Yes)
                         {
                             usuario.ActivarUsuario(usuario.ObtenerIdPorDNI(txtDNI.Text));
@@ -157,9 +187,15 @@ namespace Peak_Pass_Manager
                 else if (txtDNI.Text == usuario.ObtenerDNI(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value)))
                 {
                     int idRol = controladoraPermisos.ObtenerIdRol(cmbRol.Text);
-                    usuario.ModifcarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text, idRol);
-                    Iniciar();
-                    LimpioUsuario();
+                    if (usuario.ModifcarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text, idRol, cboxUserActivo.Checked))
+                    {
+                        Iniciar();
+                        LimpioUsuario();
+                    }
+                    else 
+                    { 
+                        MessageBox.Show("El nombre de Usuario ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
@@ -171,7 +207,7 @@ namespace Peak_Pass_Manager
                     else
                     {
                         int idRol = controladoraPermisos.ObtenerIdRol(cmbRol.Text);
-                        usuario.ModifcarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text, idRol);
+                        usuario.ModifcarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text, idRol, cboxUserActivo.Checked);
                         Iniciar();
                         LimpioUsuario();
                     }
@@ -191,8 +227,8 @@ namespace Peak_Pass_Manager
                 {
                     MessageBox.Show("No se puede eliminar el usuario que esta en uso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else 
-                { 
+                else
+                {
                     ControladoraUsuario usuario = new ControladoraUsuario();
                     if (usuario.EliminarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value)))
                     {
@@ -248,7 +284,7 @@ namespace Peak_Pass_Manager
         private void btnModificar_Click(object sender, EventArgs e)
         {
             Verificaciones verificaciones = new Verificaciones();
-            bool verif = verificaciones.VerificacionCrearUsuario(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text);
+            bool verif = verificaciones.VerificacionCrearUsuario(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "a","a");
             if (verif == true)
             {
                 ModificarUsuario();
@@ -277,6 +313,7 @@ namespace Peak_Pass_Manager
 
         private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            ControladoraUsuario usuario = new ControladoraUsuario();
             txtNombre.Text = dgvUsuarios.CurrentRow.Cells[1].Value.ToString();
             txtApellido.Text = dgvUsuarios.CurrentRow.Cells[2].Value.ToString();
             txtDNI.Text = dgvUsuarios.CurrentRow.Cells[3].Value.ToString();
@@ -284,6 +321,53 @@ namespace Peak_Pass_Manager
             txtDireccion.Text = dgvUsuarios.CurrentRow.Cells[5].Value.ToString();
             txtTelefono.Text = dgvUsuarios.CurrentRow.Cells[6].Value.ToString();
             cmbRol.Text = dgvUsuarios.CurrentRow.Cells[9].Value.ToString();
+            if (usuario.UsuarioActivo(dgvUsuarios.CurrentRow.Cells[3].Value.ToString()))
+            {
+                cboxUserActivo.Checked = true;
+            }
+            else
+            {
+                cboxUserActivo.Checked = false;
+            }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+            if(cboxActivo.Checked == true && cboxInactivo.Checked == true)
+            {
+                ControladoraUsuario usuario = new ControladoraUsuario();
+                dgvUsuarios.DataSource = usuario.BuscarUsuario(txtBuscar.Text, cmbRolFiltro.Text);
+            }
+            else if (cboxActivo.Checked == true && cboxInactivo.Checked == false)
+            {
+                ControladoraUsuario usuario = new ControladoraUsuario();
+                dgvUsuarios.DataSource = usuario.BuscarUsuarioActivoInactivo(txtBuscar.Text, cmbRolFiltro.Text, 1);
+            }
+            else if (cboxActivo.Checked == false && cboxInactivo.Checked == true)
+            {
+                ControladoraUsuario usuario = new ControladoraUsuario();
+                dgvUsuarios.DataSource = usuario.BuscarUsuarioActivoInactivo(txtBuscar.Text, cmbRolFiltro.Text, 0);
+            }
+            else
+            {
+                ControladoraUsuario usuario = new ControladoraUsuario();
+                dgvUsuarios.DataSource = usuario.BuscarUsuarioActivoInactivo(txtBuscar.Text, cmbRolFiltro.Text, 1);
+            }
+            LlenarRoles();
+        }
+
+        private void btnFiltros_Click(object sender, EventArgs e)
+        {
+            LlenarRoles();
+            if (gboxFiltros.Visible == false)
+            {
+                gboxFiltros.Show();
+            }
+            else
+            {
+                gboxFiltros.Hide();
+            }
         }
     }
 }

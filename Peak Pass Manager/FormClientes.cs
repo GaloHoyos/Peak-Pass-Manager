@@ -59,7 +59,7 @@ namespace Peak_Pass_Manager
         public void AgregarCliente()
         {
             ControladoraUsuario cliente = new ControladoraUsuario();
-            switch (cliente.AgregarUsuario(1,txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 3))
+            switch (cliente.AgregarUsuario(1,txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 3, true))
             {
                 case "No Existente":
                     MessageBox.Show("Cliente Agregado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -84,7 +84,7 @@ namespace Peak_Pass_Manager
             {
                 if (txtDNI.Text == cliente.ObtenerDNI(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value)))
                 {
-                    cliente.ModifcarUsuario(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 3);
+                    cliente.ModifcarUsuario(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 3, true);
                     iniciar();
                     LimpioCliente();
                 }
@@ -97,7 +97,7 @@ namespace Peak_Pass_Manager
                     }
                     else
                     {
-                        cliente.ModifcarUsuario(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 3);
+                        cliente.ModifcarUsuario(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 3, true);
                         iniciar();
                         LimpioCliente();
                     }

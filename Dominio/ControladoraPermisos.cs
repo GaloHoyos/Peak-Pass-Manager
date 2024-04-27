@@ -100,10 +100,6 @@ namespace Dominio
             modeloPermisos.ModificarPermisos(idRol, permisos);
         }
         //Ver permisos de un rol
-        public List<string> VerPermisos(int idRol)
-        {
-            return modeloPermisos.VerPermisos(idRol);
-        }
         public bool AgregarRol(string nombreRol)
         {
             bool existe = modeloPermisos.AgregarRol(nombreRol);
@@ -119,10 +115,23 @@ namespace Dominio
             int idRol = modeloPermisos.ObtenerIdRol(nombreRol);
             return idRol;
         }
-        public List<string> ObtenerRoles()
+        public List<string> ObtenerRolesActivos()
         {
-            List<string> roles = modeloPermisos.ObtenerRoles();
+            List<string> roles = modeloPermisos.ObtenerRolesActivos();
             return roles;
+        }
+        public List<string> ObtenerRolesInactivos()
+        {
+            List<string> roles = modeloPermisos.ObtenerRolesInactivos();
+            return roles;
+        }
+        public void HabilitarRol(int idRol)
+        {
+            modeloPermisos.HabilitarRol(idRol);
+        }
+        public void DeshabilitarRol(int idRol)
+        {
+            modeloPermisos.DeshabilitarRol(idRol);
         }
         //Llena las variables de la controladora con los permisos del rol seleccionado
         public void LlenarPermisos(int idRol)

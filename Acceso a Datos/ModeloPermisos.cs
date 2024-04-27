@@ -108,6 +108,9 @@ namespace Acceso_a_Datos
                                 case 16:
                                     EliminarUsuarios = true;
                                     break;
+                                case 17:
+                                    AgregarRoles = true;
+                                    break;
                            }
                         }
                     }
@@ -177,6 +180,9 @@ namespace Acceso_a_Datos
                         case 16:
                             EliminarUsuarios = true;
                             break;
+                        case 17:
+                            AgregarRoles = true;
+                            break;
                     }
 
                 }
@@ -243,6 +249,9 @@ namespace Acceso_a_Datos
                             break;
                         case 16:
                             EliminarUsuarios = false;
+                            break;
+                        case 17:
+                            AgregarRoles = false;
                             break;
                     }
                 }
@@ -321,7 +330,7 @@ namespace Acceso_a_Datos
                     con.Open();
                     using (var cmd = con.CreateCommand())
                     {
-                        cmd.CommandText = "insert into roles values(@nombre_rol)";
+                        cmd.CommandText = "insert into roles values(@nombre_rol, 1)";
                         cmd.Parameters.AddWithValue("@nombre_rol", nombreRol);
                         cmd.ExecuteNonQuery();
                         return existe;
@@ -356,6 +365,16 @@ namespace Acceso_a_Datos
             }
             if (!existenUsuarios)
             {
+                using (var con = GetConnection())
+                {
+                    con.Open();
+                    using (var cmd = con.CreateCommand())
+                    {
+                        cmd.CommandText = "delete from roles_permisos where id_rol = @id_rol";
+                        cmd.Parameters.AddWithValue("@id_rol", idRol);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
                 using (var con = GetConnection())
                 {
                     con.Open();
@@ -396,7 +415,7 @@ namespace Acceso_a_Datos
             return idRol;
         }
         //Devuelve una lista con los nombres de los roles
-        public List<string> ObtenerRoles()
+        public List<string> ObtenerRolesActivos()
         {
             List<string> roles = new List<string>();
             using (var con = GetConnection())
@@ -404,7 +423,28 @@ namespace Acceso_a_Datos
                 con.Open();
                 using (var cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = "select nombre_rol from roles";
+                    cmd.CommandText = "select nombre_rol from roles where activo = 1";
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            roles.Add(reader.GetString(0));
+                        }
+                    }
+                }
+            }
+            return roles;
+        }
+        //Devuelve una lista con los nombres de los roles inactivos
+        public List<string> ObtenerRolesInactivos()
+        {
+            List<string> roles = new List<string>();
+            using (var con = GetConnection())
+            {
+                con.Open();
+                using (var cmd = con.CreateCommand())
+                {
+                    cmd.CommandText = "select nombre_rol from roles where activo = 0";
                     using (var reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
@@ -448,6 +488,44 @@ namespace Acceso_a_Datos
                 if (!permisosActuales.Contains(permiso))
                 {
                     AgregarPermisos(idRol, permiso);
+                }
+            }
+        }
+        //Habilitar rol
+        public void HabilitarRol(int idRol)
+        {
+            using (var con = GetConnection())
+            {
+                con.Open();
+                using (var cmd = con.CreateCommand())
+                {
+                    cmd.CommandText = "update roles set activo = 1 where id_rol = @id_rol";
+                    cmd.Parameters.AddWithValue("@id_rol", idRol);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+        //Deshabilitar rol y usuarios asignados a ese rol
+        public void DeshabilitarRol(int idRol)
+        {
+            using (var con = GetConnection())
+            {
+                con.Open();
+                using (var cmd = con.CreateCommand())
+                {
+                    cmd.CommandText = "update roles set activo = 0 where id_rol = @id_rol";
+                    cmd.Parameters.AddWithValue("@id_rol", idRol);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            using (var con = GetConnection())
+            {
+                con.Open();
+                using (var cmd = con.CreateCommand())
+                {
+                    cmd.CommandText = "update usuarios set activo = 0 where id_rol = @id_rol";
+                    cmd.Parameters.AddWithValue("@id_rol", idRol);
+                    cmd.ExecuteNonQuery();
                 }
             }
         }
