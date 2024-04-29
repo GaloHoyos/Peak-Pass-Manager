@@ -18,7 +18,6 @@ namespace Peak_Pass_Manager
         public FormMenuPrincipal()
         {
             InitializeComponent();
-            CacheUsuario.IdUsuario = -1;
             btnBordeIzquierdo = new Panel();
             btnBordeIzquierdo.Size = new Size(7, 60);
             panelMenu.Controls.Add(btnBordeIzquierdo);
@@ -32,7 +31,6 @@ namespace Peak_Pass_Manager
         private void LoadUserData()
         {
             ControladoraUsuario usuario = new ControladoraUsuario();
-            usuario.LlenarCacheUsuario();
             lblNombre.Text = usuario.ObtenerNombre();
             lblApellido.Text = usuario.ObtenerApellido();
             lblRol.Text = usuario.ObtenerRol();
@@ -230,6 +228,19 @@ namespace Peak_Pass_Manager
             {
                 ActivarBoton(sender, RGBColors.color6);
                 AbrirFormularioHijo(new FormUsuarios());
+            }
+            else
+            {
+                MessageBox.Show("No tiene permisos para acceder a esta sección");
+            }
+        }
+
+        private void btnAuditoria_Click(object sender, EventArgs e)
+        {
+            if (permisos.Auditoria())
+            {
+                ActivarBoton(sender, RGBColors.color1);
+                AbrirFormularioHijo(new FormAuditoria());
             }
             else
             {

@@ -49,6 +49,7 @@
             iconFormulario = new FontAwesome.Sharp.IconPictureBox();
             panelSombra = new Panel();
             panelEscritorio = new Panel();
+            btnAuditoria = new FontAwesome.Sharp.IconButton();
             panelMenu.SuspendLayout();
             panel1.SuspendLayout();
             panelLogo.SuspendLayout();
@@ -62,6 +63,7 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(31, 30, 68);
+            panelMenu.Controls.Add(btnAuditoria);
             panelMenu.Controls.Add(btnReportes);
             panelMenu.Controls.Add(btnUsuarios);
             panelMenu.Controls.Add(btnPedidos);
@@ -378,6 +380,28 @@
             panelEscritorio.Size = new Size(1218, 758);
             panelEscritorio.TabIndex = 3;
             // 
+            // btnAuditoria
+            // 
+            btnAuditoria.Dock = DockStyle.Top;
+            btnAuditoria.FlatAppearance.BorderSize = 0;
+            btnAuditoria.FlatStyle = FlatStyle.Flat;
+            btnAuditoria.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAuditoria.ForeColor = SystemColors.ButtonHighlight;
+            btnAuditoria.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
+            btnAuditoria.IconColor = Color.WhiteSmoke;
+            btnAuditoria.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnAuditoria.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAuditoria.Location = new Point(0, 560);
+            btnAuditoria.Name = "btnAuditoria";
+            btnAuditoria.Padding = new Padding(10, 0, 20, 0);
+            btnAuditoria.Size = new Size(220, 60);
+            btnAuditoria.TabIndex = 9;
+            btnAuditoria.Text = "Auditoria";
+            btnAuditoria.TextAlign = ContentAlignment.MiddleLeft;
+            btnAuditoria.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAuditoria.UseVisualStyleBackColor = true;
+            btnAuditoria.Click += btnAuditoria_Click;
+            // 
             // FormMenuPrincipal
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -425,5 +449,6 @@
         private FontAwesome.Sharp.IconButton btnUsuarios;
         private Label lblRol;
         private FontAwesome.Sharp.IconButton btnReportes;
+        private FontAwesome.Sharp.IconButton btnAuditoria;
     }
 }

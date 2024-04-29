@@ -27,7 +27,7 @@ namespace Acceso_a_Datos
         public static bool ModificarUsuarios { get; set; }
         public static bool EliminarUsuarios { get; set; }
         public static bool AgregarRoles { get; set; }
-
+        ModeloAuditoria modeloAuditoria = new ModeloAuditoria();
         public ModeloPermisos()
         {
             Catalogo = false;
@@ -184,7 +184,7 @@ namespace Acceso_a_Datos
                             AgregarRoles = true;
                             break;
                     }
-
+                    modeloAuditoria.InsertarAuditoria(ModeloUsuario.IdUsuario, "Agregar Permiso", "Se ha agregado el permiso '" + VerNombrePermiso(idPermiso) + "' al rol '" + VerNombreRol(idRol) + "' con ID " + idRol);
                 }
             }
         }
@@ -254,31 +254,53 @@ namespace Acceso_a_Datos
                             AgregarRoles = false;
                             break;
                     }
+                    modeloAuditoria.InsertarAuditoria(ModeloUsuario.IdUsuario, "Eliminar Permiso", "Se ha eliminado el permiso '" + VerNombrePermiso(idPermiso) + "' del rol '" + VerNombreRol(idRol) + "' con ID " + idRol);
                 }
             }
         }
-        //Ver permisos de un rol
-        public bool VerPermiso(int idRol, int idPermiso)
+        //Ver nombre de un permiso
+        public string VerNombrePermiso(int idPermiso)
         {
-            bool permiso = false;
+            string nombrePermiso = "";
             using (var con = GetConnection())
             {
                 con.Open();
                 using (var cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = "select * from roles_permisos where id_rol = @id_rol and id_permiso = @id_permiso";
-                    cmd.Parameters.AddWithValue("@id_rol", idRol);
+                    cmd.CommandText = "select nombre_permiso from permisos where id_permiso = @id_permiso";
                     cmd.Parameters.AddWithValue("@id_permiso", idPermiso);
                     using (var reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
-                            permiso = true;
+                            nombrePermiso = reader.GetString(0);
                         }
                     }
                 }
             }
-            return permiso;
+            return nombrePermiso;
+        }
+        //Ver nombre de un rol
+        public string VerNombreRol(int idRol)
+        {
+            string nombreRol = "";
+            using (var con = GetConnection())
+            {
+                con.Open();
+                using (var cmd = con.CreateCommand())
+                {
+                    cmd.CommandText = "select nombre_rol from roles where id_rol = @id_rol";
+                    cmd.Parameters.AddWithValue("@id_rol", idRol);
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            nombreRol = reader.GetString(0);
+                        }
+                    }
+                }
+            }
+            return nombreRol;
         }
         //Ver todos los nombres de los permisos de un rol
         public List<string> VerPermisos(int idRol)
@@ -333,6 +355,7 @@ namespace Acceso_a_Datos
                         cmd.CommandText = "insert into roles values(@nombre_rol, 1)";
                         cmd.Parameters.AddWithValue("@nombre_rol", nombreRol);
                         cmd.ExecuteNonQuery();
+                        modeloAuditoria.InsertarAuditoria(ModeloUsuario.IdUsuario, "Agregar Rol", "Se ha agregado el rol '" + nombreRol + "' con ID " + ObtenerIdRol(nombreRol));
                         return existe;
                     }
                 }
@@ -383,6 +406,7 @@ namespace Acceso_a_Datos
                         cmd.CommandText = "delete from roles where id_rol = @id_rol";
                         cmd.Parameters.AddWithValue("@id_rol", idRol);
                         cmd.ExecuteNonQuery();
+                        modeloAuditoria.InsertarAuditoria(ModeloUsuario.IdUsuario, "Eliminar Rol", "Se ha eliminado el rol '" + VerNombreRol(idRol) + "' con ID " + idRol);
                         return existenUsuarios;
                     }
                 }
@@ -502,6 +526,7 @@ namespace Acceso_a_Datos
                     cmd.CommandText = "update roles set activo = 1 where id_rol = @id_rol";
                     cmd.Parameters.AddWithValue("@id_rol", idRol);
                     cmd.ExecuteNonQuery();
+                    modeloAuditoria.InsertarAuditoria(ModeloUsuario.IdUsuario, "Habilitar Rol", "Se ha habilitado el rol '" + VerNombreRol(idRol) + "' con ID " + idRol);
                 }
             }
         }
@@ -516,6 +541,7 @@ namespace Acceso_a_Datos
                     cmd.CommandText = "update roles set activo = 0 where id_rol = @id_rol";
                     cmd.Parameters.AddWithValue("@id_rol", idRol);
                     cmd.ExecuteNonQuery();
+                    modeloAuditoria.InsertarAuditoria(ModeloUsuario.IdUsuario, "Deshabilitar Rol", "Se ha deshabilitado el rol '" + VerNombreRol(idRol) + "' con ID " + idRol);
                 }
             }
             using (var con = GetConnection())
@@ -526,6 +552,7 @@ namespace Acceso_a_Datos
                     cmd.CommandText = "update usuarios set activo = 0 where id_rol = @id_rol";
                     cmd.Parameters.AddWithValue("@id_rol", idRol);
                     cmd.ExecuteNonQuery();
+                    modeloAuditoria.InsertarAuditoria(ModeloUsuario.IdUsuario, "Deshabilitar Usuarios", "Se han deshabilitado los usuarios asignados al rol '" + VerNombreRol(idRol) + "' con ID " + idRol);
                 }
             }
         }

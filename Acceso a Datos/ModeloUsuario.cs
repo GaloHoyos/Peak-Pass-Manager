@@ -24,6 +24,7 @@ namespace Acceso_a_Datos
         public static int IdRol { get; set; }
         public static string Rol { get; set; }
 
+        ModeloAuditoria modeloAuditoria = new ModeloAuditoria();
         public string Login(string user, string pass)
         {
             using (var connection = GetConnection())
@@ -150,6 +151,7 @@ namespace Acceso_a_Datos
                     }
                 }
             }
+            modeloAuditoria.InsertarAuditoria(CacheUsuario.IdUsuario, "Agregar Usuario", "Se ha agregado un usuario: " + nombre + " " + apellido + ". Con ID: " + ObtenerIdPorDNI(dni));
         }
         public bool ModificarUsuario(int idUsuario, string nombre, string apellido, string dni, string email, string direccion, string telefono, string usuario, string password, int idRol, bool userActivo)
         {
@@ -170,6 +172,7 @@ namespace Acceso_a_Datos
                         SqlCommand cmd = new SqlCommand("UPDATE usuarios SET nombre = '" + nombre + "', apellido = '" + apellido + "', dni = '" + dni + "', correo = '" + email + "', direccion = '" + direccion + "', telefono = '" + telefono + "', activo = '" + activo + "' WHERE id_usuario = '" + idUsuario + "'", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
                         cmd.CommandType = CommandType.Text; //Indica como se interpretará el comando anterior para mayor claridad al momento de ejecutarlo en el SQL
                         cmd.ExecuteNonQuery(); //Ejecuta el comando
+                        modeloAuditoria.InsertarAuditoria(CacheUsuario.IdUsuario, "Modificar Usuario", "Se ha modificado un usuario: " + nombre + " " + apellido + ". Con ID: " + idUsuario);
                         return true;
                     }
                 }
@@ -190,7 +193,8 @@ namespace Acceso_a_Datos
                                 command.Connection = connection;
                                 SqlCommand cmd = new SqlCommand("UPDATE usuarios SET nombre = '" + nombre + "', apellido = '" + apellido + "', dni = '" + dni + "', correo = '" + email + "', direccion = '" + direccion + "', telefono = '" + telefono + "', usuario = '" + usuario + "', contrasena = '" + password + "', id_rol = '" + idRol + "' WHERE id_usuario = '" + idUsuario + "'", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
                                 cmd.CommandType = CommandType.Text; //Indica como se interpretará el comando anterior para mayor claridad al momento de ejecutar
-                                cmd.ExecuteNonQuery(); //Ejecuta el comando 
+                                cmd.ExecuteNonQuery(); //Ejecuta el comando \
+                                modeloAuditoria.InsertarAuditoria(CacheUsuario.IdUsuario, "Modificar Usuario", "Se ha modificado un usuario: " + nombre + " " + apellido + ". Con ID: " + idUsuario);
                             }
                         }
                         if (activo == 1)
@@ -216,6 +220,7 @@ namespace Acceso_a_Datos
                             SqlCommand cmd = new SqlCommand("UPDATE usuarios SET nombre = '" + nombre + "', apellido = '" + apellido + "', dni = '" + dni + "', correo = '" + email + "', direccion = '" + direccion + "', telefono = '" + telefono + "', contrasena = '" + password + "', id_rol = '" + idRol + "' WHERE id_usuario = '" + idUsuario + "'", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
                             cmd.CommandType = CommandType.Text; //Indica como se interpretará el comando anterior para mayor claridad al momento de ejecutar
                             cmd.ExecuteNonQuery(); //Ejecuta el comando 
+                            modeloAuditoria.InsertarAuditoria(CacheUsuario.IdUsuario, "Modificar Usuario", "Se ha modificado un usuario: " + nombre + " " + apellido + ". Con ID: " + idUsuario);
                         }
                         if (activo == 1)
                         {
@@ -239,6 +244,7 @@ namespace Acceso_a_Datos
                                 SqlCommand cmd = new SqlCommand("UPDATE usuarios SET nombre = '" + nombre + "', apellido = '" + apellido + "', dni = '" + dni + "', correo = '" + email + "', direccion = '" + direccion + "', telefono = '" + telefono + "', usuario = '" + usuario + "', id_rol = '" + idRol + "' WHERE id_usuario = '" + idUsuario + "'", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
                                 cmd.CommandType = CommandType.Text; //Indica como se interpretará el comando anterior para mayor claridad al momento de ejecutar
                                 cmd.ExecuteNonQuery(); //Ejecuta el comando 
+                                modeloAuditoria.InsertarAuditoria(CacheUsuario.IdUsuario, "Modificar Usuario", "Se ha modificado un usuario: " + nombre + " " + apellido + ". Con ID: " + idUsuario);
                             }
                         }
                         if (activo == 1)
@@ -264,6 +270,7 @@ namespace Acceso_a_Datos
                             SqlCommand cmd = new SqlCommand("UPDATE usuarios SET nombre = '" + nombre + "', apellido = '" + apellido + "', dni = '" + dni + "', correo = '" + email + "', direccion = '" + direccion + "', telefono = '" + telefono + "', id_rol = '" + idRol + "' WHERE id_usuario = '" + idUsuario + "'", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
                             cmd.CommandType = CommandType.Text; //Indica como se interpretará el comando anterior para mayor claridad al momento de ejecutar
                             cmd.ExecuteNonQuery(); //Ejecuta el comando 
+                            modeloAuditoria.InsertarAuditoria(CacheUsuario.IdUsuario, "Modificar Usuario", "Se ha modificado un usuario: " + nombre + " " + apellido + ". Con ID: " + idUsuario);
                         }
                     }
                     if (activo == 1)
@@ -287,6 +294,7 @@ namespace Acceso_a_Datos
                     SqlCommand cmd = new SqlCommand("UPDATE usuarios SET activo = 0 WHERE id_usuario = '" + idUsuario + "'", connection);
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
+                    modeloAuditoria.InsertarAuditoria(CacheUsuario.IdUsuario, "Desactivar Usuario", "Se ha desactivado un usuario con ID: " + idUsuario);
                 }
             }
         }
@@ -333,6 +341,7 @@ namespace Acceso_a_Datos
                         SqlCommand cmd = new SqlCommand("UPDATE usuarios SET activo = 1 WHERE id_usuario = '" + idUsuario + "'", connection);
                         cmd.CommandType = CommandType.Text;
                         cmd.ExecuteNonQuery();
+                        modeloAuditoria.InsertarAuditoria(CacheUsuario.IdUsuario, "Activar Usuario", "Se ha activado un usuario con ID: " + idUsuario);
                     }
                 }
             }
@@ -348,6 +357,7 @@ namespace Acceso_a_Datos
                         SqlCommand cmd = new SqlCommand("UPDATE usuarios SET activo = 1, id_rol = 3, usuario = NULL, contrasena = NULL WHERE id_usuario = '" + idUsuario + "'", connection);
                         cmd.CommandType = CommandType.Text;
                         cmd.ExecuteNonQuery();
+                        modeloAuditoria.InsertarAuditoria(CacheUsuario.IdUsuario, "Activar Usuario", "Se ha activado un usuario con ID: " + idUsuario);
                     }
                 }
             }
@@ -445,6 +455,7 @@ namespace Acceso_a_Datos
                         SqlCommand cmd = new SqlCommand("DELETE FROM usuarios WHERE id_usuario = '" + usuario + "'", connection);
                         cmd.CommandType = CommandType.Text;
                         cmd.ExecuteNonQuery();
+                        modeloAuditoria.InsertarAuditoria(CacheUsuario.IdUsuario, "Eliminar Usuario", "Se ha eliminado un usuario con ID: " + usuario);
                     }
                 }
             }
