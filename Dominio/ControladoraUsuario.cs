@@ -9,11 +9,18 @@ namespace Dominio
     public class ControladoraUsuario
     {
         ModeloUsuario modeloUsuario = new ModeloUsuario();
+        ControladoraAuditoria auditoria = new ControladoraAuditoria();
         public string LoginUser(string user, string pass)
         {
             Verificaciones verificaciones = new Verificaciones();
             string passEncriptada = verificaciones.Encriptar(pass);
-            return modeloUsuario.Login(user, passEncriptada);
+            var loginExitoso = modeloUsuario.Login(user, passEncriptada);
+            if(loginExitoso == "true")
+            {
+                LlenarCacheUsuario();
+                auditoria.InsertarAuditoria(CacheUsuario.IdUsuario, "Login", "El usuario ha iniciado sesión");
+            }
+            return loginExitoso;
         }
         //metodo obtener el nombre del usuario
         public string ObtenerNombre()
@@ -95,6 +102,7 @@ namespace Dominio
                     Verificaciones verificaciones = new Verificaciones();
                     string passEncriptada = verificaciones.Encriptar(password);
                     modeloUsuario.AgregarUsuario(nombre, apellido, dni, email, direccion, telefono, usuario, passEncriptada, idRol, activo);
+
                     return "No Existente";
                 }
             }
