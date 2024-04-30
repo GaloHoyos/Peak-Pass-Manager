@@ -31,7 +31,7 @@ namespace Peak_Pass_Manager
             txtDNI.Text = string.Empty;
             txtDireccion.Text = string.Empty;
             txtTelefono.Text = string.Empty;
-            lblCliente.Text = cliente.ObtenerNombre() + " " + cliente.ObtenerApellido();
+            lblCliente.Text = CacheCliente.Nombre + " " + CacheCliente.Apellido;
             ActualizarClientes();
         }
         public void ActualizarClientes()

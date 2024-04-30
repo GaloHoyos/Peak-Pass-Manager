@@ -10,22 +10,30 @@ namespace Dominio
 {
     public class ControladoraCarrito
     {
-        int idCliente;
+        int idClienteTransaccion;
         ModeloCarrito modeloCarrito;
         int total;
         public ControladoraCarrito(int idClienteTransaccion, int total)
         {
             modeloCarrito = new ModeloCarrito(idClienteTransaccion, total);
             this.total = total;
-            this.idCliente = idClienteTransaccion;
+            this.idClienteTransaccion = idClienteTransaccion;
         }
         public void CambiarCliente(int idCliente)
         {
             modeloCarrito.CambiarCliente(idCliente);
         }
-        public void AgregarProducto(ModeloCarritoDetalle producto)
+        public void AgregarProducto(ModeloCarritoDetalle producto, int idCliente)
         {
-            modeloCarrito.AgregarProducto(producto);
+            //Verifica si el producto ya existe en el carrito para ese id de cliente
+            if (modeloCarrito.ExisteProducto(producto.ObtenerIdProducto(), idCliente))
+            {
+                modeloCarrito.AgregarCantidad(producto.ObtenerIdProducto(), producto.ObtenerCantidad());
+            }
+            else
+            {
+                modeloCarrito.AgregarProducto(producto);
+            }
         }
         public void AgregarCantidad(int idProducto, int cantidad)
         {
@@ -39,9 +47,9 @@ namespace Dominio
         {
             modeloCarrito.EliminarProducto(idProducto);
         }
-        public bool ExisteProducto(int idProducto)
+        public bool ExisteProducto(int idProducto, int idCliente)
         {
-            return modeloCarrito.ExisteProducto(idProducto);
+            return modeloCarrito.ExisteProducto(idProducto, idCliente);
         }
         public DataTable ObtenerLista()
         {

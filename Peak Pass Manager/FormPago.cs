@@ -43,22 +43,34 @@ namespace Peak_Pass_Manager
 
         private void btnComprar_Click(object sender, EventArgs e)
         {
-            RealizarPedido();
+            RelizarPedido();
         }
 
         //Realizar pedido
-        private void RealizarPedido()
+        public void RelizarPedido()
         {
-            if (pedido != null)
+            // if (verificaciones.VerificarTarjeta(txtTarjeta.Text) && verificaciones.VerificarCVV(txtCodigo.Text) && verificaciones.VerificarFecha(dtFecha.Value.ToString()))
+            //{
+            try
             {
                 pedido.AgregarPedido(CacheUsuario.IdUsuario, CacheCliente.IdCliente, Convert.ToInt32(carrito.ObtenerTotal()));
-                ControladoraPedidoDetalle modeloPedidoDetalle = new ControladoraPedidoDetalle();
+                ControladoraPedidoDetalle controladoraPedidoDetalle = new ControladoraPedidoDetalle();
                 foreach (DataRow row in carrito.ObtenerLista().Rows)
                 {
-                    modeloPedidoDetalle.AgregarDetallePedido(pedido.GetIdVenta(), Convert.ToInt32(row[1]), Convert.ToInt32(row[3]), Convert.ToInt32(row[4]));
+                    //Llama AgregarDetallePedido de ControladoraPedidoDetalle para agregar un detalle de pedido con los datos de la fila incluyendo el id de la venta y el id del cliente
+                    controladoraPedidoDetalle.AgregarDetallePedido(pedido.GetIdVenta(), Convert.ToInt32(row[1]), Convert.ToInt32(row[0]), Convert.ToInt32(row[3]), Convert.ToInt32(row[4]));
                 }
                 MessageBox.Show("Compra realizada con exito");
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
+
+          //  }
+           // else
+           // {
+            //    MessageBox.Show("Error en los datos de la tarjeta");
+           // }
         }
     }
 }

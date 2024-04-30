@@ -28,23 +28,16 @@ namespace Dominio
         {
             this.idClienteTransaccion = idCliente;
         }
-        public bool ExisteProducto(int idProducto)
+        public bool ExisteProducto(int idProducto, int idCliente)
         {
-            if (listaCarritoDetalles != null)
+            foreach (ModeloCarritoDetalle producto in listaCarritoDetalles)
             {
-                foreach (ModeloCarritoDetalle producto in listaCarritoDetalles)
+                if (producto.ObtenerIdProducto() == idProducto && producto.ObtenerIdCliente() == idCliente)
                 {
-                    if (producto.ObtenerIdProducto() == idProducto)
-                    {
-                        return true;
-                    }
+                    return true;
                 }
-                return false;
             }
-            else
-            {
-                return false;
-            }
+            return false;
         }
 
 

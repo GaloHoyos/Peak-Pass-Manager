@@ -23,22 +23,20 @@ namespace Acceso_a_Datos
             }
         }
 
-        public void AgregarDetallePedido(int idVenta, int idProducto, int precio, int cantidad) 
+        public void AgregarDetallePedido(int idVenta, int idProducto, int idCliente, int precio, int cantidad)
         {
-            //metodo para agregar un detalle de pedido
             using (var connection = GetConnection())
             {
                 connection.Open();
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    SqlCommand cmd = new SqlCommand("Insert into pedidos_detalles values ('" + idVenta + "','" + idProducto + "','" + precio + "','" + cantidad + "')", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
+                    SqlCommand cmd = new SqlCommand("INSERT INTO pedidos_detalles (id_venta, id_producto, id_cliente, precio_producto, cantidad) VALUES ('" + idVenta + "', '" + idProducto + "', '" + idCliente + "', '" + precio + "', '" + cantidad + "')", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
                     cmd.CommandType = CommandType.Text; //Indica como se interpretará el comando anterior para mayor claridad al momento de ejecutarlo en el SQL
-
                     cmd.ExecuteNonQuery(); //Ejecuta el comando 
                 }
             }
-        } 
+        }
         public string GetNombreProducto(int idProducto)
         {
             string nombreProducto = "";

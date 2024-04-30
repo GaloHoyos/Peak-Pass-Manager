@@ -37,6 +37,10 @@ namespace Dominio
             }
 
         }
+        public void CambiarCliente(int idCliente)
+        {
+            this.idCliente = idCliente;
+        }
         public void SetCantidad(int cantidad)
         {
             this.cantidad = cantidad;

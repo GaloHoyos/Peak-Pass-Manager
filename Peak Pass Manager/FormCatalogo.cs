@@ -57,7 +57,6 @@ namespace Peak_Pass_Manager
         {
             ControladoraProducto controladoraProducto = new ControladoraProducto();
             return controladoraProducto.VerDescripcion(id);
-            lblDescripcion.Text = controladoraProducto.VerDescripcion(id);
         }
 
         private void btnCambioCliente_Click(object sender, EventArgs e)
@@ -69,14 +68,14 @@ namespace Peak_Pass_Manager
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (idCliente >= 0)
+            if (idCliente > 0)
             {
-                if (Convert.ToInt32(dgvProductos.CurrentRow.Cells[0].Value) >= 0)
+                if (Convert.ToInt32(dgvProductos.CurrentRow.Cells[0].Value) > 0)
                 {
                     int precioProducto = Convert.ToInt32(dgvProductos.CurrentRow.Cells[2].Value);
                     int idProducto = Convert.ToInt32(dgvProductos.CurrentRow.Cells[0].Value);
                     string nombreProducto = dgvProductos.CurrentRow.Cells[1].Value.ToString();
-                    bool existencia = carrito.ExisteProducto(idProducto);
+                    bool existencia = carrito.ExisteProducto(idProducto, idCliente);
                     if (existencia == true)
                     {
                         carrito.AgregarCantidad(idProducto, 1);
@@ -84,7 +83,7 @@ namespace Peak_Pass_Manager
                     else
                     {
                         ControladoraCarritoDetalle controladoraCarritoDetalle = new ControladoraCarritoDetalle(idCliente, idProducto, nombreProducto, precioProducto, cantidad, cantidad * precioProducto);
-                        carrito.AgregarProducto(controladoraCarritoDetalle.ObtenerModelo());
+                        carrito.AgregarProducto(controladoraCarritoDetalle.ObtenerModelo(), idCliente);
                     }
 
                 }
@@ -103,7 +102,7 @@ namespace Peak_Pass_Manager
         private void btnVerCarrito_Click(object sender, EventArgs e)
         {
             //verificacion para saber si hay cliente seleccionado
-            if (idCliente >= 0)
+            if (idCliente > 0)
             {
                 //verificacion para saber si hay productos en el carrito
                 if (carrito.ObtenerLista().Rows.Count > 0)

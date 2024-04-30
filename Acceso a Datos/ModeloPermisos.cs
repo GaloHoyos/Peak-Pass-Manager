@@ -191,6 +191,7 @@ namespace Acceso_a_Datos
         //Eliminar los permisos del rol seleccionado
         public void EliminarPermisos(int idRol, int idPermiso)
         {
+            modeloAuditoria.InsertarAuditoria(ModeloUsuario.IdUsuario, "Eliminar Permiso", "Se ha eliminado el permiso '" + VerNombrePermiso(idPermiso) + "' del rol '" + VerNombreRol(idRol) + "' con ID " + idRol);
             using (var con = GetConnection())
             {
                 con.Open();
@@ -254,7 +255,6 @@ namespace Acceso_a_Datos
                             AgregarRoles = false;
                             break;
                     }
-                    modeloAuditoria.InsertarAuditoria(ModeloUsuario.IdUsuario, "Eliminar Permiso", "Se ha eliminado el permiso '" + VerNombrePermiso(idPermiso) + "' del rol '" + VerNombreRol(idRol) + "' con ID " + idRol);
                 }
             }
         }
