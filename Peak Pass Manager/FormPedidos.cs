@@ -21,14 +21,37 @@ namespace Peak_Pass_Manager
         public void ActualizarLista()
         {
             ControladoraPedido pedido = new ControladoraPedido();
+            dgvCompra.Columns.Clear();
+            dgvCompra.Columns.Add("ID Venta", "ID Venta");
+            dgvCompra.Columns[0].DataPropertyName = "id_venta";
+            dgvCompra.Columns.Add("ID Vendedor", "ID Vendedor");
+            dgvCompra.Columns[1].DataPropertyName = "id_vendedor";
+            dgvCompra.Columns.Add("Nombre Vendedor", "Nombre Vendedor");
+            dgvCompra.Columns[2].DataPropertyName = "nombre_vendedor";
+            dgvCompra.Columns.Add("ID Cliente", "ID Cliente");
+            dgvCompra.Columns[3].DataPropertyName = "id_cliente";
+            dgvCompra.Columns.Add("Nombre Cliente", "Nombre Cliente");
+            dgvCompra.Columns[4].DataPropertyName = "nombre_cliente";
+            dgvCompra.Columns.Add("Apellido Cliente", "Apellido Cliente");
+            dgvCompra.Columns[5].DataPropertyName = "apellido_cliente";
+            dgvCompra.Columns.Add("Costo Total", "Costo Total");
+            dgvCompra.Columns[6].DataPropertyName = "costo_total";
             dgvCompra.DataSource = pedido.ActualizarLista();
         }
 
         private void btnDetalles_Click(object sender, EventArgs e)
         {
-            int idVenta = Convert.ToInt32(dgvCompra.CurrentRow.Cells[0].Value);
-            FormPedidosDetalles formPedidosDetalles = new FormPedidosDetalles(idVenta);
-            formPedidosDetalles.ShowDialog();
+            if (dgvCompra.SelectedCells.Count == 0)
+            {
+                MessageBox.Show("Seleccione un pedido para ver los detalles", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                int idVenta = Convert.ToInt32(dgvCompra.CurrentRow.Cells[0].Value);
+                FormPedidosDetalles formPedidosDetalles = new FormPedidosDetalles(idVenta);
+                formPedidosDetalles.ShowDialog();
+            }
         }
     }
 }

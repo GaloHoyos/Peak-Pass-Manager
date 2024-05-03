@@ -33,7 +33,7 @@ namespace Acceso_a_Datos
                 connection.Open();
                 using(var command = connection.CreateCommand())
                 {
-                    command.CommandText = "SELECT auditoria.id_auditoria, usuarios.id_usuario, usuarios.nombre, auditoria.accion, auditoria.descripcion, auditoria.fecha FROM auditoria INNER JOIN usuarios ON auditoria.id_usuario = usuarios.id_usuario;";
+                    command.CommandText = "SELECT auditoria.id_auditoria, usuarios.id_usuario, usuarios.nombre, auditoria.accion, auditoria.descripcion, auditoria.fecha FROM auditoria INNER JOIN usuarios ON auditoria.id_usuario = usuarios.id_usuario ORDER BY auditoria.fecha DESC;";
                     using(var reader = command.ExecuteReader())
                     {
                         tabla.Load(reader);

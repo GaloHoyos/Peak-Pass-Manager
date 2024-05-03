@@ -19,6 +19,7 @@ namespace Peak_Pass_Manager
         {
             InitializeComponent();
             this.carrito = carrito;
+            carrito.CambiarCliente(CacheCliente.IdCliente);
             IniciarN(this.carrito);
         }
         public void IniciarN(ControladoraCarrito carrito)

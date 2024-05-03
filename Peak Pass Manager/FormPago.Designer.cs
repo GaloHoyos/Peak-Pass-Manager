@@ -31,7 +31,7 @@
             txtCodigo = new TextBox();
             txtTarjeta = new TextBox();
             txtNombre = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
+            dtFecha = new DateTimePicker();
             lblNombre = new Label();
             lblTarjeta = new Label();
             lblCodigo = new Label();
@@ -65,15 +65,15 @@
             txtNombre.Size = new Size(306, 31);
             txtNombre.TabIndex = 2;
             // 
-            // dateTimePicker1
+            // dtFecha
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(455, 115);
-            dateTimePicker1.MinDate = new DateTime(2024, 4, 16, 20, 27, 39, 0);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(129, 31);
-            dateTimePicker1.TabIndex = 3;
-            dateTimePicker1.Value = new DateTime(2024, 4, 16, 20, 27, 39, 0);
+            dtFecha.Format = DateTimePickerFormat.Short;
+            dtFecha.Location = new Point(455, 115);
+            dtFecha.MinDate = new DateTime(2024, 4, 16, 20, 27, 39, 0);
+            dtFecha.Name = "dtFecha";
+            dtFecha.Size = new Size(129, 31);
+            dtFecha.TabIndex = 3;
+            dtFecha.Value = new DateTime(2024, 4, 16, 20, 27, 39, 0);
             // 
             // lblNombre
             // 
@@ -159,7 +159,7 @@
             Controls.Add(lblCodigo);
             Controls.Add(lblTarjeta);
             Controls.Add(lblNombre);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dtFecha);
             Controls.Add(txtNombre);
             Controls.Add(txtTarjeta);
             Controls.Add(txtCodigo);
@@ -176,7 +176,7 @@
         private TextBox txtCodigo;
         private TextBox txtTarjeta;
         private TextBox txtNombre;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtFecha;
         private Label lblNombre;
         private Label lblTarjeta;
         private Label lblCodigo;

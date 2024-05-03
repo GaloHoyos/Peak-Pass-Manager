@@ -639,6 +639,30 @@ namespace Acceso_a_Datos
             }
 
         }
+        public string ObtenerNombrePorID(int idUsuario)
+        {
+            string nombre = "";
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    SqlCommand cmd = new SqlCommand("select nombre from usuarios where id_usuario = '" + idUsuario + "'", connection);
+                    cmd.CommandType = CommandType.Text;
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            nombre = reader.GetString(0);
+                        }
+                    }
+                    reader.Close();
+                }
+            }
+            return nombre;
+        }
     }
 }
 // ZwBhAGwAbwAxADIA = galo12

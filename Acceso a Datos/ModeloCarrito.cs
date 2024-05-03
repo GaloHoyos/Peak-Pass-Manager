@@ -28,23 +28,16 @@ namespace Dominio
         {
             this.idClienteTransaccion = idCliente;
         }
-        public bool ExisteProducto(int idProducto)
+        public bool ExisteProducto(int idProducto, int idCliente)
         {
-            if (listaCarritoDetalles != null)
+            foreach (ModeloCarritoDetalle producto in listaCarritoDetalles)
             {
-                foreach (ModeloCarritoDetalle producto in listaCarritoDetalles)
+                if (producto.ObtenerIdProducto() == idProducto && producto.ObtenerIdCliente() == idCliente)
                 {
-                    if (producto.ObtenerIdProducto() == idProducto)
-                    {
-                        return true;
-                    }
+                    return true;
                 }
-                return false;
             }
-            else
-            {
-                return false;
-            }
+            return false;
         }
 
 
@@ -125,14 +118,15 @@ namespace Dominio
         {
             DataTable dt = new DataTable();
             dt.Columns.Add("ID Cliente");
-            dt.Columns.Add("ID");
-            dt.Columns.Add("Nombre");
+            dt.Columns.Add("Nombre Cliente");
+            dt.Columns.Add("ID Producto");
+            dt.Columns.Add("Nombre Producto");
             dt.Columns.Add("Precio");
             dt.Columns.Add("Cantidad");
             dt.Columns.Add("Subtotal");
             foreach (ModeloCarritoDetalle producto in listaCarritoDetalles)
             {
-                dt.Rows.Add(producto.ObtenerIdCliente(),producto.ObtenerIdProducto(), producto.ObtenerNombreProducto(), producto.ObtenerPrecio(), producto.ObtenerCantidad(), producto.ObtenerSubtotal());
+                dt.Rows.Add(producto.ObtenerIdCliente(),producto.ObtenerNombreCliente(),producto.ObtenerIdProducto(), producto.ObtenerNombreProducto(), producto.ObtenerPrecio(), producto.ObtenerCantidad(), producto.ObtenerSubtotal());
             }
             return dt;
         }

@@ -24,14 +24,14 @@ namespace Peak_Pass_Manager
         public FormCatalogo()
         {
             InitializeComponent();
-            nombreCliente();
+            NombreCliente();
             ActualizarLista();
             lblDescripcion.MaximumSize = new Size(450, 0);
             lblDescripcion.AutoSize = true;
         }
 
         //metodo para mostrar el nombre del cliente en el label
-        public void nombreCliente()
+        public void NombreCliente()
         {
             lblCliente.Text = CacheCliente.Nombre + " " + CacheCliente.Apellido;
             idCliente = CacheCliente.IdCliente;
@@ -57,34 +57,33 @@ namespace Peak_Pass_Manager
         {
             ControladoraProducto controladoraProducto = new ControladoraProducto();
             return controladoraProducto.VerDescripcion(id);
-            lblDescripcion.Text = controladoraProducto.VerDescripcion(id);
         }
 
         private void btnCambioCliente_Click(object sender, EventArgs e)
         {
             FormClientes formClientes = new FormClientes();
             formClientes.ShowDialog();
-            nombreCliente();
+            NombreCliente();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (idCliente >= 0)
+            if (idCliente > 0)
             {
-                if (Convert.ToInt32(dgvProductos.CurrentRow.Cells[0].Value) >= 0)
+                if (Convert.ToInt32(dgvProductos.CurrentRow.Cells[0].Value) > 0)
                 {
                     int precioProducto = Convert.ToInt32(dgvProductos.CurrentRow.Cells[2].Value);
                     int idProducto = Convert.ToInt32(dgvProductos.CurrentRow.Cells[0].Value);
                     string nombreProducto = dgvProductos.CurrentRow.Cells[1].Value.ToString();
-                    bool existencia = carrito.ExisteProducto(idProducto);
+                    bool existencia = carrito.ExisteProducto(idProducto, idCliente);
                     if (existencia == true)
                     {
                         carrito.AgregarCantidad(idProducto, 1);
                     }
                     else
                     {
-                        ControladoraCarritoDetalle controladoraCarritoDetalle = new ControladoraCarritoDetalle(idCliente, idProducto, nombreProducto, precioProducto, cantidad, cantidad * precioProducto);
-                        carrito.AgregarProducto(controladoraCarritoDetalle.ObtenerModelo());
+                        ControladoraCarritoDetalle controladoraCarritoDetalle = new ControladoraCarritoDetalle(idCliente,idProducto, nombreProducto, precioProducto, cantidad, cantidad * precioProducto);
+                        carrito.AgregarProducto(controladoraCarritoDetalle.ObtenerModelo(), idCliente);
                     }
 
                 }
@@ -103,7 +102,7 @@ namespace Peak_Pass_Manager
         private void btnVerCarrito_Click(object sender, EventArgs e)
         {
             //verificacion para saber si hay cliente seleccionado
-            if (idCliente >= 0)
+            if (idCliente > 0)
             {
                 //verificacion para saber si hay productos en el carrito
                 if (carrito.ObtenerLista().Rows.Count > 0)

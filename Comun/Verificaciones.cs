@@ -79,7 +79,7 @@ namespace Comun
             }
         }
         //Verificar fecha de vencimiento
-        public bool VerificarFechaVencimiento(string fecha)
+        public bool VerificarFecha(string fecha)
         {
             if (fecha.Length == 5)
             {
@@ -91,7 +91,7 @@ namespace Comun
             }
         }
         //Verificar codigo de seguridad
-        public bool VerificarCodigoSeguridad(string codigo)
+        public bool VerificarCVV(string codigo)
         {
             if (codigo.Length == 3)
             {

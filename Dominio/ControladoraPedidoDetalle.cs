@@ -12,20 +12,14 @@ namespace Dominio
     {
         Acceso_a_Datos.ModeloPedidoDetalle pedidoDetalleDao = new Acceso_a_Datos.ModeloPedidoDetalle();
 
-        public void AgregarDetallePedido(int idVenta, int idProducto,int precio, int cantidad)
+        public void AgregarDetallePedido(int idVenta, int idProducto, int idCliente, int precio, int cantidad)
         {
-            pedidoDetalleDao.AgregarDetallePedido(idVenta, idProducto, precio, cantidad);
+            pedidoDetalleDao.AgregarDetallePedido(idVenta, idProducto, idCliente, precio, cantidad);
         }
         public DataTable ActualizarLista(int idVenta)
         {
             DataTable dt = new DataTable();
             dt = pedidoDetalleDao.ActualizarLista(idVenta);
-            dt.Columns.Add("Producto", typeof(string));
-            foreach (DataRow row in dt.Rows)
-            {
-                int idProducto = Convert.ToInt32(row["id_producto"]);
-                row["Producto"] = pedidoDetalleDao.GetNombreProducto(idProducto);
-            }
             return dt;
         }
     }
