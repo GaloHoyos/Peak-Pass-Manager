@@ -11,14 +11,14 @@ namespace Acceso_a_Datos
 {
     public class ModeloPedido : ConexionSQL1
     {
-
+        ModeloAuditoria auditoria = new ModeloAuditoria();
         public DataTable ActualizarLista()
         {
             DataTable dt = new DataTable();
             using (var connection = GetConnection())
             {
 
-                SqlDataAdapter da = new SqlDataAdapter("Select * from pedidos ORDER BY 1", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos, en este caso para poder tomar los valores de una tabla
+                SqlDataAdapter da = new SqlDataAdapter("SELECT p.id_venta, p.id_vendedor, u_vendedor.nombre AS nombre_vendedor, p.id_cliente, u_cliente.nombre AS nombre_cliente, u_cliente.apellido AS apellido_cliente, p.costo_total FROM pedidos AS p JOIN usuarios AS u_vendedor ON p.id_vendedor = u_vendedor.id_usuario JOIN usuarios AS u_cliente ON p.id_cliente = u_cliente.id_usuario;", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
                 da.SelectCommand.CommandType = CommandType.Text; //Indica como se interpretará el comando anterior para mayor claridad al momento de ejecutarlo en el SQL
                 da.Fill(dt); //Obtiene los datos de la tabla
                 return dt; //Envia los datos de la tabla
@@ -39,6 +39,7 @@ namespace Acceso_a_Datos
                     cmd.ExecuteNonQuery();
                 }
             }
+            auditoria.InsertarAuditoria(idVendedor, "Agregar Pedido", "Se ha agregado un pedido con un total de " + total + " al cliente con id " + idCliente);
         }
         public int GetIdVenta()
         {

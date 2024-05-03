@@ -20,12 +20,6 @@ namespace Dominio
         {
             DataTable dt = new DataTable();
             dt = pedidoDetalleDao.ActualizarLista(idVenta);
-            dt.Columns.Add("Producto", typeof(string));
-            foreach (DataRow row in dt.Rows)
-            {
-                int idProducto = Convert.ToInt32(row["id_producto"]);
-                row["Producto"] = pedidoDetalleDao.GetNombreProducto(idProducto);
-            }
             return dt;
         }
     }

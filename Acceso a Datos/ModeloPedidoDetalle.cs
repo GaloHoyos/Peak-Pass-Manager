@@ -16,7 +16,7 @@ namespace Acceso_a_Datos
             using (var connection = GetConnection())
             {
 
-                SqlDataAdapter da = new SqlDataAdapter("Select * from pedidos_detalles where id_venta = '" + idVenta + "'", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos, en este caso para poder tomar los valores de una tabla
+                SqlDataAdapter da = new SqlDataAdapter("Select usuarios.id_usuario, usuarios.nombre, usuarios.apellido, productos.id_producto, productos.nombre_producto, pedidos_detalles.precio_producto, pedidos_detalles.cantidad FROM pedidos_detalles INNER JOIN productos ON pedidos_detalles.id_producto = productos.id_producto INNER JOIN usuarios ON pedidos_detalles.id_cliente = usuarios.id_usuario WHERE id_venta = '" + idVenta + "'", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
                 da.SelectCommand.CommandType = CommandType.Text; //Indica como se interpretará el comando anterior para mayor claridad al momento de ejecutarlo en el SQL
                 da.Fill(dt); //Obtiene los datos de la tabla
                 return dt; //Envia los datos de la tabla

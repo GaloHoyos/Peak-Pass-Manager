@@ -118,14 +118,15 @@ namespace Dominio
         {
             DataTable dt = new DataTable();
             dt.Columns.Add("ID Cliente");
-            dt.Columns.Add("ID");
-            dt.Columns.Add("Nombre");
+            dt.Columns.Add("Nombre Cliente");
+            dt.Columns.Add("ID Producto");
+            dt.Columns.Add("Nombre Producto");
             dt.Columns.Add("Precio");
             dt.Columns.Add("Cantidad");
             dt.Columns.Add("Subtotal");
             foreach (ModeloCarritoDetalle producto in listaCarritoDetalles)
             {
-                dt.Rows.Add(producto.ObtenerIdCliente(),producto.ObtenerIdProducto(), producto.ObtenerNombreProducto(), producto.ObtenerPrecio(), producto.ObtenerCantidad(), producto.ObtenerSubtotal());
+                dt.Rows.Add(producto.ObtenerIdCliente(),producto.ObtenerNombreCliente(),producto.ObtenerIdProducto(), producto.ObtenerNombreProducto(), producto.ObtenerPrecio(), producto.ObtenerCantidad(), producto.ObtenerSubtotal());
             }
             return dt;
         }

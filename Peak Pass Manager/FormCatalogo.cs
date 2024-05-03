@@ -24,14 +24,14 @@ namespace Peak_Pass_Manager
         public FormCatalogo()
         {
             InitializeComponent();
-            nombreCliente();
+            NombreCliente();
             ActualizarLista();
             lblDescripcion.MaximumSize = new Size(450, 0);
             lblDescripcion.AutoSize = true;
         }
 
         //metodo para mostrar el nombre del cliente en el label
-        public void nombreCliente()
+        public void NombreCliente()
         {
             lblCliente.Text = CacheCliente.Nombre + " " + CacheCliente.Apellido;
             idCliente = CacheCliente.IdCliente;
@@ -63,7 +63,7 @@ namespace Peak_Pass_Manager
         {
             FormClientes formClientes = new FormClientes();
             formClientes.ShowDialog();
-            nombreCliente();
+            NombreCliente();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -82,7 +82,7 @@ namespace Peak_Pass_Manager
                     }
                     else
                     {
-                        ControladoraCarritoDetalle controladoraCarritoDetalle = new ControladoraCarritoDetalle(idCliente, idProducto, nombreProducto, precioProducto, cantidad, cantidad * precioProducto);
+                        ControladoraCarritoDetalle controladoraCarritoDetalle = new ControladoraCarritoDetalle(idCliente,idProducto, nombreProducto, precioProducto, cantidad, cantidad * precioProducto);
                         carrito.AgregarProducto(controladoraCarritoDetalle.ObtenerModelo(), idCliente);
                     }
 

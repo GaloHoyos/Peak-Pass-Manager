@@ -3,40 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\peak pass manager\\formpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|solutionrelative:peak pass manager\\formpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\peak pass manager\\formpedidosdetalles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|solutionrelative:peak pass manager\\formpedidosdetalles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\peak pass manager\\formpedidosdetalles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|solutionrelative:peak pass manager\\formpedidosdetalles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\peak pass manager\\formpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|solutionrelative:peak pass manager\\formpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12120E50-4C1C-420F-8B8B-D756C08C961D}|Dominio\\Dominio(Controladora).csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\dominio\\controladorapedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12120E50-4C1C-420F-8B8B-D756C08C961D}|Dominio\\Dominio(Controladora).csproj|solutionrelative:dominio\\controladorapedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{74BD1499-8BC1-4997-A6DA-6BA61C06F3A8}|Acceso a Datos\\Acceso a Datos(Modelo).csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\acceso a datos\\modelopedidodetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74BD1499-8BC1-4997-A6DA-6BA61C06F3A8}|Acceso a Datos\\Acceso a Datos(Modelo).csproj|solutionrelative:acceso a datos\\modelopedidodetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74BD1499-8BC1-4997-A6DA-6BA61C06F3A8}|Acceso a Datos\\Acceso a Datos(Modelo).csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\acceso a datos\\modelocarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74BD1499-8BC1-4997-A6DA-6BA61C06F3A8}|Acceso a Datos\\Acceso a Datos(Modelo).csproj|solutionrelative:acceso a datos\\modelocarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{74BD1499-8BC1-4997-A6DA-6BA61C06F3A8}|Acceso a Datos\\Acceso a Datos(Modelo).csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\acceso a datos\\modelopedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74BD1499-8BC1-4997-A6DA-6BA61C06F3A8}|Acceso a Datos\\Acceso a Datos(Modelo).csproj|solutionrelative:acceso a datos\\modelopedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\peak pass manager\\formpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|solutionrelative:peak pass manager\\formpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{12120E50-4C1C-420F-8B8B-D756C08C961D}|Dominio\\Dominio(Controladora).csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\dominio\\controladorapedidodetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12120E50-4C1C-420F-8B8B-D756C08C961D}|Dominio\\Dominio(Controladora).csproj|solutionrelative:dominio\\controladorapedidodetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74BD1499-8BC1-4997-A6DA-6BA61C06F3A8}|Acceso a Datos\\Acceso a Datos(Modelo).csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\acceso a datos\\modelocarritodetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74BD1499-8BC1-4997-A6DA-6BA61C06F3A8}|Acceso a Datos\\Acceso a Datos(Modelo).csproj|solutionrelative:acceso a datos\\modelocarritodetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12120E50-4C1C-420F-8B8B-D756C08C961D}|Dominio\\Dominio(Controladora).csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\dominio\\controladoracarritodetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12120E50-4C1C-420F-8B8B-D756C08C961D}|Dominio\\Dominio(Controladora).csproj|solutionrelative:dominio\\controladoracarritodetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\peak pass manager\\formcarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|solutionrelative:peak pass manager\\formcarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\peak pass manager\\formcatalogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|solutionrelative:peak pass manager\\formcatalogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\peak pass manager\\formcarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|solutionrelative:peak pass manager\\formcarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,120 +42,109 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormPago.cs",
-              "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormPago.cs",
-              "RelativeDocumentMoniker": "Peak Pass Manager\\FormPago.cs",
-              "ToolTip": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormPago.cs",
-              "RelativeToolTip": "Peak Pass Manager\\FormPago.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAADwvy8AAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "ControladoraPedido.cs",
+              "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Dominio\\ControladoraPedido.cs",
+              "RelativeDocumentMoniker": "Dominio\\ControladoraPedido.cs",
+              "ToolTip": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Dominio\\ControladoraPedido.cs",
+              "RelativeToolTip": "Dominio\\ControladoraPedido.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABcAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T20:04:33.355Z",
-              "IsPinned": true,
+              "WhenOpened": "2024-05-03T19:55:45.816Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ModeloCarrito.cs",
-              "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Acceso a Datos\\ModeloCarrito.cs",
-              "RelativeDocumentMoniker": "Acceso a Datos\\ModeloCarrito.cs",
-              "ToolTip": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Acceso a Datos\\ModeloCarrito.cs",
-              "RelativeToolTip": "Acceso a Datos\\ModeloCarrito.cs",
-              "ViewState": "AQIAAGgAAAAAAAAAAAAUwHsAAAAeAAAA",
+              "Title": "FormPedidos.cs",
+              "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormPedidos.cs",
+              "RelativeDocumentMoniker": "Peak Pass Manager\\FormPedidos.cs",
+              "ToolTip": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormPedidos.cs",
+              "RelativeToolTip": "Peak Pass Manager\\FormPedidos.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAQwBgAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T19:18:20.887Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ControladoraPedidoDetalle.cs",
-              "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Dominio\\ControladoraPedidoDetalle.cs",
-              "RelativeDocumentMoniker": "Dominio\\ControladoraPedidoDetalle.cs",
-              "ToolTip": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Dominio\\ControladoraPedidoDetalle.cs",
-              "RelativeToolTip": "Dominio\\ControladoraPedidoDetalle.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T19:46:51.868Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ModeloPedidoDetalle.cs",
-              "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Acceso a Datos\\ModeloPedidoDetalle.cs",
-              "RelativeDocumentMoniker": "Acceso a Datos\\ModeloPedidoDetalle.cs",
-              "ToolTip": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Acceso a Datos\\ModeloPedidoDetalle.cs",
-              "RelativeToolTip": "Acceso a Datos\\ModeloPedidoDetalle.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAcwC4AAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T19:44:50.179Z",
+              "WhenOpened": "2024-05-03T19:55:35.817Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ControladoraCarritoDetalle.cs",
-              "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Dominio\\ControladoraCarritoDetalle.cs",
-              "RelativeDocumentMoniker": "Dominio\\ControladoraCarritoDetalle.cs",
-              "ToolTip": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Dominio\\ControladoraCarritoDetalle.cs",
-              "RelativeToolTip": "Dominio\\ControladoraCarritoDetalle.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABRAAAA",
+              "Title": "ModeloPedido.cs",
+              "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Acceso a Datos\\ModeloPedido.cs",
+              "RelativeDocumentMoniker": "Acceso a Datos\\ModeloPedido.cs",
+              "ToolTip": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Acceso a Datos\\ModeloPedido.cs",
+              "RelativeToolTip": "Acceso a Datos\\ModeloPedido.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAACBAQAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T19:45:37.442Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ModeloCarritoDetalle.cs",
-              "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Acceso a Datos\\ModeloCarritoDetalle.cs",
-              "RelativeDocumentMoniker": "Acceso a Datos\\ModeloCarritoDetalle.cs",
-              "ToolTip": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Acceso a Datos\\ModeloCarritoDetalle.cs",
-              "RelativeToolTip": "Acceso a Datos\\ModeloCarritoDetalle.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAADwv0IAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T19:29:54.788Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FormCarrito.cs",
-              "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormCarrito.cs",
-              "RelativeDocumentMoniker": "Peak Pass Manager\\FormCarrito.cs",
-              "ToolTip": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormCarrito.cs",
-              "RelativeToolTip": "Peak Pass Manager\\FormCarrito.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABUAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T19:21:19.21Z",
+              "WhenOpened": "2024-05-03T19:55:23.043Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FormCarrito.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormCarrito.cs",
-              "RelativeDocumentMoniker": "Peak Pass Manager\\FormCarrito.cs",
-              "ToolTip": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormCarrito.cs [Design]",
-              "RelativeToolTip": "Peak Pass Manager\\FormCarrito.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "ModeloPedidoDetalle.cs",
+              "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Acceso a Datos\\ModeloPedidoDetalle.cs",
+              "RelativeDocumentMoniker": "Acceso a Datos\\ModeloPedidoDetalle.cs",
+              "ToolTip": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Acceso a Datos\\ModeloPedidoDetalle.cs",
+              "RelativeToolTip": "Acceso a Datos\\ModeloPedidoDetalle.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAB4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T19:21:16.991Z"
+              "WhenOpened": "2024-05-03T19:51:42.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormPedidos.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormPedidos.cs",
+              "RelativeDocumentMoniker": "Peak Pass Manager\\FormPedidos.cs",
+              "ToolTip": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormPedidos.cs [Design]",
+              "RelativeToolTip": "Peak Pass Manager\\FormPedidos.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:14:27.302Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormPedidosDetalles.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormPedidosDetalles.cs",
+              "RelativeDocumentMoniker": "Peak Pass Manager\\FormPedidosDetalles.cs",
+              "ToolTip": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormPedidosDetalles.cs [Design]",
+              "RelativeToolTip": "Peak Pass Manager\\FormPedidosDetalles.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T19:50:39.984Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormPedidosDetalles.cs",
+              "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormPedidosDetalles.cs",
+              "RelativeDocumentMoniker": "Peak Pass Manager\\FormPedidosDetalles.cs",
+              "ToolTip": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormPedidosDetalles.cs",
+              "RelativeToolTip": "Peak Pass Manager\\FormPedidosDetalles.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACMAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T19:50:45.115Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "FormCatalogo.cs",
-              "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormCatalogo.cs",
-              "RelativeDocumentMoniker": "Peak Pass Manager\\FormCatalogo.cs",
-              "ToolTip": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormCatalogo.cs",
-              "RelativeToolTip": "Peak Pass Manager\\FormCatalogo.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAWwFUAAABlAAAA",
+              "Title": "ControladoraPedidoDetalle.cs",
+              "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Dominio\\ControladoraPedidoDetalle.cs",
+              "RelativeDocumentMoniker": "Dominio\\ControladoraPedidoDetalle.cs",
+              "ToolTip": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Dominio\\ControladoraPedidoDetalle.cs",
+              "RelativeToolTip": "Dominio\\ControladoraPedidoDetalle.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T19:13:29.208Z"
+              "WhenOpened": "2024-05-03T19:51:11.027Z",
+              "EditorCaption": ""
             }
           ]
         }

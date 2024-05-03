@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Acceso_a_Datos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace Dominio
 {
     public class ModeloCarritoDetalle
     {
+        ModeloUsuario modeloUsuario = new ModeloUsuario();
         private int idCliente;
         public int idProducto;
         private string nombre;
@@ -77,7 +79,10 @@ namespace Dominio
         {
             return this.nombre;
         }
-
+        public string ObtenerNombreCliente()
+        {
+            return modeloUsuario.ObtenerNombrePorID(this.idCliente);
+        }
 
     }
 }

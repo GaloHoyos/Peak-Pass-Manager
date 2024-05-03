@@ -58,7 +58,7 @@ namespace Peak_Pass_Manager
                 foreach (DataRow row in carrito.ObtenerLista().Rows)
                 {
                     //Llama AgregarDetallePedido de ControladoraPedidoDetalle para agregar un detalle de pedido con los datos de la fila incluyendo el id de la venta y el id del cliente
-                    controladoraPedidoDetalle.AgregarDetallePedido(pedido.GetIdVenta(), Convert.ToInt32(row[1]), Convert.ToInt32(row[0]), Convert.ToInt32(row[3]), Convert.ToInt32(row[4]));
+                    controladoraPedidoDetalle.AgregarDetallePedido(pedido.GetIdVenta(), Convert.ToInt32(row[2]), Convert.ToInt32(row[0]), Convert.ToInt32(row[4]), Convert.ToInt32(row[5]));
                 }
                 MessageBox.Show("Compra realizada con exito");
             }catch (Exception ex)
