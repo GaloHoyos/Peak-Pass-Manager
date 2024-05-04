@@ -130,5 +130,9 @@ namespace Dominio
             }
             return dt;
         }
+        public void LimpiarCarrito()
+        {
+            listaCarritoDetalles.Clear();
+        }
     }
 }

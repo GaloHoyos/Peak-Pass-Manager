@@ -247,5 +247,18 @@ namespace Peak_Pass_Manager
                 MessageBox.Show("No tiene permisos para acceder a esta sección");
             }
         }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            if (permisos.Reportes())
+            {
+                ActivarBoton(sender, RGBColors.color2);
+                AbrirFormularioHijo(new FormReportes());
+            }
+            else
+            {
+                MessageBox.Show("No tiene permisos para acceder a esta sección");
+            }
+        }
     }
 }

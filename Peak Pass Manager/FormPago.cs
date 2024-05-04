@@ -61,6 +61,7 @@ namespace Peak_Pass_Manager
                     controladoraPedidoDetalle.AgregarDetallePedido(pedido.GetIdVenta(), Convert.ToInt32(row[2]), Convert.ToInt32(row[0]), Convert.ToInt32(row[4]), Convert.ToInt32(row[5]));
                 }
                 MessageBox.Show("Compra realizada con exito");
+                carrito.LimpiarCarrito();
             }catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
