@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             dgvCompra = new DataGridView();
             btnDetalles = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)dgvCompra).BeginInit();
@@ -35,7 +36,22 @@
             // 
             // dgvCompra
             // 
+            dgvCompra.AllowUserToAddRows = false;
+            dgvCompra.AllowUserToDeleteRows = false;
+            dgvCompra.AllowUserToResizeColumns = false;
+            dgvCompra.AllowUserToResizeRows = false;
+            dgvCompra.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvCompra.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.MediumPurple;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.Menu;
+            dataGridViewCellStyle1.SelectionBackColor = Color.MediumPurple;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvCompra.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvCompra.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCompra.EnableHeadersVisualStyles = false;
             dgvCompra.Location = new Point(37, 116);
             dgvCompra.Name = "dgvCompra";
             dgvCompra.RowHeadersWidth = 62;

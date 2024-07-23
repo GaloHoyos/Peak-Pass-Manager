@@ -28,13 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             dgvAuditoria = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dgvAuditoria).BeginInit();
             SuspendLayout();
             // 
             // dgvAuditoria
             // 
+            dgvAuditoria.AllowUserToAddRows = false;
+            dgvAuditoria.AllowUserToDeleteRows = false;
+            dgvAuditoria.AllowUserToResizeColumns = false;
+            dgvAuditoria.AllowUserToResizeRows = false;
+            dgvAuditoria.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvAuditoria.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.MediumPurple;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.Menu;
+            dataGridViewCellStyle1.SelectionBackColor = Color.MediumPurple;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvAuditoria.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvAuditoria.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAuditoria.EnableHeadersVisualStyles = false;
             dgvAuditoria.Location = new Point(38, 28);
             dgvAuditoria.Name = "dgvAuditoria";
             dgvAuditoria.RowHeadersWidth = 62;

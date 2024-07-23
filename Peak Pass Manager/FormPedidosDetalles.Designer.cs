@@ -28,13 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             dgvCompraDetalles = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dgvCompraDetalles).BeginInit();
             SuspendLayout();
             // 
             // dgvCompraDetalles
             // 
+            dgvCompraDetalles.AllowUserToAddRows = false;
+            dgvCompraDetalles.AllowUserToDeleteRows = false;
+            dgvCompraDetalles.AllowUserToResizeColumns = false;
+            dgvCompraDetalles.AllowUserToResizeRows = false;
+            dgvCompraDetalles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvCompraDetalles.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.MediumPurple;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.Menu;
+            dataGridViewCellStyle1.SelectionBackColor = Color.MediumPurple;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvCompraDetalles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvCompraDetalles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCompraDetalles.EnableHeadersVisualStyles = false;
             dgvCompraDetalles.Location = new Point(37, 47);
             dgvCompraDetalles.Name = "dgvCompraDetalles";
             dgvCompraDetalles.RowHeadersWidth = 62;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             dgvCarrito = new DataGridView();
             btnPago = new FontAwesome.Sharp.IconButton();
             lblTotal = new Label();
@@ -39,7 +40,22 @@
             // 
             // dgvCarrito
             // 
+            dgvCarrito.AllowUserToAddRows = false;
+            dgvCarrito.AllowUserToDeleteRows = false;
+            dgvCarrito.AllowUserToResizeColumns = false;
+            dgvCarrito.AllowUserToResizeRows = false;
+            dgvCarrito.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvCarrito.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.MediumPurple;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = Color.MediumPurple;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvCarrito.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvCarrito.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCarrito.EnableHeadersVisualStyles = false;
             dgvCarrito.Location = new Point(34, 91);
             dgvCarrito.Name = "dgvCarrito";
             dgvCarrito.RowHeadersWidth = 62;
