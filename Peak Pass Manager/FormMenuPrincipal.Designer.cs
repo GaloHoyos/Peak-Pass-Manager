@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panelMenu = new Panel();
+            btnAuditoria = new FontAwesome.Sharp.IconButton();
             btnReportes = new FontAwesome.Sharp.IconButton();
             btnUsuarios = new FontAwesome.Sharp.IconButton();
             btnPedidos = new FontAwesome.Sharp.IconButton();
@@ -49,7 +50,6 @@
             iconFormulario = new FontAwesome.Sharp.IconPictureBox();
             panelSombra = new Panel();
             panelEscritorio = new Panel();
-            btnAuditoria = new FontAwesome.Sharp.IconButton();
             panelMenu.SuspendLayout();
             panel1.SuspendLayout();
             panelLogo.SuspendLayout();
@@ -79,6 +79,28 @@
             panelMenu.Size = new Size(220, 842);
             panelMenu.TabIndex = 0;
             // 
+            // btnAuditoria
+            // 
+            btnAuditoria.Dock = DockStyle.Top;
+            btnAuditoria.FlatAppearance.BorderSize = 0;
+            btnAuditoria.FlatStyle = FlatStyle.Flat;
+            btnAuditoria.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAuditoria.ForeColor = SystemColors.ButtonHighlight;
+            btnAuditoria.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
+            btnAuditoria.IconColor = Color.WhiteSmoke;
+            btnAuditoria.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnAuditoria.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAuditoria.Location = new Point(0, 560);
+            btnAuditoria.Name = "btnAuditoria";
+            btnAuditoria.Padding = new Padding(10, 0, 20, 0);
+            btnAuditoria.Size = new Size(220, 60);
+            btnAuditoria.TabIndex = 9;
+            btnAuditoria.Text = "Auditoria";
+            btnAuditoria.TextAlign = ContentAlignment.MiddleLeft;
+            btnAuditoria.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAuditoria.UseVisualStyleBackColor = true;
+            btnAuditoria.Click += btnAuditoria_Click;
+            // 
             // btnReportes
             // 
             btnReportes.Dock = DockStyle.Top;
@@ -99,6 +121,7 @@
             btnReportes.TextAlign = ContentAlignment.MiddleLeft;
             btnReportes.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnReportes.UseVisualStyleBackColor = true;
+            btnReportes.Click += btnReportes_Click;
             // 
             // btnUsuarios
             // 
@@ -379,28 +402,6 @@
             panelEscritorio.Name = "panelEscritorio";
             panelEscritorio.Size = new Size(1218, 758);
             panelEscritorio.TabIndex = 3;
-            // 
-            // btnAuditoria
-            // 
-            btnAuditoria.Dock = DockStyle.Top;
-            btnAuditoria.FlatAppearance.BorderSize = 0;
-            btnAuditoria.FlatStyle = FlatStyle.Flat;
-            btnAuditoria.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAuditoria.ForeColor = SystemColors.ButtonHighlight;
-            btnAuditoria.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
-            btnAuditoria.IconColor = Color.WhiteSmoke;
-            btnAuditoria.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnAuditoria.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAuditoria.Location = new Point(0, 560);
-            btnAuditoria.Name = "btnAuditoria";
-            btnAuditoria.Padding = new Padding(10, 0, 20, 0);
-            btnAuditoria.Size = new Size(220, 60);
-            btnAuditoria.TabIndex = 9;
-            btnAuditoria.Text = "Auditoria";
-            btnAuditoria.TextAlign = ContentAlignment.MiddleLeft;
-            btnAuditoria.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnAuditoria.UseVisualStyleBackColor = true;
-            btnAuditoria.Click += btnAuditoria_Click;
             // 
             // FormMenuPrincipal
             // 

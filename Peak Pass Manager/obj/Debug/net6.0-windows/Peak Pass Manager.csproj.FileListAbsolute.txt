@@ -284,3 +284,11 @@ C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\De
 C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormPago.resources
 C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.Imagenes.resources
 C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormAuditoria.resources
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\WinForms.DataVisualization.Utilities.dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\WinForms.DataVisualization.dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\obj\Debug\net6.0-windows\Peak_Pass_Manager.FormReportes.resources
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\GrapeCity.DataVisualization.Chart.dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\zh\GrapeCity.DataVisualization.Chart.resources.dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\itextsharp.dll
+C:\Users\galoh\OneDrive\Documents\UAI\Peak Pass Manager\Peak Pass Manager\bin\Debug\net6.0-windows\PdfFileWriter.dll

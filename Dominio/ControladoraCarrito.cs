@@ -71,5 +71,9 @@ namespace Dominio
         {
             modeloCarrito.ReducirCantidad(idProducto, cantidad);
         }
+        public void LimpiarCarrito()
+        {
+            modeloCarrito.LimpiarCarrito();
+        }
     }
 }

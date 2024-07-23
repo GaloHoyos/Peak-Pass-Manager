@@ -18,7 +18,7 @@ namespace Acceso_a_Datos
             using (var connection = GetConnection())
             {
 
-                SqlDataAdapter da = new SqlDataAdapter("SELECT p.id_venta, p.id_vendedor, u_vendedor.nombre AS nombre_vendedor, p.id_cliente, u_cliente.nombre AS nombre_cliente, u_cliente.apellido AS apellido_cliente, p.costo_total FROM pedidos AS p JOIN usuarios AS u_vendedor ON p.id_vendedor = u_vendedor.id_usuario JOIN usuarios AS u_cliente ON p.id_cliente = u_cliente.id_usuario;", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
+                SqlDataAdapter da = new SqlDataAdapter("SELECT p.id_venta, p.id_vendedor, u_vendedor.nombre AS nombre_vendedor, p.id_cliente, u_cliente.nombre AS nombre_cliente, u_cliente.apellido AS apellido_cliente, p.costo_total, p.fecha FROM pedidos AS p JOIN usuarios AS u_vendedor ON p.id_vendedor = u_vendedor.id_usuario JOIN usuarios AS u_cliente ON p.id_cliente = u_cliente.id_usuario;", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
                 da.SelectCommand.CommandType = CommandType.Text; //Indica como se interpretará el comando anterior para mayor claridad al momento de ejecutarlo en el SQL
                 da.Fill(dt); //Obtiene los datos de la tabla
                 return dt; //Envia los datos de la tabla
@@ -33,7 +33,7 @@ namespace Acceso_a_Datos
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    SqlCommand cmd = new SqlCommand("Insert into pedidos values ('" + idVendedor + "','" + idCliente + "','" + total + "')", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
+                    SqlCommand cmd = new SqlCommand("Insert into pedidos values ('" + idVendedor + "','" + idCliente + "','" + total + "', GETDATE())", connection); //Escribimos el comando (Querry) que queremos llevar a cabo en la base de datos
                     cmd.CommandType = CommandType.Text; //Indica como se interpretará el comando anterior para mayor claridad al momento de ejecutarlo en el SQL
 
                     cmd.ExecuteNonQuery();

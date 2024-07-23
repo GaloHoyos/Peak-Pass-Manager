@@ -36,6 +36,8 @@ namespace Peak_Pass_Manager
             dgvCompra.Columns[5].DataPropertyName = "apellido_cliente";
             dgvCompra.Columns.Add("Costo Total", "Costo Total");
             dgvCompra.Columns[6].DataPropertyName = "costo_total";
+            dgvCompra.Columns.Add("Fecha", "Fecha");
+            dgvCompra.Columns[7].DataPropertyName = "fecha";
             dgvCompra.DataSource = pedido.ActualizarLista();
         }
 
