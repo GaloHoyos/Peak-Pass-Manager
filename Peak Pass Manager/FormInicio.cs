@@ -8,15 +8,14 @@ namespace Peak_Pass_Manager
 {
     public partial class FormInicio : Form
     {
-        private ControladoraBackup controladoraBackup;
-        private ControladoraAuditoria auditoria;
+        private IControladoraBackup controladoraConAuditoria;
 
         public FormInicio()
         {
             InitializeComponent();
             //Singleton
-            controladoraBackup = ControladoraBackup.Instance;
-            auditoria = new ControladoraAuditoria();
+            IControladoraBackup controladoraBackup = ControladoraBackup.Instance;
+            controladoraConAuditoria = new ControladoraBackupConAuditoria(controladoraBackup);
             LoadBackups();
         }
 
@@ -24,7 +23,7 @@ namespace Peak_Pass_Manager
         {
             try
             {
-                DataTable backupsTable = controladoraBackup.GetAvailableBackups();
+                DataTable backupsTable = controladoraConAuditoria.GetAvailableBackups();
                 dgvBackups.DataSource = backupsTable;
             }
             catch (ApplicationException ex)
@@ -37,10 +36,9 @@ namespace Peak_Pass_Manager
         {
             try
             {
-                controladoraBackup.PerformBackup();
+                controladoraConAuditoria.PerformBackup();
                 MessageBox.Show("Backup realizado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadBackups();
-                auditoria.InsertarAuditoria(CacheUsuario.IdUsuario, "Backup", "Se realizó un backup de la base de datos.");
             }
             catch (ApplicationException ex)
             {
@@ -55,10 +53,9 @@ namespace Peak_Pass_Manager
                 string backupFilePath = dgvBackups.CurrentRow.Cells["BackupPath"].Value.ToString();
                 try
                 {
-                    controladoraBackup.PerformRestore(backupFilePath);
+                    controladoraConAuditoria.PerformRestore(backupFilePath);
                     MessageBox.Show("Restore realizado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadBackups();
-                    auditoria.InsertarAuditoria(CacheUsuario.IdUsuario, "Restore", "Se realizó un restore de la base de datos.");
                 }
                 catch (ApplicationException ex)
                 {

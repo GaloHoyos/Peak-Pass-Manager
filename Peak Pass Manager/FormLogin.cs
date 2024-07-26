@@ -111,8 +111,9 @@ namespace Peak_Pass_Manager
             {
                 if(txtContra.Text != "CONTRASEÑA")
                 {
-                    ControladoraUsuario controladoraUsuario = new ControladoraUsuario();
-                    var loginValido = controladoraUsuario.LoginUser(txtUsuario.Text, txtContra.Text);
+                    IControladoraUsuario controladoraUsuario = new ControladoraUsuario();
+                    IControladoraUsuario controladoraUsuarioConAuditoria = new ControladoraUsuarioConAuditoria(controladoraUsuario);
+                    var loginValido = controladoraUsuarioConAuditoria.LoginUser(txtUsuario.Text, txtContra.Text);
                     if (loginValido == "true")
                     {
                         FormMenuPrincipal formMenuPrincipal = new FormMenuPrincipal();
