@@ -143,8 +143,9 @@ namespace Peak_Pass_Manager
             try
             {
                 int idRol = controladoraPermisos.ObtenerIdRol(cmbRol.Text);
-                ControladoraUsuario usuario = new ControladoraUsuario();
-                switch (usuario.AgregarUsuario(0, txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text, idRol, cboxUserActivo.Checked))
+                IControladoraUsuario controladoraUsuario = new ControladoraUsuario();
+                IControladoraUsuario controladoraUsuarioConAuditoria = new ControladoraUsuarioConAuditoria(controladoraUsuario);
+                switch (controladoraUsuarioConAuditoria.AgregarUsuario(0, txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text, idRol, cboxUserActivo.Checked))
                 {
                     case "Activo y Existente":
                         MessageBox.Show("El usuario ya existe");
@@ -153,7 +154,7 @@ namespace Peak_Pass_Manager
                         var m = MessageBox.Show("El usuario ya existe y esta inactivo. Desea reactivarlo?", "Atencion", MessageBoxButtons.YesNo);
                         if (m == DialogResult.Yes)
                         {
-                            usuario.ActivarUsuario(usuario.ObtenerIdPorDNI(txtDNI.Text));
+                            controladoraUsuarioConAuditoria.ActivarUsuario(controladoraUsuario.ObtenerIdPorDNI(txtDNI.Text));
                             Iniciar();
                             LimpioUsuario();
                         }
@@ -179,15 +180,16 @@ namespace Peak_Pass_Manager
         {
             try
             {
-                ControladoraUsuario usuario = new ControladoraUsuario();
+                IControladoraUsuario controladoraUsuario = new ControladoraUsuario();
+                IControladoraUsuario controladoraUsuarioConAuditoria = new ControladoraUsuarioConAuditoria(controladoraUsuario); ;
                 if (dgvUsuarios.CurrentRow.Cells[0].Value.ToString() == CacheUsuario.IdUsuario.ToString())
                 {
                     MessageBox.Show("No se puede modificar el usuario que esta en uso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (txtDNI.Text == usuario.ObtenerDNI(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value)))
+                else if (txtDNI.Text == controladoraUsuario.ObtenerDNI(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value)))
                 {
                     int idRol = controladoraPermisos.ObtenerIdRol(cmbRol.Text);
-                    if (usuario.ModifcarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text, idRol, cboxUserActivo.Checked))
+                    if (controladoraUsuarioConAuditoria.ModifcarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text, idRol, cboxUserActivo.Checked))
                     {
                         Iniciar();
                         LimpioUsuario();
@@ -199,7 +201,7 @@ namespace Peak_Pass_Manager
                 }
                 else
                 {
-                    if (usuario.ExisteDNI(txtDNI.Text))
+                    if (controladoraUsuario.ExisteDNI(txtDNI.Text))
                     {
                         MessageBox.Show("DNI Existente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
@@ -207,7 +209,7 @@ namespace Peak_Pass_Manager
                     else
                     {
                         int idRol = controladoraPermisos.ObtenerIdRol(cmbRol.Text);
-                        usuario.ModifcarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text, idRol, cboxUserActivo.Checked);
+                        controladoraUsuarioConAuditoria.ModifcarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text, idRol, cboxUserActivo.Checked);
                         Iniciar();
                         LimpioUsuario();
                     }
@@ -229,13 +231,14 @@ namespace Peak_Pass_Manager
                 }
                 else
                 {
-                    ControladoraUsuario usuario = new ControladoraUsuario();
-                    if (usuario.EliminarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value)))
+                    IControladoraUsuario controladoraUsuario = new ControladoraUsuario();
+                    IControladoraUsuario controladoraUsuarioConAuditoria = new ControladoraUsuarioConAuditoria(controladoraUsuario);
+                    if (controladoraUsuarioConAuditoria.EliminarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value)))
                     {
                         var resultado = MessageBox.Show("No se puede eliminar el usuario porque tiene pedidos asociados, desea desactivarlo en cambio?", "Atencion", MessageBoxButtons.YesNo);
                         if (resultado == DialogResult.Yes)
                         {
-                            usuario.DesactivarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value));
+                            controladoraUsuarioConAuditoria.DesactivarUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value));
                             Iniciar();
                             LimpioUsuario();
                             MessageBox.Show("Usuario desactivado");

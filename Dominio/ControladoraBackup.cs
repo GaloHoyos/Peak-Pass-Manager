@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Data;
+using Acceso_a_Datos;
+using Comun.Cache;
 
 namespace Dominio
 {
-    public class ControladoraBackup
+    public class ControladoraBackup : IControladoraBackup
     {
         private static ControladoraBackup _instance;
         private static readonly object _lock = new object();
@@ -69,4 +71,5 @@ namespace Dominio
             }
         }
     }
+
 }

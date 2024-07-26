@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 
-namespace Dominio
+namespace Acceso_a_Datos
 {
     public class ModeloBackup : ConexionSQL1
     {

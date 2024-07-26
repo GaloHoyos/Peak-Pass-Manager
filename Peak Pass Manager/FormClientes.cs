@@ -58,8 +58,9 @@ namespace Peak_Pass_Manager
 
         public void AgregarCliente()
         {
-            ControladoraUsuario cliente = new ControladoraUsuario();
-            switch (cliente.AgregarUsuario(1,txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 3, true))
+            IControladoraUsuario controladoraUsuario = new ControladoraUsuario();
+            IControladoraUsuario controladoraUsuarioConAuditoria = new ControladoraUsuarioConAuditoria(controladoraUsuario);
+            switch (controladoraUsuarioConAuditoria.AgregarUsuario(1,txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 3, true))
             {
                 case "No Existente":
                     MessageBox.Show("Cliente Agregado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -79,25 +80,26 @@ namespace Peak_Pass_Manager
         }
         public void ModificarCliente()
         {
-            ControladoraUsuario cliente = new ControladoraUsuario();
+            IControladoraUsuario controladoraUsuario = new ControladoraUsuario();
+            IControladoraUsuario controladoraUsuarioConAuditoria = new ControladoraUsuarioConAuditoria(controladoraUsuario);
             if (dgvClientes.CurrentRow.Cells[7].Value.ToString() == "Cliente")
             {
-                if (txtDNI.Text == cliente.ObtenerDNI(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value)))
+                if (txtDNI.Text == controladoraUsuario.ObtenerDNI(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value)))
                 {
-                    cliente.ModifcarUsuario(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 3, true);
+                    controladoraUsuarioConAuditoria.ModifcarUsuario(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 3, true);
                     iniciar();
                     LimpioCliente();
                 }
                 else
                 {
-                    if (cliente.ExisteDNI(txtDNI.Text))
+                    if (controladoraUsuario.ExisteDNI(txtDNI.Text))
                     {
                         MessageBox.Show("DNI Existente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                     else
                     {
-                        cliente.ModifcarUsuario(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 3, true);
+                        controladoraUsuarioConAuditoria.ModifcarUsuario(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 3, true);
                         iniciar();
                         LimpioCliente();
                     }
@@ -127,8 +129,9 @@ namespace Peak_Pass_Manager
             }
             else
             {
-                ControladoraUsuario cliente = new ControladoraUsuario();
-                if (cliente.EliminarUsuario(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value)) == true)
+                IControladoraUsuario controladoraUsuario = new ControladoraUsuario();
+                IControladoraUsuario controladoraUsuarioConAuditoria = new ControladoraUsuarioConAuditoria(controladoraUsuario);
+                if (controladoraUsuarioConAuditoria.EliminarUsuario(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value)) == true)
                 {
                     MessageBox.Show("No se puede eliminar el cliente porque tiene pedidos asociados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

@@ -6,10 +6,9 @@ using System.Data;
 
 namespace Dominio
 {
-    public class ControladoraUsuario
+    public class ControladoraUsuario : IControladoraUsuario
     {
         ModeloUsuario modeloUsuario = new ModeloUsuario();
-        ControladoraAuditoria auditoria = new ControladoraAuditoria();
         public string LoginUser(string user, string pass)
         {
             Verificaciones verificaciones = new Verificaciones();
@@ -18,7 +17,6 @@ namespace Dominio
             if(loginExitoso == "true")
             {
                 LlenarCacheUsuario();
-                auditoria.InsertarAuditoria(CacheUsuario.IdUsuario, "Login", "El usuario ha iniciado sesión");
             }
             return loginExitoso;
         }
@@ -102,7 +100,6 @@ namespace Dominio
                     Verificaciones verificaciones = new Verificaciones();
                     string passEncriptada = verificaciones.Encriptar(password);
                     modeloUsuario.AgregarUsuario(nombre, apellido, dni, email, direccion, telefono, usuario, passEncriptada, idRol, activo);
-
                     return "No Existente";
                 }
             }
