@@ -15,6 +15,7 @@ namespace Peak_Pass_Manager
 {
     public partial class FormOpciones : Form
     {
+        private IControladoraBackup controladoraConAuditoria;
         ControladoraPermisos controladoraPermisos = new ControladoraPermisos();
         public FormOpciones()
         {
@@ -25,6 +26,24 @@ namespace Peak_Pass_Manager
             if (controladoraPermisos.EditarPermisos() == false)
             {
                 gboxPermisos.Enabled = false;
+
+            }
+            //Singleton
+            IControladoraBackup controladoraBackup = ControladoraBackup.Instance;
+            controladoraConAuditoria = new ControladoraBackupConAuditoria(controladoraBackup);
+            LoadBackups();
+        }
+
+        private void LoadBackups()
+        {
+            try
+            {
+                DataTable backupsTable = controladoraConAuditoria.GetAvailableBackups();
+                dgvBackups.DataSource = backupsTable;
+            }
+            catch (ApplicationException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public void LlenarCheckBoxes()
@@ -89,11 +108,6 @@ namespace Peak_Pass_Manager
             {
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            controladoraPermisos.ModificarPermisos(controladoraPermisos.ObtenerIdRol(cmbRol.Text), ObtenerPermisos());
         }
 
         //Metodo para pasar una lista de permisos a la controladoraPermisos
@@ -203,7 +217,8 @@ namespace Peak_Pass_Manager
             chkModUsuarios.Enabled = permiso;
             chkEliUsuarios.Enabled = permiso;
             chkAgregarRol.Enabled = permiso;
-            btnGuardar.Enabled = permiso;
+            btnGuardarCambios.Enabled = permiso;
+            btnEliminarRol.Enabled = permiso;
         }
 
         private void btnAgregarRol_Click(object sender, EventArgs e)
@@ -221,7 +236,65 @@ namespace Peak_Pass_Manager
             }
         }
 
-        private void btnEliminarRol_Click(object sender, EventArgs e)
+        private void btnRestore_Click(object sender, EventArgs e)
+        {
+            if (dgvBackups.CurrentRow != null && dgvBackups.CurrentRow.Cells["BackupPath"].Value != null)
+            {
+                string backupFilePath = dgvBackups.CurrentRow.Cells["BackupPath"].Value.ToString();
+                try
+                {
+                    controladoraConAuditoria.PerformRestore(backupFilePath);
+                    MessageBox.Show("Restore realizado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadBackups();
+                }
+                catch (ApplicationException ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un backup para restaurar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnBackup_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                controladoraConAuditoria.PerformBackup();
+                MessageBox.Show("Backup realizado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadBackups();
+            }
+            catch (ApplicationException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnAgregarRol_Click_1(object sender, EventArgs e)
+        {
+            bool existe = controladoraPermisos.AgregarRol(txtRol.Text);
+            if (existe == true)
+            {
+                MessageBox.Show("El rol ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Rol agregado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LlenarRoles();
+                txtRol.Text = "";
+            }
+        }
+
+        private void btnHabilitarRol_Click_1(object sender, EventArgs e)
+        {
+            controladoraPermisos.HabilitarRol(controladoraPermisos.ObtenerIdRol(cmbRolInactivo.Text));
+            LlenarRoles();
+            MessageBox.Show("Rol habilitado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnEliminarRol_Click_1(object sender, EventArgs e)
         {
             if (cmbRol.Text == "Administrador")
             {
@@ -260,11 +333,9 @@ namespace Peak_Pass_Manager
             }
         }
 
-        private void btnHabilitarRol_Click(object sender, EventArgs e)
+        private void btnGuardarCambios_Click(object sender, EventArgs e)
         {
-            controladoraPermisos.HabilitarRol(controladoraPermisos.ObtenerIdRol(cmbRolInactivo.Text));
-            LlenarRoles();
-            MessageBox.Show("Rol habilitado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            controladoraPermisos.ModificarPermisos(controladoraPermisos.ObtenerIdRol(cmbRol.Text), ObtenerPermisos());
         }
     }
 }

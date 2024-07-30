@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblOpciones = new Label();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             gboxPermisos = new GroupBox();
-            btnEliminarRol = new Button();
+            btnGuardarCambios = new CustomControls.RJControls.RJButton();
+            btnEliminarRol = new CustomControls.RJControls.RJButton();
             chkAgregarRol = new CheckBox();
-            btnGuardar = new FontAwesome.Sharp.IconButton();
             chkEliUsuarios = new CheckBox();
             chkModUsuarios = new CheckBox();
             chkAgUsuarios = new CheckBox();
@@ -52,33 +52,28 @@
             lblRol = new Label();
             cmbRol = new ComboBox();
             gboxRoles = new GroupBox();
-            btnAgregarRol = new Button();
+            btnAgregarRol = new CustomControls.RJControls.RJButton();
             lblNombreRol = new Label();
             txtRol = new TextBox();
             groupBox1 = new GroupBox();
+            btnHabilitarRol = new CustomControls.RJControls.RJButton();
             lblRolInactivo = new Label();
-            btnHabilitarRol = new Button();
             cmbRolInactivo = new ComboBox();
+            btnBackup = new CustomControls.RJControls.RJButton();
+            btnRestore = new CustomControls.RJControls.RJButton();
+            dgvBackups = new DataGridView();
+            label1 = new Label();
             gboxPermisos.SuspendLayout();
             gboxRoles.SuspendLayout();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvBackups).BeginInit();
             SuspendLayout();
-            // 
-            // lblOpciones
-            // 
-            lblOpciones.AutoSize = true;
-            lblOpciones.ForeColor = Color.Gainsboro;
-            lblOpciones.Location = new Point(126, 37);
-            lblOpciones.Name = "lblOpciones";
-            lblOpciones.Size = new Size(87, 25);
-            lblOpciones.TabIndex = 3;
-            lblOpciones.Text = "Opciones";
             // 
             // gboxPermisos
             // 
+            gboxPermisos.Controls.Add(btnGuardarCambios);
             gboxPermisos.Controls.Add(btnEliminarRol);
             gboxPermisos.Controls.Add(chkAgregarRol);
-            gboxPermisos.Controls.Add(btnGuardar);
             gboxPermisos.Controls.Add(chkEliUsuarios);
             gboxPermisos.Controls.Add(chkModUsuarios);
             gboxPermisos.Controls.Add(chkAgUsuarios);
@@ -98,23 +93,50 @@
             gboxPermisos.Controls.Add(lblRol);
             gboxPermisos.Controls.Add(cmbRol);
             gboxPermisos.ForeColor = SystemColors.ButtonFace;
-            gboxPermisos.Location = new Point(705, 111);
+            gboxPermisos.Location = new Point(608, 13);
             gboxPermisos.Name = "gboxPermisos";
             gboxPermisos.Size = new Size(458, 530);
             gboxPermisos.TabIndex = 4;
             gboxPermisos.TabStop = false;
             gboxPermisos.Text = "Permisos";
             // 
+            // btnGuardarCambios
+            // 
+            btnGuardarCambios.BackColor = Color.LightSkyBlue;
+            btnGuardarCambios.BackgroundColor = Color.LightSkyBlue;
+            btnGuardarCambios.BorderColor = Color.PaleVioletRed;
+            btnGuardarCambios.BorderRadius = 10;
+            btnGuardarCambios.BorderSize = 0;
+            btnGuardarCambios.FlatAppearance.BorderSize = 0;
+            btnGuardarCambios.FlatStyle = FlatStyle.Flat;
+            btnGuardarCambios.ForeColor = Color.Black;
+            btnGuardarCambios.Location = new Point(287, 437);
+            btnGuardarCambios.Name = "btnGuardarCambios";
+            btnGuardarCambios.Size = new Size(149, 76);
+            btnGuardarCambios.TabIndex = 19;
+            btnGuardarCambios.Text = "Guardar Cambios";
+            btnGuardarCambios.TextColor = Color.Black;
+            btnGuardarCambios.UseVisualStyleBackColor = false;
+            btnGuardarCambios.Click += btnGuardarCambios_Click;
+            // 
             // btnEliminarRol
             // 
-            btnEliminarRol.ForeColor = SystemColors.ActiveCaptionText;
+            btnEliminarRol.BackColor = Color.LightSkyBlue;
+            btnEliminarRol.BackgroundColor = Color.LightSkyBlue;
+            btnEliminarRol.BorderColor = Color.PaleVioletRed;
+            btnEliminarRol.BorderRadius = 10;
+            btnEliminarRol.BorderSize = 0;
+            btnEliminarRol.FlatAppearance.BorderSize = 0;
+            btnEliminarRol.FlatStyle = FlatStyle.Flat;
+            btnEliminarRol.ForeColor = Color.Black;
             btnEliminarRol.Location = new Point(29, 437);
             btnEliminarRol.Name = "btnEliminarRol";
-            btnEliminarRol.Size = new Size(128, 73);
+            btnEliminarRol.Size = new Size(149, 76);
             btnEliminarRol.TabIndex = 18;
             btnEliminarRol.Text = "Eliminar Rol";
-            btnEliminarRol.UseVisualStyleBackColor = true;
-            btnEliminarRol.Click += btnEliminarRol_Click;
+            btnEliminarRol.TextColor = Color.Black;
+            btnEliminarRol.UseVisualStyleBackColor = false;
+            btnEliminarRol.Click += btnEliminarRol_Click_1;
             // 
             // chkAgregarRol
             // 
@@ -125,20 +147,6 @@
             chkAgregarRol.TabIndex = 17;
             chkAgregarRol.Text = "Agregar Roles";
             chkAgregarRol.UseVisualStyleBackColor = true;
-            // 
-            // btnGuardar
-            // 
-            btnGuardar.ForeColor = SystemColors.ActiveCaptionText;
-            btnGuardar.IconChar = FontAwesome.Sharp.IconChar.None;
-            btnGuardar.IconColor = Color.Black;
-            btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnGuardar.Location = new Point(310, 437);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(133, 76);
-            btnGuardar.TabIndex = 5;
-            btnGuardar.Text = "Guardar Cambios";
-            btnGuardar.UseVisualStyleBackColor = true;
-            btnGuardar.Click += btnGuardar_Click;
             // 
             // chkEliUsuarios
             // 
@@ -325,7 +333,7 @@
             gboxRoles.Controls.Add(lblNombreRol);
             gboxRoles.Controls.Add(txtRol);
             gboxRoles.ForeColor = SystemColors.ButtonFace;
-            gboxRoles.Location = new Point(253, 121);
+            gboxRoles.Location = new Point(164, 13);
             gboxRoles.Name = "gboxRoles";
             gboxRoles.Size = new Size(428, 178);
             gboxRoles.TabIndex = 6;
@@ -334,14 +342,22 @@
             // 
             // btnAgregarRol
             // 
-            btnAgregarRol.ForeColor = SystemColors.ActiveCaptionText;
-            btnAgregarRol.Location = new Point(188, 118);
+            btnAgregarRol.BackColor = Color.LightSkyBlue;
+            btnAgregarRol.BackgroundColor = Color.LightSkyBlue;
+            btnAgregarRol.BorderColor = Color.PaleVioletRed;
+            btnAgregarRol.BorderRadius = 10;
+            btnAgregarRol.BorderSize = 0;
+            btnAgregarRol.FlatAppearance.BorderSize = 0;
+            btnAgregarRol.FlatStyle = FlatStyle.Flat;
+            btnAgregarRol.ForeColor = Color.Black;
+            btnAgregarRol.Location = new Point(173, 116);
             btnAgregarRol.Name = "btnAgregarRol";
-            btnAgregarRol.Size = new Size(122, 34);
-            btnAgregarRol.TabIndex = 2;
+            btnAgregarRol.Size = new Size(149, 38);
+            btnAgregarRol.TabIndex = 3;
             btnAgregarRol.Text = "Agregar Rol";
-            btnAgregarRol.UseVisualStyleBackColor = true;
-            btnAgregarRol.Click += btnAgregarRol_Click;
+            btnAgregarRol.TextColor = Color.Black;
+            btnAgregarRol.UseVisualStyleBackColor = false;
+            btnAgregarRol.Click += btnAgregarRol_Click_1;
             // 
             // lblNombreRol
             // 
@@ -361,16 +377,35 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(lblRolInactivo);
             groupBox1.Controls.Add(btnHabilitarRol);
+            groupBox1.Controls.Add(lblRolInactivo);
             groupBox1.Controls.Add(cmbRolInactivo);
             groupBox1.ForeColor = SystemColors.ButtonFace;
-            groupBox1.Location = new Point(253, 332);
+            groupBox1.Location = new Point(164, 190);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(428, 178);
             groupBox1.TabIndex = 7;
             groupBox1.TabStop = false;
             groupBox1.Text = "Roles Inactivos";
+            // 
+            // btnHabilitarRol
+            // 
+            btnHabilitarRol.BackColor = Color.LightSkyBlue;
+            btnHabilitarRol.BackgroundColor = Color.LightSkyBlue;
+            btnHabilitarRol.BorderColor = Color.PaleVioletRed;
+            btnHabilitarRol.BorderRadius = 10;
+            btnHabilitarRol.BorderSize = 0;
+            btnHabilitarRol.FlatAppearance.BorderSize = 0;
+            btnHabilitarRol.FlatStyle = FlatStyle.Flat;
+            btnHabilitarRol.ForeColor = Color.Black;
+            btnHabilitarRol.Location = new Point(173, 124);
+            btnHabilitarRol.Name = "btnHabilitarRol";
+            btnHabilitarRol.Size = new Size(149, 38);
+            btnHabilitarRol.TabIndex = 21;
+            btnHabilitarRol.Text = "Habilitar Rol";
+            btnHabilitarRol.TextColor = Color.Black;
+            btnHabilitarRol.UseVisualStyleBackColor = false;
+            btnHabilitarRol.Click += btnHabilitarRol_Click_1;
             // 
             // lblRolInactivo
             // 
@@ -381,17 +416,6 @@
             lblRolInactivo.TabIndex = 20;
             lblRolInactivo.Text = "Rol";
             // 
-            // btnHabilitarRol
-            // 
-            btnHabilitarRol.ForeColor = SystemColors.ActiveCaptionText;
-            btnHabilitarRol.Location = new Point(188, 118);
-            btnHabilitarRol.Name = "btnHabilitarRol";
-            btnHabilitarRol.Size = new Size(122, 34);
-            btnHabilitarRol.TabIndex = 2;
-            btnHabilitarRol.Text = "Habilitar Rol";
-            btnHabilitarRol.UseVisualStyleBackColor = true;
-            btnHabilitarRol.Click += btnHabilitarRol_Click;
-            // 
             // cmbRolInactivo
             // 
             cmbRolInactivo.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -401,16 +425,92 @@
             cmbRolInactivo.Size = new Size(182, 33);
             cmbRolInactivo.TabIndex = 19;
             // 
+            // btnBackup
+            // 
+            btnBackup.BackColor = Color.MediumSlateBlue;
+            btnBackup.BackgroundColor = Color.MediumSlateBlue;
+            btnBackup.BorderColor = Color.PaleVioletRed;
+            btnBackup.BorderRadius = 10;
+            btnBackup.BorderSize = 0;
+            btnBackup.FlatAppearance.BorderSize = 0;
+            btnBackup.FlatStyle = FlatStyle.Flat;
+            btnBackup.ForeColor = Color.White;
+            btnBackup.Location = new Point(841, 555);
+            btnBackup.Name = "btnBackup";
+            btnBackup.Size = new Size(225, 135);
+            btnBackup.TabIndex = 10;
+            btnBackup.Text = "Backup";
+            btnBackup.TextColor = Color.White;
+            btnBackup.UseVisualStyleBackColor = false;
+            btnBackup.Click += btnBackup_Click;
+            // 
+            // btnRestore
+            // 
+            btnRestore.BackColor = Color.Magenta;
+            btnRestore.BackgroundColor = Color.Magenta;
+            btnRestore.BorderColor = Color.PaleVioletRed;
+            btnRestore.BorderRadius = 10;
+            btnRestore.BorderSize = 0;
+            btnRestore.FlatAppearance.BorderSize = 0;
+            btnRestore.FlatStyle = FlatStyle.Flat;
+            btnRestore.ForeColor = Color.White;
+            btnRestore.Location = new Point(608, 594);
+            btnRestore.Name = "btnRestore";
+            btnRestore.Size = new Size(145, 56);
+            btnRestore.TabIndex = 9;
+            btnRestore.Text = "Restaurar";
+            btnRestore.TextColor = Color.White;
+            btnRestore.UseVisualStyleBackColor = false;
+            btnRestore.Click += btnRestore_Click;
+            // 
+            // dgvBackups
+            // 
+            dgvBackups.AllowUserToAddRows = false;
+            dgvBackups.AllowUserToDeleteRows = false;
+            dgvBackups.AllowUserToResizeColumns = false;
+            dgvBackups.AllowUserToResizeRows = false;
+            dgvBackups.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvBackups.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.MediumPurple;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.Menu;
+            dataGridViewCellStyle1.SelectionBackColor = Color.MediumPurple;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvBackups.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvBackups.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvBackups.EnableHeadersVisualStyles = false;
+            dgvBackups.Location = new Point(164, 409);
+            dgvBackups.Name = "dgvBackups";
+            dgvBackups.RowHeadersWidth = 62;
+            dgvBackups.RowTemplate.Height = 33;
+            dgvBackups.Size = new Size(428, 281);
+            dgvBackups.TabIndex = 8;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.ForeColor = Color.Gainsboro;
+            label1.Location = new Point(164, 378);
+            label1.Name = "label1";
+            label1.Size = new Size(224, 25);
+            label1.TabIndex = 11;
+            label1.Text = "Backups de Base de Datos:";
+            // 
             // FormOpciones
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(34, 33, 74);
             ClientSize = new Size(1196, 702);
+            Controls.Add(label1);
+            Controls.Add(btnBackup);
+            Controls.Add(btnRestore);
+            Controls.Add(dgvBackups);
             Controls.Add(groupBox1);
             Controls.Add(gboxRoles);
             Controls.Add(gboxPermisos);
-            Controls.Add(lblOpciones);
             Name = "FormOpciones";
             Text = "FormOpciones";
             gboxPermisos.ResumeLayout(false);
@@ -419,13 +519,12 @@
             gboxRoles.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvBackups).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label lblOpciones;
         private GroupBox gboxPermisos;
         private Label lblRol;
         private ComboBox cmbRol;
@@ -445,16 +544,20 @@
         private CheckBox chkAgUsuarios;
         private CheckBox chkEliClientes;
         private CheckBox chkModClientes;
-        private FontAwesome.Sharp.IconButton btnGuardar;
         private CheckBox chkAgregarRol;
         private GroupBox gboxRoles;
-        private Button btnAgregarRol;
         private Label lblNombreRol;
         private TextBox txtRol;
-        private Button btnEliminarRol;
         private GroupBox groupBox1;
         private Label lblRolInactivo;
-        private Button btnHabilitarRol;
         private ComboBox cmbRolInactivo;
+        private CustomControls.RJControls.RJButton btnBackup;
+        private CustomControls.RJControls.RJButton btnRestore;
+        private DataGridView dgvBackups;
+        private Label label1;
+        private CustomControls.RJControls.RJButton btnAgregarRol;
+        private CustomControls.RJControls.RJButton btnEliminarRol;
+        private CustomControls.RJControls.RJButton btnHabilitarRol;
+        private CustomControls.RJControls.RJButton btnGuardarCambios;
     }
 }

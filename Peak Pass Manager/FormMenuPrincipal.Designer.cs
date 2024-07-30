@@ -34,6 +34,7 @@
             btnUsuarios = new FontAwesome.Sharp.IconButton();
             btnPedidos = new FontAwesome.Sharp.IconButton();
             panel1 = new Panel();
+            btnCerrarSesion = new FontAwesome.Sharp.IconButton();
             lblRol = new Label();
             lblApellido = new Label();
             lblNombre = new Label();
@@ -86,7 +87,7 @@
             btnAuditoria.FlatStyle = FlatStyle.Flat;
             btnAuditoria.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnAuditoria.ForeColor = SystemColors.ButtonHighlight;
-            btnAuditoria.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
+            btnAuditoria.IconChar = FontAwesome.Sharp.IconChar.ClockRotateLeft;
             btnAuditoria.IconColor = Color.WhiteSmoke;
             btnAuditoria.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnAuditoria.ImageAlign = ContentAlignment.MiddleLeft;
@@ -108,7 +109,7 @@
             btnReportes.FlatStyle = FlatStyle.Flat;
             btnReportes.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnReportes.ForeColor = SystemColors.ButtonHighlight;
-            btnReportes.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
+            btnReportes.IconChar = FontAwesome.Sharp.IconChar.ChartArea;
             btnReportes.IconColor = Color.WhiteSmoke;
             btnReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnReportes.ImageAlign = ContentAlignment.MiddleLeft;
@@ -152,7 +153,7 @@
             btnPedidos.FlatStyle = FlatStyle.Flat;
             btnPedidos.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnPedidos.ForeColor = SystemColors.ButtonHighlight;
-            btnPedidos.IconChar = FontAwesome.Sharp.IconChar.Gears;
+            btnPedidos.IconChar = FontAwesome.Sharp.IconChar.ShoppingBag;
             btnPedidos.IconColor = Color.WhiteSmoke;
             btnPedidos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnPedidos.ImageAlign = ContentAlignment.MiddleLeft;
@@ -169,6 +170,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(btnCerrarSesion);
             panel1.Controls.Add(lblRol);
             panel1.Controls.Add(lblApellido);
             panel1.Controls.Add(lblNombre);
@@ -177,6 +179,28 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(220, 150);
             panel1.TabIndex = 5;
+            // 
+            // btnCerrarSesion
+            // 
+            btnCerrarSesion.Dock = DockStyle.Top;
+            btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            btnCerrarSesion.FlatStyle = FlatStyle.Flat;
+            btnCerrarSesion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCerrarSesion.ForeColor = SystemColors.ButtonHighlight;
+            btnCerrarSesion.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            btnCerrarSesion.IconColor = Color.WhiteSmoke;
+            btnCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnCerrarSesion.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCerrarSesion.Location = new Point(0, 0);
+            btnCerrarSesion.Name = "btnCerrarSesion";
+            btnCerrarSesion.Padding = new Padding(10, 0, 20, 0);
+            btnCerrarSesion.Size = new Size(220, 60);
+            btnCerrarSesion.TabIndex = 10;
+            btnCerrarSesion.Text = "Cerrar Sesion";
+            btnCerrarSesion.TextAlign = ContentAlignment.MiddleLeft;
+            btnCerrarSesion.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnCerrarSesion.UseVisualStyleBackColor = true;
+            btnCerrarSesion.Click += btnCerrarSesion_Click;
             // 
             // lblRol
             // 
@@ -192,7 +216,7 @@
             // 
             lblApellido.AutoSize = true;
             lblApellido.ForeColor = Color.Gainsboro;
-            lblApellido.Location = new Point(12, 80);
+            lblApellido.Location = new Point(12, 88);
             lblApellido.Name = "lblApellido";
             lblApellido.Size = new Size(78, 25);
             lblApellido.TabIndex = 1;
@@ -202,7 +226,7 @@
             // 
             lblNombre.AutoSize = true;
             lblNombre.ForeColor = Color.Gainsboro;
-            lblNombre.Location = new Point(12, 55);
+            lblNombre.Location = new Point(12, 63);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(78, 25);
             lblNombre.TabIndex = 0;
@@ -451,5 +475,6 @@
         private Label lblRol;
         private FontAwesome.Sharp.IconButton btnReportes;
         private FontAwesome.Sharp.IconButton btnAuditoria;
+        private FontAwesome.Sharp.IconButton btnCerrarSesion;
     }
 }

@@ -125,6 +125,7 @@ namespace Peak_Pass_Manager
         {
             ActivarBoton(sender, RGBColors.color1);
             AbrirFormularioHijo(new FormInicio());
+            lblTitleChildForm.Text = "Inicio";
         }
 
         private void btnCatalogo_Click(object sender, EventArgs e)
@@ -133,6 +134,7 @@ namespace Peak_Pass_Manager
             {
                 ActivarBoton(sender, RGBColors.color2);
                 AbrirFormularioHijo(new FormCatalogo());
+                lblTitleChildForm.Text = "Catálogo";
             }
             else
             {
@@ -146,6 +148,7 @@ namespace Peak_Pass_Manager
             {
                 ActivarBoton(sender, RGBColors.color3);
                 AbrirFormularioHijo(new FormClientes());
+                lblTitleChildForm.Text = "Clientes";
             }
             else
             {
@@ -165,6 +168,7 @@ namespace Peak_Pass_Manager
             {
                 ActivarBoton(sender, RGBColors.color4);
                 AbrirFormularioHijo(new FormOpciones());
+                lblTitleChildForm.Text = "Opciones";
             }
             else
             {
@@ -177,6 +181,7 @@ namespace Peak_Pass_Manager
             {
                 ActivarBoton(sender, RGBColors.color5);
                 AbrirFormularioHijo(new FormPedidos());
+                lblTitleChildForm.Text = "Pedidos";
             }
             else
             {
@@ -228,6 +233,7 @@ namespace Peak_Pass_Manager
             {
                 ActivarBoton(sender, RGBColors.color6);
                 AbrirFormularioHijo(new FormUsuarios());
+                lblTitleChildForm.Text = "Usuarios";
             }
             else
             {
@@ -241,6 +247,7 @@ namespace Peak_Pass_Manager
             {
                 ActivarBoton(sender, RGBColors.color1);
                 AbrirFormularioHijo(new FormAuditoria());
+                lblTitleChildForm.Text = "Auditoría";
             }
             else
             {
@@ -254,10 +261,21 @@ namespace Peak_Pass_Manager
             {
                 ActivarBoton(sender, RGBColors.color2);
                 AbrirFormularioHijo(new FormReportes());
+                lblTitleChildForm.Text = "Reportes";
             }
             else
             {
                 MessageBox.Show("No tiene permisos para acceder a esta sección");
+            }
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro que desea cerrar sesión?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.Close();
+                FormLogin login = new FormLogin();
+                login.Show();
             }
         }
     }

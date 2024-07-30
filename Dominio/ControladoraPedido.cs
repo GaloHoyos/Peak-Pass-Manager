@@ -25,5 +25,9 @@ namespace Dominio
         {
             return pedidoDao.GetIdVenta();
         }
+        public DataTable BuscarPedidos(string busqueda)
+        {
+            return pedidoDao.BuscarPedidos(busqueda);
+        }
     }
 }

@@ -28,6 +28,9 @@ namespace Peak_Pass_Manager
             ActualizarLista();
             lblDescripcion.MaximumSize = new Size(450, 0);
             lblDescripcion.AutoSize = true;
+            dgvCarrito.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dgvCarrito.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
         }
 
         //metodo para mostrar el nombre del cliente en el label
@@ -59,6 +62,12 @@ namespace Peak_Pass_Manager
             return controladoraProducto.VerDescripcion(id);
         }
 
+        public void IniciarCarrito(ControladoraCarrito carrito)
+        {
+            dgvCarrito.DataSource = carrito.ObtenerLista();
+            lblTotal.Text = "Total: $" + carrito.ObtenerTotal();
+        }
+
         private void btnCambioCliente_Click(object sender, EventArgs e)
         {
             FormClientes formClientes = new FormClientes();
@@ -66,40 +75,7 @@ namespace Peak_Pass_Manager
             NombreCliente();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            if (idCliente > 0)
-            {
-                if (Convert.ToInt32(dgvProductos.CurrentRow.Cells[0].Value) > 0)
-                {
-                    int precioProducto = Convert.ToInt32(dgvProductos.CurrentRow.Cells[2].Value);
-                    int idProducto = Convert.ToInt32(dgvProductos.CurrentRow.Cells[0].Value);
-                    string nombreProducto = dgvProductos.CurrentRow.Cells[1].Value.ToString();
-                    bool existencia = carrito.ExisteProducto(idProducto, idCliente);
-                    if (existencia == true)
-                    {
-                        carrito.AgregarCantidad(idProducto, 1);
-                    }
-                    else
-                    {
-                        ControladoraCarritoDetalle controladoraCarritoDetalle = new ControladoraCarritoDetalle(idCliente,idProducto, nombreProducto, precioProducto, cantidad, cantidad * precioProducto);
-                        carrito.AgregarProducto(controladoraCarritoDetalle.ObtenerModelo(), idCliente);
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("Debe seleccionar un producto");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Debe seleccionar un cliente");
-            }
-
-        }
-
-        private void btnVerCarrito_Click(object sender, EventArgs e)
+        private void btnPago_Click(object sender, EventArgs e)
         {
             //verificacion para saber si hay cliente seleccionado
             if (idCliente > 0)
@@ -107,9 +83,8 @@ namespace Peak_Pass_Manager
                 //verificacion para saber si hay productos en el carrito
                 if (carrito.ObtenerLista().Rows.Count > 0)
                 {
-                    FormCarrito formCarrito = new FormCarrito(carrito);
-                    formCarrito.ShowDialog();
-                    carrito = formCarrito.carrito;
+                    FormPago formPago = new FormPago(carrito);
+                    formPago.Show();
                 }
                 else
                 {
@@ -125,6 +100,75 @@ namespace Peak_Pass_Manager
         private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             lblDescripcion.Text = "Descripcion del producto: " + ObtenerDescripcion(Convert.ToInt32(dgvProductos.CurrentRow.Cells[0].Value));
+        }
+
+        private void btnQuitar_Click(object sender, EventArgs e)
+        {
+            //verificacion para saber si hay productos seleccionados en el carrito
+            if (dgvCarrito.CurrentRow != null)
+            {
+                carrito.EliminarProducto(Convert.ToInt32(dgvCarrito.CurrentRow.Cells[2].Value));
+                IniciarCarrito(carrito);
+            }
+            else
+            {
+                MessageBox.Show("No hay productos seleccionados en el carrito");
+            }
+        }
+
+        private void btnQuitarCantidad_Click(object sender, EventArgs e)
+        {
+            if (dgvCarrito.CurrentRow != null)
+            {
+                if (Convert.ToInt32(dgvCarrito.CurrentRow.Cells[5].Value) == 1)
+                {
+                    carrito.EliminarProducto(Convert.ToInt32(dgvCarrito.CurrentRow.Cells[2].Value));
+                    IniciarCarrito(carrito);
+                }
+                else
+                {
+                    carrito.QuitarCantidad(Convert.ToInt32(dgvCarrito.CurrentRow.Cells[2].Value), 1);
+                    IniciarCarrito(carrito);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No hay productos seleccionados en el carrito");
+            }
+        }
+
+        private void btnAgregar_Click_1(object sender, EventArgs e)
+        {
+            if (idCliente > 0)
+            {
+                if (Convert.ToInt32(dgvProductos.CurrentRow.Cells[0].Value) > 0)
+                {
+                    int precioProducto = Convert.ToInt32(dgvProductos.CurrentRow.Cells[2].Value);
+                    int idProducto = Convert.ToInt32(dgvProductos.CurrentRow.Cells[0].Value);
+                    string nombreProducto = dgvProductos.CurrentRow.Cells[1].Value.ToString();
+                    bool existencia = carrito.ExisteProducto(idProducto, idCliente);
+                    if (existencia == true)
+                    {
+                        carrito.AgregarCantidad(idProducto, 1);
+                        IniciarCarrito(carrito);
+                    }
+                    else
+                    {
+                        ControladoraCarritoDetalle controladoraCarritoDetalle = new ControladoraCarritoDetalle(idCliente, idProducto, nombreProducto, precioProducto, cantidad, cantidad * precioProducto);
+                        carrito.AgregarProducto(controladoraCarritoDetalle.ObtenerModelo(), idCliente);
+                        dgvCarrito.DataSource = carrito.ObtenerLista();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar un producto");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un cliente");
+            }
         }
     }
 }

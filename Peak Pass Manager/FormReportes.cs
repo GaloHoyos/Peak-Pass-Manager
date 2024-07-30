@@ -67,8 +67,8 @@ namespace Peak_Pass_Manager
             //Hace que el chart muestre todos los meses
             chartVentasPorMes.ChartAreas[0].AxisX.Interval = 1;
         }
-
-        private void btnDescargar_Click(object sender, EventArgs e)
+        
+        private void Descargar()
         {
             //Guarda los reportes en un archivo PDF usando iTextSharp
             SaveFileDialog saveFileDialog = new SaveFileDialog();
@@ -142,6 +142,11 @@ namespace Peak_Pass_Manager
                 MessageBox.Show("Reporte guardado exitosamente");
 
             }
+        }
+
+        private void btnDescargarRJ_Click(object sender, EventArgs e)
+        {
+            Descargar();
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace Acceso_a_Datos
 {
@@ -92,5 +93,55 @@ namespace Acceso_a_Datos
             }
             return nombreVendedor;
         }
+
+        public DataTable BuscarPedidos(string searchString)
+        {
+            DataTable dt = new DataTable();
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    DateTime parsedDate;
+                    string dateFilter = string.Empty;
+                    if (DateTime.TryParseExact(searchString, new[] { "dd/MM/yyyy", "MM/dd/yyyy" }, CultureInfo.InvariantCulture, DateTimeStyles.None, out parsedDate))
+                    {
+                        dateFilter = " OR CONVERT(VARCHAR, p.fecha, 103) = @searchDate ";
+                    }
+
+                    SqlCommand cmd = new SqlCommand(
+                        $@"SELECT DISTINCT p.id_venta, p.id_vendedor, u_vendedor.nombre AS nombre_vendedor, 
+                                 p.id_cliente, u_cliente.nombre AS nombre_cliente, 
+                                 u_cliente.apellido AS apellido_cliente, p.costo_total, p.fecha 
+                          FROM pedidos AS p
+                          JOIN usuarios AS u_vendedor ON p.id_vendedor = u_vendedor.id_usuario
+                          JOIN usuarios AS u_cliente ON p.id_cliente = u_cliente.id_usuario
+                          LEFT JOIN pedidos_detalles AS pd ON p.id_venta = pd.id_venta
+                          LEFT JOIN productos AS pr ON pd.id_producto = pr.id_producto
+                          LEFT JOIN usuarios AS u_detalle_cliente ON pd.id_cliente = u_detalle_cliente.id_usuario
+                          WHERE u_vendedor.nombre LIKE @search 
+                             OR u_cliente.nombre LIKE @search 
+                             OR u_cliente.apellido LIKE @search 
+                             OR pr.nombre_producto LIKE @search 
+                             OR u_detalle_cliente.nombre LIKE @search 
+                             OR u_detalle_cliente.apellido LIKE @search 
+                             {dateFilter}", connection);
+
+                    cmd.Parameters.AddWithValue("@search", "%" + searchString + "%");
+                    if (!string.IsNullOrEmpty(dateFilter))
+                    {
+                        cmd.Parameters.AddWithValue("@searchDate", parsedDate.ToString("dd/MM/yyyy"));
+                    }
+                    cmd.CommandType = CommandType.Text;
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                }
+            }
+            return dt;
+        }
+
+
     }
 }

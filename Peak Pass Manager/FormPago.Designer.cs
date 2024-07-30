@@ -38,21 +38,21 @@
             lblFecha = new Label();
             picLogo = new PictureBox();
             panel1 = new Panel();
-            btnComprar = new FontAwesome.Sharp.IconButton();
+            btnComprar = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // txtCodigo
             // 
-            txtCodigo.Location = new Point(455, 205);
+            txtCodigo.Location = new Point(356, 150);
             txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(150, 31);
+            txtCodigo.Size = new Size(129, 31);
             txtCodigo.TabIndex = 0;
             // 
             // txtTarjeta
             // 
-            txtTarjeta.Location = new Point(33, 205);
+            txtTarjeta.Location = new Point(12, 150);
             txtTarjeta.Name = "txtTarjeta";
             txtTarjeta.Size = new Size(306, 31);
             txtTarjeta.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(33, 115);
+            txtNombre.Location = new Point(12, 72);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(306, 31);
             txtNombre.TabIndex = 2;
@@ -68,7 +68,7 @@
             // dtFecha
             // 
             dtFecha.Format = DateTimePickerFormat.Short;
-            dtFecha.Location = new Point(455, 115);
+            dtFecha.Location = new Point(356, 72);
             dtFecha.MinDate = new DateTime(2024, 4, 16, 20, 27, 39, 0);
             dtFecha.Name = "dtFecha";
             dtFecha.Size = new Size(129, 31);
@@ -79,7 +79,7 @@
             // 
             lblNombre.AutoSize = true;
             lblNombre.ForeColor = SystemColors.Control;
-            lblNombre.Location = new Point(33, 87);
+            lblNombre.Location = new Point(12, 44);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(260, 25);
             lblNombre.TabIndex = 4;
@@ -89,7 +89,7 @@
             // 
             lblTarjeta.AutoSize = true;
             lblTarjeta.ForeColor = SystemColors.Control;
-            lblTarjeta.Location = new Point(33, 177);
+            lblTarjeta.Location = new Point(12, 122);
             lblTarjeta.Name = "lblTarjeta";
             lblTarjeta.Size = new Size(156, 25);
             lblTarjeta.TabIndex = 5;
@@ -99,7 +99,7 @@
             // 
             lblCodigo.AutoSize = true;
             lblCodigo.ForeColor = SystemColors.Control;
-            lblCodigo.Location = new Point(455, 177);
+            lblCodigo.Location = new Point(356, 122);
             lblCodigo.Name = "lblCodigo";
             lblCodigo.Size = new Size(45, 25);
             lblCodigo.TabIndex = 6;
@@ -109,7 +109,7 @@
             // 
             lblFecha.AutoSize = true;
             lblFecha.ForeColor = SystemColors.Control;
-            lblFecha.Location = new Point(455, 78);
+            lblFecha.Location = new Point(339, 44);
             lblFecha.Name = "lblFecha";
             lblFecha.Size = new Size(167, 25);
             lblFecha.TabIndex = 7;
@@ -129,30 +129,36 @@
             // 
             panel1.BackColor = Color.Silver;
             panel1.Controls.Add(picLogo);
-            panel1.Location = new Point(723, 55);
+            panel1.Location = new Point(512, 12);
             panel1.Name = "panel1";
             panel1.Size = new Size(283, 211);
             panel1.TabIndex = 9;
             // 
             // btnComprar
             // 
-            btnComprar.IconChar = FontAwesome.Sharp.IconChar.None;
-            btnComprar.IconColor = Color.Black;
-            btnComprar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnComprar.Location = new Point(948, 511);
+            btnComprar.BackColor = Color.Lime;
+            btnComprar.BackgroundColor = Color.Lime;
+            btnComprar.BorderColor = Color.DarkGreen;
+            btnComprar.BorderRadius = 10;
+            btnComprar.BorderSize = 5;
+            btnComprar.FlatAppearance.BorderSize = 0;
+            btnComprar.FlatStyle = FlatStyle.Flat;
+            btnComprar.ForeColor = Color.Black;
+            btnComprar.Location = new Point(37, 223);
             btnComprar.Name = "btnComprar";
-            btnComprar.Size = new Size(236, 179);
+            btnComprar.Size = new Size(413, 126);
             btnComprar.TabIndex = 10;
-            btnComprar.Text = "Comprar";
-            btnComprar.UseVisualStyleBackColor = true;
-            btnComprar.Click += btnComprar_Click;
+            btnComprar.Text = "Realizar Compra";
+            btnComprar.TextColor = Color.Black;
+            btnComprar.UseVisualStyleBackColor = false;
+            btnComprar.Click += btnComprar_Click_1;
             // 
             // FormPago
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(34, 33, 74);
-            ClientSize = new Size(1196, 702);
+            ClientSize = new Size(808, 390);
             Controls.Add(btnComprar);
             Controls.Add(panel1);
             Controls.Add(lblFecha);
@@ -183,6 +189,6 @@
         private Label lblFecha;
         private PictureBox picLogo;
         private Panel panel1;
-        private FontAwesome.Sharp.IconButton btnComprar;
+        private CustomControls.RJControls.RJButton btnComprar;
     }
 }

@@ -407,50 +407,48 @@ namespace Acceso_a_Datos
         public bool EliminarUsuario(int usuario)
         {
             bool existenPedidos = false;
+
             using (var connection = GetConnection())
             {
                 connection.Open();
-                using (var command = new SqlCommand())
-                {
-                    command.Connection = connection;
-                    SqlCommand cmd = new SqlCommand("select * from pedidos where id_cliente = '" + usuario + "'", connection);
-                    cmd.CommandType = CommandType.Text;
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.HasRows)
-                    {
-                        existenPedidos = true;
-                    }
-                    reader.Close();
-                }
-                if (existenPedidos == false)
-                {
-                    using (var command = new SqlCommand())
-                    {
-                        command.Connection = connection;
-                        SqlCommand cmd = new SqlCommand("select * from pedidos where id_vendedor = '" + usuario + "'", connection);
-                        cmd.CommandType = CommandType.Text;
-                        SqlDataReader reader = cmd.ExecuteReader();
-                        if (reader.HasRows)
-                        {
-                            existenPedidos = true;
-                        }
-                        reader.Close();
-                    }
 
-                }
-                if (existenPedidos == false)
+                // Verificar si hay pedidos del cliente o en los detalles de pedidos
+                existenPedidos = VerificarExistenciaPedidos(connection, "pedidos", "id_cliente", usuario) ||
+                                 VerificarExistenciaPedidos(connection, "pedidos_detalles", "id_cliente", usuario);
+
+                // Si no hay pedidos como cliente, verificar si hay pedidos como vendedor
+                if (!existenPedidos)
                 {
-                    using (var command = new SqlCommand())
+                    existenPedidos = VerificarExistenciaPedidos(connection, "pedidos", "id_vendedor", usuario);
+                }
+
+                // Si no existen pedidos en ninguna de las consultas anteriores, eliminar el usuario
+                if (!existenPedidos)
+                {
+                    using (var command = new SqlCommand("DELETE FROM usuarios WHERE id_usuario = @usuario", connection))
                     {
-                        command.Connection = connection;
-                        SqlCommand cmd = new SqlCommand("DELETE FROM usuarios WHERE id_usuario = '" + usuario + "'", connection);
-                        cmd.CommandType = CommandType.Text;
-                        cmd.ExecuteNonQuery();
+                        command.Parameters.AddWithValue("@usuario", usuario);
+                        command.ExecuteNonQuery();
                     }
                 }
             }
+
             return existenPedidos;
         }
+
+        private bool VerificarExistenciaPedidos(SqlConnection connection, string tabla, string columna, int usuario)
+        {
+            using (var command = new SqlCommand($"SELECT 1 FROM {tabla} WHERE {columna} = @usuario", connection))
+            {
+                command.Parameters.AddWithValue("@usuario", usuario);
+
+                using (var reader = command.ExecuteReader())
+                {
+                    return reader.HasRows;
+                }
+            }
+        }
+
         //Detecta si el usuario ya existe por medio del DNI
         public bool ExisteDNI(string dni)
         {

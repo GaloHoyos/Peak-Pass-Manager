@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Dominio(Controladora)")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+54268ae6cd10a995eaa83c8ed7ef8421d0344121")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7eb3688c75e07d8894340431acaabe06eab36556")]
 [assembly: System.Reflection.AssemblyProductAttribute("Dominio(Controladora)")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Dominio(Controladora)")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

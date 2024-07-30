@@ -33,6 +33,12 @@ namespace Peak_Pass_Manager
             txtTelefono.Text = string.Empty;
             lblCliente.Text = CacheCliente.Nombre + " " + CacheCliente.Apellido;
             ActualizarClientes();
+            btnFiltrosRJ.Text = "Filtros";
+            btnFiltrosRJ.BackColor = Color.RoyalBlue;
+            btnFiltrosRJ.BackgroundColor = Color.RoyalBlue;
+            btnFiltrosRJ.BorderColor = Color.RoyalBlue;
+            btnFiltrosRJ.TextColor = Color.White;
+            gboxFiltros.Hide();
         }
         public void ActualizarClientes()
         {
@@ -60,7 +66,7 @@ namespace Peak_Pass_Manager
         {
             IControladoraUsuario controladoraUsuario = new ControladoraUsuario();
             IControladoraUsuario controladoraUsuarioConAuditoria = new ControladoraUsuarioConAuditoria(controladoraUsuario);
-            switch (controladoraUsuarioConAuditoria.AgregarUsuario(1,txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 3, true))
+            switch (controladoraUsuarioConAuditoria.AgregarUsuario(1, txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 3, true))
             {
                 case "No Existente":
                     MessageBox.Show("Cliente Agregado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -142,46 +148,6 @@ namespace Peak_Pass_Manager
             }
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            Verificaciones verificaciones = new Verificaciones();
-            bool verif = verificaciones.VerificacionCrearCliente(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text);
-            if (verif == true)
-            {
-                AgregarCliente();
-            }
-            else
-            {
-                lblMensajeError.Show();
-                lblMensajeError.Text = "Complete todos los campos";
-            }
-
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            if (dgvClientes.CurrentRow == null)
-            {
-                lblMensajeError.Show();
-                lblMensajeError.Text = "Seleccione un cliente";
-            }   
-            else
-            {
-                Verificaciones verificaciones = new Verificaciones();
-                bool verif = verificaciones.VerificacionCrearCliente(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text);
-                if (verif == true)
-                {
-                    ModificarCliente();
-                    lblMensajeError.Hide();
-                }
-                else
-                {
-                    lblMensajeError.Show();
-                    lblMensajeError.Text = "Complete todos los campos";
-                }
-            }
-        }
-
         private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtNombre.Text = dgvClientes.CurrentRow.Cells[1].Value.ToString();
@@ -190,25 +156,6 @@ namespace Peak_Pass_Manager
             txtCorreo.Text = dgvClientes.CurrentRow.Cells[4].Value.ToString();
             txtDireccion.Text = dgvClientes.CurrentRow.Cells[5].Value.ToString();
             txtTelefono.Text = dgvClientes.CurrentRow.Cells[6].Value.ToString();
-
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-                EliminarCliente();
-        }
-
-        private void btnCambioCliente_Click(object sender, EventArgs e)
-        {
-            if(dgvClientes.CurrentRow == null)
-            {
-                lblMensajeError.Show();
-                lblMensajeError.Text = "Seleccione un cliente";
-            }
-            else
-            {
-                CambioCliente();
-            }
 
         }
         public void CambioCliente()
@@ -233,6 +180,96 @@ namespace Peak_Pass_Manager
             CacheCliente.Direccion = string.Empty;
             CacheCliente.Telefono = string.Empty;
             lblCliente.Text = string.Empty;
+        }
+
+        private void btnAgregarRJ_Click(object sender, EventArgs e)
+        {
+            Verificaciones verificaciones = new Verificaciones();
+            bool verif = verificaciones.VerificacionCrearCliente(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text);
+            if (verif == true)
+            {
+                AgregarCliente();
+            }
+            else
+            {
+                lblMensajeError.Show();
+                lblMensajeError.Text = "Complete todos los campos";
+            }
+        }
+
+        private void btnModificarRJ_Click(object sender, EventArgs e)
+        {
+            if (dgvClientes.CurrentRow == null)
+            {
+                lblMensajeError.Show();
+                lblMensajeError.Text = "Seleccione un cliente";
+            }
+            else
+            {
+                Verificaciones verificaciones = new Verificaciones();
+                bool verif = verificaciones.VerificacionCrearCliente(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text);
+                if (verif == true)
+                {
+                    ModificarCliente();
+                    lblMensajeError.Hide();
+                }
+                else
+                {
+                    lblMensajeError.Show();
+                    lblMensajeError.Text = "Complete todos los campos";
+                }
+            }
+        }
+
+        private void btnEliminarRJ_Click(object sender, EventArgs e)
+        {
+            EliminarCliente();
+        }
+
+        private void btnBuscarRJ_Click(object sender, EventArgs e)
+        {
+            ControladoraUsuario usuario = new ControladoraUsuario();
+            dgvClientes.DataSource = usuario.BuscarUsuarioActivoInactivo(txtBuscar.Text, "Todos", 1);
+        }
+
+        private void btnFiltrosRJ_Click(object sender, EventArgs e)
+        {
+            if (gboxFiltros.Visible == false)
+            {
+                btnFiltrosRJ.Text = "Ocultar Filtros";
+                btnFiltrosRJ.BackColor = Color.Transparent;
+                btnFiltrosRJ.BackgroundColor = Color.Transparent;
+                btnFiltrosRJ.BorderColor = Color.RoyalBlue;
+                btnFiltrosRJ.TextColor = Color.RoyalBlue;
+                gboxFiltros.Show();
+            }
+            else
+            {
+                btnFiltrosRJ.Text = "Filtros";
+                btnFiltrosRJ.BackColor = Color.RoyalBlue;
+                btnFiltrosRJ.BackgroundColor = Color.RoyalBlue;
+                btnFiltrosRJ.BorderColor = Color.RoyalBlue;
+                btnFiltrosRJ.TextColor = Color.White;
+                gboxFiltros.Hide();
+            }
+        }
+
+        private void btnCambioCliente_Click_1(object sender, EventArgs e)
+        {
+            if (dgvClientes.CurrentRow == null)
+            {
+                lblMensajeError.Show();
+                lblMensajeError.Text = "Seleccione un cliente";
+            }
+            else
+            {
+                CambioCliente();
+            }
+        }
+
+        private void gboxFiltros_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

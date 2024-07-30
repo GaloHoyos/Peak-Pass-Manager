@@ -41,16 +41,11 @@ namespace Peak_Pass_Manager
             }
         }
 
-        private void btnComprar_Click(object sender, EventArgs e)
-        {
-            RelizarPedido();
-        }
-
         //Realizar pedido
-        public void RelizarPedido()
+        public void RealizarPedido()
         {
-            // if (verificaciones.VerificarTarjeta(txtTarjeta.Text) && verificaciones.VerificarCVV(txtCodigo.Text) && verificaciones.VerificarFecha(dtFecha.Value.ToString()))
-            //{
+            if (verificaciones.VerificarTarjeta(txtTarjeta.Text) && verificaciones.VerificarCVV(txtCodigo.Text))
+            {
             try
             {
                 pedido.AgregarPedido(CacheUsuario.IdUsuario, CacheCliente.IdCliente, Convert.ToInt32(carrito.ObtenerTotal()));
@@ -62,16 +57,23 @@ namespace Peak_Pass_Manager
                 }
                 MessageBox.Show("Compra realizada con exito");
                 carrito.LimpiarCarrito();
-            }catch (Exception ex)
+                this.Close();
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
 
-          //  }
-           // else
-           // {
-            //    MessageBox.Show("Error en los datos de la tarjeta");
-           // }
+            }
+            else
+            {
+               MessageBox.Show("Error en los datos de la tarjeta");
+            }
+        }
+
+        private void btnComprar_Click_1(object sender, EventArgs e)
+        {
+            RealizarPedido();
         }
     }
 }

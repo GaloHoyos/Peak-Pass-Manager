@@ -25,6 +25,11 @@ namespace Peak_Pass_Manager
         public void Iniciar()
         {
             ControladoraUsuario usuario = new ControladoraUsuario();
+            btnFiltrosRJ.Text = "Filtros";
+            btnFiltrosRJ.BackColor = Color.RoyalBlue;
+            btnFiltrosRJ.BackgroundColor = Color.RoyalBlue;
+            btnFiltrosRJ.BorderColor = Color.RoyalBlue;
+            btnFiltrosRJ.TextColor = Color.White;
             gboxFiltros.Hide();
             //Agregar columnas vacias al dgv
             dgvUsuarios.Columns.Clear();
@@ -62,31 +67,31 @@ namespace Peak_Pass_Manager
                     case 1:
                         if (controladoraPermisos.AgregarUsuarios() == false)
                         {
-                            btnAgregar.Enabled = false;
+                            btnAgregarRJ.Enabled = false;
                         }
                         else
                         {
-                            btnAgregar.Enabled = true;
+                            btnAgregarRJ.Enabled = true;
                         }
                         break;
                     case 2:
                         if (controladoraPermisos.ModificarUsuarios() == false)
                         {
-                            btnModificar.Enabled = false;
+                            btnModificarRJ.Enabled = false;
                         }
                         else
                         {
-                            btnModificar.Enabled = true;
+                            btnModificarRJ.Enabled = true;
                         }
                         break;
                     case 3:
                         if (controladoraPermisos.EliminarUsuarios() == false)
                         {
-                            btnEliminar.Enabled = false;
+                            btnEliminarRJ.Enabled = false;
                         }
                         else
                         {
-                            btnEliminar.Enabled = true;
+                            btnEliminarRJ.Enabled = true;
                         }
                         break;
                 }
@@ -194,8 +199,8 @@ namespace Peak_Pass_Manager
                         Iniciar();
                         LimpioUsuario();
                     }
-                    else 
-                    { 
+                    else
+                    {
                         MessageBox.Show("El nombre de Usuario ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
@@ -268,52 +273,6 @@ namespace Peak_Pass_Manager
             txtPassword.Text = string.Empty;
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            Verificaciones verificaciones = new Verificaciones();
-            bool verif = verificaciones.VerificacionCrearUsuario(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text);
-            if (verif == true)
-            {
-                AgregarUsuario();
-                lblMensajeError.Hide();
-            }
-            else
-            {
-                lblMensajeError.Show();
-                lblMensajeError.Text = "Complete todos los campos";
-            }
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            Verificaciones verificaciones = new Verificaciones();
-            bool verif = verificaciones.VerificacionCrearUsuario(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "a","a");
-            if (verif == true)
-            {
-                ModificarUsuario();
-                lblMensajeError.Hide();
-            }
-            else
-            {
-                lblMensajeError.Show();
-                lblMensajeError.Text = "Complete todos los campos";
-            }
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            if (dgvUsuarios.CurrentRow == null)
-            {
-                lblMensajeError.Show();
-                lblMensajeError.Text = "Seleccione un usuario";
-            }
-            else
-            {
-                EliminarUsuario();
-                lblMensajeError.Hide();
-            }
-        }
-
         private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             ControladoraUsuario usuario = new ControladoraUsuario();
@@ -333,11 +292,32 @@ namespace Peak_Pass_Manager
                 cboxUserActivo.Checked = false;
             }
         }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void btnFiltrosRJ_Click(object sender, EventArgs e)
         {
+            LlenarRoles();
+            if (gboxFiltros.Visible == false)
+            {
+                btnFiltrosRJ.Text = "Ocultar Filtros";
+                btnFiltrosRJ.BackColor = Color.Transparent;
+                btnFiltrosRJ.BackgroundColor = Color.Transparent;
+                btnFiltrosRJ.BorderColor = Color.RoyalBlue;
+                btnFiltrosRJ.TextColor = Color.RoyalBlue;
+                gboxFiltros.Show();
+            }
+            else
+            {
+                btnFiltrosRJ.Text = "Filtros";
+                btnFiltrosRJ.BackColor = Color.RoyalBlue;
+                btnFiltrosRJ.BackgroundColor = Color.RoyalBlue;
+                btnFiltrosRJ.BorderColor = Color.RoyalBlue;
+                btnFiltrosRJ.TextColor = Color.White;
+                gboxFiltros.Hide();
+            }
+        }
 
-            if(cboxActivo.Checked == true && cboxInactivo.Checked == true)
+        private void btnBuscarRJ_Click(object sender, EventArgs e)
+        {
+            if (cboxActivo.Checked == true && cboxInactivo.Checked == true)
             {
                 ControladoraUsuario usuario = new ControladoraUsuario();
                 dgvUsuarios.DataSource = usuario.BuscarUsuario(txtBuscar.Text, cmbRolFiltro.Text);
@@ -360,16 +340,49 @@ namespace Peak_Pass_Manager
             LlenarRoles();
         }
 
-        private void btnFiltros_Click(object sender, EventArgs e)
+        private void btnAgregarRJ_Click(object sender, EventArgs e)
         {
-            LlenarRoles();
-            if (gboxFiltros.Visible == false)
+            Verificaciones verificaciones = new Verificaciones();
+            bool verif = verificaciones.VerificacionCrearUsuario(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text);
+            if (verif == true)
             {
-                gboxFiltros.Show();
+                AgregarUsuario();
+                lblMensajeError.Hide();
             }
             else
             {
-                gboxFiltros.Hide();
+                lblMensajeError.Show();
+                lblMensajeError.Text = "Complete todos los campos";
+            }
+        }
+
+        private void btnModificarRJ_Click(object sender, EventArgs e)
+        {
+            Verificaciones verificaciones = new Verificaciones();
+            bool verif = verificaciones.VerificacionCrearUsuario(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "a", "a");
+            if (verif == true)
+            {
+                ModificarUsuario();
+                lblMensajeError.Hide();
+            }
+            else
+            {
+                lblMensajeError.Show();
+                lblMensajeError.Text = "Complete todos los campos";
+            }
+        }
+
+        private void btnEliminarRJ_Click(object sender, EventArgs e)
+        {
+            if (dgvUsuarios.CurrentRow == null)
+            {
+                lblMensajeError.Show();
+                lblMensajeError.Text = "Seleccione un usuario";
+            }
+            else
+            {
+                EliminarUsuario();
+                lblMensajeError.Hide();
             }
         }
     }

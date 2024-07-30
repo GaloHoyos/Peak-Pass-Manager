@@ -47,8 +47,8 @@
             chartMasVendidos = new System.Windows.Forms.DataVisualization.Charting.Chart();
             chartCategoriaMasVendida = new System.Windows.Forms.DataVisualization.Charting.Chart();
             chartProdPorCategoria = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            btnDescargar = new Button();
             chartVentasPorMes = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            btnDescargarRJ = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)chartMasVendidos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)chartCategoriaMasVendida).BeginInit();
             ((System.ComponentModel.ISupportInitialize)chartProdPorCategoria).BeginInit();
@@ -109,7 +109,7 @@
             legend2.Enabled = false;
             legend2.Name = "Legend1";
             chartCategoriaMasVendida.Legends.Add(legend2);
-            chartCategoriaMasVendida.Location = new Point(746, 343);
+            chartCategoriaMasVendida.Location = new Point(724, 295);
             chartCategoriaMasVendida.Name = "chartCategoriaMasVendida";
             series2.ChartArea = "ChartArea1";
             series2.IsValueShownAsLabel = true;
@@ -117,7 +117,7 @@
             series2.Legend = "Legend1";
             series2.Name = "Categorias";
             chartCategoriaMasVendida.Series.Add(series2);
-            chartCategoriaMasVendida.Size = new Size(438, 347);
+            chartCategoriaMasVendida.Size = new Size(391, 295);
             chartCategoriaMasVendida.TabIndex = 1;
             chartCategoriaMasVendida.Text = "chart1";
             title2.ForeColor = Color.White;
@@ -163,16 +163,6 @@
             title3.Text = "Cantidad de Productos por Categoria";
             chartProdPorCategoria.Titles.Add(title3);
             // 
-            // btnDescargar
-            // 
-            btnDescargar.Location = new Point(1072, 281);
-            btnDescargar.Name = "btnDescargar";
-            btnDescargar.Size = new Size(112, 34);
-            btnDescargar.TabIndex = 3;
-            btnDescargar.Text = "Descargar Reportes";
-            btnDescargar.UseVisualStyleBackColor = true;
-            btnDescargar.Click += btnDescargar_Click;
-            // 
             // chartVentasPorMes
             // 
             chartVentasPorMes.BackColor = Color.FromArgb(34, 33, 74);
@@ -195,7 +185,7 @@
             legend4.Enabled = false;
             legend4.Name = "Legend1";
             chartVentasPorMes.Legends.Add(legend4);
-            chartVentasPorMes.Location = new Point(12, 329);
+            chartVentasPorMes.Location = new Point(81, 317);
             chartVentasPorMes.Name = "chartVentasPorMes";
             series4.ChartArea = "ChartArea1";
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
@@ -204,7 +194,7 @@
             series4.Legend = "Legend1";
             series4.Name = "Ventas";
             chartVentasPorMes.Series.Add(series4);
-            chartVentasPorMes.Size = new Size(734, 347);
+            chartVentasPorMes.Size = new Size(550, 286);
             chartVentasPorMes.TabIndex = 4;
             chartVentasPorMes.Text = "chart1";
             title4.ForeColor = Color.White;
@@ -212,14 +202,33 @@
             title4.Text = "Cantidad de Ventas por Mes";
             chartVentasPorMes.Titles.Add(title4);
             // 
+            // btnDescargarRJ
+            // 
+            btnDescargarRJ.BackColor = Color.MediumSlateBlue;
+            btnDescargarRJ.BackgroundColor = Color.MediumSlateBlue;
+            btnDescargarRJ.BorderColor = Color.PaleVioletRed;
+            btnDescargarRJ.BorderRadius = 10;
+            btnDescargarRJ.BorderSize = 0;
+            btnDescargarRJ.FlatAppearance.BorderSize = 0;
+            btnDescargarRJ.FlatStyle = FlatStyle.Flat;
+            btnDescargarRJ.ForeColor = Color.White;
+            btnDescargarRJ.Location = new Point(505, 630);
+            btnDescargarRJ.Name = "btnDescargarRJ";
+            btnDescargarRJ.Size = new Size(225, 60);
+            btnDescargarRJ.TabIndex = 5;
+            btnDescargarRJ.Text = "Descargar Reportes";
+            btnDescargarRJ.TextColor = Color.White;
+            btnDescargarRJ.UseVisualStyleBackColor = false;
+            btnDescargarRJ.Click += btnDescargarRJ_Click;
+            // 
             // FormReportes
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(34, 33, 74);
             ClientSize = new Size(1196, 702);
+            Controls.Add(btnDescargarRJ);
             Controls.Add(chartVentasPorMes);
-            Controls.Add(btnDescargar);
             Controls.Add(chartProdPorCategoria);
             Controls.Add(chartCategoriaMasVendida);
             Controls.Add(chartMasVendidos);
@@ -238,7 +247,7 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chartMasVendidos;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartCategoriaMasVendida;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartProdPorCategoria;
-        private Button btnDescargar;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartVentasPorMes;
+        private CustomControls.RJControls.RJButton btnDescargarRJ;
     }
 }

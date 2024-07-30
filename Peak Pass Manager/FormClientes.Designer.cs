@@ -42,14 +42,20 @@
             lblCorreo = new Label();
             lblDireccion = new Label();
             lblTelefono = new Label();
-            btnAgregar = new FontAwesome.Sharp.IconButton();
-            btnModificar = new FontAwesome.Sharp.IconButton();
-            btnEliminar = new FontAwesome.Sharp.IconButton();
             lblMensajeError = new Label();
-            btnCambioCliente = new FontAwesome.Sharp.IconButton();
             lblCliente = new Label();
             lblClienteActual = new Label();
+            btnEliminarRJ = new CustomControls.RJControls.RJButton();
+            btnModificarRJ = new CustomControls.RJControls.RJButton();
+            btnAgregarRJ = new CustomControls.RJControls.RJButton();
+            btnFiltrosRJ = new CustomControls.RJControls.RJButton();
+            gboxFiltros = new GroupBox();
+            btnBuscarRJ = new CustomControls.RJControls.RJButton();
+            lblBuscar = new Label();
+            txtBuscar = new TextBox();
+            btnCambioCliente = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)dgvClientes).BeginInit();
+            gboxFiltros.SuspendLayout();
             SuspendLayout();
             // 
             // dgvClientes
@@ -80,42 +86,42 @@
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(201, 451);
+            txtNombre.Location = new Point(197, 436);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(150, 31);
             txtNombre.TabIndex = 1;
             // 
             // txtApellido
             // 
-            txtApellido.Location = new Point(201, 488);
+            txtApellido.Location = new Point(197, 473);
             txtApellido.Name = "txtApellido";
             txtApellido.Size = new Size(150, 31);
             txtApellido.TabIndex = 2;
             // 
             // txtDNI
             // 
-            txtDNI.Location = new Point(201, 525);
+            txtDNI.Location = new Point(197, 510);
             txtDNI.Name = "txtDNI";
             txtDNI.Size = new Size(150, 31);
             txtDNI.TabIndex = 3;
             // 
             // txtCorreo
             // 
-            txtCorreo.Location = new Point(201, 562);
+            txtCorreo.Location = new Point(197, 547);
             txtCorreo.Name = "txtCorreo";
             txtCorreo.Size = new Size(150, 31);
             txtCorreo.TabIndex = 4;
             // 
             // txtDireccion
             // 
-            txtDireccion.Location = new Point(201, 599);
+            txtDireccion.Location = new Point(197, 584);
             txtDireccion.Name = "txtDireccion";
             txtDireccion.Size = new Size(150, 31);
             txtDireccion.TabIndex = 5;
             // 
             // txtTelefono
             // 
-            txtTelefono.Location = new Point(201, 636);
+            txtTelefono.Location = new Point(197, 621);
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(150, 31);
             txtTelefono.TabIndex = 6;
@@ -124,7 +130,7 @@
             // 
             lblNombre.AutoSize = true;
             lblNombre.ForeColor = Color.Gainsboro;
-            lblNombre.Location = new Point(113, 454);
+            lblNombre.Location = new Point(109, 439);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(82, 25);
             lblNombre.TabIndex = 7;
@@ -134,7 +140,7 @@
             // 
             lblApellido.AutoSize = true;
             lblApellido.ForeColor = Color.Gainsboro;
-            lblApellido.Location = new Point(113, 494);
+            lblApellido.Location = new Point(109, 479);
             lblApellido.Name = "lblApellido";
             lblApellido.Size = new Size(82, 25);
             lblApellido.TabIndex = 8;
@@ -144,7 +150,7 @@
             // 
             lblDNI.AutoSize = true;
             lblDNI.ForeColor = Color.Gainsboro;
-            lblDNI.Location = new Point(148, 528);
+            lblDNI.Location = new Point(144, 513);
             lblDNI.Name = "lblDNI";
             lblDNI.Size = new Size(47, 25);
             lblDNI.TabIndex = 9;
@@ -154,7 +160,7 @@
             // 
             lblCorreo.AutoSize = true;
             lblCorreo.ForeColor = Color.Gainsboro;
-            lblCorreo.Location = new Point(125, 562);
+            lblCorreo.Location = new Point(121, 547);
             lblCorreo.Name = "lblCorreo";
             lblCorreo.Size = new Size(70, 25);
             lblCorreo.TabIndex = 10;
@@ -164,7 +170,7 @@
             // 
             lblDireccion.AutoSize = true;
             lblDireccion.ForeColor = Color.Gainsboro;
-            lblDireccion.Location = new Point(110, 602);
+            lblDireccion.Location = new Point(106, 587);
             lblDireccion.Name = "lblDireccion";
             lblDireccion.Size = new Size(89, 25);
             lblDireccion.TabIndex = 11;
@@ -174,80 +180,28 @@
             // 
             lblTelefono.AutoSize = true;
             lblTelefono.ForeColor = Color.Gainsboro;
-            lblTelefono.Location = new Point(116, 636);
+            lblTelefono.Location = new Point(112, 621);
             lblTelefono.Name = "lblTelefono";
             lblTelefono.Size = new Size(83, 25);
             lblTelefono.TabIndex = 12;
             lblTelefono.Text = "Telefono:";
             // 
-            // btnAgregar
-            // 
-            btnAgregar.IconChar = FontAwesome.Sharp.IconChar.None;
-            btnAgregar.IconColor = Color.Black;
-            btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnAgregar.Location = new Point(537, 480);
-            btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(112, 34);
-            btnAgregar.TabIndex = 13;
-            btnAgregar.Text = "Agregar";
-            btnAgregar.UseVisualStyleBackColor = true;
-            btnAgregar.Click += btnAgregar_Click;
-            // 
-            // btnModificar
-            // 
-            btnModificar.IconChar = FontAwesome.Sharp.IconChar.None;
-            btnModificar.IconColor = Color.Black;
-            btnModificar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnModificar.Location = new Point(537, 525);
-            btnModificar.Name = "btnModificar";
-            btnModificar.Size = new Size(112, 34);
-            btnModificar.TabIndex = 14;
-            btnModificar.Text = "Modificar";
-            btnModificar.UseVisualStyleBackColor = true;
-            btnModificar.Click += btnModificar_Click;
-            // 
-            // btnEliminar
-            // 
-            btnEliminar.IconChar = FontAwesome.Sharp.IconChar.None;
-            btnEliminar.IconColor = Color.Black;
-            btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnEliminar.Location = new Point(537, 576);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(112, 34);
-            btnEliminar.TabIndex = 15;
-            btnEliminar.Text = "Eliminar";
-            btnEliminar.UseVisualStyleBackColor = true;
-            btnEliminar.Click += btnEliminar_Click;
-            // 
             // lblMensajeError
             // 
             lblMensajeError.AutoSize = true;
             lblMensajeError.ForeColor = Color.Red;
-            lblMensajeError.Location = new Point(529, 639);
+            lblMensajeError.Location = new Point(210, 668);
             lblMensajeError.Name = "lblMensajeError";
             lblMensajeError.Size = new Size(120, 25);
             lblMensajeError.TabIndex = 16;
             lblMensajeError.Text = "Mensaje Error";
             lblMensajeError.Visible = false;
             // 
-            // btnCambioCliente
-            // 
-            btnCambioCliente.IconChar = FontAwesome.Sharp.IconChar.None;
-            btnCambioCliente.IconColor = Color.Black;
-            btnCambioCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnCambioCliente.Location = new Point(942, 562);
-            btnCambioCliente.Name = "btnCambioCliente";
-            btnCambioCliente.Size = new Size(197, 68);
-            btnCambioCliente.TabIndex = 17;
-            btnCambioCliente.Text = "Cambiar Cliente de Venta";
-            btnCambioCliente.UseVisualStyleBackColor = true;
-            btnCambioCliente.Click += btnCambioCliente_Click;
-            // 
             // lblCliente
             // 
             lblCliente.AutoSize = true;
             lblCliente.ForeColor = Color.Gainsboro;
-            lblCliente.Location = new Point(1052, 642);
+            lblCliente.Location = new Point(1044, 645);
             lblCliente.Name = "lblCliente";
             lblCliente.Size = new Size(65, 25);
             lblCliente.TabIndex = 19;
@@ -257,11 +211,156 @@
             // 
             lblClienteActual.AutoSize = true;
             lblClienteActual.ForeColor = Color.Gainsboro;
-            lblClienteActual.Location = new Point(923, 642);
+            lblClienteActual.Location = new Point(915, 645);
             lblClienteActual.Name = "lblClienteActual";
             lblClienteActual.Size = new Size(123, 25);
             lblClienteActual.TabIndex = 18;
             lblClienteActual.Text = "Cliente Actual:";
+            // 
+            // btnEliminarRJ
+            // 
+            btnEliminarRJ.BackColor = Color.DarkMagenta;
+            btnEliminarRJ.BackgroundColor = Color.DarkMagenta;
+            btnEliminarRJ.BorderColor = Color.PaleVioletRed;
+            btnEliminarRJ.BorderRadius = 10;
+            btnEliminarRJ.BorderSize = 0;
+            btnEliminarRJ.FlatAppearance.BorderSize = 0;
+            btnEliminarRJ.FlatStyle = FlatStyle.Flat;
+            btnEliminarRJ.ForeColor = Color.White;
+            btnEliminarRJ.Location = new Point(384, 607);
+            btnEliminarRJ.Name = "btnEliminarRJ";
+            btnEliminarRJ.Size = new Size(138, 60);
+            btnEliminarRJ.TabIndex = 55;
+            btnEliminarRJ.Text = "Eliminar";
+            btnEliminarRJ.TextColor = Color.White;
+            btnEliminarRJ.UseVisualStyleBackColor = false;
+            btnEliminarRJ.Click += btnEliminarRJ_Click;
+            // 
+            // btnModificarRJ
+            // 
+            btnModificarRJ.BackColor = Color.MediumSlateBlue;
+            btnModificarRJ.BackgroundColor = Color.MediumSlateBlue;
+            btnModificarRJ.BorderColor = Color.PaleVioletRed;
+            btnModificarRJ.BorderRadius = 10;
+            btnModificarRJ.BorderSize = 0;
+            btnModificarRJ.FlatAppearance.BorderSize = 0;
+            btnModificarRJ.FlatStyle = FlatStyle.Flat;
+            btnModificarRJ.ForeColor = Color.White;
+            btnModificarRJ.Location = new Point(384, 521);
+            btnModificarRJ.Name = "btnModificarRJ";
+            btnModificarRJ.Size = new Size(138, 60);
+            btnModificarRJ.TabIndex = 54;
+            btnModificarRJ.Text = "Modificar";
+            btnModificarRJ.TextColor = Color.White;
+            btnModificarRJ.UseVisualStyleBackColor = false;
+            btnModificarRJ.Click += btnModificarRJ_Click;
+            // 
+            // btnAgregarRJ
+            // 
+            btnAgregarRJ.BackColor = Color.MediumSlateBlue;
+            btnAgregarRJ.BackgroundColor = Color.MediumSlateBlue;
+            btnAgregarRJ.BorderColor = Color.PaleVioletRed;
+            btnAgregarRJ.BorderRadius = 10;
+            btnAgregarRJ.BorderSize = 0;
+            btnAgregarRJ.FlatAppearance.BorderSize = 0;
+            btnAgregarRJ.FlatStyle = FlatStyle.Flat;
+            btnAgregarRJ.ForeColor = Color.White;
+            btnAgregarRJ.Location = new Point(384, 436);
+            btnAgregarRJ.Name = "btnAgregarRJ";
+            btnAgregarRJ.Size = new Size(138, 60);
+            btnAgregarRJ.TabIndex = 53;
+            btnAgregarRJ.Text = "Agregar";
+            btnAgregarRJ.TextColor = Color.White;
+            btnAgregarRJ.UseVisualStyleBackColor = false;
+            btnAgregarRJ.Click += btnAgregarRJ_Click;
+            // 
+            // btnFiltrosRJ
+            // 
+            btnFiltrosRJ.BackColor = Color.RoyalBlue;
+            btnFiltrosRJ.BackgroundColor = Color.RoyalBlue;
+            btnFiltrosRJ.BorderColor = Color.RoyalBlue;
+            btnFiltrosRJ.BorderRadius = 10;
+            btnFiltrosRJ.BorderSize = 1;
+            btnFiltrosRJ.FlatAppearance.BorderSize = 0;
+            btnFiltrosRJ.FlatStyle = FlatStyle.Flat;
+            btnFiltrosRJ.ForeColor = Color.White;
+            btnFiltrosRJ.Location = new Point(543, 439);
+            btnFiltrosRJ.Name = "btnFiltrosRJ";
+            btnFiltrosRJ.Size = new Size(366, 41);
+            btnFiltrosRJ.TabIndex = 57;
+            btnFiltrosRJ.Text = "Filtros";
+            btnFiltrosRJ.TextColor = Color.White;
+            btnFiltrosRJ.UseVisualStyleBackColor = false;
+            btnFiltrosRJ.Click += btnFiltrosRJ_Click;
+            // 
+            // gboxFiltros
+            // 
+            gboxFiltros.Controls.Add(btnBuscarRJ);
+            gboxFiltros.Controls.Add(lblBuscar);
+            gboxFiltros.Controls.Add(txtBuscar);
+            gboxFiltros.ForeColor = SystemColors.ButtonFace;
+            gboxFiltros.Location = new Point(543, 486);
+            gboxFiltros.Name = "gboxFiltros";
+            gboxFiltros.Size = new Size(366, 137);
+            gboxFiltros.TabIndex = 56;
+            gboxFiltros.TabStop = false;
+            gboxFiltros.Text = "Filtros";
+            gboxFiltros.Enter += gboxFiltros_Enter;
+            // 
+            // btnBuscarRJ
+            // 
+            btnBuscarRJ.BackColor = Color.MediumSlateBlue;
+            btnBuscarRJ.BackgroundColor = Color.MediumSlateBlue;
+            btnBuscarRJ.BorderColor = Color.PaleVioletRed;
+            btnBuscarRJ.BorderRadius = 10;
+            btnBuscarRJ.BorderSize = 0;
+            btnBuscarRJ.FlatAppearance.BorderSize = 0;
+            btnBuscarRJ.FlatStyle = FlatStyle.Flat;
+            btnBuscarRJ.ForeColor = Color.White;
+            btnBuscarRJ.Location = new Point(121, 76);
+            btnBuscarRJ.Name = "btnBuscarRJ";
+            btnBuscarRJ.Size = new Size(139, 42);
+            btnBuscarRJ.TabIndex = 50;
+            btnBuscarRJ.Text = "Buscar";
+            btnBuscarRJ.TextColor = Color.White;
+            btnBuscarRJ.UseVisualStyleBackColor = false;
+            btnBuscarRJ.Click += btnBuscarRJ_Click;
+            // 
+            // lblBuscar
+            // 
+            lblBuscar.AutoSize = true;
+            lblBuscar.Location = new Point(30, 32);
+            lblBuscar.Name = "lblBuscar";
+            lblBuscar.Size = new Size(63, 25);
+            lblBuscar.TabIndex = 1;
+            lblBuscar.Text = "Buscar";
+            // 
+            // txtBuscar
+            // 
+            txtBuscar.Location = new Point(99, 29);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.Size = new Size(205, 31);
+            txtBuscar.TabIndex = 0;
+            // 
+            // btnCambioCliente
+            // 
+            btnCambioCliente.BackColor = Color.Transparent;
+            btnCambioCliente.BackgroundColor = Color.Transparent;
+            btnCambioCliente.BackgroundImageLayout = ImageLayout.None;
+            btnCambioCliente.BorderColor = Color.RoyalBlue;
+            btnCambioCliente.BorderRadius = 10;
+            btnCambioCliente.BorderSize = 1;
+            btnCambioCliente.FlatAppearance.BorderSize = 0;
+            btnCambioCliente.FlatStyle = FlatStyle.Flat;
+            btnCambioCliente.ForeColor = Color.RoyalBlue;
+            btnCambioCliente.Location = new Point(543, 636);
+            btnCambioCliente.Name = "btnCambioCliente";
+            btnCambioCliente.Size = new Size(366, 43);
+            btnCambioCliente.TabIndex = 58;
+            btnCambioCliente.Text = "Cambiar Cliente";
+            btnCambioCliente.TextColor = Color.RoyalBlue;
+            btnCambioCliente.UseVisualStyleBackColor = false;
+            btnCambioCliente.Click += btnCambioCliente_Click_1;
             // 
             // FormClientes
             // 
@@ -269,13 +368,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(34, 33, 74);
             ClientSize = new Size(1196, 702);
+            Controls.Add(btnCambioCliente);
+            Controls.Add(btnFiltrosRJ);
+            Controls.Add(gboxFiltros);
+            Controls.Add(btnEliminarRJ);
+            Controls.Add(btnModificarRJ);
+            Controls.Add(btnAgregarRJ);
             Controls.Add(lblCliente);
             Controls.Add(lblClienteActual);
-            Controls.Add(btnCambioCliente);
             Controls.Add(lblMensajeError);
-            Controls.Add(btnEliminar);
-            Controls.Add(btnModificar);
-            Controls.Add(btnAgregar);
             Controls.Add(lblTelefono);
             Controls.Add(lblDireccion);
             Controls.Add(lblCorreo);
@@ -292,6 +393,8 @@
             Name = "FormClientes";
             Text = "FormClientes";
             ((System.ComponentModel.ISupportInitialize)dgvClientes).EndInit();
+            gboxFiltros.ResumeLayout(false);
+            gboxFiltros.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -311,12 +414,17 @@
         private Label lblCorreo;
         private Label lblDireccion;
         private Label lblTelefono;
-        private FontAwesome.Sharp.IconButton btnAgregar;
-        private FontAwesome.Sharp.IconButton btnModificar;
-        private FontAwesome.Sharp.IconButton btnEliminar;
         private Label lblMensajeError;
-        private FontAwesome.Sharp.IconButton btnCambioCliente;
         private Label lblCliente;
         private Label lblClienteActual;
+        private CustomControls.RJControls.RJButton btnEliminarRJ;
+        private CustomControls.RJControls.RJButton btnModificarRJ;
+        private CustomControls.RJControls.RJButton btnAgregarRJ;
+        private CustomControls.RJControls.RJButton btnFiltrosRJ;
+        private GroupBox gboxFiltros;
+        private CustomControls.RJControls.RJButton btnBuscarRJ;
+        private Label lblBuscar;
+        private TextBox txtBuscar;
+        private CustomControls.RJControls.RJButton btnCambioCliente;
     }
 }

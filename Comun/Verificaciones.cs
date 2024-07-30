@@ -81,7 +81,7 @@ namespace Comun
         //Verificar fecha de vencimiento
         public bool VerificarFecha(string fecha)
         {
-            if (fecha.Length == 5)
+            if (DateTime.Parse(fecha) > DateTime.Now)
             {
                 return true;
             }
