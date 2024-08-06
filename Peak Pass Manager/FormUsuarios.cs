@@ -31,6 +31,7 @@ namespace Peak_Pass_Manager
             btnFiltrosRJ.BorderColor = Color.RoyalBlue;
             btnFiltrosRJ.TextColor = Color.White;
             gboxFiltros.Hide();
+            cboxUserActivo.Checked = true;
             //Agregar columnas vacias al dgv
             dgvUsuarios.Columns.Clear();
             dgvUsuarios.Columns.Add("ID", "ID");
@@ -344,15 +345,33 @@ namespace Peak_Pass_Manager
         {
             Verificaciones verificaciones = new Verificaciones();
             bool verif = verificaciones.VerificacionCrearUsuario(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, txtUsuario.Text, txtPassword.Text);
-            if (verif == true)
+            bool verifCliente = verificaciones.VerificacionCrearCliente(txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text);
+            if(cmbRol.SelectedItem.ToString() == "Cliente")
             {
-                AgregarUsuario();
-                lblMensajeError.Hide();
+                if(verifCliente == true)
+                {
+                    AgregarUsuario();
+                    lblMensajeError.Hide();
+                    MessageBox.Show("Cliente agregado");
+                }
+                else
+                {
+                    lblMensajeError.Show();
+                    lblMensajeError.Text = "Complete todos los campos";
+                }
             }
             else
             {
-                lblMensajeError.Show();
-                lblMensajeError.Text = "Complete todos los campos";
+                if (verif == true)
+                {
+                    AgregarUsuario();
+                    lblMensajeError.Hide();
+                }
+                else if (verif == false)
+                {
+                    lblMensajeError.Show();
+                    lblMensajeError.Text = "Complete todos los campos";
+                }
             }
         }
 
@@ -364,6 +383,7 @@ namespace Peak_Pass_Manager
             {
                 ModificarUsuario();
                 lblMensajeError.Hide();
+                MessageBox.Show("Usuario modificado");
             }
             else
             {
@@ -381,8 +401,28 @@ namespace Peak_Pass_Manager
             }
             else
             {
-                EliminarUsuario();
-                lblMensajeError.Hide();
+                if (MessageBox.Show("¿Está seguro que desea eliminar el usuario?", "Atención", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    EliminarUsuario();
+                    lblMensajeError.Hide();
+                    MessageBox.Show("Usuario eliminado");
+                }
+            }
+        }
+
+        private void cmbRol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbRol.SelectedItem.ToString() == "Cliente")
+            {
+                txtUsuario.Text = "";
+                txtPassword.Text = "";
+                txtUsuario.Enabled = false;
+                txtPassword.Enabled = false;
+            }
+            else
+            {
+                txtUsuario.Enabled = true;
+                txtPassword.Enabled = true;
             }
         }
     }

@@ -256,6 +256,7 @@
             cmbRol.Name = "cmbRol";
             cmbRol.Size = new Size(150, 33);
             cmbRol.TabIndex = 44;
+            cmbRol.SelectedIndexChanged += cmbRol_SelectedIndexChanged;
             // 
             // lblRol
             // 

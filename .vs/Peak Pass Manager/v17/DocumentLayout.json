@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\peak pass manager\\formclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|solutionrelative:peak pass manager\\formclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE90D439-AF9E-417C-8C82-F0EB12267900}|Comun\\Comun.csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\comun\\verificaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE90D439-AF9E-417C-8C82-F0EB12267900}|Comun\\Comun.csproj|solutionrelative:comun\\verificaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\peak pass manager\\formclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|solutionrelative:peak pass manager\\formclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12120E50-4C1C-420F-8B8B-D756C08C961D}|Dominio\\Dominio(Controladora).csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\dominio\\controladorausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12120E50-4C1C-420F-8B8B-D756C08C961D}|Dominio\\Dominio(Controladora).csproj|solutionrelative:dominio\\controladorausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE90D439-AF9E-417C-8C82-F0EB12267900}|Comun\\Comun.csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\comun\\cache\\cacheusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE90D439-AF9E-417C-8C82-F0EB12267900}|Comun\\Comun.csproj|solutionrelative:comun\\cache\\cacheusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\peak pass manager\\formusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|solutionrelative:peak pass manager\\formusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\peak pass manager\\formusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|solutionrelative:peak pass manager\\formusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\peak pass manager\\formopciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|solutionrelative:peak pass manager\\formopciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\peak pass manager\\formopciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|solutionrelative:peak pass manager\\formopciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,26 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{74BD1499-8BC1-4997-A6DA-6BA61C06F3A8}|Acceso a Datos\\Acceso a Datos(Modelo).csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\acceso a datos\\modelousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74BD1499-8BC1-4997-A6DA-6BA61C06F3A8}|Acceso a Datos\\Acceso a Datos(Modelo).csproj|solutionrelative:acceso a datos\\modelousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12120E50-4C1C-420F-8B8B-D756C08C961D}|Dominio\\Dominio(Controladora).csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\dominio\\controladorausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12120E50-4C1C-420F-8B8B-D756C08C961D}|Dominio\\Dominio(Controladora).csproj|solutionrelative:dominio\\controladorausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE90D439-AF9E-417C-8C82-F0EB12267900}|Comun\\Comun.csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\comun\\cache\\cacheusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE90D439-AF9E-417C-8C82-F0EB12267900}|Comun\\Comun.csproj|solutionrelative:comun\\cache\\cacheusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\peak pass manager\\formopciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|solutionrelative:peak pass manager\\formopciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\peak pass manager\\formusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|solutionrelative:peak pass manager\\formusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|c:\\users\\galoh\\onedrive\\documents\\uai\\peak pass manager\\peak pass manager\\formusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EB5E4B6-578E-4573-9FF5-917F32B13DD0}|Peak Pass Manager\\Peak Pass Manager.csproj|solutionrelative:peak pass manager\\formusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,24 +58,62 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "FormClientes.cs",
+              "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormClientes.cs",
+              "RelativeDocumentMoniker": "Peak Pass Manager\\FormClientes.cs",
+              "ToolTip": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormClientes.cs",
+              "RelativeToolTip": "Peak Pass Manager\\FormClientes.cs",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAAAHgAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T01:38:32.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Verificaciones.cs",
+              "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Comun\\Verificaciones.cs",
+              "RelativeDocumentMoniker": "Comun\\Verificaciones.cs",
+              "ToolTip": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Comun\\Verificaciones.cs",
+              "RelativeToolTip": "Comun\\Verificaciones.cs",
+              "ViewState": "AQIAAKIAAAAAAAAAAAAmwKcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T01:20:16.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormClientes.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormClientes.cs",
+              "RelativeDocumentMoniker": "Peak Pass Manager\\FormClientes.cs",
+              "ToolTip": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormClientes.cs [Design]",
+              "RelativeToolTip": "Peak Pass Manager\\FormClientes.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T01:14:38.758Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ControladoraUsuario.cs",
               "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Dominio\\ControladoraUsuario.cs",
               "RelativeDocumentMoniker": "Dominio\\ControladoraUsuario.cs",
               "ToolTip": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Dominio\\ControladoraUsuario.cs",
               "RelativeToolTip": "Dominio\\ControladoraUsuario.cs",
-              "ViewState": "AQIAAJYAAAAAAAAAAAAswKcAAAA1AAAA",
+              "ViewState": "AQIAAKwAAAAAAAAAAAAIwKcAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-06T00:49:34.539Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "CacheUsuario.cs",
               "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Comun\\Cache\\CacheUsuario.cs",
               "RelativeDocumentMoniker": "Comun\\Cache\\CacheUsuario.cs",
@@ -76,7 +126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "ModeloUsuario.cs",
               "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Acceso a Datos\\ModeloUsuario.cs",
               "RelativeDocumentMoniker": "Acceso a Datos\\ModeloUsuario.cs",
@@ -89,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "ModeloPermisos.cs",
               "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Acceso a Datos\\ModeloPermisos.cs",
               "RelativeDocumentMoniker": "Acceso a Datos\\ModeloPermisos.cs",
@@ -97,12 +147,11 @@
               "RelativeToolTip": "Acceso a Datos\\ModeloPermisos.cs",
               "ViewState": "AQIAABAAAAAAAAAAAAAcwAsBAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-06T00:26:02.969Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-06T00:26:02.969Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "ControladoraPermisos.cs",
               "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Dominio\\ControladoraPermisos.cs",
               "RelativeDocumentMoniker": "Dominio\\ControladoraPermisos.cs",
@@ -110,12 +159,11 @@
               "RelativeToolTip": "Dominio\\ControladoraPermisos.cs",
               "ViewState": "AQIAAEYAAAAAAAAAAAAAAN8AAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-06T00:26:05.552Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-06T00:26:05.552Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "FormOpciones.cs",
               "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormOpciones.cs",
               "RelativeDocumentMoniker": "Peak Pass Manager\\FormOpciones.cs",
@@ -128,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "FormOpciones.cs [Design]",
               "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormOpciones.cs",
               "RelativeDocumentMoniker": "Peak Pass Manager\\FormOpciones.cs",
@@ -140,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "FormUsuarios.cs [Design]",
               "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormUsuarios.cs",
               "RelativeDocumentMoniker": "Peak Pass Manager\\FormUsuarios.cs",
@@ -152,13 +200,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "FormUsuarios.cs",
               "DocumentMoniker": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormUsuarios.cs",
               "RelativeDocumentMoniker": "Peak Pass Manager\\FormUsuarios.cs",
               "ToolTip": "C:\\Users\\galoh\\OneDrive\\Documents\\UAI\\Peak Pass Manager\\Peak Pass Manager\\FormUsuarios.cs",
               "RelativeToolTip": "Peak Pass Manager\\FormUsuarios.cs",
-              "ViewState": "AQIAADwAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "ViewState": "AQIAAFABAAAAAAAAAAAAAFcBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-06T00:19:22.877Z",
               "EditorCaption": ""

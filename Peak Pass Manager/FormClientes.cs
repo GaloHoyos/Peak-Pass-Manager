@@ -131,6 +131,7 @@ namespace Peak_Pass_Manager
                     else
                     {
                         controladoraUsuarioConAuditoria.ModifcarUsuario(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value), txtNombre.Text, txtApellido.Text, txtDNI.Text, txtCorreo.Text, txtDireccion.Text, txtTelefono.Text, "", "", 3, true);
+                        MessageBox.Show("Cliente Modificado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         iniciar();
                         LimpioCliente();
                     }
@@ -165,6 +166,10 @@ namespace Peak_Pass_Manager
                 if (controladoraUsuarioConAuditoria.EliminarUsuario(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value)) == true)
                 {
                     MessageBox.Show("No se puede eliminar el cliente porque tiene pedidos asociados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Cliente Eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 iniciar();
                 LimpioCliente();
@@ -248,7 +253,10 @@ namespace Peak_Pass_Manager
 
         private void btnEliminarRJ_Click(object sender, EventArgs e)
         {
-            EliminarCliente();
+            if(MessageBox.Show("¿Está seguro que desea eliminar el cliente?", "Eliminar Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                EliminarCliente();
+            }
         }
 
         private void btnBuscarRJ_Click(object sender, EventArgs e)
