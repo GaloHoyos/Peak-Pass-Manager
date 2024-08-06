@@ -164,6 +164,8 @@ namespace Dominio
             CacheUsuario.Correo = ModeloUsuario.Email;
             CacheUsuario.Direccion = ModeloUsuario.Direccion;
             CacheUsuario.Telefono = ModeloUsuario.Telefono;
+            CacheUsuario.Activo = ModeloUsuario.Activo;
+            CacheUsuario.idRol = ModeloUsuario.IdRol;
         }
         public string ObtenerDNI(int idUsuario)
         {

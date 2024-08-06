@@ -84,7 +84,7 @@ namespace Peak_Pass_Manager
                 if (carrito.ObtenerLista().Rows.Count > 0)
                 {
                     FormPago formPago = new FormPago(carrito);
-                    formPago.Show();
+                    formPago.ShowDialog();
                 }
                 else
                 {

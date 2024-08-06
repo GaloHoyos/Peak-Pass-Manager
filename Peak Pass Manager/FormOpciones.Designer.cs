@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             gboxPermisos = new GroupBox();
+            chkEliminarRol = new CheckBox();
             btnGuardarCambios = new CustomControls.RJControls.RJButton();
             btnEliminarRol = new CustomControls.RJControls.RJButton();
             chkAgregarRol = new CheckBox();
@@ -55,7 +56,7 @@
             btnAgregarRol = new CustomControls.RJControls.RJButton();
             lblNombreRol = new Label();
             txtRol = new TextBox();
-            groupBox1 = new GroupBox();
+            gboxRolesInactivos = new GroupBox();
             btnHabilitarRol = new CustomControls.RJControls.RJButton();
             lblRolInactivo = new Label();
             cmbRolInactivo = new ComboBox();
@@ -65,12 +66,13 @@
             label1 = new Label();
             gboxPermisos.SuspendLayout();
             gboxRoles.SuspendLayout();
-            groupBox1.SuspendLayout();
+            gboxRolesInactivos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvBackups).BeginInit();
             SuspendLayout();
             // 
             // gboxPermisos
             // 
+            gboxPermisos.Controls.Add(chkEliminarRol);
             gboxPermisos.Controls.Add(btnGuardarCambios);
             gboxPermisos.Controls.Add(btnEliminarRol);
             gboxPermisos.Controls.Add(chkAgregarRol);
@@ -99,6 +101,16 @@
             gboxPermisos.TabIndex = 4;
             gboxPermisos.TabStop = false;
             gboxPermisos.Text = "Permisos";
+            // 
+            // chkEliminarRol
+            // 
+            chkEliminarRol.AutoSize = true;
+            chkEliminarRol.Location = new Point(269, 116);
+            chkEliminarRol.Name = "chkEliminarRol";
+            chkEliminarRol.Size = new Size(147, 29);
+            chkEliminarRol.TabIndex = 20;
+            chkEliminarRol.Text = "Eliminar Roles";
+            chkEliminarRol.UseVisualStyleBackColor = true;
             // 
             // btnGuardarCambios
             // 
@@ -151,7 +163,7 @@
             // chkEliUsuarios
             // 
             chkEliUsuarios.AutoSize = true;
-            chkEliUsuarios.Location = new Point(270, 361);
+            chkEliUsuarios.Location = new Point(269, 396);
             chkEliUsuarios.Name = "chkEliUsuarios";
             chkEliUsuarios.Size = new Size(173, 29);
             chkEliUsuarios.TabIndex = 16;
@@ -161,7 +173,7 @@
             // chkModUsuarios
             // 
             chkModUsuarios.AutoSize = true;
-            chkModUsuarios.Location = new Point(270, 326);
+            chkModUsuarios.Location = new Point(269, 361);
             chkModUsuarios.Name = "chkModUsuarios";
             chkModUsuarios.Size = new Size(186, 29);
             chkModUsuarios.TabIndex = 15;
@@ -171,7 +183,7 @@
             // chkAgUsuarios
             // 
             chkAgUsuarios.AutoSize = true;
-            chkAgUsuarios.Location = new Point(270, 291);
+            chkAgUsuarios.Location = new Point(269, 326);
             chkAgUsuarios.Name = "chkAgUsuarios";
             chkAgUsuarios.Size = new Size(175, 29);
             chkAgUsuarios.TabIndex = 14;
@@ -181,7 +193,7 @@
             // chkEliClientes
             // 
             chkEliClientes.AutoSize = true;
-            chkEliClientes.Location = new Point(270, 256);
+            chkEliClientes.Location = new Point(269, 291);
             chkEliClientes.Name = "chkEliClientes";
             chkEliClientes.Size = new Size(166, 29);
             chkEliClientes.TabIndex = 13;
@@ -191,7 +203,7 @@
             // chkModClientes
             // 
             chkModClientes.AutoSize = true;
-            chkModClientes.Location = new Point(270, 221);
+            chkModClientes.Location = new Point(269, 256);
             chkModClientes.Name = "chkModClientes";
             chkModClientes.Size = new Size(179, 29);
             chkModClientes.TabIndex = 12;
@@ -201,7 +213,7 @@
             // chkAgClientes
             // 
             chkAgClientes.AutoSize = true;
-            chkAgClientes.Location = new Point(270, 186);
+            chkAgClientes.Location = new Point(269, 221);
             chkAgClientes.Name = "chkAgClientes";
             chkAgClientes.Size = new Size(168, 29);
             chkAgClientes.TabIndex = 11;
@@ -211,7 +223,7 @@
             // chkAuditoria
             // 
             chkAuditoria.AutoSize = true;
-            chkAuditoria.Location = new Point(270, 151);
+            chkAuditoria.Location = new Point(269, 186);
             chkAuditoria.Name = "chkAuditoria";
             chkAuditoria.Size = new Size(141, 29);
             chkAuditoria.TabIndex = 10;
@@ -221,7 +233,7 @@
             // chkReportes
             // 
             chkReportes.AutoSize = true;
-            chkReportes.Location = new Point(270, 116);
+            chkReportes.Location = new Point(269, 151);
             chkReportes.Name = "chkReportes";
             chkReportes.Size = new Size(138, 29);
             chkReportes.TabIndex = 9;
@@ -375,18 +387,18 @@
             txtRol.Size = new Size(150, 31);
             txtRol.TabIndex = 0;
             // 
-            // groupBox1
+            // gboxRolesInactivos
             // 
-            groupBox1.Controls.Add(btnHabilitarRol);
-            groupBox1.Controls.Add(lblRolInactivo);
-            groupBox1.Controls.Add(cmbRolInactivo);
-            groupBox1.ForeColor = SystemColors.ButtonFace;
-            groupBox1.Location = new Point(164, 190);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(428, 178);
-            groupBox1.TabIndex = 7;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Roles Inactivos";
+            gboxRolesInactivos.Controls.Add(btnHabilitarRol);
+            gboxRolesInactivos.Controls.Add(lblRolInactivo);
+            gboxRolesInactivos.Controls.Add(cmbRolInactivo);
+            gboxRolesInactivos.ForeColor = SystemColors.ButtonFace;
+            gboxRolesInactivos.Location = new Point(164, 190);
+            gboxRolesInactivos.Name = "gboxRolesInactivos";
+            gboxRolesInactivos.Size = new Size(428, 178);
+            gboxRolesInactivos.TabIndex = 7;
+            gboxRolesInactivos.TabStop = false;
+            gboxRolesInactivos.Text = "Roles Inactivos";
             // 
             // btnHabilitarRol
             // 
@@ -471,14 +483,14 @@
             dgvBackups.AllowUserToResizeRows = false;
             dgvBackups.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvBackups.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.MediumPurple;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.Menu;
-            dataGridViewCellStyle1.SelectionBackColor = Color.MediumPurple;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvBackups.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.MediumPurple;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.Menu;
+            dataGridViewCellStyle2.SelectionBackColor = Color.MediumPurple;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvBackups.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvBackups.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvBackups.EnableHeadersVisualStyles = false;
             dgvBackups.Location = new Point(164, 409);
@@ -508,7 +520,7 @@
             Controls.Add(btnBackup);
             Controls.Add(btnRestore);
             Controls.Add(dgvBackups);
-            Controls.Add(groupBox1);
+            Controls.Add(gboxRolesInactivos);
             Controls.Add(gboxRoles);
             Controls.Add(gboxPermisos);
             Name = "FormOpciones";
@@ -517,8 +529,8 @@
             gboxPermisos.PerformLayout();
             gboxRoles.ResumeLayout(false);
             gboxRoles.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            gboxRolesInactivos.ResumeLayout(false);
+            gboxRolesInactivos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvBackups).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -548,7 +560,7 @@
         private GroupBox gboxRoles;
         private Label lblNombreRol;
         private TextBox txtRol;
-        private GroupBox groupBox1;
+        private GroupBox gboxRolesInactivos;
         private Label lblRolInactivo;
         private ComboBox cmbRolInactivo;
         private CustomControls.RJControls.RJButton btnBackup;
@@ -559,5 +571,6 @@
         private CustomControls.RJControls.RJButton btnEliminarRol;
         private CustomControls.RJControls.RJButton btnHabilitarRol;
         private CustomControls.RJControls.RJButton btnGuardarCambios;
+        private CheckBox chkEliminarRol;
     }
 }

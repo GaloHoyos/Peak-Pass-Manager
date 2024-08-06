@@ -7,7 +7,15 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <PackageIcon>Peak Pass Manager Logo.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\3er año\Primer Cuatrimestre\Ingeniería de Software\Peak Pass Manager\Peak Pass Manager Logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FontAwesome.Sharp" Version="6.3.0" />

@@ -25,6 +25,7 @@ namespace Peak_Pass_Manager
         }
         public void iniciar()
         {
+            ControladoraPermisos controladoraPermisos = new ControladoraPermisos();
             txtNombre.Text = string.Empty;
             txtApellido.Text = string.Empty;
             txtCorreo.Text = string.Empty;
@@ -39,6 +40,30 @@ namespace Peak_Pass_Manager
             btnFiltrosRJ.BorderColor = Color.RoyalBlue;
             btnFiltrosRJ.TextColor = Color.White;
             gboxFiltros.Hide();
+            if(controladoraPermisos.AgregarClientes() == true)
+            {
+                btnAgregarRJ.Enabled = true;
+            }
+            else
+            {
+                btnAgregarRJ.Enabled = false;
+            }
+            if (controladoraPermisos.ModificarClientes() == true)
+            {
+                btnModificarRJ.Enabled = true;
+            }
+            else
+            {
+                btnModificarRJ.Enabled = false;
+            }
+            if (controladoraPermisos.EliminarClientes() == true)
+            {
+                btnEliminarRJ.Enabled = true;
+            }
+            else
+            {
+                btnEliminarRJ.Enabled = false;
+            }
         }
         public void ActualizarClientes()
         {
