@@ -23,6 +23,7 @@ namespace Acceso_a_Datos
         public static string Password { get; set; }
         public static int IdRol { get; set; }
         public static string Rol { get; set; }
+        public static bool Activo { get; set; }
 
         ModeloAuditoria modeloAuditoria = new ModeloAuditoria();
         public string Login(string user, string pass)
@@ -35,7 +36,7 @@ namespace Acceso_a_Datos
                     using (var command = new SqlCommand())
                     {
                         command.Connection = connection;
-                        command.CommandText = "SELECT * FROM usuarios WHERE usuario = @user AND contrasena = @pass";
+                        command.CommandText = "SELECT * FROM usuarios WHERE usuario = @user AND contrasena = @pass AND activo = 1";
                         command.Parameters.AddWithValue("@user", user);
                         command.Parameters.AddWithValue("@pass", pass);
                         command.CommandType = CommandType.Text;

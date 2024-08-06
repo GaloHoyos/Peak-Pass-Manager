@@ -27,6 +27,7 @@ namespace Acceso_a_Datos
         public static bool ModificarUsuarios { get; set; }
         public static bool EliminarUsuarios { get; set; }
         public static bool AgregarRoles { get; set; }
+        public static bool EliminarRoles { get; set; }
         ModeloAuditoria modeloAuditoria = new ModeloAuditoria();
         public ModeloPermisos()
         {
@@ -46,6 +47,8 @@ namespace Acceso_a_Datos
             AgregarUsuarios = false;
             ModificarUsuarios = false;
             EliminarUsuarios = false;
+            AgregarRoles = false;
+            EliminarRoles = false;
             //Obtener los permisos del usuario
             using (var con = GetConnection())
             {
@@ -110,6 +113,9 @@ namespace Acceso_a_Datos
                                     break;
                                 case 17:
                                     AgregarRoles = true;
+                                    break;
+                                case 18:
+                                    EliminarRoles = true;
                                     break;
                            }
                         }
@@ -183,6 +189,9 @@ namespace Acceso_a_Datos
                         case 17:
                             AgregarRoles = true;
                             break;
+                        case 18:
+                            EliminarRoles = true;
+                            break;
                     }
                     modeloAuditoria.InsertarAuditoria(ModeloUsuario.IdUsuario, "Agregar Permiso", "Se ha agregado el permiso '" + VerNombrePermiso(idPermiso) + "' al rol '" + VerNombreRol(idRol) + "' con ID " + idRol);
                 }
@@ -253,6 +262,9 @@ namespace Acceso_a_Datos
                             break;
                         case 17:
                             AgregarRoles = false;
+                            break;
+                        case 18:
+                            EliminarRoles = false;
                             break;
                     }
                 }

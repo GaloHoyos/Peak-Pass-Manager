@@ -1,4 +1,5 @@
-﻿using Dominio;
+﻿using Comun.Cache;
+using Dominio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,10 @@ namespace Peak_Pass_Manager
         ControladoraPermisos controladoraPermisos = new ControladoraPermisos();
         public FormOpciones()
         {
+            Inicio();
+        }
+        private void Inicio()
+        {
             InitializeComponent();
             LlenarRoles();
             LlenarCheckBoxes();
@@ -32,6 +37,37 @@ namespace Peak_Pass_Manager
             IControladoraBackup controladoraBackup = ControladoraBackup.Instance;
             controladoraConAuditoria = new ControladoraBackupConAuditoria(controladoraBackup);
             LoadBackups();
+            VerificarPermisos();
+        }
+
+        private void VerificarPermisos()
+        {
+            if (controladoraPermisos.EditarPermisos() == false)
+            {
+                gboxPermisos.Enabled = false;
+            }
+            else
+            {
+                gboxPermisos.Enabled = true;
+            }
+            if (controladoraPermisos.AgregarRoles() == false)
+            {
+                gboxRolesInactivos.Enabled = false;
+                gboxRoles.Enabled = false;
+            }
+            else
+            {
+                gboxRolesInactivos.Enabled = true;
+                gboxRoles.Enabled = true;
+            }
+            if(controladoraPermisos.EliminarRoles() == false)
+            {
+                btnEliminarRol.Enabled = false;
+            }
+            else
+            {
+                btnEliminarRol.Enabled = true;
+            }
         }
 
         private void LoadBackups()
@@ -68,6 +104,7 @@ namespace Peak_Pass_Manager
                 chkReportes.Checked = ControladoraPermisos.ReportesSeleccion;
                 chkUsuarios.Checked = ControladoraPermisos.UsuariosSeleccion;
                 chkAgregarRol.Checked = ControladoraPermisos.AgregarRolesSeleccion;
+                chkEliminarRol.Checked = ControladoraPermisos.EliminarRolesSeleccion;
             }
             catch (Exception ex)
             {
@@ -182,6 +219,10 @@ namespace Peak_Pass_Manager
             {
                 permisos.Add(17);
             }
+            if (chkEliminarRol.Checked == true)
+            {
+                permisos.Add(18);
+            }
             return permisos;
         }
 
@@ -217,6 +258,7 @@ namespace Peak_Pass_Manager
             chkModUsuarios.Enabled = permiso;
             chkEliUsuarios.Enabled = permiso;
             chkAgregarRol.Enabled = permiso;
+            chkEliminarRol.Enabled = permiso;
             btnGuardarCambios.Enabled = permiso;
             btnEliminarRol.Enabled = permiso;
         }
@@ -246,6 +288,8 @@ namespace Peak_Pass_Manager
                     controladoraConAuditoria.PerformRestore(backupFilePath);
                     MessageBox.Show("Restore realizado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadBackups();
+                    VerificarPermisos();
+                    Inicio();
                 }
                 catch (ApplicationException ex)
                 {
@@ -318,11 +362,19 @@ namespace Peak_Pass_Manager
                 if (existenUsuarios == true)
                 {
                     var m = MessageBox.Show("El rol que desea eliminar tiene usuarios asociados. Desea deshabilitar el Rol junto a los usuarios asociados?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                    if (m == DialogResult.Yes)
+                    if (m == DialogResult.Yes && CacheUsuario.idRol != idRol)
                     {
                         controladoraPermisos.DeshabilitarRol(idRol);
                         MessageBox.Show("El rol fue deshabilitado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LlenarRoles();
+                    }
+                    else if (m == DialogResult.Yes && CacheUsuario.idRol == idRol)
+                    {
+                        MessageBox.Show("No se puede deshabilitar el rol con el que se encuentra logueado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("El rol no fue eliminado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -336,6 +388,8 @@ namespace Peak_Pass_Manager
         private void btnGuardarCambios_Click(object sender, EventArgs e)
         {
             controladoraPermisos.ModificarPermisos(controladoraPermisos.ObtenerIdRol(cmbRol.Text), ObtenerPermisos());
+            VerificarPermisos();
+            MessageBox.Show("Permisos modificados con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

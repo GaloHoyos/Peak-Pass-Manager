@@ -26,6 +26,7 @@ namespace Dominio
         public static bool ModificarUsuariosSeleccion { get; set; }
         public static bool EliminarUsuariosSeleccion { get; set; }
         public static bool AgregarRolesSeleccion { get; set; }
+        public static bool EliminarRolesSeleccion { get; set; }
 
 
         ModeloPermisos modeloPermisos = new ModeloPermisos();
@@ -94,6 +95,14 @@ namespace Dominio
         {
             return ModeloPermisos.EliminarUsuarios;
         }
+        public bool AgregarRoles()
+        {
+            return ModeloPermisos.AgregarRoles;
+        }
+        public bool EliminarRoles()
+        {
+            return ModeloPermisos.EliminarRoles;
+        }
         //Modificar permisos con una lista de permisos
         public void ModificarPermisos(int idRol, List<int> permisos)
         {
@@ -153,6 +162,7 @@ namespace Dominio
             ModificarUsuariosSeleccion = false;
             EliminarUsuariosSeleccion = false;
             AgregarRolesSeleccion = false;
+            EliminarRolesSeleccion = false;
             List<string> permisos = modeloPermisos.VerPermisos(idRol);
             foreach (string permiso in permisos)
             {
@@ -208,6 +218,9 @@ namespace Dominio
                         break;
                     case "Agregar Roles":
                         AgregarRolesSeleccion = true;
+                        break;
+                    case "Eliminar Roles":
+                        EliminarRolesSeleccion = true;
                         break;
                 }
             }
